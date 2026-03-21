@@ -1,6 +1,6 @@
 // ============================================================
 //  LEAD MODAL — JakNaPravnika.cz
-//  Shared contact modal + Supabase lead saving + EmailJS notify
+//  Shared contact modal + Supabase lead saving + Web3Forms notify
 // ============================================================
 
 // Inject the modal HTML once into the page
