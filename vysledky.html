@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="cs" class="light">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Váš výběr advokátů | JakNaPravnika.cz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "secondary":"#964824","on-primary":"#ffffff","on-surface":"#191c18","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","background":"#f9faf2","outline-variant":"#c2c9bb","error":"#ba1a1a","on-surface-variant":"#42493e","tertiary":"#003d57","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","on-tertiary-fixed":"#001e2d","on-primary-fixed":"#002201","primary-container":"#2d5a27","surface-container-low":"#f3f4ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+    body { font-family:'Inter',sans-serif; background-color:#f9faf2; }
+    h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
+    .editorial-shadow { box-shadow:0 12px 40px -4px rgba(25,28,24,0.08); }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 50px -8px rgba(25,28,24,0.12); }
+  </style>
+</head>
+<body class="bg-[#f9faf2] text-[#191c18]">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl border-b border-[#c2c9bb]/20">
+  <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+    <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Domů</a>
+      <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Advokáti</a>
+      <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Pro advokáty</a>
+    </div>
+    <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Chci doporučení</a>
+  </div>
+</nav>
+
+<main class="pt-28 pb-24 max-w-4xl mx-auto px-6 md:px-8">
+
+  <!-- Progress / context bar -->
+  <div class="mb-10">
+    <div class="flex items-center gap-3 mb-4">
+      <a href="quiz.html" class="text-[#154212] hover:underline text-sm font-semibold flex items-center gap-1">
+        <span class="material-symbols-outlined text-base">arrow_back</span> Zpět na kvíz
+      </a>
+    </div>
+    <!-- Summary badge -->
+    <div id="quizSummaryBadge" class="hidden inline-flex items-center gap-2 bg-[#ffdbcd] text-[#360f00] px-4 py-2 rounded-full text-sm font-bold mb-6">
+      <span class="material-symbols-outlined text-sm">quiz</span>
+      <span id="summaryText"></span>
+    </div>
+    <h1 class="text-4xl md:text-5xl font-extrabold text-[#154212] tracking-tight leading-[1.1] mb-4">
+      Vaši <span class="text-[#964824]">3 doporučení</span> advokáti
+    </h1>
+    <p class="text-lg text-[#42493e] max-w-xl leading-relaxed">
+      Na základě vašich odpovědí jsme vybrali nejlépe hodnocené specialisty. Klikněte na <strong>Mám zájem</strong> a do 24 hodin vás propojíme.
+    </p>
+  </div>
+
+  <!-- How it works strip -->
+  <div class="flex flex-col sm:flex-row gap-4 mb-12">
+    <div class="flex-1 flex items-start gap-3 bg-white rounded-xl p-4 editorial-shadow">
+      <span class="material-symbols-outlined text-[#154212] mt-0.5">send</span>
+      <div><p class="font-bold text-sm text-[#154212]">Pošlete poptávku</p><p class="text-xs text-[#42493e]">Vyplníte jen jméno + kontakt</p></div>
+    </div>
+    <div class="flex-1 flex items-start gap-3 bg-white rounded-xl p-4 editorial-shadow">
+      <span class="material-symbols-outlined text-[#154212] mt-0.5">manage_search</span>
+      <div><p class="font-bold text-sm text-[#154212]">Ověříme advokáta</p><p class="text-xs text-[#42493e]">Do 24h zpracujeme váš požadavek</p></div>
+    </div>
+    <div class="flex-1 flex items-start gap-3 bg-white rounded-xl p-4 editorial-shadow">
+      <span class="material-symbols-outlined text-[#154212] mt-0.5">handshake</span>
+      <div><p class="font-bold text-sm text-[#154212]">Propojíme vás</p><p class="text-xs text-[#42493e]">Advokát vás kontaktuje přímo</p></div>
+    </div>
+  </div>
+
+  <!-- Matched lawyers list -->
+  <div id="matchedLawyers" class="space-y-6">
+    <!-- Rendered by JS -->
+  </div>
+
+  <!-- Fallback: no matches -->
+  <div id="noMatches" class="hidden text-center py-16">
+    <span class="material-symbols-outlined text-5xl text-[#c2c9bb] mb-4 block">search_off</span>
+    <h3 class="text-xl font-bold text-[#154212] mb-2">Žádní doporučení advokáti</h3>
+    <p class="text-[#42493e] mb-6">Pro vaše zadání nemáme v databázi shodu. Zkuste procházet celý seznam.</p>
+    <a href="advokati.html" class="inline-block bg-[#154212] text-white px-8 py-3 rounded-full font-bold hover:bg-[#0f2c0a] transition-colors">Procházet všechny advokáty</a>
+  </div>
+
+  <!-- See all link -->
+  <div class="mt-12 text-center">
+    <p class="text-[#42493e] mb-4">Chcete vidět více možností?</p>
+    <a href="advokati.html" class="inline-flex items-center gap-2 text-[#154212] font-bold hover:underline">
+      Zobrazit všechny advokáty
+      <span class="material-symbols-outlined text-base">arrow_forward</span>
+    </a>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#edefe7] w-full pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-4">
+    <p class="text-sm font-bold text-[#154212] font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</p>
+    <p class="text-xs text-[#191c18]/40 max-w-lg">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál. Neposkytuje právní poradenství.</p>
+    <p class="text-xs text-[#191c18]/60">© 2026 JakNaPravnika.cz</p>
+  </div>
+</footer>
+
+<!-- Supabase + EmailJS + Shared scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="js/lawyers-data.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/lead-modal.js"></script>
+
+<script>
+  // Read quiz answers from URL params
+  const params = new URLSearchParams(window.location.search);
+  const oblast   = params.get('oblast') || '';
+  const lokalita = params.get('lokalita') || '';
+  const budget   = params.get('budget') || '';
+  const qid      = params.get('qid') || '';   // Supabase quiz_response UUID
+
+  // Show summary badge
+  if (oblast) {
+    document.getElementById('quizSummaryBadge').classList.remove('hidden');
+    let summaryParts = [];
+    if (oblast)   summaryParts.push(oblast);
+    if (lokalita) summaryParts.push(lokalita);
+    document.getElementById('summaryText').textContent = 'Kvíz: ' + summaryParts.join(' · ');
+  }
+
+  // ── Extended area keywords ───────────────────────────────────────
+  const areaKeywords = {
+    'Rodinné právo':  ['Rodinné právo','Rozvod','Divorce','Péče o děti','Child Custody','Dědické','Dědictví','Inheritance','Mediace','Manželské','Family','Alimenty','Custody'],
+    'Obchodní právo': ['Obchodní právo','Korporátní','Corporate','Fúze','Fúze a akvizice','M&A','PE','Smluvní','Zakládání firem','Venture Capital','Startup Advisory','Obchodní'],
+    'Nemovitosti':    ['Nemovitosti','Stavební právo','Katastr','Real Estate','Nemovitostní','Development','Developers'],
+    'Trestní právo':  ['Trestní','Criminal','Obrana','Obhajoba','Defense'],
+    'Pracovní právo': ['Pracovní právo','Labour','Employment','Pracovní spory','HR','Pracovní úrazy','Discrimination','Social Security'],
+    'Daně':           ['Daně','Daňové','Tax','Účetnictví','Daňové poradenství'],
+    'IT právo':       ['IT právo','IT','Technologie','Duševní vlastnictví','Startup','E-commerce','Fintech','GDPR','Data','TMT','Media','IP'],
+    'Imigrace':       ['Imigrace','Visa','Work Permits','Residency','Migrace','Immigration'],
+  };
+
+  // ── Firm tier: 0=solo/boutique … 3=large international ─────────
+  function firmTier(type) {
+    if (!type) return 1;
+    const t = type.toLowerCase();
+    if (t.includes('mezinárodní'))  return 3;
+    if (t.includes('velká'))        return 2;
+    if (t.includes('střední'))      return 1;
+    // Boutique, small, solo practitioners
+    if (t.includes('butique') || t.includes('malá') || t.includes('solo') ||
+        t.includes('mediator') || t.includes('lawyer') || t.includes('attorney')) return 0;
+    return 1;
+  }
+
+  // ── Parse minimum hourly rate from "3,500–5,500" style strings ──
+  function parseMinRate(str) {
+    if (!str) return 3000;
+    const nums = (str + '').replace(/,/g, '').match(/\d{4,5}/g);
+    return nums ? parseInt(nums[0]) : 3000;
+  }
+
+  // ── Parse number of lawyers from "350+", "60+", "2" etc. ────────
+  function parseSize(str) {
+    if (!str) return 10;
+    const n = parseInt((str + '').replace(/[^0-9]/g, ''));
+    return isNaN(n) ? 10 : n;
+  }
+
+  // ════════════════════════════════════════════════════════════════
+  //  SCORING — priority order:
+  //  1. Practice area match  (0–90 pts)  ← dominant criterion
+  //  2. Location             (0–90 pts)  ← equally dominant
+  //  3. Firm size fit        (0–20 pts)  ← capacity for client type
+  //  4. Hourly rate / budget (0–20 pts)  ← affordability
+  //  5. Client target fit    (0–12 pts)  ← who they serve
+  //  6. Rating               (0–12 pts)  ← tiebreaker
+  //  7. Verified             (0 pts)     ← not used
+  // ════════════════════════════════════════════════════════════════
+  function scoreMatch(lawyer) {
+    let score = 0;
+    const userType    = params.get('type')   || '';
+    const budget      = params.get('budget') || '';
+    const targetLower = (lawyer.target || '').toLowerCase();
+
+    // ── 1. PRACTICE AREA MATCH (0–90 pts) ───────────────────────────
+    if (oblast) {
+      const keywords  = areaKeywords[oblast] || [oblast];
+      const areasText = lawyer.areas.join(' ').toLowerCase();
+      const fullText  = [...lawyer.areas, lawyer.primary || '', lawyer.description || ''].join(' ').toLowerCase();
+
+      // Each keyword found in the firm's listed areas = 15 pts, capped at 3 hits
+      let hits = 0;
+      keywords.forEach(kw => { if (areasText.includes(kw.toLowerCase())) hits++; });
+      score += Math.min(hits * 15, 45);
+
+      // Primary specialization built around this area = biggest bonus
+      if (lawyer.primary && keywords.some(kw => lawyer.primary.toLowerCase().includes(kw.toLowerCase()))) {
+        score += 30;
+      }
+      // First area listed = the firm's declared main focus
+      if (lawyer.areas[0] && keywords.some(kw => lawyer.areas[0].toLowerCase().includes(kw.toLowerCase()))) {
+        score += 10;
+      }
+      // Keyword in description (secondary signal)
+      if (keywords.some(kw => (lawyer.description || '').toLowerCase().includes(kw.toLowerCase()))) {
+        score += 5;
+      }
+    }
+
+    // ── 2. FIRM SIZE FIT (0–20 pts) ──────────────────────────────────
+    const firmSize = parseSize(lawyer.size);
+    if (userType === 'firma') {
+      // Companies need capacity and full-service teams
+      if (firmSize >= 100)     score += 20;
+      else if (firmSize >= 25) score += 14;
+      else if (firmSize >= 10) score +=  8;
+      else                     score +=  2; // tiny firm, probably not enough capacity
+    } else if (userType === 'fyzicka') {
+      // Individuals want personal attention from smaller firms
+      if (firmSize <= 5)       score += 20;
+      else if (firmSize <= 15) score += 15;
+      else if (firmSize <= 35) score += 10;
+      else if (firmSize <= 80) score +=  5;
+      else                     score +=  2; // large firm = impersonal
+    } else {
+      // No type selected — neutral mid-size preference
+      score += (firmSize >= 10 && firmSize <= 60) ? 10 : 5;
+    }
+
+    // ── 3. HOURLY RATE / BUDGET FIT (0–20 pts) ──────────────────────
+    const minRate = parseMinRate(lawyer.hourly_rate);
+    if (budget === 'do-5k') {
+      if (minRate <= 1500)      score += 20;
+      else if (minRate <= 2500) score += 10;
+      else                      score +=  0;
+    } else if (budget === '5k-20k') {
+      if (minRate <= 2000)      score += 20;
+      else if (minRate <= 3000) score += 14;
+      else if (minRate <= 4000) score +=  6;
+      else                      score +=  0;
+    } else if (budget === '20k-50k') {
+      if (minRate <= 3500)      score += 20;
+      else if (minRate <= 5000) score += 12;
+      else                      score +=  4;
+    } else if (budget === '50k-200k') {
+      if (minRate >= 3000 && minRate <= 6000) score += 20;
+      else if (minRate >= 2000)               score += 10;
+    } else if (budget === 'vice-200k') {
+      if (minRate >= 4000)      score += 20;
+      else if (minRate >= 3000) score += 12;
+      else                      score +=  4;
+    }
+
+    // ── 4. CLIENT TARGET FIT (0–12 pts, penalty for hard mismatch) ──
+    if (userType === 'fyzicka') {
+      if (targetLower.includes('individual') || targetLower.includes('families') || targetLower.includes('expat')) score += 12;
+      else if (targetLower.includes('sme') || targetLower.includes('small')) score += 6;
+      // International-only firms unsuitable for individuals
+      if (firmTier(lawyer.type) === 3 && !targetLower.includes('individual') && !targetLower.includes('families')) score -= 6;
+    } else if (userType === 'firma') {
+      if (targetLower.includes('corporate') || targetLower.includes('multinationals') || targetLower.includes('banks')) score += 12;
+      else if (targetLower.includes('sme') || targetLower.includes('startup')) score += 7;
+      // Family/expat-only firms are unsuitable for companies
+      if ((targetLower.includes('families') || targetLower.includes('expat'))
+          && !targetLower.includes('corporate') && !targetLower.includes('sme')) score -= 12;
+    }
+
+    // ── 5. LOCATION (0–90 pts) ───────────────────────────────────────
+    if (lokalita && lawyer.city && lawyer.city.toLowerCase().includes(lokalita.toLowerCase())) {
+      score += 90;
+    }
+
+    // ── 6. RATING (0–12 pts) — tiebreaker after area + location ─────
+    //    Scale: 4.0 → 0 pts, 4.5 → 6 pts, 5.0 → 12 pts
+    score += Math.max(0, ((lawyer.rating || 0) - 4.0) * 24); // max 12 pts at 4.5+
+    // Verified: not used (score += 0)
+
+    return score;
+  }
+
+  // ── Generate human-readable match reasons ────────────────────────
+  function matchReasons(lawyer) {
+    const reasons = [];
+    const userType    = params.get('type')   || '';
+    const budget      = params.get('budget') || '';
+    const tier        = firmTier(lawyer.type);
+    const targetLower = (lawyer.target || '').toLowerCase();
+    const minRate     = parseMinRate(lawyer.hourly_rate);
+
+    // Area reason
+    if (oblast) {
+      const keywords = areaKeywords[oblast] || [oblast];
+      const haystack = [...lawyer.areas, lawyer.primary || ''].join(' ').toLowerCase();
+      if (lawyer.primary && keywords.some(kw => lawyer.primary.toLowerCase().includes(kw.toLowerCase()))) {
+        reasons.push('Primární specializace: ' + lawyer.primary);
+      } else if (keywords.some(kw => haystack.includes(kw.toLowerCase()))) {
+        reasons.push('Specializace: ' + oblast);
+      }
+    }
+
+    // Client type reason
+    if (userType === 'fyzicka') {
+      if (targetLower.includes('individual') || targetLower.includes('families')) reasons.push('Zaměřeno na fyzické osoby');
+      else if (tier <= 1) reasons.push('Přístupná ' + (tier === 0 ? 'boutique' : 'kancelář') + ' pro jednotlivce');
+    } else if (userType === 'firma') {
+      if (targetLower.includes('corporate') || targetLower.includes('multinationals')) reasons.push('Expertíza pro firemní klientelu');
+      else if (tier >= 2) reasons.push('Velká kancelář vhodná pro firmy');
+    }
+
+    // Budget reason
+    if ((budget === 'do-5k' || budget === '5k-20k') && minRate <= 2000) {
+      reasons.push('Dostupné sazby (' + lawyer.hourly_rate + ' Kč/hod)');
+    } else if ((budget === 'vice-200k' || budget === '50k-200k') && (lawyer.ranking || '').toLowerCase().includes('tier 1')) {
+      reasons.push('Prémiová kancelář Tier 1');
+    }
+
+    // Quality reason
+    if (lawyer.verified && !reasons.some(r => r.includes('Ověřeno'))) reasons.push('Ověřeno ČAK');
+
+    return reasons.slice(0, 3);
+  }
+
+  // ── Helper: does this firm have any area keyword hit? ───────────
+  function hasAreaMatch(lawyer) {
+    if (!oblast) return true; // no filter if no area selected
+    const keywords = areaKeywords[oblast] || [oblast];
+    const haystack = [
+      ...lawyer.areas,
+      lawyer.primary || '',
+      lawyer.description || '',
+    ].join(' ').toLowerCase();
+    return keywords.some(kw => haystack.includes(kw.toLowerCase()));
+  }
+
+  // ── Rank all lawyers and pick top 3 ─────────────────────────────
+  // First try: firms that have at least one area keyword match
+  let pool = lawyersData.filter(hasAreaMatch);
+  // Safety fallback: if fewer than 3 match, open pool to all (shouldn't happen with 100 firms)
+  if (pool.length < 3) pool = lawyersData;
+
+  const ranked = pool
+    .map(l => ({ ...l, _score: scoreMatch(l) }))
+    .sort((a, b) => b._score - a._score)
+    .slice(0, 3);
+
+  const container = document.getElementById('matchedLawyers');
+
+  if (ranked.length === 0 || ranked[0]._score === 0) {
+    document.getElementById('noMatches').classList.remove('hidden');
+  } else {
+    const medals = ['🥇', '🥈', '🥉'];
+    const medalLabels = ['Nejlepší shoda', 'Výborná shoda', 'Dobrá shoda'];
+
+    // Avatar colour palette (same as advokati / profil)
+    const PALETTES = [
+      {bg:'#bcf0ae',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
+      {bg:'#ffdbcd',text:'#360f00'},{bg:'#e8d5ff',text:'#2f0052'},
+      {bg:'#fff3cd',text:'#3a2f00'},{bg:'#d4f0e8',text:'#003325'},
+    ];
+
+    // Build back-to-results params so the profile page knows where to return
+    const backParams = new URLSearchParams({
+      from: 'vysledky',
+      oblast:   params.get('oblast')   || '',
+      lokalita: params.get('lokalita') || '',
+      budget:   params.get('budget')   || '',
+      urgency:  params.get('urgency')  || '',
+      type:     params.get('type')     || '',
+      qid:      params.get('qid')      || '',
+    }).toString();
+
+    ranked.forEach((lawyer, i) => {
+      const pal = PALETTES[(lawyer.firm || '').charCodeAt(0) % PALETTES.length];
+
+      const stars = Array(5).fill(0).map((_, s) =>
+        `<span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' ${s < Math.round(lawyer.rating || 0) ? 1 : 0},'wght' 400,'GRAD' 0,'opsz' 24; color:#964824;">star</span>`
+      ).join('');
+
+      const areasHtml = lawyer.areas.slice(0, 3).map(a =>
+        `<span class="bg-[#c6e7ff] text-[#001e2d] px-3 py-1 rounded-full text-xs font-semibold">${a}</span>`
+      ).join('');
+
+      const langsHtml = (lawyer.languages || []).slice(0, 3).map(l =>
+        `<span class="text-xs text-[#42493e] bg-[#f3f4ed] px-2 py-0.5 rounded-full">${l}</span>`
+      ).join('');
+
+      const verifiedBadge = lawyer.verified
+        ? `<span class="inline-flex items-center gap-1 bg-[#bcf0ae] text-[#002201] text-xs font-bold px-2.5 py-1 rounded-full">
+             <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">verified</span> Ověřeno ČAK
+           </span>`
+        : '';
+
+      const partnerLine = lawyer.key_partner
+        ? `<p class="text-sm text-[#72796e] mb-1">Klíčový partner: <span class="font-medium text-[#42493e]">${lawyer.key_partner}</span></p>`
+        : '';
+
+      const reasons = matchReasons(lawyer);
+      const reasonsHtml = reasons.length
+        ? `<div class="flex flex-wrap gap-1.5 mb-4">
+             ${reasons.map(r => `<span class="inline-flex items-center gap-1 bg-[#f0f8ee] text-[#154212] border border-[#bcf0ae] text-xs font-semibold px-2.5 py-1 rounded-full">
+               <span class="material-symbols-outlined" style="font-size:0.8rem;font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 20;">check_circle</span>${r}
+             </span>`).join('')}
+           </div>`
+        : '';
+
+      const card = document.createElement('div');
+      card.className = 'bg-white rounded-2xl editorial-shadow card-hover overflow-hidden';
+      if (i === 0) card.className += ' ring-2 ring-[#154212]/20';
+
+      card.innerHTML = `
+        <div class="p-6 md:p-8">
+          <!-- Rank badge + match label -->
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">${medals[i]}</span>
+              <span class="text-xs font-bold text-[#42493e] uppercase tracking-wider">${medalLabels[i]}</span>
+            </div>
+            ${verifiedBadge}
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-6">
+            <!-- Avatar (firm colour) -->
+            <div class="flex-shrink-0">
+              <div class="w-20 h-20 rounded-2xl flex items-center justify-center text-2xl font-extrabold font-['Plus_Jakarta_Sans']"
+                   style="background:${pal.bg};color:${pal.text}">
+                ${lawyer.initials || (lawyer.firm || '??').slice(0,2).toUpperCase()}
+              </div>
+            </div>
+
+            <!-- Info -->
+            <div class="flex-1 min-w-0">
+              <h2 class="text-2xl font-extrabold text-[#191c18] font-['Plus_Jakarta_Sans'] mb-0.5">${lawyer.firm}</h2>
+              ${partnerLine}
+              <p class="text-xs text-[#72796e] mb-3">${lawyer.type || ''} · Praha</p>
+
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mb-4">
+                <div class="flex">${stars}</div>
+                <span class="font-bold text-[#964824]">${(lawyer.rating || 0).toFixed(1)}</span>
+                <span class="text-sm text-[#72796e]">(${lawyer.reviews || 0} hodnocení)</span>
+              </div>
+
+              <!-- Specializations -->
+              <div class="flex flex-wrap gap-2 mb-3">${areasHtml}</div>
+
+              <!-- Why this firm -->
+              ${reasonsHtml}
+
+              <!-- Description -->
+              <p class="text-sm text-[#42493e] leading-relaxed mb-4">${lawyer.description || ''}</p>
+
+              <!-- Languages -->
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="material-symbols-outlined text-sm text-[#72796e]">language</span>
+                ${langsHtml}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action bar -->
+        <div class="px-6 md:px-8 py-5 bg-[#f3f4ed] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-sm text-[#42493e]">
+            <span class="material-symbols-outlined text-sm align-middle text-[#154212]">schedule</span>
+            Odpovíme do <strong>24 hodin</strong> od odeslání poptávky
+          </div>
+          <div class="flex gap-3 w-full sm:w-auto">
+            <a href="profil.html?id=${lawyer.id}&${backParams}"
+               class="flex-1 sm:flex-none px-5 py-2.5 border-2 border-[#c2c9bb] text-[#154212] font-bold text-sm rounded-full hover:border-[#154212] hover:bg-white transition-all text-center">
+              Zobrazit profil
+            </a>
+            <button
+              onclick="openLeadModal(${lawyer.id}, '${(lawyer.name || lawyer.firm || '').replace(/'/g, "\\'")}', '${(lawyer.firm || '').replace(/'/g, "\\'")}', '${qid}')"
+              class="flex-1 sm:flex-none px-6 py-2.5 bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white font-bold text-sm rounded-full hover:shadow-lg active:scale-95 transition-all text-center">
+              Mám zájem
+            </button>
+          </div>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  }
+
+  // Init EmailJS
+  try {
+    if (typeof emailjs !== 'undefined' && EMAILJS_PUBLIC_KEY !== 'YOUR_EMAILJS_PUBLIC_KEY') {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+  } catch(e) {}
+</script>
+</body>
+</html>
