@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advokáti - JakNaPravnika.cz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Supabase + EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "inverse-primary":"#a1d494","secondary":"#964824","on-primary":"#ffffff","on-tertiary-fixed-variant":"#0a4c69","secondary-fixed-dim":"#ffb597","on-surface":"#191c18","on-primary-container":"#9dd090","error-container":"#ffdad6","primary-fixed-dim":"#a1d494","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","inverse-surface":"#2e312c","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","on-background":"#191c18","background":"#f9faf2","outline-variant":"#c2c9bb","error":"#ba1a1a","surface-variant":"#e2e3dc","on-surface-variant":"#42493e","surface-dim":"#d9dbd3","tertiary":"#003d57","on-secondary-fixed-variant":"#77320e","surface-tint":"#3b6934","tertiary-container":"#1a5573","on-primary-fixed-variant":"#23501e","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","surface":"#f9faf2","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","on-secondary-container":"#76300d","tertiary-fixed-dim":"#99cdf0","inverse-on-surface":"#f0f1ea","on-tertiary-fixed":"#001e2d","primary-container":"#2d5a27","surface-container-low":"#f3f4ed","surface-bright":"#f9faf2" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"],"label":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
+  </script>
+  <style>
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+    body { font-family:'Inter',sans-serif; background-color:#f9faf2; }
+    h1,h2,h3,h4,.brand { font-family:'Plus Jakarta Sans',sans-serif; }
+    .editorial-shadow { box-shadow: 0 12px 40px -4px rgba(25,28,24,0.06); }
+    .sticky-sidebar { position: sticky; top: 88px; }
+  </style>
+</head>
+<body>
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter brand">JakNaPravnika.cz</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Domů</a>
+        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Advokáti</a>
+        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Pro advokáty</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="pt-32 pb-12 px-8">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-bold text-[#154212] mb-2">Najděte svého advokáta</h1>
+      <p class="text-lg text-[#191c18]/60 mb-8">Procházejte naší databází ověřených právníků. Filtrujte podle oblasti práva, typu kanceláře a jazyka.</p>
+      
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Sidebar Filters -->
+        <aside class="lg:w-72 flex-shrink-0">
+          <div class="sticky-sidebar bg-[#f3f4ed] p-6 rounded-2xl">
+            <!-- Search -->
+            <div class="mb-8">
+              <label class="block text-sm font-semibold text-[#154212] mb-2">Hledat</label>
+              <input 
+                type="text" 
+                id="search-input"
+                placeholder="Jméno, kancelář..." 
+                class="w-full px-4 py-2.5 border-2 border-[#c2c9bb] rounded-xl focus:border-[#154212] focus:outline-none transition-colors"
+              >
+            </div>
+
+            <!-- Practice Areas -->
+            <div class="mb-8">
+              <label class="block text-sm font-semibold text-[#154212] mb-3">Oblast práva</label>
+              <div class="space-y-2.5">
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Obchodní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Obchodní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Fúze a akvizice" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Fúze a akvizice</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Nemovitosti" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Nemovitosti</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Pracovní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Pracovní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Trestní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Trestní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Rodinné právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Rodinné právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Daně" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Daně</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Bankovní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Bankovní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Spory a rozhodčí řízení" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Spory a rozhodčí řízení</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Soutěžní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Soutěžní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Duševní vlastnictví" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Duševní vlastnictví</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="IT právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">IT právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Správní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Správní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Insolvence" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Insolvence</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Imigrace" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Imigrace</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Stavební právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Stavební právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Energetika" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Energetika</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Životní prostředí" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Životní prostředí</span></label>
+              </div>
+            </div>
+
+            <!-- Lawyer Type -->
+            <div class="mb-8">
+              <label class="block text-sm font-semibold text-[#154212] mb-3">Typ kanceláře</label>
+              <div class="space-y-2.5">
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" value="Butique kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
+                  <span class="text-sm text-[#191c18]">Butique kancelář</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" value="Střední národní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
+                  <span class="text-sm text-[#191c18]">Střední národní</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" value="Velká národní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
+                  <span class="text-sm text-[#191c18]">Velká národní</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" value="Mezinárodní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
+                  <span class="text-sm text-[#191c18]">Mezinárodní</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" value="Solo" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
+                  <span class="text-sm text-[#191c18]">Solo</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input type="checkbox" value="Malá kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
+                  <span class="text-sm text-[#191c18]">Malá kancelář</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Language -->
+            <div class="mb-8">
+              <label class="block text-sm font-semibold text-[#154212] mb-3">Jazyk</label>
+              <select id="language-select" class="w-full px-4 py-2.5 border-2 border-[#c2c9bb] rounded-xl focus:border-[#154212] focus:outline-none transition-colors">
+                <option value="">Vše jazyky</option>
+                <option value="Čeština">Čeština</option>
+                <option value="Angličtina">Angličtina</option>
+                <option value="Němčina">Němčina</option>
+                <option value="Francouzština">Francouzština</option>
+                <option value="Slovenština">Slovenština</option>
+                <option value="Ruština">Ruština</option>
+                <option value="Polština">Polština</option>
+                <option value="Italština">Italština</option>
+                <option value="Španělština">Španělština</option>
+                <option value="Maďarština">Maďarština</option>
+              </select>
+            </div>
+
+            <!-- Clear Filters -->
+            <button id="clear-filters" class="w-full bg-white hover:bg-[#e7e9e1] text-[#154212] px-4 py-2.5 rounded-xl font-semibold transition-all border-2 border-[#c2c9bb]">Smazat filtry</button>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+          <!-- Results Header -->
+          <div class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div>
+              <div id="quiz-badge" class="hidden mb-3">
+                <span class="inline-block bg-[#bcf0ae] text-[#154212] px-4 py-2 rounded-full text-sm font-semibold">Filtrováno dle kvízu</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-lg font-semibold text-[#191c18]">Zobrazeno</span>
+                <span id="result-count" class="text-lg font-bold text-[#154212]">12</span>
+                <span class="text-lg font-semibold text-[#191c18]">advokátů</span>
+              </div>
+            </div>
+            <div>
+              <label class="text-sm font-semibold text-[#191c18] mr-3">Řadit:</label>
+              <select id="sort-select" class="px-4 py-2.5 border-2 border-[#c2c9bb] rounded-xl focus:border-[#154212] focus:outline-none transition-colors font-medium">
+                <option value="relevance">Relevance</option>
+                <option value="rating">Podle hodnocení</option>
+                <option value="founded">Rok založení</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Lawyers List -->
+          <div id="lawyers-list" class="space-y-4">
+            <!-- Will be populated by JavaScript -->
+          </div>
+
+          <!-- No Results -->
+          <div id="no-results" class="hidden text-center py-16">
+            <span class="material-symbols-outlined text-5xl text-[#191c18]/30 block mb-4">person_off</span>
+            <p class="text-lg text-[#191c18]/60">Žádní advokáti se neshodují s vašimi filtry. Zkuste změnit podmínky.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#edefe7] w-full pt-16 pb-8 mt-16">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+      <div class="col-span-2"><div class="text-lg font-bold text-[#154212] mb-4 brand">JakNaPravnika.cz</div><p class="text-sm text-[#191c18]/60 max-w-xs mb-4">Nejmodernější platforma pro výběr právního zastoupení v České republice. Věříme v transparentnost a odbornost.</p></div>
+      <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html" class="hover:text-[#154212] transition-colors">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#154212] transition-colors">Kvíz pro výběr</a></li><li><a href="registrace.html" class="hover:text-[#154212] transition-colors">Pro advokáty</a></li></ul></div>
+      <div><h4 class="font-bold text-[#154212] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#" class="hover:text-[#154212] transition-colors">Podmínky užití</a></li><li><a href="#" class="hover:text-[#154212] transition-colors">Ochrana údajů</a></li><li><a href="#" class="hover:text-[#154212] transition-colors">O nás</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
+      <p class="text-xs text-[#191c18]/40 mb-2">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál mezi uživateli a poskytovateli právních služeb. Neposkytuje právní poradenství.</p>
+      <p class="text-sm text-[#191c18]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+
+  <script src="js/lawyers-data.js"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/lead-modal.js"></script>
+  <script>
+    class LawyerFilterManager {
+      constructor() {
+        this.allLawyers = [...lawyersData];
+        this.filteredLawyers = [...lawyersData];
+        this.filters = {
+          search: '',
+          areas: [],
+          types: [],
+          language: ''
+        };
+        this.sortBy = 'relevance';
+        this.init();
+      }
+
+      init() {
+        this.attachEventListeners();
+        this.applyUrlParams();
+        this.render();
+      }
+
+      attachEventListeners() {
+        // Search
+        document.getElementById('search-input').addEventListener('input', (e) => {
+          this.filters.search = e.target.value;
+          this.applyFilters();
+        });
+
+        // Area checkboxes
+        document.querySelectorAll('.area-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', () => {
+            this.filters.areas = Array.from(document.querySelectorAll('.area-checkbox:checked')).map(cb => cb.value);
+            this.applyFilters();
+          });
+        });
+
+        // Type checkboxes
+        document.querySelectorAll('.type-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', () => {
+            this.filters.types = Array.from(document.querySelectorAll('.type-checkbox:checked')).map(cb => cb.value);
+            this.applyFilters();
+          });
+        });
+
+        // Language select
+        document.getElementById('language-select').addEventListener('change', (e) => {
+          this.filters.language = e.target.value;
+          this.applyFilters();
+        });
+
+        // Sort select
+        document.getElementById('sort-select').addEventListener('change', (e) => {
+          this.sortBy = e.target.value;
+          this.render();
+        });
+
+        // Clear filters
+        document.getElementById('clear-filters').addEventListener('click', () => {
+          this.clearAllFilters();
+        });
+      }
+
+      applyUrlParams() {
+        const params = new URLSearchParams(window.location.search);
+        
+        if (params.has('oblast')) {
+          const oblast = params.get('oblast');
+          this.filters.areas = [oblast];
+          const checkbox = document.querySelector(`.area-checkbox[value="${oblast}"]`);
+          if (checkbox) checkbox.checked = true;
+        }
+      }
+
+      applyFilters() {
+        this.filteredLawyers = this.allLawyers.filter(lawyer => {
+          const matchSearch = this.matchSearch(lawyer);
+          const matchAreas = this.matchAreas(lawyer);
+          const matchTypes = this.matchTypes(lawyer);
+          const matchLanguage = this.matchLanguage(lawyer);
+
+          return matchSearch && matchAreas && matchTypes && matchLanguage;
+        });
+
+        this.render();
+      }
+
+      matchSearch(lawyer) {
+        if (!this.filters.search) return true;
+        const search = this.filters.search.toLowerCase();
+        return (
+          (lawyer.firm || '').toLowerCase().includes(search) ||
+          (lawyer.name || '').toLowerCase().includes(search) ||
+          (lawyer.key_partner || '').toLowerCase().includes(search) ||
+          (lawyer.city || '').toLowerCase().includes(search) ||
+          (lawyer.areas || []).some(a => a.toLowerCase().includes(search))
+        );
+      }
+
+      matchAreas(lawyer) {
+        if (this.filters.areas.length === 0) return true;
+        return this.filters.areas.some(area => lawyer.areas.includes(area));
+      }
+
+      matchTypes(lawyer) {
+        if (this.filters.types.length === 0) return true;
+        return this.filters.types.includes(lawyer.type);
+      }
+
+      matchLanguage(lawyer) {
+        if (!this.filters.language) return true;
+        return lawyer.languages.includes(this.filters.language);
+      }
+
+      clearAllFilters() {
+        this.filters = {
+          search: '',
+          areas: [],
+          types: [],
+          language: ''
+        };
+        document.getElementById('search-input').value = '';
+        document.querySelectorAll('.area-checkbox, .type-checkbox').forEach(cb => cb.checked = false);
+        document.getElementById('language-select').value = '';
+        this.applyFilters();
+      }
+
+      sortLawyers(lawyers) {
+        const copy = [...lawyers];
+        
+        switch (this.sortBy) {
+          case 'rating':
+            return copy.sort((a, b) => b.rating - a.rating);
+          case 'founded':
+            return copy.sort((a, b) => b.founded - a.founded);
+          case 'relevance':
+          default:
+            return copy;
+        }
+      }
+
+      renderStarRating(rating) {
+        const stars = [];
+        for (let i = 0; i < 5; i++) {
+          stars.push(i < Math.floor(rating) ? '★' : '☆');
+        }
+        return stars.join('');
+      }
+
+      render() {
+        const sorted = this.sortLawyers(this.filteredLawyers);
+        const listContainer = document.getElementById('lawyers-list');
+        const resultCount = document.getElementById('result-count');
+        const noResults = document.getElementById('no-results');
+
+        resultCount.textContent = sorted.length;
+
+        if (sorted.length === 0) {
+          listContainer.innerHTML = '';
+          noResults.classList.remove('hidden');
+          return;
+        }
+
+        noResults.classList.add('hidden');
+        listContainer.innerHTML = sorted.map(lawyer => this.createLawyerCard(lawyer)).join('');
+      }
+
+      createLawyerCard(lawyer) {
+        // Avatar colour based on firm name
+        const PALETTES = [
+          {bg:'#bcf0ae',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
+          {bg:'#ffdbcd',text:'#360f00'},{bg:'#e8d5ff',text:'#2f0052'},
+          {bg:'#fff3cd',text:'#3a2f00'},{bg:'#d4f0e8',text:'#003325'},
+        ];
+        const pal = PALETTES[(lawyer.firm || '').charCodeAt(0) % PALETTES.length];
+        const initials = lawyer.initials || (lawyer.firm || '??').slice(0,2).toUpperCase();
+
+        const verified = lawyer.verified
+          ? '<span class="inline-flex items-center gap-1 bg-[#bcf0ae] text-[#002201] px-2.5 py-0.5 rounded-full text-xs font-bold">✓ Ověřeno</span>'
+          : '';
+
+        const partnerLine = lawyer.key_partner
+          ? `<p class="text-xs text-[#72796e] mt-0.5 mb-1">Klíčový partner: <span class="font-medium text-[#42493e]">${lawyer.key_partner}</span></p>`
+          : '<p class="mb-1"></p>';
+
+        const metaParts = [
+          lawyer.type || '',
+          lawyer.founded ? `zal. ${lawyer.founded}` : '',
+          lawyer.size    ? `${lawyer.size} právníků`  : '',
+        ].filter(Boolean);
+        const metaLine = metaParts.join(' · ');
+
+        const areasHtml = (lawyer.areas || []).slice(0, 3)
+          .map(a => `<span class="bg-[#c6e7ff] text-[#003d57] px-2.5 py-1 rounded-full text-xs font-medium">${a}</span>`)
+          .join('');
+
+        // Safely escape firm name for inline onclick (no apostrophes)
+        const firmSafe = (lawyer.firm || '').replace(/'/g, '&#39;');
+
+        return `
+          <div class="bg-white rounded-2xl p-5 flex flex-col sm:flex-row sm:items-start gap-5 editorial-shadow hover:shadow-lg transition-all border border-[#e2e3dc]">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-xl font-extrabold font-['Plus_Jakarta_Sans'] select-none"
+                 style="background:${pal.bg};color:${pal.text}">
+              ${initials}
+            </div>
+
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center gap-2 mb-0.5">
+                <h3 class="text-base font-bold text-[#191c18] leading-tight">${lawyer.firm}</h3>
+                ${verified}
+              </div>
+              ${partnerLine}
+              <p class="text-xs text-[#72796e] mb-2">${metaLine}</p>
+              <div class="flex items-center gap-1.5 mb-2.5">
+                <span class="text-sm leading-none text-yellow-500">${this.renderStarRating(lawyer.rating)}</span>
+                <span class="text-xs text-[#191c18]/60">${lawyer.rating.toFixed(1)} (${lawyer.reviews} recenzí)</span>
+              </div>
+              <div class="flex gap-1.5 flex-wrap">${areasHtml}</div>
+            </div>
+
+            <div class="flex flex-col gap-2 flex-shrink-0 sm:w-32">
+              <button onclick="openLeadModal(${lawyer.id}, '${firmSafe}', '${firmSafe}')"
+                class="bg-[#154212] hover:bg-[#0f2c0a] text-white px-4 py-2.5 rounded-xl font-semibold text-sm transition-all text-center active:scale-95 cursor-pointer">
+                Kontaktovat
+              </button>
+              <a href="profil.html?id=${lawyer.id}"
+                class="bg-[#e7e9e1] hover:bg-[#d9dbd3] text-[#154212] px-4 py-2.5 rounded-xl font-semibold text-sm transition-all text-center active:scale-95">
+                Profil
+              </a>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      new LawyerFilterManager();
+    });
+  </script>
+</body>
+</html>

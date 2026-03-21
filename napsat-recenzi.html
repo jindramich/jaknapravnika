@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "secondary":"#964824","on-primary":"#ffffff","on-surface":"#191c18","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","on-background":"#191c18","background":"#f9faf2","outline-variant":"#c2c9bb","surface-variant":"#e2e3dc","on-surface-variant":"#42493e","tertiary":"#003d57","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","primary-container":"#2d5a27","surface-container-low":"#f3f4ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"] }, borderRadius:{"DEFAULT":"1rem","lg":"2rem","full":"9999px"} } } }
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+body { font-family:'Inter',sans-serif; background-color:#f9faf2; color:#191c18; }
+h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
+.editorial-shadow { box-shadow: 0 4px 20px rgba(21, 66, 18, 0.08); }
+.star-rating { display: flex; gap: 0.5rem; }
+.star-rating .star { cursor: pointer; font-size: 2rem; color: #c2c9bb; transition: color 0.2s; }
+.star-rating .star.active { color: #964824; }
+.star-rating .star:hover, .star-rating .star.hover { color: #964824; }
+.sub-rating { display: flex; gap: 0.25rem; }
+.sub-rating .star { font-size: 1rem; cursor: pointer; color: #c2c9bb; transition: color 0.2s; }
+.sub-rating .star.active { color: #964824; }
+.sub-rating .star:hover, .sub-rating .star.hover { color: #964824; }
+.toast { animation: slideUp 0.3s ease-out; }
+@keyframes slideUp { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+</style>
+</head>
+<body class="bg-[#f9faf2]">
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl">
+  <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+    <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Domů</a>
+      <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Advokáti</a>
+      <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Pro advokáty</a>
+    </div>
+    <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold">Zdarma doporučení</a>
+  </div>
+</nav>
+
+<!-- Toast Notification -->
+<div id="toast" class="hidden toast fixed bottom-8 right-8 z-50 bg-green-50 border-l-4 border-green-600 px-6 py-4 rounded-lg shadow-lg max-w-md">
+  <p class="text-sm font-semibold text-green-800">Recenze odeslána! Brzy ji ověříme.</p>
+</div>
+
+<!-- Main Content -->
+<main class="w-full pt-32 pb-20">
+  <div class="max-w-2xl mx-auto px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl md:text-5xl font-bold text-[#154212] mb-4">Napsat recenzi</h1>
+      <p class="text-lg text-[#191c18]/70">Pomozte ostatním najít správného advokáta sdílením vaší zkušenosti.</p>
+    </div>
+
+    <!-- Lawyer Selection -->
+    <div class="bg-[#f3f4ed] p-6 rounded-lg mb-8">
+      <h2 class="text-lg font-bold text-[#154212] mb-4">Pro koho píšete recenzi?</h2>
+      <div class="space-y-3">
+        <input type="text" id="lawyerSearch" placeholder="Hledejte jméno advokáta nebo kancelář..." class="w-full bg-white rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]">
+        <div id="lawyerList" class="hidden space-y-2">
+          <!-- Options will be populated by JS -->
+        </div>
+        <div id="selectedLawyer" class="hidden bg-white p-4 rounded-lg border-l-4 border-[#154212]">
+          <p class="text-sm text-[#191c18]/60">Vybraný advokát:</p>
+          <p id="selectedLawyerName" class="font-semibold text-[#191c18]"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Form -->
+    <div class="bg-[#ffffff] p-10 rounded-lg editorial-shadow">
+      <form id="reviewForm" class="space-y-8">
+
+        <!-- Overall Rating -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-4">Vaše celkové hodnocení</label>
+          <div class="star-rating" id="overallRating">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <input type="hidden" id="overallRatingValue" name="overallRating" value="0">
+        </div>
+
+        <!-- Sub-Ratings -->
+        <div class="bg-[#edefe7] p-6 rounded-lg">
+          <p class="text-sm font-semibold text-[#154212] mb-6">Podrobné hodnocení</p>
+
+          <div class="space-y-4">
+            <!-- Komunikace -->
+            <div class="flex items-center justify-between">
+              <label class="text-sm text-[#191c18]">Komunikace</label>
+              <div class="sub-rating" data-type="komunikace">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <input type="hidden" name="komunikace" value="0">
+            </div>
+
+            <!-- Odbornost -->
+            <div class="flex items-center justify-between">
+              <label class="text-sm text-[#191c18]">Odbornost</label>
+              <div class="sub-rating" data-type="odbornost">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <input type="hidden" name="odbornost" value="0">
+            </div>
+
+            <!-- Poměr cena/výkon -->
+            <div class="flex items-center justify-between">
+              <label class="text-sm text-[#191c18]">Poměr cena/výkon</label>
+              <div class="sub-rating" data-type="cena-vykon">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <input type="hidden" name="cena-vykon" value="0">
+            </div>
+
+            <!-- Rychlost -->
+            <div class="flex items-center justify-between">
+              <label class="text-sm text-[#191c18]">Rychlost</label>
+              <div class="sub-rating" data-type="rychlost">
+                <span class="star" data-value="1">★</span>
+                <span class="star" data-value="2">★</span>
+                <span class="star" data-value="3">★</span>
+                <span class="star" data-value="4">★</span>
+                <span class="star" data-value="5">★</span>
+              </div>
+              <input type="hidden" name="rychlost" value="0">
+            </div>
+          </div>
+        </div>
+
+        <!-- Your Name -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-2">Vaše jméno</label>
+          <input type="text" name="reviewerName" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Jméno">
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-2">E-mail</label>
+          <input type="email" name="reviewerEmail" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="vase-email@example.com">
+          <p class="text-xs text-[#191c18]/60 mt-1">Váš e-mail se neukazuje veřejně</p>
+        </div>
+
+        <!-- Client Type -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-3">Typ klienta</label>
+          <div class="space-y-2">
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input type="radio" name="clientType" value="fyzicka-osoba" required class="w-4 h-4 text-[#154212] bg-[#e7e9e1] border-none focus:ring-2 focus:ring-[#154212]">
+              <span class="text-sm text-[#191c18]">Fyzická osoba</span>
+            </label>
+            <label class="flex items-center space-x-3 cursor-pointer">
+              <input type="radio" name="clientType" value="firma" class="w-4 h-4 text-[#154212] bg-[#e7e9e1] border-none focus:ring-2 focus:ring-[#154212]">
+              <span class="text-sm text-[#191c18]">Firma</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Practice Area -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-2">Oblast právní pomoci</label>
+          <select name="practiceArea" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] focus:outline-none focus:ring-2 focus:ring-[#154212] appearance-none cursor-pointer">
+            <option value="">Vyberte oblast...</option>
+            <option value="rodinne-pravo">Rodinné právo</option>
+            <option value="trestni-pravo">Trestní právo</option>
+            <option value="pracovni-pravo">Pracovní právo</option>
+            <option value="nemovitosti">Nemovitosti</option>
+            <option value="dane">Daně</option>
+            <option value="it-pravo">IT právo</option>
+            <option value="migrace">Imigrace</option>
+            <option value="obchodni-pravo">Obchodní právo</option>
+            <option value="bankovnictvi">Bankovnictví</option>
+            <option value="dusevni-vlastnictvi">Duševní vlastnictví</option>
+          </select>
+        </div>
+
+        <!-- Review Text -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-2">Váš příběh</label>
+          <textarea name="reviewText" rows="6" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Popište svou zkušenost s advokátem. Proč jste ho vyhledali? Jak probíhala spolupráce? Doporučili byste ho?"></textarea>
+        </div>
+
+        <!-- Verification Code -->
+        <div>
+          <label class="block text-sm font-semibold text-[#191c18] mb-2">Ověřovací kód</label>
+          <input type="text" name="verificationCode" class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Zadejte kód z e-mailu, který vám pošleme po ověření">
+          <p class="text-xs text-[#191c18]/60 mt-1">Pomůže nám ověřit, že jste skutečným klientem</p>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white font-bold py-3.5 rounded-lg hover:shadow-lg transition-all">Odeslat recenzi</button>
+
+        <!-- Note -->
+        <p class="text-xs text-[#191c18]/60 text-center">Vaše recenze bude zveřejněna po ověření do 24 hodin. Nepoužívejte urážlivý jazyk.</p>
+      </form>
+    </div>
+
+    <!-- Trust Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+      <div class="text-center p-6">
+        <span class="material-symbols-outlined text-[#154212] text-4xl mb-3 flex justify-center">shield</span>
+        <h3 class="font-bold text-[#154212] mb-2">Ověřené recenze</h3>
+        <p class="text-sm text-[#191c18]/60">Všechny recenze jsou manuálně kontrolovány</p>
+      </div>
+      <div class="text-center p-6">
+        <span class="material-symbols-outlined text-[#154212] text-4xl mb-3 flex justify-center">privacy_tip</span>
+        <h3 class="font-bold text-[#154212] mb-2">Anonymní možnost</h3>
+        <p class="text-sm text-[#191c18]/60">Vaše jméno lze zobrazit jen jako iniciály</p>
+      </div>
+      <div class="text-center p-6">
+        <span class="material-symbols-outlined text-[#154212] text-4xl mb-3 flex justify-center">thumb_up</span>
+        <h3 class="font-bold text-[#154212] mb-2">Pomáháte ostatním</h3>
+        <p class="text-sm text-[#191c18]/60">Každá recenze pomáhá dalším klientům</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-[#edefe7] w-full pt-16 pb-8 mt-20">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+    <div class="col-span-2"><div class="text-lg font-bold text-[#154212] mb-4">JakNaPravnika.cz</div><p class="text-sm text-[#191c18]/60 max-w-xs">Nejmodernější platforma pro výběr právního zastoupení v České republice.</p></div>
+    <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html">Advokáti</a></li><li><a href="quiz.html">Kvíz</a></li></ul></div>
+    <div><h4 class="font-bold text-[#154212] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#">Podmínky užití</a></li><li><a href="#">Ochrana údajů</a></li></ul></div>
+  </div>
+  <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
+    <p class="text-sm text-[#191c18]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+  </div>
+</footer>
+
+<script>
+// Hardcoded lawyer list
+const lawyers = [
+  { id: 1, name: 'JUDr. Pavel Dvořák', firm: 'Advokátní kancelář Dvořák & spol.' },
+  { id: 2, name: 'JUDr. Marie Nováková', firm: 'Právní služby Nováková' },
+  { id: 3, name: 'JUDr. Jan Křístek', firm: 'Kancelář Křístek - Právní poradny' },
+  { id: 4, name: 'JUDr. Petra Svobodová', firm: 'Svobodová a spol., advokáti' },
+  { id: 5, name: 'JUDr. Tomáš Procházka', firm: 'Procházka Legal Services' }
+];
+
+let selectedLawyer = null;
+
+// Check for URL parameter
+const params = new URLSearchParams(window.location.search);
+const lawyerId = params.get('id');
+if (lawyerId) {
+  const lawyer = lawyers.find(l => l.id === parseInt(lawyerId));
+  if (lawyer) {
+    selectLawyer(lawyer);
+  }
+}
+
+// Lawyer search functionality
+document.getElementById('lawyerSearch').addEventListener('focus', function() {
+  showLawyerList();
+});
+
+document.getElementById('lawyerSearch').addEventListener('input', function(e) {
+  const query = e.target.value.toLowerCase();
+  const list = document.getElementById('lawyerList');
+
+  if (query.length === 0) {
+    list.innerHTML = '';
+    lawyers.forEach(lawyer => {
+      list.innerHTML += `<div class="bg-white border border-[#c2c9bb] p-3 rounded-lg cursor-pointer hover:bg-[#f3f4ed] transition-all" onclick="selectLawyer({id: ${lawyer.id}, name: '${lawyer.name}', firm: '${lawyer.firm}'})">
+        <p class="font-semibold text-[#191c18] text-sm">${lawyer.name}</p>
+        <p class="text-xs text-[#191c18]/60">${lawyer.firm}</p>
+      </div>`;
+    });
+  } else {
+    list.innerHTML = '';
+    const filtered = lawyers.filter(l => l.name.toLowerCase().includes(query) || l.firm.toLowerCase().includes(query));
+    if (filtered.length === 0) {
+      list.innerHTML = '<p class="text-sm text-[#191c18]/60 py-2">Žádní advokáti nenalezeni</p>';
+    } else {
+      filtered.forEach(lawyer => {
+        list.innerHTML += `<div class="bg-white border border-[#c2c9bb] p-3 rounded-lg cursor-pointer hover:bg-[#f3f4ed] transition-all" onclick="selectLawyer({id: ${lawyer.id}, name: '${lawyer.name}', firm: '${lawyer.firm}'})">
+          <p class="font-semibold text-[#191c18] text-sm">${lawyer.name}</p>
+          <p class="text-xs text-[#191c18]/60">${lawyer.firm}</p>
+        </div>`;
+      });
+    }
+  }
+});
+
+function showLawyerList() {
+  const list = document.getElementById('lawyerList');
+  list.classList.remove('hidden');
+  list.innerHTML = '';
+  lawyers.forEach(lawyer => {
+    list.innerHTML += `<div class="bg-white border border-[#c2c9bb] p-3 rounded-lg cursor-pointer hover:bg-[#f3f4ed] transition-all" onclick="selectLawyer({id: ${lawyer.id}, name: '${lawyer.name}', firm: '${lawyer.firm}'})">
+      <p class="font-semibold text-[#191c18] text-sm">${lawyer.name}</p>
+      <p class="text-xs text-[#191c18]/60">${lawyer.firm}</p>
+    </div>`;
+  });
+}
+
+function selectLawyer(lawyer) {
+  selectedLawyer = lawyer;
+  document.getElementById('lawyerSearch').value = '';
+  document.getElementById('lawyerList').classList.add('hidden');
+
+  const selected = document.getElementById('selectedLawyer');
+  selected.classList.remove('hidden');
+  document.getElementById('selectedLawyerName').textContent = `${lawyer.name} - ${lawyer.firm}`;
+}
+
+// Overall Rating
+document.querySelectorAll('#overallRating .star').forEach(star => {
+  star.addEventListener('click', function() {
+    const value = this.dataset.value;
+    document.getElementById('overallRatingValue').value = value;
+    updateStarRating('#overallRating', value);
+  });
+
+  star.addEventListener('mouseover', function() {
+    const value = this.dataset.value;
+    hoverStarRating('#overallRating', value);
+  });
+});
+
+document.getElementById('overallRating').addEventListener('mouseout', function() {
+  const value = document.getElementById('overallRatingValue').value;
+  updateStarRating('#overallRating', value);
+});
+
+// Sub-ratings
+document.querySelectorAll('.sub-rating').forEach(rating => {
+  const type = rating.dataset.type;
+  rating.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('click', function() {
+      const value = this.dataset.value;
+      document.querySelector(`input[name="${type}"]`).value = value;
+      updateSubRating(rating, value);
+    });
+
+    star.addEventListener('mouseover', function() {
+      const value = this.dataset.value;
+      hoverSubRating(rating, value);
+    });
+  });
+
+  rating.addEventListener('mouseout', function() {
+    const value = document.querySelector(`input[name="${type}"]`).value;
+    updateSubRating(rating, value);
+  });
+});
+
+function updateStarRating(selector, value) {
+  document.querySelectorAll(`${selector} .star`).forEach(star => {
+    if (star.dataset.value <= value) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
+}
+
+function hoverStarRating(selector, value) {
+  document.querySelectorAll(`${selector} .star`).forEach(star => {
+    if (star.dataset.value <= value) {
+      star.classList.add('hover');
+    } else {
+      star.classList.remove('hover');
+    }
+  });
+}
+
+function updateSubRating(element, value) {
+  element.querySelectorAll('.star').forEach(star => {
+    if (star.dataset.value <= value) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
+}
+
+function hoverSubRating(element, value) {
+  element.querySelectorAll('.star').forEach(star => {
+    if (star.dataset.value <= value) {
+      star.classList.add('hover');
+    } else {
+      star.classList.remove('hover');
+    }
+  });
+}
+
+// Form submission
+document.getElementById('reviewForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Show toast
+  const toast = document.getElementById('toast');
+  toast.classList.remove('hidden');
+
+  // Reset form
+  this.reset();
+  document.getElementById('overallRatingValue').value = '0';
+  document.querySelectorAll('.sub-rating').forEach(rating => {
+    const type = rating.dataset.type;
+    document.querySelector(`input[name="${type}"]`).value = '0';
+  });
+  document.querySelectorAll('.star').forEach(star => {
+    star.classList.remove('active');
+  });
+
+  // Hide toast after 5 seconds
+  setTimeout(() => {
+    toast.classList.add('hidden');
+  }, 5000);
+});
+
+// Close lawyer selection when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('#lawyerSearch') && !e.target.closest('#lawyerList')) {
+    document.getElementById('lawyerList').classList.add('hidden');
+  }
+});
+</script>
+
+</body>
+</html>

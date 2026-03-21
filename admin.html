@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin – Leads | JakNaPravnika.cz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "primary":"#154212","primary-container":"#2d5a27","primary-fixed":"#bcf0ae","surface":"#f9faf2","surface-container":"#edefe7","surface-container-low":"#f3f4ed","on-surface":"#191c18","on-surface-variant":"#42493e","outline":"#72796e","outline-variant":"#c2c9bb","error":"#ba1a1a","error-container":"#ffdad6" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"]} } } }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f9faf2; }
+    h1,h2,h3,h4,.brand { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+    #login-screen { display: flex; }
+    #admin-screen { display: none; }
+    .status-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+    .status-new { background: #bcf0ae; color: #154212; }
+    .status-reviewed { background: #c6e7ff; color: #003d57; }
+    .status-forwarded { background: #ffdbcd; color: #360f00; }
+    .status-closed { background: #e2e3dc; color: #42493e; }
+    tr:hover td { background: #f3f4ed; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     LOGIN SCREEN
+============================================================ -->
+<div id="login-screen" class="min-h-screen items-center justify-center px-4">
+  <div class="w-full max-w-md">
+    <div class="text-center mb-8">
+      <div class="w-16 h-16 bg-[#bcf0ae] rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <span class="material-symbols-outlined text-[#154212]" style="font-size:2rem">admin_panel_settings</span>
+      </div>
+      <h1 class="text-2xl font-extrabold text-[#154212] brand">JakNaPravnika.cz</h1>
+      <p class="text-[#42493e] text-sm mt-1">Přihlaste se do administrace</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-xl p-8">
+      <div class="space-y-5">
+        <div>
+          <label class="block text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1.5">Heslo</label>
+          <input type="password" id="admin-password" placeholder="Zadejte heslo"
+            class="w-full bg-[#f3f4ed] border-none rounded-xl px-4 py-3 text-[#191c18] placeholder:text-[#72796e] focus:ring-2 focus:ring-[#154212]/20 focus:bg-white transition-all outline-none"
+            onkeydown="if(event.key==='Enter') checkPassword()">
+        </div>
+        <p id="login-error" class="hidden text-[#ba1a1a] text-xs font-medium bg-[#ffdad6] px-3 py-2 rounded-lg">Nesprávné heslo.</p>
+        <button onclick="checkPassword()"
+          class="w-full bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white font-bold py-3 rounded-full text-sm hover:shadow-lg transition-all active:scale-95">
+          Přihlásit se
+        </button>
+      </div>
+    </div>
+    <p class="text-center text-xs text-[#72796e] mt-6">
+      Výchozí heslo: <code class="bg-[#edefe7] px-2 py-0.5 rounded font-mono">admin2026</code>
+      — změňte ho v supabase-config.js
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     ADMIN SCREEN
+============================================================ -->
+<div id="admin-screen" class="min-h-screen">
+  <!-- Top Bar -->
+  <header class="bg-white border-b border-[#e2e3dc] sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-[#bcf0ae] rounded-lg flex items-center justify-center">
+          <span class="material-symbols-outlined text-[#154212]" style="font-size:1.1rem">admin_panel_settings</span>
+        </div>
+        <div>
+          <span class="font-bold text-[#154212] brand text-lg">Admin</span>
+          <span class="text-[#42493e]/60 text-sm ml-1">— JakNaPravnika.cz</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="loadLeads()" class="flex items-center gap-2 px-4 py-2 bg-[#f3f4ed] hover:bg-[#edefe7] text-[#154212] rounded-full text-sm font-semibold transition-all">
+          <span class="material-symbols-outlined" style="font-size:1rem">refresh</span> Obnovit
+        </button>
+        <a href="index.html" class="flex items-center gap-2 px-4 py-2 text-[#42493e] hover:text-[#154212] text-sm transition-all">
+          <span class="material-symbols-outlined" style="font-size:1rem">home</span> Web
+        </a>
+        <button onclick="logout()" class="flex items-center gap-2 px-4 py-2 text-[#42493e] hover:text-[#ba1a1a] text-sm transition-all">
+          <span class="material-symbols-outlined" style="font-size:1rem">logout</span> Odhlásit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <!-- Stats Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="bg-white rounded-2xl p-5 border border-[#e2e3dc]">
+        <p class="text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1">Celkem poptávek</p>
+        <p class="text-3xl font-extrabold text-[#154212] brand" id="stat-total">—</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-[#e2e3dc]">
+        <p class="text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1">Nové</p>
+        <p class="text-3xl font-extrabold text-[#154212] brand" id="stat-new">—</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-[#e2e3dc]">
+        <p class="text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1">Přeposlané</p>
+        <p class="text-3xl font-extrabold text-[#154212] brand" id="stat-forwarded">—</p>
+      </div>
+      <div class="bg-white rounded-2xl p-5 border border-[#e2e3dc]">
+        <p class="text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1">Uzavřené</p>
+        <p class="text-3xl font-extrabold text-[#154212] brand" id="stat-closed">—</p>
+      </div>
+    </div>
+
+    <!-- Filters Row -->
+    <div class="flex flex-wrap gap-3 mb-6 items-center">
+      <input type="text" id="filter-search" placeholder="Hledat jméno, e-mail, advokát…"
+        class="px-4 py-2 bg-white border-2 border-[#c2c9bb] rounded-xl text-sm focus:border-[#154212] focus:outline-none transition-colors w-64">
+      <select id="filter-status" class="px-4 py-2 bg-white border-2 border-[#c2c9bb] rounded-xl text-sm focus:border-[#154212] focus:outline-none transition-colors">
+        <option value="">Všechny statusy</option>
+        <option value="new">Nové</option>
+        <option value="reviewed">Zkontrolované</option>
+        <option value="forwarded">Přeposlané</option>
+        <option value="closed">Uzavřené</option>
+      </select>
+      <button onclick="clearFilters()" class="px-4 py-2 bg-white border-2 border-[#c2c9bb] rounded-xl text-sm text-[#42493e] hover:border-[#154212] transition-colors">
+        Smazat filtry
+      </button>
+      <div class="ml-auto text-sm text-[#72796e]" id="showing-count"></div>
+    </div>
+
+    <!-- Supabase not configured warning -->
+    <div id="supabase-warning" class="hidden bg-[#ffdad6] border border-[#ba1a1a]/20 rounded-xl p-4 mb-6 flex items-start gap-3">
+      <span class="material-symbols-outlined text-[#ba1a1a] flex-shrink-0">warning</span>
+      <div>
+        <p class="font-bold text-[#ba1a1a] text-sm">Supabase není nakonfigurovaný</p>
+        <p class="text-[#42493e] text-sm mt-1">Otevřete <code class="bg-white/60 px-1 rounded font-mono">js/supabase-config.js</code> a vyplňte své Supabase URL a klíče. Poté obnovte stránku.</p>
+      </div>
+    </div>
+
+    <!-- Leads Table -->
+    <div class="bg-white rounded-2xl border border-[#e2e3dc] overflow-hidden">
+      <div id="leads-loading" class="flex items-center justify-center py-20 gap-3 text-[#42493e]">
+        <svg class="w-6 h-6 animate-spin text-[#154212]" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
+        </svg>
+        <span>Načítám poptávky…</span>
+      </div>
+
+      <div id="leads-empty" class="hidden flex flex-col items-center justify-center py-20 text-center">
+        <span class="material-symbols-outlined text-5xl text-[#c2c9bb] mb-3">inbox</span>
+        <p class="font-semibold text-[#42493e]">Žádné poptávky</p>
+        <p class="text-sm text-[#72796e] mt-1">Zatím nepřišla žádná poptávka od klientů.</p>
+      </div>
+
+      <div id="leads-table-wrapper" class="hidden overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-[#f3f4ed] border-b border-[#e2e3dc]">
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Datum</th>
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Klient</th>
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Kontakt</th>
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Advokát</th>
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Zpráva</th>
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Status</th>
+              <th class="text-left px-5 py-3 font-bold text-[#154212] text-xs uppercase tracking-wider">Akce</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Lead Detail Modal -->
+    <div id="detailModal" class="fixed inset-0 z-[999] flex items-center justify-center p-4 bg-[#191c18]/40 backdrop-blur-sm hidden">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
+        <div class="bg-gradient-to-br from-[#154212] to-[#2d5a27] px-8 py-5 flex justify-between items-center">
+          <h2 class="text-white text-lg font-extrabold brand">Detail poptávky</h2>
+          <button onclick="closeDetailModal()" class="text-white/70 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="px-8 py-6 space-y-4" id="detail-body"></div>
+        <div class="px-8 pb-6">
+          <p class="text-xs font-bold text-[#72796e] uppercase tracking-wider mb-2">Změnit status</p>
+          <div class="flex flex-wrap gap-2" id="detail-status-btns"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ============================================================
+     SCRIPTS
+============================================================ -->
+<script src="js/supabase-config.js"></script>
+<script>
+  // ── Admin password (change in supabase-config.js or here) ──
+  const ADMIN_PASSWORD = typeof ADMIN_PASS !== 'undefined' ? ADMIN_PASS : 'admin2026';
+
+  let allLeads = [];
+  let currentLeadId = null;
+
+  // ── Login ──────────────────────────────────────────────────
+  function checkPassword() {
+    const pw = document.getElementById('admin-password').value;
+    if (pw === ADMIN_PASSWORD) {
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('admin-screen').style.display = 'block';
+      sessionStorage.setItem('admin_auth', '1');
+      loadLeads();
+    } else {
+      document.getElementById('login-error').classList.remove('hidden');
+      document.getElementById('admin-password').value = '';
+      document.getElementById('admin-password').focus();
+    }
+  }
+
+  function logout() {
+    sessionStorage.removeItem('admin_auth');
+    document.getElementById('admin-screen').style.display = 'none';
+    document.getElementById('login-screen').style.display = 'flex';
+    document.getElementById('admin-password').value = '';
+    document.getElementById('login-error').classList.add('hidden');
+  }
+
+  // Auto-login if session active
+  if (sessionStorage.getItem('admin_auth') === '1') {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('admin-screen').style.display = 'block';
+    // loadLeads() called after supabase ready
+  }
+
+  // ── Load Leads from Supabase ───────────────────────────────
+  async function loadLeads() {
+    document.getElementById('leads-loading').classList.remove('hidden');
+    document.getElementById('leads-empty').classList.add('hidden');
+    document.getElementById('leads-table-wrapper').classList.add('hidden');
+    document.getElementById('supabase-warning').classList.add('hidden');
+
+    try {
+      // Check if Supabase is configured
+      if (SUPABASE_URL === 'YOUR_SUPABASE_URL') {
+        document.getElementById('supabase-warning').classList.remove('hidden');
+        document.getElementById('leads-loading').classList.add('hidden');
+        showDemoData();
+        return;
+      }
+
+      const { data, error } = await supabase
+        .from('leads')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      allLeads = data || [];
+      renderLeads(allLeads);
+    } catch (err) {
+      console.warn('Could not load leads:', err.message);
+      document.getElementById('supabase-warning').classList.remove('hidden');
+      document.getElementById('leads-loading').classList.add('hidden');
+      showDemoData();
+    }
+  }
+
+  function showDemoData() {
+    // Show sample data when Supabase isn't configured yet
+    allLeads = [
+      { id: 'demo-1', created_at: new Date().toISOString(), client_name: 'Jan Novák', client_email: 'jan@email.cz', client_phone: '+420 700 100 200', attorney_name: 'Tomáš Černý', client_message: 'Potřebuji pomoc s výpovědí ze zaměstnání.', status: 'new' },
+      { id: 'demo-2', created_at: new Date(Date.now()-86400000).toISOString(), client_name: 'Marie Kovářová', client_email: 'marie@firma.cz', client_phone: null, attorney_name: 'Petr Havel', client_message: 'Zajímám se o korporátní poradenství pro naši s.r.o.', status: 'reviewed' },
+      { id: 'demo-3', created_at: new Date(Date.now()-172800000).toISOString(), client_name: 'Pavel Horák', client_email: 'p.horak@gmail.com', client_phone: '+420 777 888 999', attorney_name: 'Michaela Rowan', client_message: null, status: 'forwarded' },
+    ];
+    renderLeads(allLeads);
+  }
+
+  // ── Render ─────────────────────────────────────────────────
+  function renderLeads(leads) {
+    const search = document.getElementById('filter-search')?.value.toLowerCase() || '';
+    const statusFilter = document.getElementById('filter-status')?.value || '';
+
+    const filtered = leads.filter(lead => {
+      const matchSearch = !search ||
+        (lead.client_name || '').toLowerCase().includes(search) ||
+        (lead.client_email || '').toLowerCase().includes(search) ||
+        (lead.attorney_name || '').toLowerCase().includes(search);
+      const matchStatus = !statusFilter || lead.status === statusFilter;
+      return matchSearch && matchStatus;
+    });
+
+    // Stats
+    document.getElementById('stat-total').textContent = leads.length;
+    document.getElementById('stat-new').textContent = leads.filter(l => l.status === 'new').length;
+    document.getElementById('stat-forwarded').textContent = leads.filter(l => l.status === 'forwarded').length;
+    document.getElementById('stat-closed').textContent = leads.filter(l => l.status === 'closed').length;
+    document.getElementById('showing-count').textContent = `Zobrazeno ${filtered.length} z ${leads.length}`;
+
+    document.getElementById('leads-loading').classList.add('hidden');
+
+    if (filtered.length === 0) {
+      document.getElementById('leads-empty').classList.remove('hidden');
+      document.getElementById('leads-table-wrapper').classList.add('hidden');
+      return;
+    }
+
+    document.getElementById('leads-empty').classList.add('hidden');
+    document.getElementById('leads-table-wrapper').classList.remove('hidden');
+
+    document.getElementById('leads-tbody').innerHTML = filtered.map(lead => {
+      const date = new Date(lead.created_at).toLocaleString('cs-CZ', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+      const statusBadge = statusBadgeHtml(lead.status);
+      const msgPreview = lead.client_message ? lead.client_message.slice(0, 50) + (lead.client_message.length > 50 ? '…' : '') : '<span class="text-[#c2c9bb]">—</span>';
+
+      return `
+        <tr class="border-b border-[#f3f4ed] cursor-pointer" onclick="openDetail('${lead.id}')">
+          <td class="px-5 py-3.5 text-[#72796e] whitespace-nowrap">${date}</td>
+          <td class="px-5 py-3.5 font-semibold text-[#191c18]">${escHtml(lead.client_name || '—')}</td>
+          <td class="px-5 py-3.5">
+            ${lead.client_email ? `<div class="text-[#191c18]">${escHtml(lead.client_email)}</div>` : ''}
+            ${lead.client_phone ? `<div class="text-[#42493e]/70 text-xs">${escHtml(lead.client_phone)}</div>` : ''}
+            ${!lead.client_email && !lead.client_phone ? '<span class="text-[#c2c9bb]">—</span>' : ''}
+          </td>
+          <td class="px-5 py-3.5 text-[#154212] font-medium">${escHtml(lead.attorney_name || '—')}</td>
+          <td class="px-5 py-3.5 text-[#42493e] max-w-[200px]">${msgPreview}</td>
+          <td class="px-5 py-3.5">${statusBadge}</td>
+          <td class="px-5 py-3.5">
+            <button onclick="event.stopPropagation(); openDetail('${lead.id}')" class="text-xs font-semibold text-[#154212] hover:underline">Detail →</button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
+
+  function statusBadgeHtml(status) {
+    const labels = { new: 'Nová', reviewed: 'Zkontrolováno', forwarded: 'Přeposlano', closed: 'Uzavřeno' };
+    const classes = { new: 'status-new', reviewed: 'status-reviewed', forwarded: 'status-forwarded', closed: 'status-closed' };
+    return `<span class="status-badge ${classes[status] || 'status-closed'}">${labels[status] || status}</span>`;
+  }
+
+  function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // ── Detail Modal ───────────────────────────────────────────
+  function openDetail(leadId) {
+    const lead = allLeads.find(l => String(l.id) === String(leadId));
+    if (!lead) return;
+    currentLeadId = leadId;
+
+    const date = new Date(lead.created_at).toLocaleString('cs-CZ');
+
+    document.getElementById('detail-body').innerHTML = `
+      <div class="grid grid-cols-2 gap-4 text-sm">
+        <div><p class="text-xs font-bold text-[#72796e] uppercase tracking-wider">Datum</p><p class="mt-1 text-[#191c18]">${date}</p></div>
+        <div><p class="text-xs font-bold text-[#72796e] uppercase tracking-wider">Advokát</p><p class="mt-1 font-semibold text-[#154212]">${escHtml(lead.attorney_name || '—')}</p></div>
+        <div><p class="text-xs font-bold text-[#72796e] uppercase tracking-wider">Jméno klienta</p><p class="mt-1 text-[#191c18]">${escHtml(lead.client_name || '—')}</p></div>
+        <div><p class="text-xs font-bold text-[#72796e] uppercase tracking-wider">Status</p><div class="mt-1">${statusBadgeHtml(lead.status)}</div></div>
+        <div><p class="text-xs font-bold text-[#72796e] uppercase tracking-wider">E-mail</p>
+          ${lead.client_email ? `<a href="mailto:${escHtml(lead.client_email)}" class="mt-1 text-[#154212] hover:underline block">${escHtml(lead.client_email)}</a>` : '<p class="mt-1 text-[#c2c9bb]">—</p>'}
+        </div>
+        <div><p class="text-xs font-bold text-[#72796e] uppercase tracking-wider">Telefon</p>
+          ${lead.client_phone ? `<a href="tel:${escHtml(lead.client_phone)}" class="mt-1 text-[#154212] hover:underline block">${escHtml(lead.client_phone)}</a>` : '<p class="mt-1 text-[#c2c9bb]">—</p>'}
+        </div>
+      </div>
+      ${lead.client_message ? `
+        <div class="mt-2">
+          <p class="text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1.5">Zpráva klienta</p>
+          <p class="text-sm text-[#191c18] bg-[#f3f4ed] rounded-xl px-4 py-3 leading-relaxed">${escHtml(lead.client_message)}</p>
+        </div>` : ''}
+    `;
+
+    const statuses = [
+      { value: 'new',       label: 'Nová',           cls: 'bg-[#bcf0ae] text-[#154212]' },
+      { value: 'reviewed',  label: 'Zkontrolovat',   cls: 'bg-[#c6e7ff] text-[#003d57]' },
+      { value: 'forwarded', label: 'Přeposlat',      cls: 'bg-[#ffdbcd] text-[#360f00]' },
+      { value: 'closed',    label: 'Uzavřít',        cls: 'bg-[#e2e3dc] text-[#42493e]' }
+    ];
+
+    document.getElementById('detail-status-btns').innerHTML = statuses.map(s => `
+      <button onclick="updateStatus('${leadId}', '${s.value}')"
+        class="${s.cls} px-4 py-1.5 rounded-full text-xs font-bold transition-all hover:opacity-80 active:scale-95 ${lead.status === s.value ? 'ring-2 ring-offset-1 ring-current' : ''}">
+        ${s.label}
+      </button>
+    `).join('');
+
+    const modal = document.getElementById('detailModal');
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDetailModal() {
+    document.getElementById('detailModal').classList.add('hidden');
+    document.body.style.overflow = '';
+    currentLeadId = null;
+  }
+
+  document.getElementById('detailModal').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('detailModal')) closeDetailModal();
+  });
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDetailModal(); });
+
+  // ── Update Status ──────────────────────────────────────────
+  async function updateStatus(leadId, newStatus) {
+    // Optimistic update
+    const lead = allLeads.find(l => String(l.id) === String(leadId));
+    if (lead) lead.status = newStatus;
+
+    // Update in Supabase (skip if demo)
+    if (SUPABASE_URL !== 'YOUR_SUPABASE_URL' && !String(leadId).startsWith('demo-')) {
+      try {
+        const { error } = await supabase.from('leads').update({ status: newStatus }).eq('id', leadId);
+        if (error) console.warn('Status update error:', error.message);
+      } catch (err) {
+        console.warn('Could not update status:', err.message);
+      }
+    }
+
+    closeDetailModal();
+    renderLeads(allLeads);
+  }
+
+  // ── Filters ────────────────────────────────────────────────
+  document.getElementById('filter-search').addEventListener('input', () => renderLeads(allLeads));
+  document.getElementById('filter-status').addEventListener('change', () => renderLeads(allLeads));
+
+  function clearFilters() {
+    document.getElementById('filter-search').value = '';
+    document.getElementById('filter-status').value = '';
+    renderLeads(allLeads);
+  }
+
+  // ── Auto-load if already authenticated ────────────────────
+  if (sessionStorage.getItem('admin_auth') === '1') {
+    loadLeads();
+  }
+</script>
+</body>
+</html>
