@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Najděte svého právníka – Kvíz | JakNaPravnika.cz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { colors: { "inverse-primary": "#a1d494", "secondary": "#964824", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#0a4c69", "secondary-fixed-dim": "#ffb597", "on-surface": "#191c18", "on-primary-container": "#9dd090", "error-container": "#ffdad6", "primary-fixed-dim": "#a1d494", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#fd9a6f", "outline": "#72796e", "primary": "#154212", "secondary-fixed": "#ffdbcd", "surface-container-high": "#e7e9e1", "on-secondary-fixed": "#360f00", "inverse-surface": "#2e312c", "surface-container": "#edefe7", "surface-container-highest": "#e2e3dc", "on-background": "#191c18", "background": "#f9faf2", "outline-variant": "#c2c9bb", "error": "#ba1a1a", "surface-variant": "#e2e3dc", "on-surface-variant": "#42493e", "surface-dim": "#d9dbd3", "tertiary": "#003d57", "on-secondary-fixed-variant": "#77320e", "surface-tint": "#3b6934", "tertiary-container": "#1a5573", "on-primary-fixed-variant": "#23501e", "primary-fixed": "#bcf0ae", "tertiary-fixed": "#c6e7ff", "surface": "#f9faf2", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed": "#002201", "on-secondary-container": "#76300d", "tertiary-fixed-dim": "#99cdf0", "inverse-on-surface": "#f0f1ea", "on-tertiary-fixed": "#001e2d", "primary-container": "#2d5a27", "surface-container-low": "#f3f4ed", "surface-bright": "#f9faf2" }, fontFamily: { "headline": ["Plus Jakarta Sans"], "body": ["Inter"], "label": ["Inter"] }, borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"} } }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .card-option { cursor: pointer; background: #ffffff; border-radius: 1rem; border: 2px solid transparent; transition: all 0.15s; }
+    .card-option:hover { border-color: rgba(21,66,18,0.25); }
+    .card-option.selected { border-color: #154212 !important; background: rgba(188,240,174,0.2) !important; }
+    .radio-option { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #ffffff; border-radius: 0.75rem; border: 2px solid #e2e3dc; cursor: pointer; transition: all 0.15s; }
+    .radio-option:hover { border-color: rgba(21,66,18,0.35); }
+    .radio-option input[type="radio"] { width: 20px; height: 20px; accent-color: #154212; flex-shrink: 0; cursor: pointer; }
+    .radio-option.selected { border-color: #154212; background: rgba(188,240,174,0.15); }
+    select, input[type="text"], input[type="number"] { background: #ffffff; border: 2px solid #c2c9bb; border-radius: 0.75rem; padding: 12px 16px; width: 100%; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #191c18; outline: none; transition: border-color 0.15s; }
+    select:focus, input:focus { border-color: #154212; box-shadow: 0 0 0 3px rgba(21,66,18,0.1); }
+    .step-subtitle { font-size: 0.95rem; color: rgba(25,28,24,0.55); margin-bottom: 2rem; margin-top: -0.5rem; }
+  </style>
+</head>
+<body class="bg-[#f9faf2] font-['Inter']">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all">Domů</a>
+        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all">Advokáti</a>
+        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all">Pro advokáty</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-20 px-4 sm:px-8">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Progress Bar -->
+      <div class="mb-10">
+        <div class="flex justify-between items-center mb-3">
+          <h1 class="text-xl sm:text-2xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Najdeme vám ideálního právníka</h1>
+          <span id="progressText" class="text-sm font-semibold text-[#154212] whitespace-nowrap ml-4">Krok 1 z 8</span>
+        </div>
+        <div class="w-full bg-[#edefe7] rounded-full h-2">
+          <div id="progressBar" class="bg-gradient-to-r from-[#154212] to-[#2d5a27] h-2 rounded-full transition-all duration-400" style="width: 12.5%"></div>
+        </div>
+      </div>
+
+      <!-- ── STEP 1: Individual or Company ────────────────────── -->
+      <div id="step1" class="step-container">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Kdo jste?</h2>
+        <p class="step-subtitle">Pomůže nám to lépe přizpůsobit doporučení.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="card-option p-8" data-field="user_type" data-value="fyzicka">
+            <div class="text-[#154212] mb-4">
+              <span class="material-symbols-outlined" style="font-size: 2.5rem; font-weight: 600;">person</span>
+            </div>
+            <h3 class="text-xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Fyzická osoba</h3>
+            <p class="text-sm text-[#191c18]/60">Řeším osobní nebo rodinnou právní záležitost</p>
+          </div>
+          <div class="card-option p-8" data-field="user_type" data-value="firma">
+            <div class="text-[#154212] mb-4">
+              <span class="material-symbols-outlined" style="font-size: 2.5rem; font-weight: 600;">business</span>
+            </div>
+            <h3 class="text-xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Firma / podnikatel</h3>
+            <p class="text-sm text-[#191c18]/60">Potřebuji právní podporu pro podnikání</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 2: Legal Area ────────────────────────────────── -->
+      <div id="step2" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">O jakou oblast práva se jedná?</h2>
+        <p class="step-subtitle">Vyberte tu, která nejlépe odpovídá vašemu problému.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="card-option p-5" data-field="oblast" data-value="rodinne">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">family_history</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Rodinné právo</h3>
+                <p class="text-sm text-[#191c18]/55">Rozvody, péče o děti, výživné</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="obchodni">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">business_center</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Obchodní právo</h3>
+                <p class="text-sm text-[#191c18]/55">Zakládání firem, smlouvy, akvizice</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="nemovitosti">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">apartment</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Právo nemovitostí</h3>
+                <p class="text-sm text-[#191c18]/55">Koupě, prodej, nájmy, katastr</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="pracovni">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">work</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Pracovní právo</h3>
+                <p class="text-sm text-[#191c18]/55">Výpovědi, pracovní smlouvy, náhrady</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="trestni">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">gavel</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Trestní právo</h3>
+                <p class="text-sm text-[#191c18]/55">Obhajoba, zastupování poškozených</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="dane">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">account_balance_wallet</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Daně a finance</h3>
+                <p class="text-sm text-[#191c18]/55">Daňová optimalizace, spory s FÚ</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="it">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">computer</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">IT a technologie</h3>
+                <p class="text-sm text-[#191c18]/55">Smlouvy, GDPR, e-commerce</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="imigrace">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.8rem">flight</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18]">Imigrace</h3>
+                <p class="text-sm text-[#191c18]/55">Víza, povolení k pobytu, práce</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 3a: Individual — age + occupation + income ──── -->
+      <div id="step3_individual" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Něco o vás</h2>
+        <p class="step-subtitle">Pomůže nám vybrat právníka s relevantní praxí a ve správném cenovém rozmezí.</p>
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Form fields -->
+          <div class="flex-1 space-y-7">
+            <!-- Age + Occupation row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-sm font-semibold text-[#191c18] mb-2">Váš věk</label>
+                <input type="number" id="age-input" min="18" max="100" placeholder="Např. 34">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-[#191c18] mb-2">Zaměstnání / status</label>
+                <select id="occupation-select">
+                  <option value="">— Vyberte —</option>
+                  <option value="zamestnany">Zaměstnaný/á</option>
+                  <option value="osvc">OSVČ / živnostník</option>
+                  <option value="jednatel">Jednatel / majitel firmy</option>
+                  <option value="student">Student/ka</option>
+                  <option value="duchodce">Důchodce</option>
+                  <option value="rodic">Na mateřské / rodičovské</option>
+                  <option value="nezamestnany">Nezaměstnaný/á</option>
+                  <option value="jine">Jiné</option>
+                </select>
+              </div>
+            </div>
+            <!-- Income -->
+            <div>
+              <label class="block text-sm font-semibold text-[#191c18] mb-3">Přibližný příjem domácnosti</label>
+              <div class="space-y-2.5">
+                <label class="radio-option">
+                  <input type="radio" name="income" value="do-50k">
+                  <span class="text-[#191c18]">Do 50 000 Kč / měsíc</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="income" value="50k-200k">
+                  <span class="text-[#191c18]">50 000 – 200 000 Kč / měsíc</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="income" value="200k+">
+                  <span class="text-[#191c18]">Nad 200 000 Kč / měsíc</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="income" value="nechci-uvest">
+                  <span class="text-[#191c18]">Nechci uvádět</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Explanation card -->
+          <div class="lg:w-64 flex-shrink-0">
+            <div class="rounded-2xl p-6 h-full" style="background:#fff3ed">
+              <!-- Icon -->
+              <div class="w-10 h-10 rounded-full flex items-center justify-center mb-4" style="background:#964824">
+                <span class="text-white font-bold text-lg font-['Plus_Jakarta_Sans']">?</span>
+              </div>
+              <h4 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] text-base mb-3">Proč se ptáme?</h4>
+              <p class="text-sm leading-relaxed" style="color:#5c3520">
+                Věk a příjem nám pomáhají lépe pochopit vaši životní situaci. Některé právní úkony (např. darovací smlouvy nebo dědictví) mají specifické daňové dopady v závislosti na vašem příjmovém profilu.
+              </p>
+              <div class="mt-5 pt-4" style="border-top:1px solid rgba(150,72,36,0.2)">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined" style="font-size:1rem; color:#964824">lock</span>
+                  <span class="text-xs font-bold tracking-wider uppercase" style="color:#964824">Vaše data jsou v bezpečí</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 3b: Company info ──────────────────────────────── -->
+      <div id="step3_company" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">O vaší firmě</h2>
+        <p class="step-subtitle">Pomůže nám doporučit právníka se správnou specializací.</p>
+        <div class="space-y-8">
+          <div>
+            <label class="block text-sm font-semibold text-[#191c18] mb-3">Počet zaměstnanců</label>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div class="card-option p-5 text-center" data-field="company_size" data-value="1-5">
+                <div class="text-2xl font-bold font-['Plus_Jakarta_Sans'] text-[#154212] mb-1">1–5</div>
+                <div class="text-xs text-[#191c18]/60">Mikrofirma</div>
+              </div>
+              <div class="card-option p-5 text-center" data-field="company_size" data-value="6-25">
+                <div class="text-2xl font-bold font-['Plus_Jakarta_Sans'] text-[#154212] mb-1">6–25</div>
+                <div class="text-xs text-[#191c18]/60">Malá firma</div>
+              </div>
+              <div class="card-option p-5 text-center" data-field="company_size" data-value="26-100">
+                <div class="text-2xl font-bold font-['Plus_Jakarta_Sans'] text-[#154212] mb-1">26–100</div>
+                <div class="text-xs text-[#191c18]/60">Střední firma</div>
+              </div>
+              <div class="card-option p-5 text-center" data-field="company_size" data-value="100+">
+                <div class="text-2xl font-bold font-['Plus_Jakarta_Sans'] text-[#154212] mb-1">100+</div>
+                <div class="text-xs text-[#191c18]/60">Velká firma</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-[#191c18] mb-2">Odvětví / obor</label>
+            <select id="industry-select">
+              <option value="">— Vyberte obor —</option>
+              <option value="it_tech">IT / Technologie</option>
+              <option value="obchod">Obchod / Retail</option>
+              <option value="stavebnictvi">Stavebnictví / Reality</option>
+              <option value="finance">Finance / Pojišťovnictví</option>
+              <option value="zdravotnictvi">Zdravotnictví</option>
+              <option value="vyrobni">Výroba / Průmysl</option>
+              <option value="gastro">Gastronomie / Cestovní ruch</option>
+              <option value="media">Média / Marketing</option>
+              <option value="logistika">Doprava / Logistika</option>
+              <option value="nezisk">Neziskový sektor</option>
+              <option value="jine">Jiné</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 4b: Company annual revenue ───────────────────── -->
+      <div id="step4_company" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Roční obrat vaší firmy</h2>
+        <p class="step-subtitle">Pomůže nám doporučit kancelář odpovídající vašemu rozsahu.</p>
+        <div class="space-y-3">
+          <label class="radio-option">
+            <input type="radio" name="revenue" value="do-2m">
+            <span class="text-[#191c18]">Do 2 mil. Kč</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="revenue" value="2m-10m">
+            <span class="text-[#191c18]">2 – 10 mil. Kč</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="revenue" value="10m-50m">
+            <span class="text-[#191c18]">10 – 50 mil. Kč</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="revenue" value="50m-200m">
+            <span class="text-[#191c18]">50 – 200 mil. Kč</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="revenue" value="200m+">
+            <span class="text-[#191c18]">Nad 200 mil. Kč</span>
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="revenue" value="nechci-uvest">
+            <span class="text-[#191c18]">Nechci uvádět</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- ── STEP 5: Current attorney status ───────────────────── -->
+      <div id="step5" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Pracujete již s advokátem?</h2>
+        <p class="step-subtitle">Pomůže nám pochopit, co potřebujete.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="card-option p-6" data-field="attorney_status" data-value="no">
+            <span class="material-symbols-outlined text-[#154212] mb-3 block" style="font-size:2rem">person_search</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Ne, hledám poprvé</h3>
+            <p class="text-sm text-[#191c18]/55">Nemám dosud zastoupení</p>
+          </div>
+          <div class="card-option p-6" data-field="attorney_status" data-value="yes_change">
+            <span class="material-symbols-outlined text-[#154212] mb-3 block" style="font-size:2rem">autorenew</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Ano, ale chci ho změnit</h3>
+            <p class="text-sm text-[#191c18]/55">Nespokojenost nebo jiné důvody</p>
+          </div>
+          <div class="card-option p-6" data-field="attorney_status" data-value="yes_newcase">
+            <span class="material-symbols-outlined text-[#154212] mb-3 block" style="font-size:2rem">add_circle</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Ano, ale mám nový případ</h3>
+            <p class="text-sm text-[#191c18]/55">Stávající advokát se nespecializuje na tuto oblast</p>
+          </div>
+          <div class="card-option p-6" data-field="attorney_status" data-value="yes_secondopinion">
+            <span class="material-symbols-outlined text-[#154212] mb-3 block" style="font-size:2rem">rate_review</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Hledám druhý názor</h3>
+            <p class="text-sm text-[#191c18]/55">Chci ověřit radu svého advokáta</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 6: Concrete problem (dynamic) ────────────────── -->
+      <div id="step6" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Jaký konkrétní problém řešíte?</h2>
+        <p class="step-subtitle">Upřesnění nám pomůže najít skutečného specialistu.</p>
+        <div id="problem-cards" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Populated dynamically by JS -->
+        </div>
+      </div>
+
+      <!-- ── STEP 7: Urgency ────────────────────────────────────── -->
+      <div id="step7" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Jak rychle potřebujete pomoc?</h2>
+        <p class="step-subtitle">Pomůže nám to upřednostnit advokáty dostupné v daném čase.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="card-option p-6" data-field="urgency" data-value="ihned">
+            <span class="material-symbols-outlined text-[#ba1a1a] mb-3 block" style="font-size:2rem">emergency</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Ihned / urgentně</h3>
+            <p class="text-sm text-[#191c18]/55">Případ nesnese odkladu</p>
+          </div>
+          <div class="card-option p-6" data-field="urgency" data-value="do-tydne">
+            <span class="material-symbols-outlined text-[#964824] mb-3 block" style="font-size:2rem">schedule</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Do týdne</h3>
+            <p class="text-sm text-[#191c18]/55">Brzy, ale ne nutně dnes</p>
+          </div>
+          <div class="card-option p-6" data-field="urgency" data-value="do-mesice">
+            <span class="material-symbols-outlined text-[#154212] mb-3 block" style="font-size:2rem">calendar_month</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Do měsíce</h3>
+            <p class="text-sm text-[#191c18]/55">Mám trochu času na výběr</p>
+          </div>
+          <div class="card-option p-6" data-field="urgency" data-value="flexibilne">
+            <span class="material-symbols-outlined text-[#154212] mb-3 block" style="font-size:2rem">wb_sunny</span>
+            <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-1">Flexibilně / konzultace</h3>
+            <p class="text-sm text-[#191c18]/55">Spíše se chci poradit nebo připravit</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── STEP 8: Location + Budget ─────────────────────────── -->
+      <div id="step8" class="step-container hidden">
+        <h2 class="text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#191c18] mb-2">Finální detaily</h2>
+        <p class="step-subtitle">Poslední dva kroky a jdeme hledat!</p>
+        <div class="space-y-8">
+          <div>
+            <label for="location" class="block text-sm font-semibold text-[#191c18] mb-2">Kde se nacházíte?</label>
+            <input type="text" id="location" placeholder="Město, okres nebo kraj (např. Praha 2)">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-[#191c18] mb-3">Rozpočet na právní služby</label>
+            <div class="space-y-3">
+              <label class="radio-option">
+                <input type="radio" name="budget" value="do-5k">
+                <span class="text-[#191c18]">Do 5 000 Kč celkem</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="budget" value="5k-20k">
+                <span class="text-[#191c18]">5 000 – 20 000 Kč</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="budget" value="20k-50k">
+                <span class="text-[#191c18]">20 000 – 50 000 Kč</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="budget" value="50k-200k">
+                <span class="text-[#191c18]">50 000 – 200 000 Kč</span>
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="budget" value="vice-200k">
+                <span class="text-[#191c18]">Více než 200 000 Kč</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between items-center mt-12 gap-4">
+        <button id="backBtn" class="hidden px-6 py-3 rounded-full font-bold font-['Plus_Jakarta_Sans'] text-[#154212] border-2 border-[#154212] hover:bg-[#f3f4ed] transition-all">
+          ← Zpět
+        </button>
+        <div class="flex-1"></div>
+        <button id="nextBtn" class="px-8 py-3 bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white rounded-full font-bold font-['Plus_Jakarta_Sans'] shadow-lg hover:shadow-xl active:scale-95 transition-all">
+          Pokračovat
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#edefe7] w-full pt-16 pb-8 mt-20">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+      <div class="col-span-2">
+        <div class="text-lg font-bold text-[#154212] mb-4">JakNaPravnika.cz</div>
+        <p class="text-sm text-[#191c18]/60 max-w-xs">Nejmodernější platforma pro výběr právního zastoupení v České republice.</p>
+      </div>
+      <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html" class="hover:text-[#154212]">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#154212]">Doporučení zdarma</a></li></ul></div>
+      <div><h4 class="font-bold text-[#154212] mb-4">Společnost</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#" class="hover:text-[#154212]">O nás</a></li><li><a href="registrace.html" class="hover:text-[#154212]">Pro advokáty</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
+      <p class="text-xs text-[#191c18]/40">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál. Neposkytuje právní poradenství.</p>
+      <p class="text-sm text-[#191c18]/60 mt-2">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+
+  <script src="js/supabase-config.js"></script>
+  <script>
+    // ── State ───────────────────────────────────────────────────
+    const answers = {
+      user_type:        null,  // fyzicka | firma
+      oblast:           null,  // rodinne | obchodni | …
+      age:              null,
+      occupation:       null,
+      company_size:     null,
+      company_industry: null,
+      income:           null,
+      revenue:          null,
+      attorney_status:  null,
+      problem:          null,
+      urgency:          null,
+      lokalita:         null,
+      budget:           null
+    };
+
+    let currentStepId = 'step1';
+
+    // ── Step order (dynamic based on user_type) ─────────────────
+    function getStepOrder() {
+      const co = answers.user_type === 'firma';
+      return [
+        'step1',
+        'step2',
+        co ? 'step3_company' : 'step3_individual',
+        ...(co ? ['step4_company'] : []),   // company only: revenue step
+        'step5',
+        'step6',
+        'step7',
+        'step8'
+      ];
+    }
+
+    function getStepNumber(stepId) {
+      return getStepOrder().indexOf(stepId) + 1;  // 1-based
+    }
+
+    // ── Problem options per area ────────────────────────────────
+    const problemsByArea = {
+      rodinne:     [['Rozvod','how_to_reg'],       ['Péče o děti','child_care'],      ['Výživné','child_support'],          ['Dědictví','inheritance'],        ['Majetkové vypořádání','property_settlement'], ['Adopce','adoption'],           ['Jiné','other']],
+      obchodni:    [['Zakládání firmy','founding'], ['Prodej / koupě firmy','m_a'],    ['Obchodní smlouvy','contracts'],     ['Fúze a akvizice','acquisition'], ['Insolvence','insolvency'],                    ['Spor s partnerem','dispute'],  ['Jiné','other']],
+      nemovitosti: [['Koupě nemovitosti','buy'],    ['Prodej nemovitosti','sell'],      ['Nájemní smlouva','lease'],          ['Záležitost katastru','cadaster'],['Stavební právo','construction'],              ['Spor s developerem','dev_dispute'],['Jiné','other']],
+      pracovni:    [['Výpověď / propuštění','dismissal'],['Pracovní smlouva','contract'],['Šikana na pracovišti','harassment'],['Náhrada škody','damages'],        ['Diskriminace','discrimination'],              ['Dohoda o ukončení','termination'],['Jiné','other']],
+      trestni:     [['Obhajoba','defence'],         ['Zastupování poškozeného','victim'],['Trestní oznámení','complaint'],   ['Odvolání','appeal'],             ['Podmíněné propuštění','parole'],              ['Jiné','other']],
+      dane:        [['Daňová kontrola','audit'],    ['Spor s finančním úřadem','tax_dispute'],['Daňová optimalizace','optimization'],['DPH','vat'],           ['Převod majetku','transfer'],                  ['Jiné','other']],
+      it:          [['GDPR / ochrana dat','gdpr'],  ['Softwarová smlouva','software'],  ['E-commerce právo','ecommerce'],     ['Autorská práva / IP','ip'],      ['Kybernetický incident','cyber'],              ['Jiné','other']],
+      imigrace:    [['Povolení k pobytu','residence'],['Pracovní vízum','work_visa'],  ['Trvalý pobyt','permanent'],         ['Občanství','citizenship'],        ['Sloučení rodiny','family_reunification'],     ['Jiné','other']]
+    };
+
+    function populateProblemCards() {
+      const area = answers.oblast;
+      const problems = problemsByArea[area] || [['Jiné','other']];
+      document.getElementById('problem-cards').innerHTML = problems.map(([label, val]) => `
+        <div class="card-option p-5 flex items-center gap-3${answers.problem === val ? ' selected' : ''}" data-field="problem" data-value="${val}">
+          <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.4rem">check_circle</span>
+          <span class="font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]">${label}</span>
+        </div>
+      `).join('');
+      // Re-attach handlers for dynamically created cards
+      attachCardHandlers(document.getElementById('problem-cards'));
+    }
+
+    // ── Card click handling ─────────────────────────────────────
+    function attachCardHandlers(container) {
+      container.querySelectorAll('.card-option[data-field]').forEach(card => {
+        card.addEventListener('click', function() {
+          const field = this.dataset.field;
+          const value = this.dataset.value;
+          // Deselect siblings in same container
+          const parent = this.closest('[id]') || this.parentElement;
+          parent.querySelectorAll(`.card-option[data-field="${field}"]`).forEach(c => c.classList.remove('selected'));
+          this.classList.add('selected');
+          answers[field] = value;
+        });
+      });
+    }
+
+    // Attach to all static containers on load
+    document.querySelectorAll('.step-container').forEach(container => {
+      attachCardHandlers(container);
+    });
+
+    // Radio button styling sync
+    document.querySelectorAll('.radio-option input[type="radio"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const name = this.name;
+        document.querySelectorAll(`.radio-option input[name="${name}"]`).forEach(r => {
+          r.closest('.radio-option').classList.toggle('selected', r === this);
+        });
+        if (name === 'income')  answers.income  = this.value;
+        if (name === 'revenue') answers.revenue = this.value;
+        if (name === 'budget')  answers.budget  = this.value;
+      });
+    });
+
+    // ── Show Step ───────────────────────────────────────────────
+    function showStep(stepId) {
+      document.querySelectorAll('.step-container').forEach(s => s.classList.add('hidden'));
+      document.getElementById(stepId).classList.remove('hidden');
+
+      if (stepId === 'step6') populateProblemCards();
+
+      updateProgress(stepId);
+
+      const order = getStepOrder();
+      const idx = order.indexOf(stepId);
+      backBtn.classList.toggle('hidden', idx === 0);
+      nextBtn.textContent = idx === order.length - 1 ? 'Zobrazit výsledky' : 'Pokračovat';
+      nextBtn.disabled = false;
+
+      // Scroll to top of quiz
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress(stepId) {
+      const num = getStepNumber(stepId);
+      const total = getStepOrder().length;
+      progressBar.style.width = ((num / total) * 100) + '%';
+      progressText.textContent = `Krok ${num} z ${total}`;
+    }
+
+    // ── Validation ──────────────────────────────────────────────
+    function canProceed(stepId) {
+      const isCompany = answers.user_type === 'firma';
+      switch (stepId) {
+        case 'step1':
+          if (!answers.user_type) { showError('Prosím vyberte, zda jste fyzická osoba nebo firma.'); return false; }
+          break;
+        case 'step2':
+          if (!answers.oblast) { showError('Prosím vyberte oblast práva.'); return false; }
+          break;
+        case 'step3_individual': {
+          const age = parseInt(document.getElementById('age-input').value);
+          const occ = document.getElementById('occupation-select').value;
+          if (!age || age < 18 || age > 110) { showError('Prosím zadejte platný věk (18–110).'); return false; }
+          if (!occ) { showError('Prosím vyberte zaměstnání / status.'); return false; }
+          if (!answers.income) { showError('Prosím vyberte příjmové pásmo.'); return false; }
+          answers.age        = age;
+          answers.occupation = occ;
+          break;
+        }
+        case 'step3_company':
+          if (!answers.company_size) { showError('Prosím vyberte velikost firmy.'); return false; }
+          if (!document.getElementById('industry-select').value) { showError('Prosím vyberte odvětví.'); return false; }
+          answers.company_industry = document.getElementById('industry-select').value;
+          break;
+        case 'step4_company':
+          if (!answers.revenue) { showError('Prosím vyberte obrat firmy.'); return false; }
+          break;
+        case 'step5':
+          if (!answers.attorney_status) { showError('Prosím vyberte jednu z možností.'); return false; }
+          break;
+        case 'step6':
+          if (!answers.problem) { showError('Prosím vyberte konkrétní problém.'); return false; }
+          break;
+        case 'step7':
+          if (!answers.urgency) { showError('Prosím vyberte časový rámec.'); return false; }
+          break;
+        case 'step8': {
+          const loc = document.getElementById('location').value.trim();
+          if (!loc) { showError('Prosím zadejte vaši lokalitu.'); return false; }
+          if (!answers.budget) { showError('Prosím vyberte rozpočet.'); return false; }
+          answers.lokalita = loc;
+          break;
+        }
+      }
+      return true;
+    }
+
+    // ── Error ───────────────────────────────────────────────────
+    let errorTimeout = null;
+    function showError(msg) {
+      let el = document.getElementById('quiz-error');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'quiz-error';
+        el.className = 'fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#ba1a1a] text-white px-6 py-3 rounded-full font-semibold text-sm shadow-xl z-[999] transition-all';
+        document.body.appendChild(el);
+      }
+      el.textContent = msg;
+      el.style.opacity = '1';
+      clearTimeout(errorTimeout);
+      errorTimeout = setTimeout(() => { el.style.opacity = '0'; }, 3000);
+    }
+
+    // ── Navigation ──────────────────────────────────────────────
+    const nextBtn = document.getElementById('nextBtn');
+    const backBtn = document.getElementById('backBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressText = document.getElementById('progressText');
+
+    nextBtn.addEventListener('click', () => {
+      if (!canProceed(currentStepId)) return;
+      const order = getStepOrder();
+      const idx = order.indexOf(currentStepId);
+      if (idx === order.length - 1) {
+        submitQuiz();
+      } else {
+        currentStepId = order[idx + 1];
+        showStep(currentStepId);
+      }
+    });
+
+    backBtn.addEventListener('click', () => {
+      const order = getStepOrder();
+      const idx = order.indexOf(currentStepId);
+      if (idx > 0) {
+        currentStepId = order[idx - 1];
+        showStep(currentStepId);
+      }
+    });
+
+    // ── Submit ──────────────────────────────────────────────────
+    async function submitQuiz() {
+      nextBtn.disabled = true;
+      nextBtn.textContent = 'Zpracovávám…';
+
+      const quizData = {
+        user_type:        answers.user_type,
+        oblast:           answers.oblast,
+        age:              answers.age,
+        occupation:       answers.occupation,
+        company_size:     answers.company_size,
+        company_industry: answers.company_industry,
+        income:           answers.income,
+        revenue:          answers.revenue,
+        attorney_status:  answers.attorney_status,
+        problem:          answers.problem,
+        urgency:          answers.urgency,
+        lokalita:         answers.lokalita,
+        budget:           answers.budget,
+        submitted_at:     new Date().toISOString()
+      };
+
+      let qid = '';
+      try {
+        const { data, error } = await supabase
+          .from('quiz_responses')
+          .insert([quizData])
+          .select('id')
+          .single();
+        if (error) console.warn('Supabase quiz save error:', error.message);
+        else if (data && data.id) qid = data.id;
+      } catch (err) {
+        console.warn('Supabase not configured, skipping save:', err.message);
+      }
+
+      const params = new URLSearchParams({
+        oblast:   answers.oblast   || '',
+        lokalita: answers.lokalita || '',
+        budget:   answers.budget   || '',
+        urgency:  answers.urgency  || '',
+        type:     answers.user_type || ''
+      });
+      if (qid) params.set('qid', qid);
+
+      window.location.href = `vysledky.html?${params.toString()}`;
+    }
+
+    // ── Init ────────────────────────────────────────────────────
+    showStep('step1');
+  </script>
+</body>
+</html>
