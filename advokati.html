@@ -2,37 +2,63 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advokáti - JakNaPravnika.cz</title>
+  <title>Advokáti | JakNaPravnika.cz</title>
+  <meta name="description" content="Procházejte ověřené advokáty a právní kanceláře. Filtrujte podle oblasti práva, jazyka a lokace. Nezávazná poptávka zdarma.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.jaknapravnika.cz/advokati.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jaknapravnika.cz/advokati.html">
+  <meta property="og:title" content="Advokáti | JakNaPravnika.cz">
+  <meta property="og:description" content="Procházejte ověřené advokáty a právní kanceláře. Filtrujte podle oblasti práva, jazyka a lokace.">
+  <meta property="og:locale" content="cs_CZ">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <!-- Dark mode script runs before paint to avoid flash -->
+  <script src="js/dark-mode.js"></script>
   <!-- Supabase + EmailJS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
-    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "inverse-primary":"#a1d494","secondary":"#964824","on-primary":"#ffffff","on-tertiary-fixed-variant":"#0a4c69","secondary-fixed-dim":"#ffb597","on-surface":"#191c18","on-primary-container":"#9dd090","error-container":"#ffdad6","primary-fixed-dim":"#a1d494","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","inverse-surface":"#2e312c","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","on-background":"#191c18","background":"#f9faf2","outline-variant":"#c2c9bb","error":"#ba1a1a","surface-variant":"#e2e3dc","on-surface-variant":"#42493e","surface-dim":"#d9dbd3","tertiary":"#003d57","on-secondary-fixed-variant":"#77320e","surface-tint":"#3b6934","tertiary-container":"#1a5573","on-primary-fixed-variant":"#23501e","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","surface":"#f9faf2","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","on-secondary-container":"#76300d","tertiary-fixed-dim":"#99cdf0","inverse-on-surface":"#f0f1ea","on-tertiary-fixed":"#001e2d","primary-container":"#2d5a27","surface-container-low":"#f3f4ed","surface-bright":"#f9faf2" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"],"label":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
+    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "inverse-primary":"#b8dc7e","secondary":"#964824","on-primary":"#ffffff","on-tertiary-fixed-variant":"#0a4c69","secondary-fixed-dim":"#ffb597","on-surface":"#1a1810","on-primary-container":"#9dd090","error-container":"#ffdad6","primary-fixed-dim":"#b8dc7e","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#6b6140","primary":"#1f4209","secondary-fixed":"#ffdbcd","surface-container-high":"#e2d9c0","on-secondary-fixed":"#360f00","inverse-surface":"#2e312c","surface-container":"#e9e0c8","surface-container-highest":"#dccfac","on-background":"#1a1810","background":"#faf6ed","outline-variant":"#bdb08e","error":"#ba1a1a","surface-variant":"#dccfac","on-surface-variant":"#3e3b26","surface-dim":"#d4c9a4","tertiary":"#003d57","on-secondary-fixed-variant":"#77320e","surface-tint":"#3b6934","tertiary-container":"#1a5573","on-primary-fixed-variant":"#2e4d0a","primary-fixed":"#c9ea8e","tertiary-fixed":"#c6e7ff","surface":"#faf6ed","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","on-secondary-container":"#76300d","tertiary-fixed-dim":"#99cdf0","inverse-on-surface":"#f0f1ea","on-tertiary-fixed":"#001e2d","primary-container":"#3b580f","surface-container-low":"#f2e8d5","surface-bright":"#faf6ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"],"label":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
   </script>
   <style>
     .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
-    body { font-family:'Inter',sans-serif; background-color:#f9faf2; }
+    body { font-family:'Inter',sans-serif; background-color:#faf6ed; transition: background-color 0.2s, color 0.2s; }
     h1,h2,h3,h4,.brand { font-family:'Plus Jakarta Sans',sans-serif; }
     .editorial-shadow { box-shadow: 0 12px 40px -4px rgba(25,28,24,0.06); }
     .sticky-sidebar { position: sticky; top: 88px; }
+
+    /* ── Dark Mode: base + things JS can't reach (hover, nav blur, inputs) ── */
+    html.dark body   { background-color:#140f05 !important; color:#ede8d4; }
+    html.dark nav    { background-color:rgba(20,15,5,0.92) !important; }
+    html.dark .editorial-shadow { box-shadow:0 12px 40px -4px rgba(0,0,0,0.5) !important; }
+    html.dark input, html.dark select, html.dark textarea {
+      background-color:#1c1608 !important; color:#ede8d4 !important; border-color:#2e2610 !important;
+    }
+    html.dark input::placeholder, html.dark textarea::placeholder { color:#8a8060 !important; }
+    html.dark .dark-toggle-btn { color:#c9ea8e !important; }
+    html.dark input[type="checkbox"] { accent-color:#c9ea8e; }
   </style>
 </head>
 <body>
   <!-- Nav -->
-  <nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl">
+  <nav class="fixed top-0 w-full z-50 bg-[#faf6ed]/80 backdrop-blur-xl">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-      <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter brand">JakNaPravnika.cz</a>
+      <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter brand">JakNaPravnika.cz</a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Domů</a>
-        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Advokáti</a>
-        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Pro advokáty</a>
+        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Domů</a>
+        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Advokáti</a>
+        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Pro advokáty</a>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleDarkMode()" title="Přepnout tmavý režim"
+          class="dark-toggle-btn w-10 h-10 rounded-full flex items-center justify-center text-[#1f4209] hover:bg-[#f2e8d5] transition-all">
+          <span class="material-symbols-outlined dark-toggle-icon" style="font-size:1.3rem">dark_mode</span>
+        </button>
+        <a href="quiz.html" class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
       </div>
     </div>
   </nav>
@@ -40,84 +66,84 @@
   <!-- Main Content -->
   <div class="pt-32 pb-12 px-8">
     <div class="max-w-7xl mx-auto">
-      <h1 class="text-5xl md:text-6xl font-bold text-[#154212] mb-2">Najděte svého advokáta</h1>
-      <p class="text-lg text-[#191c18]/60 mb-8">Procházejte naší databází ověřených právníků. Filtrujte podle oblasti práva, typu kanceláře a jazyka.</p>
+      <h1 class="text-5xl md:text-6xl font-bold text-[#1f4209] mb-2">Najděte svého advokáta</h1>
+      <p class="text-lg text-[#1a1810]/60 mb-8">Procházejte naší databází ověřených právníků. Filtrujte podle oblasti práva, typu kanceláře a jazyka.</p>
       
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Sidebar Filters -->
         <aside class="lg:w-72 flex-shrink-0">
-          <div class="sticky-sidebar bg-[#f3f4ed] p-6 rounded-2xl">
+          <div class="sticky-sidebar bg-[#f2e8d5] p-6 rounded-2xl">
             <!-- Search -->
             <div class="mb-8">
-              <label class="block text-sm font-semibold text-[#154212] mb-2">Hledat</label>
+              <label class="block text-sm font-semibold text-[#1f4209] mb-2">Hledat</label>
               <input 
                 type="text" 
                 id="search-input"
                 placeholder="Jméno, kancelář..." 
-                class="w-full px-4 py-2.5 border-2 border-[#c2c9bb] rounded-xl focus:border-[#154212] focus:outline-none transition-colors"
+                class="w-full px-4 py-2.5 border-2 border-[#bdb08e] rounded-xl focus:border-[#1f4209] focus:outline-none transition-colors"
               >
             </div>
 
             <!-- Practice Areas -->
             <div class="mb-8">
-              <label class="block text-sm font-semibold text-[#154212] mb-3">Oblast práva</label>
+              <label class="block text-sm font-semibold text-[#1f4209] mb-3">Oblast práva</label>
               <div class="space-y-2.5">
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Obchodní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Obchodní právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Fúze a akvizice" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Fúze a akvizice</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Nemovitosti" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Nemovitosti</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Pracovní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Pracovní právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Trestní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Trestní právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Rodinné právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Rodinné právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Daně" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Daně</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Bankovní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Bankovní právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Spory a rozhodčí řízení" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Spory a rozhodčí řízení</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Soutěžní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Soutěžní právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Duševní vlastnictví" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Duševní vlastnictví</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="IT právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">IT právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Správní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Správní právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Insolvence" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Insolvence</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Imigrace" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Imigrace</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Stavební právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Stavební právo</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Energetika" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Energetika</span></label>
-                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Životní prostředí" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]"><span class="text-sm text-[#191c18]">Životní prostředí</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Obchodní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Obchodní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Fúze a akvizice" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Fúze a akvizice</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Nemovitosti" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Nemovitosti</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Pracovní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Pracovní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Trestní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Trestní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Rodinné právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Rodinné právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Daně" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Daně</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Bankovní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Bankovní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Spory a rozhodčí řízení" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Spory a rozhodčí řízení</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Soutěžní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Soutěžní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Duševní vlastnictví" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Duševní vlastnictví</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="IT právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">IT právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Správní právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Správní právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Insolvence" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Insolvence</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Imigrace" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Imigrace</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Stavební právo" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Stavební právo</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Energetika" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Energetika</span></label>
+                <label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" value="Životní prostředí" class="area-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]"><span class="text-sm text-[#1a1810]">Životní prostředí</span></label>
               </div>
             </div>
 
             <!-- Lawyer Type -->
             <div class="mb-8">
-              <label class="block text-sm font-semibold text-[#154212] mb-3">Typ kanceláře</label>
+              <label class="block text-sm font-semibold text-[#1f4209] mb-3">Typ kanceláře</label>
               <div class="space-y-2.5">
                 <label class="flex items-center gap-3 cursor-pointer">
-                  <input type="checkbox" value="Butique kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
-                  <span class="text-sm text-[#191c18]">Butique kancelář</span>
+                  <input type="checkbox" value="Butique kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Butique kancelář</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer">
-                  <input type="checkbox" value="Střední národní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
-                  <span class="text-sm text-[#191c18]">Střední národní</span>
+                  <input type="checkbox" value="Střední národní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Střední národní</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer">
-                  <input type="checkbox" value="Velká národní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
-                  <span class="text-sm text-[#191c18]">Velká národní</span>
+                  <input type="checkbox" value="Velká národní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Velká národní</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer">
-                  <input type="checkbox" value="Mezinárodní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
-                  <span class="text-sm text-[#191c18]">Mezinárodní</span>
+                  <input type="checkbox" value="Mezinárodní kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Mezinárodní</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer">
-                  <input type="checkbox" value="Solo" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
-                  <span class="text-sm text-[#191c18]">Solo</span>
+                  <input type="checkbox" value="Solo" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Solo</span>
                 </label>
                 <label class="flex items-center gap-3 cursor-pointer">
-                  <input type="checkbox" value="Malá kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#154212]">
-                  <span class="text-sm text-[#191c18]">Malá kancelář</span>
+                  <input type="checkbox" value="Malá kancelář" class="type-checkbox w-5 h-5 rounded cursor-pointer accent-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Malá kancelář</span>
                 </label>
               </div>
             </div>
 
             <!-- Language -->
             <div class="mb-8">
-              <label class="block text-sm font-semibold text-[#154212] mb-3">Jazyk</label>
-              <select id="language-select" class="w-full px-4 py-2.5 border-2 border-[#c2c9bb] rounded-xl focus:border-[#154212] focus:outline-none transition-colors">
+              <label class="block text-sm font-semibold text-[#1f4209] mb-3">Jazyk</label>
+              <select id="language-select" class="w-full px-4 py-2.5 border-2 border-[#bdb08e] rounded-xl focus:border-[#1f4209] focus:outline-none transition-colors">
                 <option value="">Vše jazyky</option>
                 <option value="Čeština">Čeština</option>
                 <option value="Angličtina">Angličtina</option>
@@ -133,7 +159,7 @@
             </div>
 
             <!-- Clear Filters -->
-            <button id="clear-filters" class="w-full bg-white hover:bg-[#e7e9e1] text-[#154212] px-4 py-2.5 rounded-xl font-semibold transition-all border-2 border-[#c2c9bb]">Smazat filtry</button>
+            <button id="clear-filters" class="w-full bg-white hover:bg-[#e2d9c0] text-[#1f4209] px-4 py-2.5 rounded-xl font-semibold transition-all border-2 border-[#bdb08e]">Smazat filtry</button>
           </div>
         </aside>
 
@@ -143,17 +169,17 @@
           <div class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <div id="quiz-badge" class="hidden mb-3">
-                <span class="inline-block bg-[#bcf0ae] text-[#154212] px-4 py-2 rounded-full text-sm font-semibold">Filtrováno dle kvízu</span>
+                <span class="inline-block bg-[#c9ea8e] text-[#1f4209] px-4 py-2 rounded-full text-sm font-semibold">Filtrováno dle kvízu</span>
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-lg font-semibold text-[#191c18]">Zobrazeno</span>
-                <span id="result-count" class="text-lg font-bold text-[#154212]">12</span>
-                <span class="text-lg font-semibold text-[#191c18]">advokátů</span>
+                <span class="text-lg font-semibold text-[#1a1810]">Zobrazeno</span>
+                <span id="result-count" class="text-lg font-bold text-[#1f4209]">12</span>
+                <span class="text-lg font-semibold text-[#1a1810]">advokátů</span>
               </div>
             </div>
             <div>
-              <label class="text-sm font-semibold text-[#191c18] mr-3">Řadit:</label>
-              <select id="sort-select" class="px-4 py-2.5 border-2 border-[#c2c9bb] rounded-xl focus:border-[#154212] focus:outline-none transition-colors font-medium">
+              <label class="text-sm font-semibold text-[#1a1810] mr-3">Řadit:</label>
+              <select id="sort-select" class="px-4 py-2.5 border-2 border-[#bdb08e] rounded-xl focus:border-[#1f4209] focus:outline-none transition-colors font-medium">
                 <option value="relevance">Relevance</option>
                 <option value="rating">Podle hodnocení</option>
                 <option value="founded">Rok založení</option>
@@ -168,8 +194,8 @@
 
           <!-- No Results -->
           <div id="no-results" class="hidden text-center py-16">
-            <span class="material-symbols-outlined text-5xl text-[#191c18]/30 block mb-4">person_off</span>
-            <p class="text-lg text-[#191c18]/60">Žádní advokáti se neshodují s vašimi filtry. Zkuste změnit podmínky.</p>
+            <span class="material-symbols-outlined text-5xl text-[#1a1810]/30 block mb-4">person_off</span>
+            <p class="text-lg text-[#1a1810]/60">Žádní advokáti se neshodují s vašimi filtry. Zkuste změnit podmínky.</p>
           </div>
         </div>
       </div>
@@ -177,15 +203,15 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-[#edefe7] w-full pt-16 pb-8 mt-16">
+  <footer class="bg-[#e9e0c8] w-full pt-16 pb-8 mt-16">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
-      <div class="col-span-2"><div class="text-lg font-bold text-[#154212] mb-4 brand">JakNaPravnika.cz</div><p class="text-sm text-[#191c18]/60 max-w-xs mb-4">Nejmodernější platforma pro výběr právního zastoupení v České republice. Věříme v transparentnost a odbornost.</p></div>
-      <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html" class="hover:text-[#154212] transition-colors">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#154212] transition-colors">Kvíz pro výběr</a></li><li><a href="registrace.html" class="hover:text-[#154212] transition-colors">Pro advokáty</a></li></ul></div>
-      <div><h4 class="font-bold text-[#154212] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#" class="hover:text-[#154212] transition-colors">Podmínky užití</a></li><li><a href="#" class="hover:text-[#154212] transition-colors">Ochrana údajů</a></li><li><a href="#" class="hover:text-[#154212] transition-colors">O nás</a></li></ul></div>
+      <div class="col-span-2"><div class="text-lg font-bold text-[#1f4209] mb-4 brand">JakNaPravnika.cz</div><p class="text-sm text-[#1a1810]/60 max-w-xs mb-4">Nejmodernější platforma pro výběr právního zastoupení v České republice. Věříme v transparentnost a odbornost.</p></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="advokati.html" class="hover:text-[#1f4209] transition-colors">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#1f4209] transition-colors">Kvíz pro výběr</a></li><li><a href="registrace.html" class="hover:text-[#1f4209] transition-colors">Pro advokáty</a></li></ul></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="#" class="hover:text-[#1f4209] transition-colors">Podmínky užití</a></li><li><a href="#" class="hover:text-[#1f4209] transition-colors">Ochrana údajů</a></li><li><a href="#" class="hover:text-[#1f4209] transition-colors">O nás</a></li></ul></div>
     </div>
-    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
-      <p class="text-xs text-[#191c18]/40 mb-2">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál mezi uživateli a poskytovateli právních služeb. Neposkytuje právní poradenství.</p>
-      <p class="text-sm text-[#191c18]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#bdb08e]/30">
+      <p class="text-xs text-[#1a1810]/40 mb-2">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál mezi uživateli a poskytovateli právních služeb. Neposkytuje právní poradenství.</p>
+      <p class="text-sm text-[#1a1810]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
     </div>
   </footer>
 
@@ -361,7 +387,7 @@
       createLawyerCard(lawyer) {
         // Avatar colour based on firm name
         const PALETTES = [
-          {bg:'#bcf0ae',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
+          {bg:'#c9ea8e',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
           {bg:'#ffdbcd',text:'#360f00'},{bg:'#e8d5ff',text:'#2f0052'},
           {bg:'#fff3cd',text:'#3a2f00'},{bg:'#d4f0e8',text:'#003325'},
         ];
@@ -369,11 +395,11 @@
         const initials = lawyer.initials || (lawyer.firm || '??').slice(0,2).toUpperCase();
 
         const verified = lawyer.verified
-          ? '<span class="inline-flex items-center gap-1 bg-[#bcf0ae] text-[#002201] px-2.5 py-0.5 rounded-full text-xs font-bold">✓ Ověřeno</span>'
+          ? '<span class="inline-flex items-center gap-1 bg-[#c9ea8e] text-[#002201] px-2.5 py-0.5 rounded-full text-xs font-bold">✓ Ověřeno</span>'
           : '';
 
         const partnerLine = lawyer.key_partner
-          ? `<p class="text-xs text-[#72796e] mt-0.5 mb-1">Klíčový partner: <span class="font-medium text-[#42493e]">${lawyer.key_partner}</span></p>`
+          ? `<p class="text-xs text-[#6b6140] mt-0.5 mb-1">Klíčový partner: <span class="font-medium text-[#3e3b26]">${lawyer.key_partner}</span></p>`
           : '<p class="mb-1"></p>';
 
         const metaParts = [
@@ -391,7 +417,8 @@
         const firmSafe = (lawyer.firm || '').replace(/'/g, '&#39;');
 
         return `
-          <div class="bg-white rounded-2xl p-5 flex flex-col sm:flex-row sm:items-start gap-5 editorial-shadow hover:shadow-lg transition-all border border-[#e2e3dc]">
+          <div class="bg-white rounded-2xl p-5 flex flex-col sm:flex-row sm:items-start gap-5 editorial-shadow hover:shadow-lg transition-all border border-[#dccfac] cursor-pointer group"
+               onclick="window.location.href='profil.html?id=${lawyer.id}'">
             <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-xl font-extrabold font-['Plus_Jakarta_Sans'] select-none"
                  style="background:${pal.bg};color:${pal.text}">
               ${initials}
@@ -399,25 +426,25 @@
 
             <div class="flex-1 min-w-0">
               <div class="flex flex-wrap items-center gap-2 mb-0.5">
-                <h3 class="text-base font-bold text-[#191c18] leading-tight">${lawyer.firm}</h3>
+                <h3 class="text-base font-bold text-[#1a1810] leading-tight group-hover:text-[#1f4209] transition-colors">${lawyer.firm}</h3>
                 ${verified}
               </div>
               ${partnerLine}
-              <p class="text-xs text-[#72796e] mb-2">${metaLine}</p>
+              <p class="text-xs text-[#6b6140] mb-2">${metaLine}</p>
               <div class="flex items-center gap-1.5 mb-2.5">
                 <span class="text-sm leading-none text-yellow-500">${this.renderStarRating(lawyer.rating)}</span>
-                <span class="text-xs text-[#191c18]/60">${lawyer.rating.toFixed(1)} (${lawyer.reviews} recenzí)</span>
+                <span class="text-xs text-[#1a1810]/60">${lawyer.rating.toFixed(1)} (${lawyer.reviews} recenzí)</span>
               </div>
               <div class="flex gap-1.5 flex-wrap">${areasHtml}</div>
             </div>
 
-            <div class="flex flex-col gap-2 flex-shrink-0 sm:w-32">
+            <div class="flex flex-col gap-2 flex-shrink-0 sm:w-32" onclick="event.stopPropagation()">
               <button onclick="openLeadModal(${lawyer.id}, '${firmSafe}', '${firmSafe}')"
-                class="bg-[#154212] hover:bg-[#0f2c0a] text-white px-4 py-2.5 rounded-xl font-semibold text-sm transition-all text-center active:scale-95 cursor-pointer">
+                class="bg-[#1f4209] hover:bg-[#263b07] text-white px-4 py-2.5 rounded-xl font-semibold text-sm transition-all text-center active:scale-95 cursor-pointer">
                 Kontaktovat
               </button>
               <a href="profil.html?id=${lawyer.id}"
-                class="bg-[#e7e9e1] hover:bg-[#d9dbd3] text-[#154212] px-4 py-2.5 rounded-xl font-semibold text-sm transition-all text-center active:scale-95">
+                class="bg-[#e2d9c0] hover:bg-[#d4c9a4] text-[#1f4209] px-4 py-2.5 rounded-xl font-semibold text-sm transition-all text-center active:scale-95">
                 Profil
               </a>
             </div>

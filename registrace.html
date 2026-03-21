@@ -3,33 +3,60 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Registrace advokáta | JakNaPravnika.cz</title>
+<meta name="description" content="Zaregistrujte svou advokátní kancelář na JakNaPravnika.cz a získejte nové klienty. Jednoduché, rychlé a efektivní.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.jaknapravnika.cz/registrace.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.jaknapravnika.cz/registrace.html">
+<meta property="og:title" content="Registrace advokáta | JakNaPravnika.cz">
+<meta property="og:description" content="Zaregistrujte svou advokátní kancelář a získejte nové klienty přes JakNaPravnika.cz.">
+<meta property="og:locale" content="cs_CZ">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<!-- Dark mode script runs before paint to avoid flash -->
+<script src="js/dark-mode.js"></script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
-tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "secondary":"#964824","on-primary":"#ffffff","on-surface":"#191c18","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","on-background":"#191c18","background":"#f9faf2","outline-variant":"#c2c9bb","surface-variant":"#e2e3dc","on-surface-variant":"#42493e","tertiary":"#003d57","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","primary-container":"#2d5a27","surface-container-low":"#f3f4ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"] }, borderRadius:{"DEFAULT":"1rem","lg":"2rem","full":"9999px"} } } }
+tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "secondary":"#964824","on-primary":"#ffffff","on-surface":"#1a1810","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","outline":"#6b6140","primary":"#1f4209","secondary-fixed":"#ffdbcd","surface-container-high":"#e2d9c0","on-secondary-fixed":"#360f00","surface-container":"#e9e0c8","surface-container-highest":"#dccfac","on-background":"#1a1810","background":"#faf6ed","outline-variant":"#bdb08e","surface-variant":"#dccfac","on-surface-variant":"#3e3b26","tertiary":"#003d57","primary-fixed":"#c9ea8e","tertiary-fixed":"#c6e7ff","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","primary-container":"#3b580f","surface-container-low":"#f2e8d5" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"] }, borderRadius:{"DEFAULT":"1rem","lg":"2rem","full":"9999px"} } } }
 </script>
 <style>
 .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
-body { font-family:'Inter',sans-serif; background-color:#f9faf2; color:#191c18; }
+body { font-family:'Inter',sans-serif; background-color:#faf6ed; color:#1a1810; transition: background-color 0.2s, color 0.2s; }
 h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
 .editorial-shadow { box-shadow: 0 4px 20px rgba(21, 66, 18, 0.08); }
 .success-banner { animation: slideDown 0.3s ease-out; }
 @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+/* ── Dark Mode: base + things JS can't reach ── */
+html.dark body   { background-color:#140f05 !important; color:#ede8d4; }
+html.dark nav    { background-color:rgba(20,15,5,0.92) !important; }
+html.dark .editorial-shadow { box-shadow:0 4px 20px rgba(0,0,0,0.4) !important; }
+html.dark input, html.dark select, html.dark textarea {
+  background-color:#1c1608 !important; color:#ede8d4 !important; border-color:#2e2610 !important;
+}
+html.dark input::placeholder, html.dark textarea::placeholder { color:#8a8060 !important; }
+html.dark .dark-toggle-btn { color:#c9ea8e !important; }
 </style>
 </head>
-<body class="bg-[#f9faf2]">
+<body class="bg-[#faf6ed]">
 
 <!-- Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl">
+<nav class="fixed top-0 w-full z-50 bg-[#faf6ed]/80 backdrop-blur-xl">
   <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-    <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
+    <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
     <div class="hidden md:flex items-center gap-8">
-      <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Domů</a>
-      <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Advokáti</a>
-      <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#154212] border-b-2 border-[#154212] pb-1">Pro advokáty</a>
+      <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] px-3 py-1 rounded-full hover:bg-[#f2e8d5] transition-all">Domů</a>
+      <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] px-3 py-1 rounded-full hover:bg-[#f2e8d5] transition-all">Advokáti</a>
+      <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1f4209] border-b-2 border-[#1f4209] pb-1">Pro advokáty</a>
     </div>
-    <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold">Zdarma doporučení</a>
+    <div class="flex items-center gap-3">
+      <button onclick="toggleDarkMode()" title="Přepnout tmavý režim"
+        class="dark-toggle-btn w-10 h-10 rounded-full flex items-center justify-center text-[#1f4209] hover:bg-[#f2e8d5] transition-all">
+        <span class="material-symbols-outlined dark-toggle-icon" style="font-size:1.3rem">dark_mode</span>
+      </button>
+      <a href="quiz.html" class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white px-6 py-2.5 rounded-full text-sm font-bold">Zdarma doporučení</a>
+    </div>
   </div>
 </nav>
 
@@ -43,25 +70,25 @@ h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
   <!-- Hero Section -->
   <div class="max-w-7xl mx-auto px-8 mb-16">
     <div class="text-center mb-12">
-      <div class="inline-block bg-[#edefe7] px-4 py-1.5 rounded-full mb-6">
-        <p class="text-xs font-bold text-[#154212] uppercase tracking-widest">PRO ADVOKÁTY</p>
+      <div class="inline-block bg-[#e9e0c8] px-4 py-1.5 rounded-full mb-6">
+        <p class="text-xs font-bold text-[#1f4209] uppercase tracking-widest">PRO ADVOKÁTY</p>
       </div>
-      <h1 class="text-5xl md:text-6xl font-bold text-[#154212] mb-6 leading-tight">Zaregistrujte svou kancelář</h1>
-      <p class="text-lg text-[#191c18]/70 max-w-2xl mx-auto mb-12">Připojte se k 500+ ověřeným advokátům na největší české platformě pro výběr právního zastoupení.</p>
+      <h1 class="text-5xl md:text-6xl font-bold text-[#1f4209] mb-6 leading-tight">Zaregistrujte svou kancelář</h1>
+      <p class="text-lg text-[#1a1810]/70 max-w-2xl mx-auto mb-12">Připojte se k 500+ ověřeným advokátům na největší české platformě pro výběr právního zastoupení.</p>
 
       <!-- Stats -->
       <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
         <div class="text-center">
-          <div class="text-3xl font-bold text-[#154212] mb-2">500+</div>
-          <p class="text-sm text-[#191c18]/60">Advokátů</p>
+          <div class="text-3xl font-bold text-[#1f4209] mb-2">500+</div>
+          <p class="text-sm text-[#1a1810]/60">Advokátů</p>
         </div>
         <div class="text-center">
-          <div class="text-3xl font-bold text-[#154212] mb-2">10 000+</div>
-          <p class="text-sm text-[#191c18]/60">Klientů měsíčně</p>
+          <div class="text-3xl font-bold text-[#1f4209] mb-2">10 000+</div>
+          <p class="text-sm text-[#1a1810]/60">Klientů měsíčně</p>
         </div>
         <div class="text-center">
-          <div class="text-3xl font-bold text-[#154212] mb-2">Zdarma</div>
-          <p class="text-sm text-[#191c18]/60">Základní profil</p>
+          <div class="text-3xl font-bold text-[#1f4209] mb-2">Zdarma</div>
+          <p class="text-sm text-[#1a1810]/60">Základní profil</p>
         </div>
       </div>
     </div>
@@ -73,161 +100,161 @@ h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
       <!-- Left Column - Form -->
       <div class="lg:col-span-2">
         <div class="bg-[#ffffff] rounded-lg p-10 editorial-shadow">
-          <h2 class="text-2xl font-bold text-[#154212] mb-8">Základní informace</h2>
+          <h2 class="text-2xl font-bold text-[#1f4209] mb-8">Základní informace</h2>
 
           <form id="registrationForm" class="space-y-6">
             <!-- Name -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Jméno a příjmení</label>
-              <input type="text" name="fullname" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Jméno a příjmení">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Jméno a příjmení</label>
+              <input type="text" name="fullname" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="Jméno a příjmení">
             </div>
 
             <!-- Email -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">E-mailová adresa</label>
-              <input type="email" name="email" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="e-mail@kancelar.cz">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">E-mailová adresa</label>
+              <input type="email" name="email" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="e-mail@kancelar.cz">
             </div>
 
             <!-- Phone -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Telefon</label>
-              <input type="tel" name="phone" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="+420 123 456 789">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Telefon</label>
+              <input type="tel" name="phone" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="+420 123 456 789">
             </div>
 
             <!-- Firm Name -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Název advokátní kanceláře</label>
-              <input type="text" name="firmname" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Advokátní kancelář...">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Název advokátní kanceláře</label>
+              <input type="text" name="firmname" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="Advokátní kancelář...">
             </div>
 
             <!-- CAK Number -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Číslo ČAK</label>
-              <input type="text" name="caknumber" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Číslo v registru České advokátní komory">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Číslo ČAK</label>
+              <input type="text" name="caknumber" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="Číslo v registru České advokátní komory">
             </div>
 
             <!-- Specialization -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-3">Specializace</label>
+              <label class="block text-sm font-semibold text-[#1a1810] mb-3">Specializace</label>
               <div class="grid grid-cols-2 gap-3">
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="rodinne-pravo" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Rodinné právo</span>
+                  <input type="checkbox" name="specialization" value="rodinne-pravo" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Rodinné právo</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="trestni-pravo" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Trestní právo</span>
+                  <input type="checkbox" name="specialization" value="trestni-pravo" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Trestní právo</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="pracovni-pravo" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Pracovní právo</span>
+                  <input type="checkbox" name="specialization" value="pracovni-pravo" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Pracovní právo</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="nemovitosti" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Nemovitosti</span>
+                  <input type="checkbox" name="specialization" value="nemovitosti" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Nemovitosti</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="dane" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Daně</span>
+                  <input type="checkbox" name="specialization" value="dane" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Daně</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="it-pravo" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">IT právo</span>
+                  <input type="checkbox" name="specialization" value="it-pravo" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">IT právo</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="migrace" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Imigrace</span>
+                  <input type="checkbox" name="specialization" value="migrace" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Imigrace</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="obchodni-pravo" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Obchodní právo</span>
+                  <input type="checkbox" name="specialization" value="obchodni-pravo" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Obchodní právo</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="bankovnictvi" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Bankovnictví</span>
+                  <input type="checkbox" name="specialization" value="bankovnictvi" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Bankovnictví</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="specialization" value="dusevni-vlastnictvi" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Duševní vlastnictví</span>
+                  <input type="checkbox" name="specialization" value="dusevni-vlastnictvi" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Duševní vlastnictví</span>
                 </label>
               </div>
             </div>
 
             <!-- Languages -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-3">Jazyky</label>
+              <label class="block text-sm font-semibold text-[#1a1810] mb-3">Jazyky</label>
               <div class="grid grid-cols-2 gap-3">
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="languages" value="cestina" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Čeština</span>
+                  <input type="checkbox" name="languages" value="cestina" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Čeština</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="languages" value="anglictina" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Angličtina</span>
+                  <input type="checkbox" name="languages" value="anglictina" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Angličtina</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="languages" value="nemcina" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Němčina</span>
+                  <input type="checkbox" name="languages" value="nemcina" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Němčina</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="languages" value="francouzstina" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Francouzština</span>
+                  <input type="checkbox" name="languages" value="francouzstina" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Francouzština</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="languages" value="rustina" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Ruština</span>
+                  <input type="checkbox" name="languages" value="rustina" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Ruština</span>
                 </label>
                 <label class="flex items-center space-x-2 cursor-pointer">
-                  <input type="checkbox" name="languages" value="spantina" class="w-4 h-4 rounded bg-[#e7e9e1] border-none text-[#154212] focus:ring-2 focus:ring-[#154212]">
-                  <span class="text-sm text-[#191c18]">Španělština</span>
+                  <input type="checkbox" name="languages" value="spantina" class="w-4 h-4 rounded bg-[#e2d9c0] border-none text-[#1f4209] focus:ring-2 focus:ring-[#1f4209]">
+                  <span class="text-sm text-[#1a1810]">Španělština</span>
                 </label>
               </div>
             </div>
 
             <!-- Hourly Rate -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Hodinová sazba</label>
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Hodinová sazba</label>
               <div class="flex items-center gap-4">
                 <div class="flex-1">
-                  <input type="number" name="rateFrom" min="0" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="od">
+                  <input type="number" name="rateFrom" min="0" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="od">
                 </div>
-                <span class="text-[#191c18]/60">–</span>
+                <span class="text-[#1a1810]/60">–</span>
                 <div class="flex-1">
-                  <input type="number" name="rateTo" min="0" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="do">
+                  <input type="number" name="rateTo" min="0" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="do">
                 </div>
-                <span class="text-[#191c18]/60 font-semibold">Kč/hod</span>
+                <span class="text-[#1a1810]/60 font-semibold">Kč/hod</span>
               </div>
             </div>
 
             <!-- Description -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Popis kanceláře</label>
-              <textarea name="description" rows="4" class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Popište vaši kancelář, práci a přístup k klientům..."></textarea>
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Popis kanceláře</label>
+              <textarea name="description" rows="4" class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="Popište vaši kancelář, práci a přístup k klientům..."></textarea>
             </div>
 
             <!-- Address -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Adresa kanceláře</label>
-              <input type="text" name="address" required class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="Ulice číslo, PSČ Město">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Adresa kanceláře</label>
+              <input type="text" name="address" required class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="Ulice číslo, PSČ Město">
             </div>
 
             <!-- Website -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">Web kanceláře</label>
-              <input type="url" name="website" class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="https://www.vase-kancelar.cz">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">Web kanceláře</label>
+              <input type="url" name="website" class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="https://www.vase-kancelar.cz">
             </div>
 
             <!-- LinkedIn -->
             <div>
-              <label class="block text-sm font-semibold text-[#191c18] mb-2">LinkedIn</label>
-              <input type="url" name="linkedin" class="w-full bg-[#e7e9e1] rounded-lg px-4 py-3 text-[#191c18] placeholder-[#191c18]/40 focus:outline-none focus:ring-2 focus:ring-[#154212]" placeholder="https://linkedin.com/in/vaseprofil">
+              <label class="block text-sm font-semibold text-[#1a1810] mb-2">LinkedIn</label>
+              <input type="url" name="linkedin" class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="https://linkedin.com/in/vaseprofil">
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="w-full bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white font-bold py-3.5 rounded-lg hover:shadow-lg transition-all mt-8">Odeslat žádost o registraci</button>
+            <button type="submit" class="w-full bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white font-bold py-3.5 rounded-lg hover:shadow-lg transition-all mt-8">Odeslat žádost o registraci</button>
 
             <!-- Note -->
-            <p class="text-xs text-[#191c18]/60 text-center pt-4">Po odeslání formuláře vás kontaktujeme do 2 pracovních dnů. Základní profil je <span class="font-semibold">ZDARMA</span>.</p>
+            <p class="text-xs text-[#1a1810]/60 text-center pt-4">Po odeslání formuláře vás kontaktujeme do 2 pracovních dnů. Základní profil je <span class="font-semibold">ZDARMA</span>.</p>
           </form>
         </div>
       </div>
@@ -236,52 +263,52 @@ h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
       <div class="lg:col-span-1">
         <div class="sticky top-32 space-y-6">
           <!-- Why Join Card -->
-          <div class="bg-[#154212] text-white p-8 rounded-lg">
+          <div class="bg-[#1f4209] text-white p-8 rounded-lg">
             <h3 class="text-lg font-bold mb-6">Proč se přidat?</h3>
             <ul class="space-y-4">
               <li class="flex items-start gap-4">
-                <span class="material-symbols-outlined flex-shrink-0 text-[#bcf0ae]">visibility</span>
+                <span class="material-symbols-outlined flex-shrink-0 text-[#c9ea8e]">visibility</span>
                 <span class="text-sm">Více klientů</span>
               </li>
               <li class="flex items-start gap-4">
-                <span class="material-symbols-outlined flex-shrink-0 text-[#bcf0ae]">verified</span>
+                <span class="material-symbols-outlined flex-shrink-0 text-[#c9ea8e]">verified</span>
                 <span class="text-sm">Ověřený profil ČAK</span>
               </li>
               <li class="flex items-start gap-4">
-                <span class="material-symbols-outlined flex-shrink-0 text-[#bcf0ae]">star</span>
+                <span class="material-symbols-outlined flex-shrink-0 text-[#c9ea8e]">star</span>
                 <span class="text-sm">Hodnocení klientů</span>
               </li>
               <li class="flex items-start gap-4">
-                <span class="material-symbols-outlined flex-shrink-0 text-[#bcf0ae]">trending_up</span>
+                <span class="material-symbols-outlined flex-shrink-0 text-[#c9ea8e]">trending_up</span>
                 <span class="text-sm">Analytika profilu</span>
               </li>
             </ul>
           </div>
 
           <!-- How It Works Card -->
-          <div class="bg-[#f3f4ed] p-8 rounded-lg">
-            <h3 class="text-lg font-bold text-[#154212] mb-6">Jak to funguje</h3>
+          <div class="bg-[#f2e8d5] p-8 rounded-lg">
+            <h3 class="text-lg font-bold text-[#1f4209] mb-6">Jak to funguje</h3>
             <ol class="space-y-4">
               <li class="flex gap-3">
-                <span class="flex-shrink-0 w-6 h-6 bg-[#154212] text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
-                <span class="text-sm text-[#191c18]">Vyplňte formulář</span>
+                <span class="flex-shrink-0 w-6 h-6 bg-[#1f4209] text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                <span class="text-sm text-[#1a1810]">Vyplňte formulář</span>
               </li>
               <li class="flex gap-3">
-                <span class="flex-shrink-0 w-6 h-6 bg-[#154212] text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
-                <span class="text-sm text-[#191c18]">Ověříme vaše ČAK číslo</span>
+                <span class="flex-shrink-0 w-6 h-6 bg-[#1f4209] text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                <span class="text-sm text-[#1a1810]">Ověříme vaše ČAK číslo</span>
               </li>
               <li class="flex gap-3">
-                <span class="flex-shrink-0 w-6 h-6 bg-[#154212] text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
-                <span class="text-sm text-[#191c18]">Profil je živý do 48 hodin</span>
+                <span class="flex-shrink-0 w-6 h-6 bg-[#1f4209] text-white rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                <span class="text-sm text-[#1a1810]">Profil je živý do 48 hodin</span>
               </li>
             </ol>
           </div>
 
           <!-- GDPR Card -->
-          <div class="bg-[#e7e9e1] p-4 rounded-lg">
+          <div class="bg-[#e2d9c0] p-4 rounded-lg">
             <div class="flex items-start gap-3">
-              <span class="material-symbols-outlined flex-shrink-0 text-[#154212] text-lg">shield</span>
-              <p class="text-xs text-[#191c18]/70">Vaše údaje jsou chráněny podle GDPR. Nebudeme je sdílet s třetími stranami bez vašeho souhlasu.</p>
+              <span class="material-symbols-outlined flex-shrink-0 text-[#1f4209] text-lg">shield</span>
+              <p class="text-xs text-[#1a1810]/70">Vaše údaje jsou chráněny podle GDPR. Nebudeme je sdílet s třetími stranami bez vašeho souhlasu.</p>
             </div>
           </div>
         </div>
@@ -291,14 +318,14 @@ h1,h2,h3,h4 { font-family:'Plus Jakarta Sans',sans-serif; }
 </main>
 
 <!-- Footer -->
-<footer class="bg-[#edefe7] w-full pt-16 pb-8 mt-20">
+<footer class="bg-[#e9e0c8] w-full pt-16 pb-8 mt-20">
   <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
-    <div class="col-span-2"><div class="text-lg font-bold text-[#154212] mb-4">JakNaPravnika.cz</div><p class="text-sm text-[#191c18]/60 max-w-xs">Nejmodernější platforma pro výběr právního zastoupení v České republice.</p></div>
-    <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html">Advokáti</a></li><li><a href="quiz.html">Kvíz</a></li></ul></div>
-    <div><h4 class="font-bold text-[#154212] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#">Podmínky užití</a></li><li><a href="#">Ochrana údajů</a></li></ul></div>
+    <div class="col-span-2"><div class="text-lg font-bold text-[#1f4209] mb-4">JakNaPravnika.cz</div><p class="text-sm text-[#1a1810]/60 max-w-xs">Nejmodernější platforma pro výběr právního zastoupení v České republice.</p></div>
+    <div><h4 class="font-bold text-[#1f4209] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="advokati.html">Advokáti</a></li><li><a href="quiz.html">Kvíz</a></li></ul></div>
+    <div><h4 class="font-bold text-[#1f4209] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="#">Podmínky užití</a></li><li><a href="#">Ochrana údajů</a></li></ul></div>
   </div>
-  <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
-    <p class="text-sm text-[#191c18]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+  <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#bdb08e]/30">
+    <p class="text-sm text-[#1a1810]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
   </div>
 </footer>
 

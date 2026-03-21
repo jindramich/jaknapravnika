@@ -8,14 +8,14 @@ function initLeadModal() {
   if (document.getElementById('leadModal')) return;
   const modal = document.createElement('div');
   modal.id = 'leadModal';
-  modal.className = 'fixed inset-0 z-[999] flex items-center justify-center p-4 bg-[#191c18]/40 backdrop-blur-sm hidden';
+  modal.className = 'fixed inset-0 z-[999] flex items-center justify-center p-4 bg-[#1a1810]/40 backdrop-blur-sm hidden';
   modal.innerHTML = `
     <div id="leadModalBox" class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden transform transition-all scale-95 opacity-0">
       <!-- Header -->
-      <div class="bg-gradient-to-br from-[#154212] to-[#2d5a27] px-8 py-6">
+      <div class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] px-8 py-6">
         <div class="flex justify-between items-start">
           <div>
-            <p class="text-[#bcf0ae] text-xs font-bold uppercase tracking-widest mb-1">Nezávazná poptávka</p>
+            <p class="text-[#c9ea8e] text-xs font-bold uppercase tracking-widest mb-1">Nezávazná poptávka</p>
             <h2 class="text-white text-2xl font-extrabold font-['Plus_Jakarta_Sans'] leading-tight" id="modalAttorneyName">Kontaktovat advokáta</h2>
             <p class="text-white/70 text-sm mt-1" id="modalFirmName"></p>
           </div>
@@ -27,41 +27,41 @@ function initLeadModal() {
 
       <!-- Body -->
       <div class="px-8 py-6" id="modalFormWrapper">
-        <p class="text-[#42493e] text-sm mb-6 leading-relaxed">Vyplňte kontaktní údaje. <strong>Advokáta přímo neoslovíme</strong> — váš dotaz nejprve zpracujeme a do 24 hodin vás propojíme s tím pravým odborníkem.</p>
+        <p class="text-[#3e3b26] text-sm mb-6 leading-relaxed">Vyplňte kontaktní údaje. <strong>Advokáta přímo neoslovíme</strong> — váš dotaz nejprve zpracujeme a do 24 hodin vás propojíme s tím pravým odborníkem.</p>
 
         <form id="leadForm" class="space-y-4" novalidate>
           <input type="hidden" id="modalAttorneyId" value="">
           <input type="hidden" id="modalQuizResponseId" value="">
 
           <div>
-            <label class="block text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1.5">Vaše jméno *</label>
+            <label class="block text-xs font-bold text-[#6b6140] uppercase tracking-wider mb-1.5">Vaše jméno *</label>
             <input type="text" id="leadName" required placeholder="Jan Novák"
-              class="w-full bg-[#f3f4ed] border-none rounded-xl px-4 py-3 text-[#191c18] placeholder:text-[#72796e] focus:ring-2 focus:ring-[#154212]/20 focus:bg-white transition-all outline-none text-sm">
+              class="w-full bg-[#f2e8d5] border-none rounded-xl px-4 py-3 text-[#1a1810] placeholder:text-[#6b6140] focus:ring-2 focus:ring-[#1f4209]/20 focus:bg-white transition-all outline-none text-sm">
           </div>
 
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <label class="block text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1.5">Telefon</label>
+              <label class="block text-xs font-bold text-[#6b6140] uppercase tracking-wider mb-1.5">Telefon</label>
               <input type="tel" id="leadPhone" placeholder="+420 123 456 789"
-                class="w-full bg-[#f3f4ed] border-none rounded-xl px-4 py-3 text-[#191c18] placeholder:text-[#72796e] focus:ring-2 focus:ring-[#154212]/20 focus:bg-white transition-all outline-none text-sm">
+                class="w-full bg-[#f2e8d5] border-none rounded-xl px-4 py-3 text-[#1a1810] placeholder:text-[#6b6140] focus:ring-2 focus:ring-[#1f4209]/20 focus:bg-white transition-all outline-none text-sm">
             </div>
             <div>
-              <label class="block text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1.5">E-mail *</label>
+              <label class="block text-xs font-bold text-[#6b6140] uppercase tracking-wider mb-1.5">E-mail *</label>
               <input type="email" id="leadEmail" required placeholder="jan@email.cz"
-                class="w-full bg-[#f3f4ed] border-none rounded-xl px-4 py-3 text-[#191c18] placeholder:text-[#72796e] focus:ring-2 focus:ring-[#154212]/20 focus:bg-white transition-all outline-none text-sm">
+                class="w-full bg-[#f2e8d5] border-none rounded-xl px-4 py-3 text-[#1a1810] placeholder:text-[#6b6140] focus:ring-2 focus:ring-[#1f4209]/20 focus:bg-white transition-all outline-none text-sm">
             </div>
           </div>
 
           <div>
-            <label class="block text-xs font-bold text-[#72796e] uppercase tracking-wider mb-1.5">Stručný popis situace</label>
+            <label class="block text-xs font-bold text-[#6b6140] uppercase tracking-wider mb-1.5">Stručný popis situace</label>
             <textarea id="leadMessage" rows="3" placeholder="Napište nám krátce, co potřebujete řešit..."
-              class="w-full bg-[#f3f4ed] border-none rounded-xl px-4 py-3 text-[#191c18] placeholder:text-[#72796e] focus:ring-2 focus:ring-[#154212]/20 focus:bg-white transition-all outline-none text-sm resize-none"></textarea>
+              class="w-full bg-[#f2e8d5] border-none rounded-xl px-4 py-3 text-[#1a1810] placeholder:text-[#6b6140] focus:ring-2 focus:ring-[#1f4209]/20 focus:bg-white transition-all outline-none text-sm resize-none"></textarea>
           </div>
 
           <p id="leadError" class="hidden text-[#ba1a1a] text-xs font-medium bg-[#ffdad6] px-3 py-2 rounded-lg"></p>
 
           <button type="submit" id="leadSubmitBtn"
-            class="w-full bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white font-bold py-4 rounded-full text-base active:scale-95 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
+            class="w-full bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white font-bold py-4 rounded-full text-base active:scale-95 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
             <span id="leadBtnText">Odeslat poptávku</span>
             <svg id="leadSpinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
@@ -69,7 +69,7 @@ function initLeadModal() {
             </svg>
           </button>
 
-          <p class="text-center text-[#72796e] text-xs">
+          <p class="text-center text-[#6b6140] text-xs">
             <span class="inline-flex items-center gap-1">
               <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
               Vaše údaje jsou v bezpečí. Nepředáváme je třetím stranám.
@@ -80,14 +80,14 @@ function initLeadModal() {
 
       <!-- Success state (hidden by default) -->
       <div id="modalSuccess" class="hidden px-8 py-12 text-center">
-        <div class="w-16 h-16 bg-[#bcf0ae] rounded-full flex items-center justify-center mx-auto mb-6">
-          <svg class="w-8 h-8 text-[#154212]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <div class="w-16 h-16 bg-[#c9ea8e] rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-8 h-8 text-[#1f4209]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
           </svg>
         </div>
-        <h3 class="text-2xl font-extrabold text-[#154212] font-['Plus_Jakarta_Sans'] mb-3">Poptávka přijata!</h3>
-        <p class="text-[#42493e] leading-relaxed mb-6">Vaši žádost jsme přijali a do <strong>24 hodin</strong> vás propojíme s tím pravým advokátem. Zkontrolujte svůj e-mail.</p>
-        <button onclick="closeLeadModal()" class="px-8 py-3 bg-[#f3f4ed] text-[#154212] font-bold rounded-full hover:bg-[#e7e9e1] transition-colors">
+        <h3 class="text-2xl font-extrabold text-[#1f4209] font-['Plus_Jakarta_Sans'] mb-3">Poptávka přijata!</h3>
+        <p class="text-[#3e3b26] leading-relaxed mb-6">Vaši žádost jsme přijali a do <strong>24 hodin</strong> vás propojíme s tím pravým advokátem. Zkontrolujte svůj e-mail.</p>
+        <button onclick="closeLeadModal()" class="px-8 py-3 bg-[#f2e8d5] text-[#1f4209] font-bold rounded-full hover:bg-[#e2d9c0] transition-colors">
           Zavřít
         </button>
       </div>

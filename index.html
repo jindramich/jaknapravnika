@@ -2,33 +2,67 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JakNaPravnika.cz - Najděte si advokáta</title>
+  <title>Jak na právníka | Pomoc s právem jednoduše</title>
+  <meta name="description" content="Pomáháme vám zorientovat se v právních otázkách jednoduše. Najděte správného advokáta během pár minut – zdarma a nezávazně.">
+  <meta name="keywords" content="advokát, právník, právní pomoc, jak najít advokáta, právní poradna, JakNaPravnika">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.jaknapravnika.cz/">
+
+  <!-- Open Graph (Facebook, LinkedIn, iMessage link previews) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jaknapravnika.cz/">
+  <meta property="og:title" content="Jak na právníka | Pomoc s právem jednoduše">
+  <meta property="og:description" content="Pomáháme vám zorientovat se v právních otázkách jednoduše. Najděte správného advokáta během pár minut – zdarma a nezávazně.">
+  <meta property="og:locale" content="cs_CZ">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jak na právníka | Pomoc s právem jednoduše">
+  <meta name="twitter:description" content="Najděte správného advokáta během pár minut – zdarma a nezávazně.">
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
-    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "inverse-primary":"#a1d494","secondary":"#964824","on-primary":"#ffffff","on-tertiary-fixed-variant":"#0a4c69","secondary-fixed-dim":"#ffb597","on-surface":"#191c18","on-primary-container":"#9dd090","error-container":"#ffdad6","primary-fixed-dim":"#a1d494","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","inverse-surface":"#2e312c","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","on-background":"#191c18","background":"#f9faf2","outline-variant":"#c2c9bb","error":"#ba1a1a","surface-variant":"#e2e3dc","on-surface-variant":"#42493e","surface-dim":"#d9dbd3","tertiary":"#003d57","on-secondary-fixed-variant":"#77320e","surface-tint":"#3b6934","tertiary-container":"#1a5573","on-primary-fixed-variant":"#23501e","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","surface":"#f9faf2","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","on-secondary-container":"#76300d","tertiary-fixed-dim":"#99cdf0","inverse-on-surface":"#f0f1ea","on-tertiary-fixed":"#001e2d","primary-container":"#2d5a27","surface-container-low":"#f3f4ed","surface-bright":"#f9faf2" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"],"label":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
+    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "inverse-primary":"#b8dc7e","secondary":"#964824","on-primary":"#ffffff","on-tertiary-fixed-variant":"#0a4c69","secondary-fixed-dim":"#ffb597","on-surface":"#1a1810","on-primary-container":"#9dd090","error-container":"#ffdad6","primary-fixed-dim":"#b8dc7e","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#6b6140","primary":"#1f4209","secondary-fixed":"#ffdbcd","surface-container-high":"#e2d9c0","on-secondary-fixed":"#360f00","inverse-surface":"#2e312c","surface-container":"#e9e0c8","surface-container-highest":"#dccfac","on-background":"#1a1810","background":"#faf6ed","outline-variant":"#bdb08e","error":"#ba1a1a","surface-variant":"#dccfac","on-surface-variant":"#3e3b26","surface-dim":"#d4c9a4","tertiary":"#003d57","on-secondary-fixed-variant":"#77320e","surface-tint":"#3b6934","tertiary-container":"#1a5573","on-primary-fixed-variant":"#2e4d0a","primary-fixed":"#c9ea8e","tertiary-fixed":"#c6e7ff","surface":"#faf6ed","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","on-secondary-container":"#76300d","tertiary-fixed-dim":"#99cdf0","inverse-on-surface":"#f0f1ea","on-tertiary-fixed":"#001e2d","primary-container":"#3b580f","surface-container-low":"#f2e8d5","surface-bright":"#faf6ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"],"label":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
   </script>
+  <!-- Dark mode script runs before paint to avoid flash -->
+  <script src="js/dark-mode.js"></script>
   <style>
     .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
-    body { font-family:'Inter',sans-serif; background-color:#f9faf2; }
+    body { font-family:'Inter',sans-serif; background-color:#faf6ed; transition: background-color 0.2s, color 0.2s; }
     h1,h2,h3,h4,.brand { font-family:'Plus Jakarta Sans',sans-serif; }
     .editorial-shadow { box-shadow: 0 12px 40px -4px rgba(25,28,24,0.06); }
+
+    /* ── Dark Mode: base + things JS can't reach (hover, nav blur, inputs) ── */
+    html.dark body   { background-color:#140f05 !important; color:#ede8d4; }
+    html.dark nav    { background-color:rgba(20,15,5,0.92) !important; }
+    html.dark .editorial-shadow { box-shadow:0 12px 40px -4px rgba(0,0,0,0.5) !important; }
+    html.dark input, html.dark select, html.dark textarea {
+      background-color:#1c1608 !important; color:#ede8d4 !important; border-color:#2e2610 !important;
+    }
+    html.dark input::placeholder, html.dark textarea::placeholder { color:#8a8060 !important; }
+    html.dark .dark-toggle-btn { color:#c9ea8e !important; }
   </style>
 </head>
 <body>
   <!-- Nav -->
-  <nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl">
+  <nav class="fixed top-0 w-full z-50 bg-[#faf6ed]/80 backdrop-blur-xl">
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-      <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter brand">JakNaPravnika.cz</a>
+      <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter brand">JakNaPravnika.cz</a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Domů</a>
-        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Advokáti</a>
-        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] transition-all px-3 py-1 rounded-full hover:bg-[#f3f4ed]">Pro advokáty</a>
+        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Domů</a>
+        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Advokáti</a>
+        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Pro advokáty</a>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleDarkMode()" title="Přepnout tmavý režim"
+          class="dark-toggle-btn w-10 h-10 rounded-full flex items-center justify-center text-[#1f4209] hover:bg-[#f2e8d5] transition-all">
+          <span class="material-symbols-outlined dark-toggle-icon" style="font-size:1.3rem">dark_mode</span>
+        </button>
+        <a href="quiz.html" class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
       </div>
     </div>
   </nav>
@@ -41,31 +75,30 @@
         <div class="inline-block bg-[#ffdbcd] px-4 py-2 rounded-full mb-6">
           <span class="text-xs font-bold text-[#360f00] tracking-widest">PRÁVNÍ POMOC NA MÍRU</span>
         </div>
-        <h1 class="text-5xl md:text-7xl font-bold text-[#154212] leading-tight mb-6 tracking-tight">Hledáte ideálního advokáta?</h1>
-        <p class="text-lg text-[#191c18]/70 mb-8 max-w-lg leading-relaxed">Propojujeme vás s kvalifikovanými právníky v České republice. Najděte specialistu na vaši situaci, porovnejte zkušenosti a spojte se přímo.</p>
+        <h1 class="text-5xl md:text-7xl font-bold text-[#1f4209] leading-tight mb-6 tracking-tight">Hledáte ideálního advokáta?</h1>
+        <p class="text-lg text-[#1a1810]/70 mb-8 max-w-lg leading-relaxed">Propojujeme vás s kvalifikovanými právníky v České republice. Najděte specialistu na vaši situaci, porovnejte zkušenosti a spojte se přímo.</p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="quiz.html" class="bg-[#154212] hover:bg-[#0f2c0a] text-white px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Získat doporučení zdarma</a>
-          <a href="advokati.html" class="bg-[#e7e9e1] hover:bg-[#d9dbd3] text-[#191c18] px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Procházet advokáty</a>
+          <a href="quiz.html" class="bg-[#1f4209] hover:bg-[#263b07] text-white px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Získat doporučení zdarma</a>
+          <a href="advokati.html" class="bg-[#e2d9c0] hover:bg-[#d4c9a4] text-[#1a1810] px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Procházet advokáty</a>
         </div>
       </div>
-      <!-- Right: Stats Card -->
-      <div class="hidden md:block">
-        <div class="editorial-shadow bg-white p-8 rounded-3xl transform -rotate-2">
-          <div class="space-y-6">
-            <div class="border-b border-[#e2e3dc] pb-6">
-              <p class="text-sm text-[#191c18]/50 uppercase tracking-widest font-semibold mb-2">Ověření odborníci</p>
-              <p class="text-4xl font-bold text-[#154212]">100+</p>
-              <p class="text-sm text-[#191c18]/60 mt-1">právníků v naší síti</p>
-            </div>
-            <div class="border-b border-[#e2e3dc] pb-6">
-              <p class="text-sm text-[#191c18]/50 uppercase tracking-widest font-semibold mb-2">Průměrné hodnocení</p>
-              <p class="text-4xl font-bold text-[#154212]">4.8★</p>
-              <p class="text-sm text-[#191c18]/60 mt-1">od klientů</p>
-            </div>
+      <!-- Right: Mascot + floating stats card -->
+      <div class="hidden md:flex justify-center items-end relative min-h-[480px]">
+        <img src="images/mascot.png" alt="Maskot JakNaPravnika"
+             class="h-[480px] w-auto relative z-10 drop-shadow-2xl select-none" />
+        <div class="editorial-shadow bg-white p-5 rounded-2xl transform rotate-2 absolute bottom-4 right-0 z-20 w-48">
+          <div class="space-y-3">
             <div>
-              <p class="text-sm text-[#191c18]/50 uppercase tracking-widest font-semibold mb-2">Pokrytí</p>
-              <p class="text-4xl font-bold text-[#154212]">ČR</p>
-              <p class="text-sm text-[#191c18]/60 mt-1">Praha a všechny regiony</p>
+              <p class="text-3xl font-bold text-[#1f4209]">100+</p>
+              <p class="text-xs text-[#1a1810]/60 mt-0.5">ověřených advokátů</p>
+            </div>
+            <div class="border-t border-[#dccfac] pt-3">
+              <p class="text-3xl font-bold text-[#1f4209]">4.8★</p>
+              <p class="text-xs text-[#1a1810]/60 mt-0.5">průměrné hodnocení</p>
+            </div>
+            <div class="border-t border-[#dccfac] pt-3">
+              <p class="text-3xl font-bold text-[#1f4209]">ČR</p>
+              <p class="text-xs text-[#1a1810]/60 mt-0.5">Praha a všechny regiony</p>
             </div>
           </div>
         </div>
@@ -74,37 +107,37 @@
   </section>
 
   <!-- How It Works Section -->
-  <section class="bg-[#f3f4ed] py-20 px-8">
+  <section class="bg-[#f2e8d5] py-20 px-8">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-[#154212] mb-4 text-center">Jak to funguje?</h2>
-      <p class="text-center text-[#191c18]/60 mb-16 max-w-2xl mx-auto">Tři jednoduché kroky k tomu, abyste našli ideálního právníka pro vaši situaci.</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#1f4209] mb-4 text-center">Jak to funguje?</h2>
+      <p class="text-center text-[#1a1810]/60 mb-16 max-w-2xl mx-auto">Tři jednoduché kroky k tomu, abyste našli ideálního právníka pro vaši situaci.</p>
       
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Card 1 -->
         <div class="bg-white p-8 rounded-2xl editorial-shadow hover:shadow-xl transition-all hover:-translate-y-1">
-          <div class="w-16 h-16 bg-[#bcf0ae] rounded-2xl flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-[#154212] text-3xl">edit_note</span>
+          <div class="w-16 h-16 bg-[#c9ea8e] rounded-2xl flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-[#1f4209] text-3xl">edit_note</span>
           </div>
-          <h3 class="text-xl font-bold text-[#154212] mb-3">1. Vyplňte krátký kvíz</h3>
-          <p class="text-[#191c18]/70">Povězte nám o vaší situaci. Trvá to jen pár minut a pomůže nám vybrat nejlepší kandidáty.</p>
+          <h3 class="text-xl font-bold text-[#1f4209] mb-3">1. Vyplňte krátký kvíz</h3>
+          <p class="text-[#1a1810]/70">Povězte nám o vaší situaci. Trvá to jen pár minut a pomůže nám vybrat nejlepší kandidáty.</p>
         </div>
 
         <!-- Card 2 -->
         <div class="bg-white p-8 rounded-2xl editorial-shadow hover:shadow-xl transition-all hover:-translate-y-1">
-          <div class="w-16 h-16 bg-[#bcf0ae] rounded-2xl flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-[#154212] text-3xl">compare_arrows</span>
+          <div class="w-16 h-16 bg-[#c9ea8e] rounded-2xl flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-[#1f4209] text-3xl">compare_arrows</span>
           </div>
-          <h3 class="text-xl font-bold text-[#154212] mb-3">2. Porovnejte experty</h3>
-          <p class="text-[#191c18]/70">Vidíte jejich kvalifikaci, hodnocení a speciality. Volez si podle vašich preferencí.</p>
+          <h3 class="text-xl font-bold text-[#1f4209] mb-3">2. Porovnejte experty</h3>
+          <p class="text-[#1a1810]/70">Vidíte jejich kvalifikaci, hodnocení a speciality. Volez si podle vašich preferencí.</p>
         </div>
 
         <!-- Card 3 -->
         <div class="bg-white p-8 rounded-2xl editorial-shadow hover:shadow-xl transition-all hover:-translate-y-1">
-          <div class="w-16 h-16 bg-[#bcf0ae] rounded-2xl flex items-center justify-center mb-6">
-            <span class="material-symbols-outlined text-[#154212] text-3xl">phone_in_talk</span>
+          <div class="w-16 h-16 bg-[#c9ea8e] rounded-2xl flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-[#1f4209] text-3xl">phone_in_talk</span>
           </div>
-          <h3 class="text-xl font-bold text-[#154212] mb-3">3. Spojte se přímo</h3>
-          <p class="text-[#191c18]/70">Kontaktujte advokáta přímo. Domluvte si konzultaci a začněte řešit vaši věc.</p>
+          <h3 class="text-xl font-bold text-[#1f4209] mb-3">3. Spojte se přímo</h3>
+          <p class="text-[#1a1810]/70">Kontaktujte advokáta přímo. Domluvte si konzultaci a začněte řešit vaši věc.</p>
         </div>
       </div>
     </div>
@@ -113,8 +146,8 @@
   <!-- Top Rated Lawyers Section -->
   <section class="py-20 px-8">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-[#154212] mb-4">Nejlépe hodnocené kanceláře</h2>
-      <p class="text-[#191c18]/60 mb-16">Ověřené advokátní kanceláře s nejlepším hodnocením od klientů.</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#1f4209] mb-4">Nejlépe hodnocené kanceláře</h2>
+      <p class="text-[#1a1810]/60 mb-16">Ověřené advokátní kanceláře s nejlepším hodnocením od klientů.</p>
       <div id="topRatedGrid" class="grid md:grid-cols-3 gap-8">
         <!-- Rendered dynamically from lawyersData -->
       </div>
@@ -122,13 +155,13 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="bg-[#154212] py-20 px-8">
+  <section class="bg-[#1f4209] py-20 px-8">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-16 text-center">Spokojení klienti</h2>
       
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Testimonial 1 -->
-        <div class="bg-[#2d5a27] p-8 rounded-2xl">
+        <div class="bg-[#3b580f] p-8 rounded-2xl">
           <div class="flex gap-1 mb-4">
             <span class="text-yellow-300">★</span>
             <span class="text-yellow-300">★</span>
@@ -142,7 +175,7 @@
         </div>
 
         <!-- Testimonial 2 -->
-        <div class="bg-[#2d5a27] p-8 rounded-2xl">
+        <div class="bg-[#3b580f] p-8 rounded-2xl">
           <div class="flex gap-1 mb-4">
             <span class="text-yellow-300">★</span>
             <span class="text-yellow-300">★</span>
@@ -156,7 +189,7 @@
         </div>
 
         <!-- Testimonial 3 -->
-        <div class="bg-[#2d5a27] p-8 rounded-2xl">
+        <div class="bg-[#3b580f] p-8 rounded-2xl">
           <div class="flex gap-1 mb-4">
             <span class="text-yellow-300">★</span>
             <span class="text-yellow-300">★</span>
@@ -175,86 +208,86 @@
   <!-- Categories Section -->
   <section class="py-20 px-8">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-4xl md:text-5xl font-bold text-[#154212] mb-16 text-center">Všechny oblasti práva</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-[#1f4209] mb-16 text-center">Všechny oblasti práva</h2>
       
       <div class="grid md:grid-cols-4 gap-6">
-        <a href="advokati.html?oblast=Rodinné%20právo" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">family_restroom</span>
-          <h3 class="font-bold text-[#154212]">Rodinné právo</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">Rozvody, péče o děti</p>
+        <a href="advokati.html?oblast=Rodinné%20právo" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">family_restroom</span>
+          <h3 class="font-bold text-[#1f4209]">Rodinné právo</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">Rozvody, péče o děti</p>
         </a>
         
-        <a href="advokati.html?oblast=Obchodní%20právo" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">business_center</span>
-          <h3 class="font-bold text-[#154212]">Obchodní právo</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">Smlouvy, smluvní spory</p>
+        <a href="advokati.html?oblast=Obchodní%20právo" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">business_center</span>
+          <h3 class="font-bold text-[#1f4209]">Obchodní právo</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">Smlouvy, smluvní spory</p>
         </a>
         
-        <a href="advokati.html?oblast=Nemovitosti" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">apartment</span>
-          <h3 class="font-bold text-[#154212]">Nemovitosti</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">Nákup, prodej, pronájem</p>
+        <a href="advokati.html?oblast=Nemovitosti" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">apartment</span>
+          <h3 class="font-bold text-[#1f4209]">Nemovitosti</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">Nákup, prodej, pronájem</p>
         </a>
         
-        <a href="advokati.html?oblast=Trestní%20právo" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">gavel</span>
-          <h3 class="font-bold text-[#154212]">Trestní právo</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">Obhajoba, řízení</p>
+        <a href="advokati.html?oblast=Trestní%20právo" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">gavel</span>
+          <h3 class="font-bold text-[#1f4209]">Trestní právo</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">Obhajoba, řízení</p>
         </a>
 
-        <a href="advokati.html?oblast=Pracovní%20právo" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">work</span>
-          <h3 class="font-bold text-[#154212]">Pracovní právo</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">HR, pracovní spory</p>
+        <a href="advokati.html?oblast=Pracovní%20právo" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">work</span>
+          <h3 class="font-bold text-[#1f4209]">Pracovní právo</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">HR, pracovní spory</p>
         </a>
 
-        <a href="advokati.html?oblast=Daně" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">receipt_long</span>
-          <h3 class="font-bold text-[#154212]">Daně</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">Daňové poradenství</p>
+        <a href="advokati.html?oblast=Daně" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">receipt_long</span>
+          <h3 class="font-bold text-[#1f4209]">Daně</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">Daňové poradenství</p>
         </a>
 
-        <a href="advokati.html?oblast=IT%20právo" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">computer</span>
-          <h3 class="font-bold text-[#154212]">IT právo</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">IP, technologie</p>
+        <a href="advokati.html?oblast=IT%20právo" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">computer</span>
+          <h3 class="font-bold text-[#1f4209]">IT právo</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">IP, technologie</p>
         </a>
 
-        <a href="advokati.html?oblast=Imigrace" class="bg-white border-2 border-[#e2e3dc] hover:border-[#154212] hover:bg-[#f3f4ed] p-6 rounded-2xl transition-all">
-          <span class="material-symbols-outlined text-[#154212] text-3xl mb-3 block">public</span>
-          <h3 class="font-bold text-[#154212]">Imigrace</h3>
-          <p class="text-sm text-[#191c18]/60 mt-1">Víza, pobyty</p>
+        <a href="advokati.html?oblast=Imigrace" class="bg-white border-2 border-[#dccfac] hover:border-[#1f4209] hover:bg-[#f2e8d5] p-6 rounded-2xl transition-all">
+          <span class="material-symbols-outlined text-[#1f4209] text-3xl mb-3 block">public</span>
+          <h3 class="font-bold text-[#1f4209]">Imigrace</h3>
+          <p class="text-sm text-[#1a1810]/60 mt-1">Víza, pobyty</p>
         </a>
       </div>
     </div>
   </section>
 
   <!-- CTA Banner -->
-  <section class="bg-gradient-to-br from-[#154212] to-[#2d5a27] py-16 px-8">
+  <section class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] py-16 px-8">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Jste právník?</h2>
       <p class="text-white/90 mb-8 text-lg">Zaregistrujte se na naší platformě a rozšiřte svůj seznam klientů.</p>
-      <a href="registrace.html" class="inline-block bg-white hover:bg-[#f3f4ed] text-[#154212] px-8 py-3.5 rounded-full font-bold transition-all active:scale-95">Zaregistrovat se zdarma</a>
+      <a href="registrace.html" class="inline-block bg-white hover:bg-[#f2e8d5] text-[#1f4209] px-8 py-3.5 rounded-full font-bold transition-all active:scale-95">Zaregistrovat se zdarma</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#edefe7] w-full pt-16 pb-8">
+  <footer class="bg-[#e9e0c8] w-full pt-16 pb-8">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
-      <div class="col-span-2"><div class="text-lg font-bold text-[#154212] mb-4 brand">JakNaPravnika.cz</div><p class="text-sm text-[#191c18]/60 max-w-xs mb-4">Nejmodernější platforma pro výběr právního zastoupení v České republice. Věříme v transparentnost a odbornost.</p></div>
-      <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html" class="hover:text-[#154212] transition-colors">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#154212] transition-colors">Kvíz pro výběr</a></li><li><a href="registrace.html" class="hover:text-[#154212] transition-colors">Pro advokáty</a></li></ul></div>
-      <div><h4 class="font-bold text-[#154212] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#" class="hover:text-[#154212] transition-colors">Podmínky užití</a></li><li><a href="#" class="hover:text-[#154212] transition-colors">Ochrana údajů</a></li><li><a href="#" class="hover:text-[#154212] transition-colors">O nás</a></li></ul></div>
+      <div class="col-span-2"><div class="text-lg font-bold text-[#1f4209] mb-4 brand">JakNaPravnika.cz</div><p class="text-sm text-[#1a1810]/60 max-w-xs mb-4">Nejmodernější platforma pro výběr právního zastoupení v České republice. Věříme v transparentnost a odbornost.</p></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="advokati.html" class="hover:text-[#1f4209] transition-colors">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#1f4209] transition-colors">Kvíz pro výběr</a></li><li><a href="registrace.html" class="hover:text-[#1f4209] transition-colors">Pro advokáty</a></li></ul></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="#" class="hover:text-[#1f4209] transition-colors">Podmínky užití</a></li><li><a href="#" class="hover:text-[#1f4209] transition-colors">Ochrana údajů</a></li><li><a href="#" class="hover:text-[#1f4209] transition-colors">O nás</a></li></ul></div>
     </div>
-    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
-      <p class="text-xs text-[#191c18]/40 mb-2">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál mezi uživateli a poskytovateli právních služeb. Neposkytuje právní poradenství.</p>
-      <p class="text-sm text-[#191c18]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#bdb08e]/30">
+      <p class="text-xs text-[#1a1810]/40 mb-2">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál mezi uživateli a poskytovateli právních služeb. Neposkytuje právní poradenství.</p>
+      <p class="text-sm text-[#1a1810]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
     </div>
   </footer>
 <script src="js/lawyers-data.js"></script>
 <script>
   (function () {
     const PALETTES = [
-      {bg:'#bcf0ae',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
+      {bg:'#c9ea8e',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
       {bg:'#ffdbcd',text:'#360f00'},{bg:'#e8d5ff',text:'#2f0052'},
       {bg:'#fff3cd',text:'#3a2f00'},{bg:'#d4f0e8',text:'#003325'},
     ];
@@ -273,7 +306,7 @@
       const pal = PALETTES[(l.firm || '').charCodeAt(0) % PALETTES.length];
       const initials = l.initials || (l.firm || '??').slice(0, 2).toUpperCase();
       const stars = Array(5).fill(0).map((_, i) =>
-        `<span style="color:${i < Math.round(l.rating || 0) ? '#f4a200' : '#e2e3dc'}">★</span>`
+        `<span style="color:${i < Math.round(l.rating || 0) ? '#f4a200' : '#dccfac'}">★</span>`
       ).join('');
       const chips = (l.areas || []).slice(0, 2).map(a =>
         `<span class="bg-[#c6e7ff] text-[#001e2d] px-3 py-1 rounded-full text-xs font-medium">${a}</span>`
@@ -286,17 +319,17 @@
           <div class="w-14 h-14 rounded-xl flex items-center justify-center text-base font-extrabold flex-shrink-0"
                style="background:${pal.bg};color:${pal.text}">${initials}</div>
           <div class="min-w-0">
-            <h3 class="font-bold text-[#191c18] text-base leading-tight truncate">${l.firm}</h3>
-            <p class="text-xs text-[#72796e] mt-0.5">${l.type || ''}</p>
+            <h3 class="font-bold text-[#1a1810] text-base leading-tight truncate">${l.firm}</h3>
+            <p class="text-xs text-[#6b6140] mt-0.5">${l.type || ''}</p>
           </div>
         </div>
         <div class="flex items-center gap-2 mb-4">
           <div class="flex text-base">${stars}</div>
           <span class="text-sm font-bold text-[#964824]">${(l.rating || 0).toFixed(1)}</span>
-          <span class="text-xs text-[#72796e]">(${l.reviews || 0} recenzí)</span>
+          <span class="text-xs text-[#6b6140]">(${l.reviews || 0} recenzí)</span>
         </div>
         <div class="flex gap-2 flex-wrap mb-6">${chips}</div>
-        <a href="profil.html?id=${l.id}" class="block text-center bg-[#154212] hover:bg-[#0f2c0a] text-white py-3 rounded-xl font-semibold transition-all text-sm">Zobrazit profil</a>
+        <a href="profil.html?id=${l.id}" class="block text-center bg-[#1f4209] hover:bg-[#263b07] text-white py-3 rounded-xl font-semibold transition-all text-sm">Zobrazit profil</a>
       `;
       grid.appendChild(card);
     });

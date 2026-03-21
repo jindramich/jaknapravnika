@@ -2,6 +2,7 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title id="pageTitle">Profil kanceláře | JakNaPravnika.cz</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,46 +11,67 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/dark-mode.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
-      theme: { extend: { colors: { "inverse-primary": "#a1d494", "secondary": "#964824", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#0a4c69", "secondary-fixed-dim": "#ffb597", "on-surface": "#191c18", "on-primary-container": "#9dd090", "error-container": "#ffdad6", "primary-fixed-dim": "#a1d494", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#fd9a6f", "outline": "#72796e", "primary": "#154212", "secondary-fixed": "#ffdbcd", "surface-container-high": "#e7e9e1", "on-secondary-fixed": "#360f00", "inverse-surface": "#2e312c", "surface-container": "#edefe7", "surface-container-highest": "#e2e3dc", "on-background": "#191c18", "background": "#f9faf2", "outline-variant": "#c2c9bb", "error": "#ba1a1a", "surface-variant": "#e2e3dc", "on-surface-variant": "#42493e", "surface-dim": "#d9dbd3", "tertiary": "#003d57", "on-secondary-fixed-variant": "#77320e", "surface-tint": "#3b6934", "tertiary-container": "#1a5573", "on-primary-fixed-variant": "#23501e", "primary-fixed": "#bcf0ae", "tertiary-fixed": "#c6e7ff", "surface": "#f9faf2", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed": "#002201", "on-secondary-container": "#76300d", "tertiary-fixed-dim": "#99cdf0", "inverse-on-surface": "#f0f1ea", "on-tertiary-fixed": "#001e2d", "primary-container": "#2d5a27", "surface-container-low": "#f3f4ed", "surface-bright": "#f9faf2" }, fontFamily: { "headline": ["Plus Jakarta Sans"], "body": ["Inter"], "label": ["Inter"] }, borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"} } }
+      theme: { extend: { colors: { "inverse-primary": "#a1d494", "secondary": "#964824", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#0a4c69", "secondary-fixed-dim": "#ffb597", "on-surface": "#1a1810", "on-primary-container": "#9dd090", "error-container": "#ffdad6", "primary-fixed-dim": "#a1d494", "surface-container-lowest": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#fd9a6f", "outline": "#6b6140", "primary": "#1f4209", "secondary-fixed": "#ffdbcd", "surface-container-high": "#e2d9c0", "on-secondary-fixed": "#360f00", "inverse-surface": "#2e312c", "surface-container": "#e9e0c8", "surface-container-highest": "#dccfac", "on-background": "#1a1810", "background": "#faf6ed", "outline-variant": "#bdb08e", "error": "#ba1a1a", "surface-variant": "#dccfac", "on-surface-variant": "#3e3b26", "surface-dim": "#d4c9a4", "tertiary": "#003d57", "on-secondary-fixed-variant": "#77320e", "surface-tint": "#3b6934", "tertiary-container": "#1a5573", "on-primary-fixed-variant": "#23501e", "primary-fixed": "#c9ea8e", "tertiary-fixed": "#c6e7ff", "surface": "#faf6ed", "on-error": "#ffffff", "on-tertiary": "#ffffff", "on-primary-fixed": "#002201", "on-secondary-container": "#76300d", "tertiary-fixed-dim": "#99cdf0", "inverse-on-surface": "#f0f1ea", "on-tertiary-fixed": "#001e2d", "primary-container": "#3b580f", "surface-container-low": "#f2e8d5", "surface-bright": "#faf6ed" }, fontFamily: { "headline": ["Plus Jakarta Sans"], "body": ["Inter"], "label": ["Inter"] }, borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"} } }
     }
   </script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #f9faf2; color: #191c18; }
+    body { font-family: 'Inter', sans-serif; background: #faf6ed; color: #1a1810; }
     h1,h2,h3,h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
     .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
     .info-card { background: #ffffff; border-radius: 1.25rem; padding: 1.75rem; box-shadow: 0 2px 16px rgba(25,28,24,0.05); }
-    .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #72796e; margin-bottom: 0.4rem; }
+    .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6140; margin-bottom: 0.4rem; }
     .area-chip { display: inline-block; padding: 0.375rem 0.875rem; background: #c6e7ff; color: #001e2d; font-size: 0.8rem; font-weight: 600; border-radius: 9999px; }
     .lang-chip { display: inline-block; padding: 0.3rem 0.75rem; background: #ffdbcd; color: #360f00; font-size: 0.78rem; font-weight: 600; border-radius: 9999px; }
     .stat-block { text-align: center; }
-    .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 800; color: #154212; line-height: 1.2; }
-    .stat-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #72796e; margin-top: 0.2rem; }
-    .divider { border: none; border-top: 1px solid #e2e3dc; margin: 1.25rem 0; }
-    .row-info { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid #f3f4ed; }
+    .stat-value { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 800; color: #1f4209; line-height: 1.2; }
+    .stat-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #6b6140; margin-top: 0.2rem; }
+    .divider { border: none; border-top: 1px solid #dccfac; margin: 1.25rem 0; }
+    .row-info { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid #f2e8d5; }
     .row-info:last-child { border-bottom: none; }
-    .row-key { font-size: 0.8rem; font-weight: 600; color: #72796e; flex-shrink: 0; }
-    .row-val { font-size: 0.875rem; font-weight: 600; color: #191c18; text-align: right; }
+    .row-key { font-size: 0.8rem; font-weight: 600; color: #6b6140; flex-shrink: 0; }
+    .row-val { font-size: 0.875rem; font-weight: 600; color: #1a1810; text-align: right; }
     .star-filled { color: #f4a200; }
-    .star-empty  { color: #e2e3dc; }
+    .star-empty  { color: #dccfac; }
+
+    /* ── Dark mode overrides for custom CSS classes ── */
+    html.dark body { background: #140f05 !important; color: #ede8d4 !important; }
+    html.dark nav { background: rgba(20,15,5,0.85) !important; border-color: rgba(46,38,16,0.5) !important; }
+    html.dark .info-card { background: #1a1408 !important; box-shadow: 0 2px 16px rgba(0,0,0,0.4) !important; }
+    html.dark .section-label { color: #8a8060 !important; }
+    html.dark .area-chip { background: #012033 !important; color: #c6e7ff !important; }
+    html.dark .lang-chip { background: #2a1a10 !important; color: #ffb597 !important; }
+    html.dark .stat-value { color: #c9ea8e !important; }
+    html.dark .stat-label { color: #8a8060 !important; }
+    html.dark .divider { border-color: #2e2610 !important; }
+    html.dark .row-info { border-bottom-color: #211a0a !important; }
+    html.dark .row-key { color: #8a8060 !important; }
+    html.dark .row-val { color: #ede8d4 !important; }
+    html.dark .star-empty { color: #2e2610 !important; }
   </style>
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full z-50 bg-[#f9faf2]/80 backdrop-blur-xl border-b border-[#e2e3dc]/50">
+  <nav class="fixed top-0 w-full z-50 bg-[#faf6ed]/80 backdrop-blur-xl border-b border-[#dccfac]/50">
     <div class="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
-      <a href="index.html" class="text-xl font-bold text-[#154212] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
+      <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter font-['Plus_Jakarta_Sans']">JakNaPravnika.cz</a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-semibold text-[#191c18]/70 hover:text-[#154212] transition-all">Domů</a>
-        <a href="advokati.html" class="text-sm font-semibold text-[#191c18]/70 hover:text-[#154212] transition-all">Advokáti</a>
-        <a href="registrace.html" class="text-sm font-semibold text-[#191c18]/70 hover:text-[#154212] transition-all">Pro advokáty</a>
+        <a href="index.html" class="text-sm font-semibold text-[#1a1810]/70 hover:text-[#1f4209] transition-all">Domů</a>
+        <a href="advokati.html" class="text-sm font-semibold text-[#1a1810]/70 hover:text-[#1f4209] transition-all">Advokáti</a>
+        <a href="registrace.html" class="text-sm font-semibold text-[#1a1810]/70 hover:text-[#1f4209] transition-all">Pro advokáty</a>
       </div>
-      <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md active:scale-95 transition-all">Chci doporučení</a>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleDarkMode()" class="w-9 h-9 flex items-center justify-center rounded-full border border-[#dccfac] bg-[#f2e8d5]/60 hover:bg-[#e9e0c8] transition-all" title="Přepnout tmavý režim">
+          <span class="material-symbols-outlined dark-toggle-icon" style="font-size:1.1rem">dark_mode</span>
+        </button>
+        <a href="quiz.html" class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-md active:scale-95 transition-all">Zdarma doporučení</a>
+      </div>
     </div>
   </nav>
 
@@ -58,7 +80,7 @@
     <div class="max-w-7xl mx-auto">
 
       <!-- Back -->
-      <a href="advokati.html" class="inline-flex items-center gap-2 text-[#154212] font-semibold text-sm hover:gap-3 transition-all mb-8">
+      <a href="advokati.html" class="inline-flex items-center gap-2 text-[#1f4209] font-semibold text-sm hover:gap-3 transition-all mb-8">
         <span class="material-symbols-outlined" style="font-size:1.1rem">arrow_back</span>
         Zpět na seznam advokátů
       </a>
@@ -66,9 +88,9 @@
       <!-- Profile not found -->
       <div id="notFound" class="hidden info-card text-center py-16">
         <span class="material-symbols-outlined text-5xl text-[#964824] block mb-4">person_off</span>
-        <h1 class="text-2xl font-bold text-[#191c18] mb-2">Profil nenalezen</h1>
-        <p class="text-[#191c18]/60 mb-6">Profil kanceláře, který hledáte, se nepodařilo najít.</p>
-        <a href="advokati.html" class="inline-block px-6 py-3 bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white rounded-full font-bold shadow-lg">Zpět na seznam</a>
+        <h1 class="text-2xl font-bold text-[#1a1810] mb-2">Profil nenalezen</h1>
+        <p class="text-[#1a1810]/60 mb-6">Profil kanceláře, který hledáte, se nepodařilo najít.</p>
+        <a href="advokati.html" class="inline-block px-6 py-3 bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white rounded-full font-bold shadow-lg">Zpět na seznam</a>
       </div>
 
       <!-- Profile content -->
@@ -86,30 +108,30 @@
               <!-- Main info -->
               <div class="flex-1 min-w-0">
                 <div class="flex flex-wrap items-start justify-between gap-3 mb-1">
-                  <h1 id="firmName" class="text-3xl font-extrabold text-[#191c18] leading-tight"></h1>
-                  <div id="verifiedBadge" class="hidden items-center gap-1.5 px-3 py-1.5 bg-[#bcf0ae] rounded-full">
+                  <h1 id="firmName" class="text-3xl font-extrabold text-[#1a1810] leading-tight"></h1>
+                  <div id="verifiedBadge" class="hidden items-center gap-1.5 px-3 py-1.5 bg-[#c9ea8e] rounded-full">
                     <span class="material-symbols-outlined text-[#002201]" style="font-size:1rem;font-weight:700">verified</span>
                     <span class="text-xs font-bold text-[#002201]">Ověřeno</span>
                   </div>
                 </div>
-                <p id="firmTypeLine" class="text-sm text-[#72796e] font-medium mb-1"></p>
-                <p id="partnerLine" class="text-sm text-[#191c18]/70 mb-5"></p>
+                <p id="firmTypeLine" class="text-sm text-[#6b6140] font-medium mb-1"></p>
+                <p id="partnerLine" class="text-sm text-[#1a1810]/70 mb-5"></p>
 
                 <!-- 4 stat blocks -->
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                  <div class="stat-block bg-[#f3f4ed] rounded-xl p-3">
+                  <div class="stat-block bg-[#f2e8d5] rounded-xl p-3">
                     <div id="stat-type" class="stat-value text-base"></div>
                     <div class="stat-label">Typ kanceláře</div>
                   </div>
-                  <div class="stat-block bg-[#f3f4ed] rounded-xl p-3">
+                  <div class="stat-block bg-[#f2e8d5] rounded-xl p-3">
                     <div id="stat-founded" class="stat-value"></div>
                     <div class="stat-label">Rok založení</div>
                   </div>
-                  <div class="stat-block bg-[#f3f4ed] rounded-xl p-3">
+                  <div class="stat-block bg-[#f2e8d5] rounded-xl p-3">
                     <div id="stat-size" class="stat-value"></div>
                     <div class="stat-label">Počet právníků</div>
                   </div>
-                  <div class="stat-block bg-[#f3f4ed] rounded-xl p-3">
+                  <div class="stat-block bg-[#f2e8d5] rounded-xl p-3">
                     <div id="stat-rating" class="stat-value"></div>
                     <div class="stat-label">Hodnocení</div>
                   </div>
@@ -126,30 +148,30 @@
 
           <!-- O KANCELÁŘI -->
           <div class="info-card">
-            <h2 class="text-lg font-bold text-[#191c18] mb-3">O kanceláři</h2>
-            <p id="description" class="text-[#191c18]/80 leading-relaxed text-sm"></p>
-            <div id="targetBlock" class="mt-4 pt-4 border-t border-[#f3f4ed] hidden">
+            <h2 class="text-lg font-bold text-[#1a1810] mb-3">O kanceláři</h2>
+            <p id="description" class="text-[#1a1810]/80 leading-relaxed text-sm"></p>
+            <div id="targetBlock" class="mt-4 pt-4 border-t border-[#f2e8d5] hidden">
               <p class="section-label">Cílový klient</p>
-              <p id="targetText" class="text-sm text-[#191c18]/80 mt-1"></p>
+              <p id="targetText" class="text-sm text-[#1a1810]/80 mt-1"></p>
             </div>
           </div>
 
           <!-- OBLASTI PRÁVA -->
           <div class="info-card">
-            <h2 class="text-lg font-bold text-[#191c18] mb-1">Oblasti práva</h2>
-            <p id="primarySpec" class="text-sm text-[#72796e] mb-4"></p>
+            <h2 class="text-lg font-bold text-[#1a1810] mb-1">Oblasti práva</h2>
+            <p id="primarySpec" class="text-sm text-[#6b6140] mb-4"></p>
             <div id="areaChips" class="flex flex-wrap gap-2"></div>
           </div>
 
           <!-- ŽEBŘÍČKY A OCENĚNÍ -->
           <div id="rankingCard" class="info-card hidden">
-            <h2 class="text-lg font-bold text-[#191c18] mb-4">Žebříčky a ocenění</h2>
+            <h2 class="text-lg font-bold text-[#1a1810] mb-4">Žebříčky a ocenění</h2>
             <div id="rankingBlock" class="hidden">
-              <div class="flex items-start gap-3 p-4 bg-[#f3f4ed] rounded-xl mb-3">
-                <span class="material-symbols-outlined text-[#154212] flex-shrink-0" style="font-size:1.4rem">workspace_premium</span>
+              <div class="flex items-start gap-3 p-4 bg-[#f2e8d5] rounded-xl mb-3">
+                <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.4rem">workspace_premium</span>
                 <div>
                   <p class="section-label">Legal500 / Chambers</p>
-                  <p id="rankingText" class="text-sm font-semibold text-[#191c18] mt-0.5"></p>
+                  <p id="rankingText" class="text-sm font-semibold text-[#1a1810] mt-0.5"></p>
                 </div>
               </div>
             </div>
@@ -158,7 +180,7 @@
                 <span class="material-symbols-outlined text-[#f4a200] flex-shrink-0" style="font-size:1.4rem">emoji_events</span>
                 <div>
                   <p class="section-label">Ocenění</p>
-                  <p id="awardsText" class="text-sm font-semibold text-[#191c18] mt-0.5"></p>
+                  <p id="awardsText" class="text-sm font-semibold text-[#1a1810] mt-0.5"></p>
                 </div>
               </div>
             </div>
@@ -166,11 +188,11 @@
 
           <!-- CENOVÉ PODMÍNKY -->
           <div id="pricingCard" class="info-card">
-            <h2 class="text-lg font-bold text-[#191c18] mb-4">Cenové podmínky</h2>
+            <h2 class="text-lg font-bold text-[#1a1810] mb-4">Cenové podmínky</h2>
             <div class="space-y-0">
               <div class="row-info">
                 <span class="row-key">Hodinová sazba</span>
-                <span id="hourlyRate" class="row-val text-[#154212]"></span>
+                <span id="hourlyRate" class="row-val text-[#1f4209]"></span>
               </div>
               <div class="row-info" id="consultRow">
                 <span class="row-key">Konzultační poplatek</span>
@@ -178,17 +200,17 @@
               </div>
               <div id="pricingNoteRow" class="row-info hidden">
                 <span class="row-key">Poznámka</span>
-                <span id="pricingNote" class="row-val font-normal text-[#42493e]" style="max-width:60%"></span>
+                <span id="pricingNote" class="row-val font-normal text-[#3e3b26]" style="max-width:60%"></span>
               </div>
             </div>
-            <p class="text-xs text-[#191c18]/40 mt-4">* DPH není zahrnuta. Ceny se mohou lišit dle složitosti případu a způsobu fakturace.</p>
+            <p class="text-xs text-[#1a1810]/40 mt-4">* DPH není zahrnuta. Ceny se mohou lišit dle složitosti případu a způsobu fakturace.</p>
           </div>
 
           <!-- WEBOVÉ STRÁNKY -->
           <div id="websiteCard" class="info-card hidden">
-            <h2 class="text-lg font-bold text-[#191c18] mb-3">Webové stránky</h2>
+            <h2 class="text-lg font-bold text-[#1a1810] mb-3">Webové stránky</h2>
             <a id="websiteLink" href="#" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-[#154212] font-semibold hover:underline text-sm">
+              class="inline-flex items-center gap-2 text-[#1f4209] font-semibold hover:underline text-sm">
               <span class="material-symbols-outlined" style="font-size:1.1rem">open_in_new</span>
               <span id="websiteText"></span>
             </a>
@@ -202,18 +224,18 @@
 
             <!-- Kontakt CTA -->
             <div class="info-card">
-              <h3 class="text-base font-bold text-[#191c18] mb-1">Máte zájem o zastoupení?</h3>
-              <p class="text-sm text-[#191c18]/60 mb-4">Zanechte kontakt a my vám předáme poptávku kanceláři.</p>
+              <h3 class="text-base font-bold text-[#1a1810] mb-1">Máte zájem o zastoupení?</h3>
+              <p class="text-sm text-[#1a1810]/60 mb-4">Zanechte kontakt a my vám předáme poptávku kanceláři.</p>
               <button id="contactBtn"
-                class="w-full py-3 bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white rounded-xl font-bold text-sm shadow-md hover:shadow-lg active:scale-95 transition-all">
+                class="w-full py-3 bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white rounded-xl font-bold text-sm shadow-md hover:shadow-lg active:scale-95 transition-all">
                 Kontaktovat kancelář
               </button>
-              <p class="text-xs text-[#191c18]/40 mt-3 text-center">Vaše poptávka bude manuálně ověřena před předáním.</p>
+              <p class="text-xs text-[#1a1810]/40 mt-3 text-center">Vaše poptávka bude manuálně ověřena před předáním.</p>
             </div>
 
             <!-- Shrnutí kanceláře -->
             <div class="info-card">
-              <h3 class="text-sm font-bold text-[#191c18] mb-4">Přehled kanceláře</h3>
+              <h3 class="text-sm font-bold text-[#1a1810] mb-4">Přehled kanceláře</h3>
               <div class="space-y-0">
                 <div class="row-info">
                   <span class="row-key">Název</span>
@@ -241,16 +263,16 @@
                 </div>
                 <div class="row-info">
                   <span class="row-key">Hodnocení</span>
-                  <span id="sum-rating" class="row-val text-[#154212]"></span>
+                  <span id="sum-rating" class="row-val text-[#1f4209]"></span>
                 </div>
               </div>
             </div>
 
             <!-- Quiz CTA -->
-            <div class="bg-gradient-to-br from-[#154212] to-[#2d5a27] rounded-2xl p-5 text-white">
+            <div class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] rounded-2xl p-5 text-white">
               <h3 class="font-bold text-base mb-2">Nejste si jisti?</h3>
               <p class="text-xs mb-4 opacity-80">Projděte si náš kvíz a my vám doporučíme tři nejlepší kanceláře pro váš případ.</p>
-              <a href="quiz.html" class="block w-full py-2.5 bg-white text-[#154212] rounded-xl font-bold text-sm text-center hover:bg-[#f3f4ed] transition-all">
+              <a href="quiz.html" class="block w-full py-2.5 bg-white text-[#1f4209] rounded-xl font-bold text-sm text-center hover:bg-[#f2e8d5] transition-all">
                 Spustit kvíz
               </a>
             </div>
@@ -262,18 +284,18 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#edefe7] w-full pt-16 pb-8 mt-20">
+  <footer class="bg-[#e9e0c8] w-full pt-16 pb-8 mt-20">
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
       <div class="col-span-2">
-        <div class="text-lg font-bold text-[#154212] mb-4">JakNaPravnika.cz</div>
-        <p class="text-sm text-[#191c18]/60 max-w-xs">Nejmodernější platforma pro výběr právního zastoupení v České republice.</p>
+        <div class="text-lg font-bold text-[#1f4209] mb-4">JakNaPravnika.cz</div>
+        <p class="text-sm text-[#1a1810]/60 max-w-xs">Nejmodernější platforma pro výběr právního zastoupení v České republice.</p>
       </div>
-      <div><h4 class="font-bold text-[#154212] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="advokati.html" class="hover:text-[#154212]">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#154212]">Najít přes kvíz</a></li></ul></div>
-      <div><h4 class="font-bold text-[#154212] mb-4">Společnost</h4><ul class="space-y-2 text-sm text-[#191c18]/60"><li><a href="#" class="hover:text-[#154212]">O nás</a></li><li><a href="registrace.html" class="hover:text-[#154212]">Pro advokáty</a></li></ul></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="advokati.html" class="hover:text-[#1f4209]">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#1f4209]">Doporučení zdarma</a></li></ul></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Společnost</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="#" class="hover:text-[#1f4209]">O nás</a></li><li><a href="registrace.html" class="hover:text-[#1f4209]">Pro advokáty</a></li></ul></div>
     </div>
-    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#c2c9bb]/30">
-      <p class="text-xs text-[#191c18]/40">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál. Neposkytuje právní poradenství.</p>
-      <p class="text-sm text-[#191c18]/60 mt-2">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#bdb08e]/30">
+      <p class="text-xs text-[#1a1810]/40">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál. Neposkytuje právní poradenství.</p>
+      <p class="text-sm text-[#1a1810]/60 mt-2">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
     </div>
   </footer>
 
@@ -283,7 +305,7 @@
   <script>
     // ── Avatar colour palette (based on firm name char code) ───
     const AVATAR_PALETTES = [
-      { bg: '#bcf0ae', text: '#002201' },
+      { bg: '#c9ea8e', text: '#002201' },
       { bg: '#c6e7ff', text: '#001e2d' },
       { bg: '#ffdbcd', text: '#360f00' },
       { bg: '#e8d5ff', text: '#2f0052' },
@@ -299,7 +321,7 @@
     function starsHtml(rating) {
       const full  = Math.floor(rating);
       const empty = 5 - full;
-      return '★'.repeat(full) + '<span style="color:#e2e3dc">' + '★'.repeat(empty) + '</span>';
+      return '★'.repeat(full) + '<span style="color:#dccfac">' + '★'.repeat(empty) + '</span>';
     }
 
     // ── Load lawyer ─────────────────────────────────────────────
@@ -363,7 +385,7 @@
       document.getElementById('stat-founded').textContent = l.founded || '—';
       document.getElementById('stat-size').textContent    = l.size    || '—';
       document.getElementById('stat-rating').innerHTML    =
-        `<span style="color:#f4a200">${starsHtml(l.rating)}</span><br><span style="font-size:0.8rem;color:#72796e">${l.rating.toFixed(1)}</span>`;
+        `<span style="color:#f4a200">${starsHtml(l.rating)}</span><br><span style="font-size:0.8rem;color:#6b6140">${l.rating.toFixed(1)}</span>`;
 
       // ── Languages ───────────────────────────────────────────
       const langCont = document.getElementById('langChips');
