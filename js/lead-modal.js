@@ -181,20 +181,45 @@ async function handleLeadSubmit(e) {
 
     // 2. Send e-mail notification to owner via Web3Forms
     try {
+      // Read quiz answers from sessionStorage if available
+      let quizSummary = '—';
+      try {
+        const raw = sessionStorage.getItem('jaknapravnika_quiz_answers');
+        if (raw) {
+          const q = JSON.parse(raw);
+          const lines = [];
+          if (q.user_type)        lines.push('Typ klienta: '    + q.user_type);
+          if (q.oblast)           lines.push('Oblast práva: '   + q.oblast);
+          if (q.problem)          lines.push('Problém: '        + q.problem);
+          if (q.lokalita)         lines.push('Lokalita: '       + q.lokalita);
+          if (q.urgency)          lines.push('Naléhavost: '     + q.urgency);
+          if (q.budget)           lines.push('Rozpočet: '       + q.budget);
+          if (q.attorney_status)  lines.push('Má advokáta: '    + q.attorney_status);
+          if (q.age)              lines.push('Věk: '            + q.age);
+          if (q.occupation)       lines.push('Povolání: '       + q.occupation);
+          if (q.income)           lines.push('Příjem: '         + q.income);
+          if (q.company_size)     lines.push('Velikost firmy: ' + q.company_size);
+          if (q.company_industry) lines.push('Obor: '           + q.company_industry);
+          if (q.revenue)          lines.push('Obrat: '          + q.revenue);
+          if (lines.length) quizSummary = lines.join('\n');
+        }
+      } catch (_) {}
+
       const w3fResponse = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          access_key:  '379cea1f-d59f-4179-9e4c-6d780240ee34',
-          subject:     'Nová poptávka – JakNaPravnika.cz',
-          from_name:   'JakNaPravnika.cz',
-          name:        name,
-          email:       email || 'nezadán',
-          phone:       phone || '—',
-          attorney:    attorneyName,
-          message:     message || '—',
+          access_key:   '379cea1f-d59f-4179-9e4c-6d780240ee34',
+          subject:      'Nová poptávka – JakNaPravnika.cz',
+          from_name:    'JakNaPravnika.cz',
+          name:         name,
+          email:        email || 'nezadán',
+          phone:        phone || '—',
+          attorney:     attorneyName,
+          message:      message || '—',
+          quiz_answers: quizSummary,
           submitted_at: new Date().toLocaleString('cs-CZ'),
-          botcheck:    false
+          botcheck:     false
         })
       });
       const w3fResult = await w3fResponse.json();

@@ -144,15 +144,17 @@
   }
 
   // ── Extended area keywords ───────────────────────────────────────
+  // IMPORTANT: keywords must be specific to the area. Avoid broad terms
+  // that match unrelated practices (e.g. "HR" matches many firms).
   const areaKeywords = {
-    'Rodinné právo':  ['Rodinné právo','Rozvod','Divorce','Péče o děti','Child Custody','Dědické','Dědictví','Inheritance','Mediace','Manželské','Family','Alimenty','Custody'],
-    'Obchodní právo': ['Obchodní právo','Korporátní','Corporate','Fúze','Fúze a akvizice','M&A','PE','Smluvní','Zakládání firem','Venture Capital','Startup Advisory','Obchodní'],
-    'Nemovitosti':    ['Nemovitosti','Stavební právo','Katastr','Real Estate','Nemovitostní','Development','Developers'],
-    'Trestní právo':  ['Trestní','Criminal','Obrana','Obhajoba','Defense'],
-    'Pracovní právo': ['Pracovní právo','Labour','Employment','Pracovní spory','HR','Pracovní úrazy','Discrimination','Social Security'],
+    'Rodinné právo':  ['Rodinné právo','Rozvod','Divorce','Péče o děti','Child Custody','Dědické','Dědictví','Inheritance','Manželské','Family','Alimenty','Custody'],
+    'Obchodní právo': ['Obchodní právo','Korporátní','Corporate','Fúze','Fúze a akvizice','M&A','Smluvní','Zakládání firem','Venture Capital','Startup Advisory'],
+    'Nemovitosti':    ['Nemovitosti','Stavební právo','Katastr','Real Estate','Nemovitostní','Development'],
+    'Trestní právo':  ['Trestní právo','Trestní','Criminal','Obhajoba','Defense'],
+    'Pracovní právo': ['Pracovní právo','Labour','Employment','Pracovní spory','HR poradenství','Právní HR','Sociální zabezpečení'],
     'Daně':           ['Daně','Daňové','Tax','Účetnictví','Daňové poradenství'],
-    'IT právo':       ['IT právo','IT','Technologie','Duševní vlastnictví','Startup','E-commerce','Fintech','GDPR','Data','TMT','Media','IP'],
-    'Imigrace':       ['Imigrace','Visa','Work Permits','Residency','Migrace','Immigration'],
+    'IT právo':       ['IT právo','Technologie','Duševní vlastnictví','E-commerce','Fintech','GDPR','TMT','Autorské právo'],
+    'Imigrace':       ['Imigrace','Visa','Work Permits','Residency','Migrace','Immigration','Azylové'],
   };
 
   // ── Firm tier: 0=solo/boutique … 3=large international ─────────
@@ -183,115 +185,111 @@
   }
 
   // ════════════════════════════════════════════════════════════════
-  //  SCORING — priority order:
-  //  1. Practice area match  (0–90 pts)  ← dominant criterion
-  //  2. Location             (0–90 pts)  ← equally dominant
-  //  3. Firm size fit        (0–20 pts)  ← capacity for client type
-  //  4. Hourly rate / budget (0–20 pts)  ← affordability
-  //  5. Client target fit    (0–12 pts)  ← who they serve
-  //  6. Rating               (0–12 pts)  ← tiebreaker
-  //  7. Verified             (0 pts)     ← not used
+  //  SCORING — area match is the DOMINANT factor (3× weight).
+  //  Other factors (location, size, budget, target, rating) only
+  //  differentiate between firms that match the area well.
+  //
+  //  Area score (0–90 raw → ×3 = 0–270)  ← always dominant
+  //  Location          (0–50)
+  //  Firm size fit     (0–20)
+  //  Budget fit        (0–20)
+  //  Client target fit (0–12)
+  //  Rating            (0–12)
   // ════════════════════════════════════════════════════════════════
   function scoreMatch(lawyer) {
-    let score = 0;
+    let areaScore = 0;
+    let otherScore = 0;
     const userType    = params.get('type')   || '';
     const budget      = params.get('budget') || '';
     const targetLower = (lawyer.target || '').toLowerCase();
 
-    // ── 1. PRACTICE AREA MATCH (0–90 pts) ───────────────────────────
+    // ── 1. PRACTICE AREA MATCH (0–90 raw, ×3 later) ────────────────
     if (oblast) {
       const keywords  = areaKeywords[oblast] || [oblast];
       const areasText = lawyer.areas.join(' ').toLowerCase();
-      const fullText  = [...lawyer.areas, lawyer.primary || '', lawyer.description || ''].join(' ').toLowerCase();
 
       // Each keyword found in the firm's listed areas = 15 pts, capped at 3 hits
       let hits = 0;
       keywords.forEach(kw => { if (areasText.includes(kw.toLowerCase())) hits++; });
-      score += Math.min(hits * 15, 45);
+      areaScore += Math.min(hits * 15, 45);
 
       // Primary specialization built around this area = biggest bonus
       if (lawyer.primary && keywords.some(kw => lawyer.primary.toLowerCase().includes(kw.toLowerCase()))) {
-        score += 30;
+        areaScore += 30;
       }
       // First area listed = the firm's declared main focus
       if (lawyer.areas[0] && keywords.some(kw => lawyer.areas[0].toLowerCase().includes(kw.toLowerCase()))) {
-        score += 10;
+        areaScore += 10;
       }
       // Keyword in description (secondary signal)
       if (keywords.some(kw => (lawyer.description || '').toLowerCase().includes(kw.toLowerCase()))) {
-        score += 5;
+        areaScore += 5;
       }
     }
 
     // ── 2. FIRM SIZE FIT (0–20 pts) ──────────────────────────────────
     const firmSize = parseSize(lawyer.size);
     if (userType === 'firma') {
-      // Companies need capacity and full-service teams
-      if (firmSize >= 100)     score += 20;
-      else if (firmSize >= 25) score += 14;
-      else if (firmSize >= 10) score +=  8;
-      else                     score +=  2; // tiny firm, probably not enough capacity
+      if (firmSize >= 100)     otherScore += 20;
+      else if (firmSize >= 25) otherScore += 14;
+      else if (firmSize >= 10) otherScore +=  8;
+      else                     otherScore +=  2;
     } else if (userType === 'fyzicka') {
-      // Individuals want personal attention from smaller firms
-      if (firmSize <= 5)       score += 20;
-      else if (firmSize <= 15) score += 15;
-      else if (firmSize <= 35) score += 10;
-      else if (firmSize <= 80) score +=  5;
-      else                     score +=  2; // large firm = impersonal
+      if (firmSize <= 5)       otherScore += 20;
+      else if (firmSize <= 15) otherScore += 15;
+      else if (firmSize <= 35) otherScore += 10;
+      else if (firmSize <= 80) otherScore +=  5;
+      else                     otherScore +=  2;
     } else {
-      // No type selected — neutral mid-size preference
-      score += (firmSize >= 10 && firmSize <= 60) ? 10 : 5;
+      otherScore += (firmSize >= 10 && firmSize <= 60) ? 10 : 5;
     }
 
     // ── 3. HOURLY RATE / BUDGET FIT (0–20 pts) ──────────────────────
     const minRate = parseMinRate(lawyer.hourly_rate);
     if (budget === 'do-5k') {
-      if (minRate <= 1500)      score += 20;
-      else if (minRate <= 2500) score += 10;
-      else                      score +=  0;
+      if (minRate <= 1500)      otherScore += 20;
+      else if (minRate <= 2500) otherScore += 10;
     } else if (budget === '5k-20k') {
-      if (minRate <= 2000)      score += 20;
-      else if (minRate <= 3000) score += 14;
-      else if (minRate <= 4000) score +=  6;
-      else                      score +=  0;
+      if (minRate <= 2000)      otherScore += 20;
+      else if (minRate <= 3000) otherScore += 14;
+      else if (minRate <= 4000) otherScore +=  6;
     } else if (budget === '20k-50k') {
-      if (minRate <= 3500)      score += 20;
-      else if (minRate <= 5000) score += 12;
-      else                      score +=  4;
+      if (minRate <= 3500)      otherScore += 20;
+      else if (minRate <= 5000) otherScore += 12;
+      else                      otherScore +=  4;
     } else if (budget === '50k-200k') {
-      if (minRate >= 3000 && minRate <= 6000) score += 20;
-      else if (minRate >= 2000)               score += 10;
+      if (minRate >= 3000 && minRate <= 6000) otherScore += 20;
+      else if (minRate >= 2000)               otherScore += 10;
     } else if (budget === 'vice-200k') {
-      if (minRate >= 4000)      score += 20;
-      else if (minRate >= 3000) score += 12;
-      else                      score +=  4;
+      if (minRate >= 4000)      otherScore += 20;
+      else if (minRate >= 3000) otherScore += 12;
+      else                      otherScore +=  4;
     }
 
     // ── 4. CLIENT TARGET FIT (0–12 pts, penalty for hard mismatch) ──
     if (userType === 'fyzicka') {
-      if (targetLower.includes('individual') || targetLower.includes('families') || targetLower.includes('expat')) score += 12;
-      else if (targetLower.includes('sme') || targetLower.includes('small')) score += 6;
-      // International-only firms unsuitable for individuals
-      if (firmTier(lawyer.type) === 3 && !targetLower.includes('individual') && !targetLower.includes('families')) score -= 6;
+      if (targetLower.includes('individual') || targetLower.includes('families') || targetLower.includes('expat')) otherScore += 12;
+      else if (targetLower.includes('sme') || targetLower.includes('small')) otherScore += 6;
+      if (firmTier(lawyer.type) === 3 && !targetLower.includes('individual') && !targetLower.includes('families')) otherScore -= 6;
     } else if (userType === 'firma') {
-      if (targetLower.includes('corporate') || targetLower.includes('multinationals') || targetLower.includes('banks')) score += 12;
-      else if (targetLower.includes('sme') || targetLower.includes('startup')) score += 7;
-      // Family/expat-only firms are unsuitable for companies
+      if (targetLower.includes('corporate') || targetLower.includes('multinationals') || targetLower.includes('banks')) otherScore += 12;
+      else if (targetLower.includes('sme') || targetLower.includes('startup')) otherScore += 7;
       if ((targetLower.includes('families') || targetLower.includes('expat'))
-          && !targetLower.includes('corporate') && !targetLower.includes('sme')) score -= 12;
+          && !targetLower.includes('corporate') && !targetLower.includes('sme')) otherScore -= 12;
     }
 
-    // ── 5. LOCATION (0–90 pts) ───────────────────────────────────────
+    // ── 5. LOCATION (0–50 pts) — reduced so it doesn't drown area ──
     if (lokalita && lawyer.city && lawyer.city.toLowerCase().includes(lokalita.toLowerCase())) {
-      score += 90;
+      otherScore += 50;
     }
 
-    // ── 6. RATING (0–12 pts) — tiebreaker after area + location ─────
-    //    Scale: 4.0 → 0 pts, 4.5 → 6 pts, 5.0 → 12 pts
-    score += Math.max(0, ((lawyer.rating || 0) - 4.0) * 24); // max 12 pts at 4.5+
-    // Verified: not used (score += 0)
+    // ── 6. RATING (0–12 pts) — tiebreaker ──────────────────────────
+    otherScore += Math.max(0, ((lawyer.rating || 0) - 4.0) * 24);
 
-    return score;
+    // ── FINAL: area × 3 + other factors ─────────────────────────────
+    // This ensures that a firm specialising in the requested area
+    // ALWAYS outranks a firm that merely lists it as a side practice.
+    return areaScore * 3 + otherScore;
   }
 
   // ── Generate human-readable match reasons ────────────────────────
@@ -340,11 +338,9 @@
   function hasAreaMatch(lawyer) {
     if (!oblast) return true; // no filter if no area selected
     const keywords = areaKeywords[oblast] || [oblast];
-    const haystack = [
-      ...lawyer.areas,
-      lawyer.primary || '',
-      lawyer.description || '',
-    ].join(' ').toLowerCase();
+    // Only check the firm's declared practice areas (not description)
+    // to avoid false positives from tangential keyword mentions
+    const haystack = [...lawyer.areas, lawyer.primary || ''].join(' ').toLowerCase();
     return keywords.some(kw => haystack.includes(kw.toLowerCase()));
   }
 

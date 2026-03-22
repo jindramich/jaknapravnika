@@ -743,6 +743,9 @@
         console.warn('Supabase not configured, skipping save:', err.message);
       }
 
+      // Save full answers to sessionStorage so the contact email can include them
+      sessionStorage.setItem('jaknapravnika_quiz_answers', JSON.stringify(quizData));
+
       const params = new URLSearchParams({
         oblast:   answers.oblast   || '',
         lokalita: answers.lokalita || '',

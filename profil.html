@@ -94,7 +94,7 @@
     <div class="max-w-7xl mx-auto">
 
       <!-- Back -->
-      <a href="advokati.html" class="inline-flex items-center gap-2 text-[#1f4209] font-semibold text-sm hover:gap-3 transition-all mb-8">
+      <a id="backBtn" href="advokati.html" class="inline-flex items-center gap-2 text-[#1f4209] font-semibold text-sm hover:gap-3 transition-all mb-8">
         <span class="material-symbols-outlined" style="font-size:1.1rem">arrow_back</span>
         Zpět na seznam advokátů
       </a>
@@ -353,7 +353,7 @@
 
     // ── Back navigation: return to doporučení if came from quiz results ──
     const fromPage = params.get('from');
-    const backLink = document.querySelector('a[href="advokati.html"]');
+    const backLink = document.getElementById('backBtn');
     if (fromPage === 'vysledky' && backLink) {
       const vysledkyParams = new URLSearchParams();
       ['oblast','lokalita','budget','urgency','type','qid'].forEach(key => {
