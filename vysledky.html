@@ -21,6 +21,7 @@
   <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="js/dark-mode.js"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script id="tailwind-config">
     tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "secondary":"#964824","on-primary":"#ffffff","on-surface":"#191c18","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#72796e","primary":"#154212","secondary-fixed":"#ffdbcd","surface-container-high":"#e7e9e1","on-secondary-fixed":"#360f00","surface-container":"#edefe7","surface-container-highest":"#e2e3dc","background":"#f9faf2","outline-variant":"#c2c9bb","error":"#ba1a1a","on-surface-variant":"#42493e","tertiary":"#003d57","primary-fixed":"#bcf0ae","tertiary-fixed":"#c6e7ff","on-tertiary-fixed":"#001e2d","on-primary-fixed":"#002201","primary-container":"#2d5a27","surface-container-low":"#f3f4ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
@@ -32,6 +33,18 @@
     .editorial-shadow { box-shadow:0 12px 40px -4px rgba(25,28,24,0.08); }
     .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
     .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 50px -8px rgba(25,28,24,0.12); }
+
+    /* ── Dark Mode ── */
+    html.dark body { background-color:#140f05 !important; color:#ede8d4; }
+    html.dark nav { background-color:rgba(20,15,5,0.92) !important; }
+    html.dark .editorial-shadow { box-shadow:0 12px 40px -4px rgba(0,0,0,0.5) !important; }
+    html.dark .dark-toggle-btn { color:#c9ea8e !important; }
+    html.dark .lawyer-card { background-color:#1a1f18 !important; border-color:#2a3328 !important; }
+    html.dark .card-footer { background-color:#111610 !important; border-top-color:#2a3328 !important; }
+    html.dark .lang-tag { background-color:#252e22 !important; color:#c9ea8e !important; }
+    html.dark .reason-badge { background-color:#1a2e18 !important; border-color:#2d5a27 !important; color:#9dd090 !important; }
+    html.dark footer { background-color:#0d1209 !important; }
+    html.dark footer p { color:#8a9e85 !important; }
   </style>
 </head>
 <body class="bg-[#f9faf2] text-[#191c18]">
@@ -45,7 +58,13 @@
       <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Advokáti</a>
       <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#191c18]/70 hover:text-[#154212] px-3 py-1 rounded-full hover:bg-[#f3f4ed] transition-all">Pro advokáty</a>
     </div>
-    <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+    <div class="flex items-center gap-3">
+      <button onclick="toggleDarkMode()" title="Přepnout tmavý režim"
+        class="dark-toggle-btn w-10 h-10 rounded-full flex items-center justify-center text-[#154212] hover:bg-[#f3f4ed] transition-all">
+        <span class="material-symbols-outlined dark-toggle-icon" style="font-size:1.3rem">dark_mode</span>
+      </button>
+      <a href="quiz.html" class="bg-gradient-to-br from-[#154212] to-[#2d5a27] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+    </div>
   </div>
 </nav>
 
@@ -284,9 +303,7 @@
     }
 
     // ── 5. LOCATION (0–50 pts) — reduced so it doesn't drown area ──
-    if (lokalita && lawyer.city && lawyer.city.toLowerCase().includes(lokalita.toLowerCase())) {
-      otherScore += 50;
-    }
+    // city is handled as a hard filter above, no bonus needed here
 
     // ── 6. RATING (0–12 pts) — tiebreaker ──────────────────────────
     otherScore += Math.max(0, ((lawyer.rating || 0) - 4.0) * 24);
@@ -350,9 +367,20 @@
   }
 
   // ── Rank all lawyers and pick top 3 ─────────────────────────────
-  // First try: firms that have at least one area keyword match
-  let pool = lawyersData.filter(hasAreaMatch);
-  // Safety fallback: if fewer than 3 match, open pool to all (shouldn't happen with 100 firms)
+  // City is the PRIMARY hard filter — only show lawyers from the selected city
+  const cityFilter = lawyer =>
+    !lokalita || (lawyer.city || '').toLowerCase().includes(lokalita.toLowerCase());
+
+  // First try: city match + area match (ideal)
+  let pool = lawyersData.filter(l => cityFilter(l) && hasAreaMatch(l));
+
+  // Fallback 1: city match only (if not enough with area)
+  if (pool.length < 3 && lokalita) pool = lawyersData.filter(cityFilter);
+
+  // Fallback 2: area match only (if no city set or city has no lawyers)
+  if (pool.length < 3) pool = lawyersData.filter(hasAreaMatch);
+
+  // Fallback 3: all lawyers
   if (pool.length < 3) pool = lawyersData;
 
   const ranked = pool
@@ -398,7 +426,7 @@
       ).join('');
 
       const langsHtml = (lawyer.languages || []).slice(0, 3).map(l =>
-        `<span class="text-xs text-[#42493e] bg-[#f3f4ed] px-2 py-0.5 rounded-full">${l}</span>`
+        `<span class="lang-tag text-xs text-[#42493e] bg-[#f3f4ed] px-2 py-0.5 rounded-full">${l}</span>`
       ).join('');
 
       const verifiedBadge = lawyer.verified
@@ -414,14 +442,14 @@
       const reasons = matchReasons(lawyer);
       const reasonsHtml = reasons.length
         ? `<div class="flex flex-wrap gap-1.5 mb-4">
-             ${reasons.map(r => `<span class="inline-flex items-center gap-1 bg-[#f0f8ee] text-[#154212] border border-[#bcf0ae] text-xs font-semibold px-2.5 py-1 rounded-full">
+             ${reasons.map(r => `<span class="reason-badge inline-flex items-center gap-1 bg-[#f0f8ee] text-[#154212] border border-[#bcf0ae] text-xs font-semibold px-2.5 py-1 rounded-full">
                <span class="material-symbols-outlined" style="font-size:0.8rem;font-variation-settings:'FILL' 1,'wght' 500,'GRAD' 0,'opsz' 20;">check_circle</span>${r}
              </span>`).join('')}
            </div>`
         : '';
 
       const card = document.createElement('div');
-      card.className = 'bg-white rounded-2xl editorial-shadow card-hover overflow-hidden';
+      card.className = 'lawyer-card bg-white rounded-2xl editorial-shadow card-hover overflow-hidden';
       if (i === 0) card.className += ' ring-2 ring-[#154212]/20';
 
       card.innerHTML = `
@@ -448,7 +476,7 @@
             <div class="flex-1 min-w-0">
               <h2 class="text-2xl font-extrabold text-[#191c18] font-['Plus_Jakarta_Sans'] mb-0.5">${lawyer.firm}</h2>
               ${partnerLine}
-              <p class="text-xs text-[#72796e] mb-3">${lawyer.type || ''} · Praha</p>
+              <p class="text-xs text-[#72796e] mb-3">${lawyer.type || ''}${lawyer.city ? ' · ' + lawyer.city : ''}</p>
 
               <!-- Rating -->
               <div class="flex items-center gap-2 mb-4">
@@ -476,7 +504,7 @@
         </div>
 
         <!-- Action bar -->
-        <div class="px-6 md:px-8 py-5 bg-[#f3f4ed] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="card-footer px-6 md:px-8 py-5 bg-[#f3f4ed] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div class="text-sm text-[#42493e]">
             <span class="material-symbols-outlined text-sm align-middle text-[#154212]">schedule</span>
             Odpovíme do <strong>24 hodin</strong> od odeslání poptávky

@@ -612,6 +612,9 @@
       attachCardHandlers(document.getElementById('problem-cards'));
     }
 
+    // Steps where a single card-click should auto-advance
+    const autoAdvanceCardSteps = ['step1', 'step2', 'step5', 'step6', 'step7'];
+
     // ── Card click handling ─────────────────────────────────────
     function attachCardHandlers(container) {
       container.querySelectorAll('.card-option[data-field]').forEach(card => {
@@ -623,6 +626,11 @@
           parent.querySelectorAll(`.card-option[data-field="${field}"]`).forEach(c => c.classList.remove('selected'));
           this.classList.add('selected');
           answers[field] = value;
+
+          // Auto-advance after short delay on single-select steps
+          if (autoAdvanceCardSteps.includes(currentStepId)) {
+            setTimeout(() => { nextBtn.click(); }, 350);
+          }
         });
       });
     }
@@ -631,6 +639,9 @@
     document.querySelectorAll('.step-container').forEach(container => {
       attachCardHandlers(container);
     });
+
+    // Steps where a radio selection should auto-advance
+    const autoAdvanceRadioSteps = { 'revenue': 'step4_company' };
 
     // Radio button styling sync
     document.querySelectorAll('.radio-option input[type="radio"]').forEach(radio => {
@@ -642,6 +653,11 @@
         if (name === 'income')  answers.income  = this.value;
         if (name === 'revenue') answers.revenue = this.value;
         if (name === 'budget')  answers.budget  = this.value;
+
+        // Auto-advance on single-radio steps
+        if (autoAdvanceRadioSteps[name] && currentStepId === autoAdvanceRadioSteps[name]) {
+          setTimeout(() => { nextBtn.click(); }, 350);
+        }
       });
     });
 
