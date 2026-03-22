@@ -469,7 +469,21 @@
         <div class="space-y-8">
           <div>
             <label for="location" class="block text-sm font-semibold text-[#1a1810] mb-2">Kde se nacházíte?</label>
-            <input type="text" id="location" placeholder="Město, okres nebo kraj (např. Praha 2)">
+            <select id="location">
+              <option value="">Vyberte město</option>
+              <option value="Praha">Praha</option>
+              <option value="Brno">Brno</option>
+              <option value="Plzeň">Plzeň</option>
+              <option value="Olomouc">Olomouc</option>
+              <option value="České Budějovice">České Budějovice</option>
+              <option value="Hradec Králové">Hradec Králové</option>
+              <option value="Pardubice">Pardubice</option>
+              <option value="Ústí nad Labem">Ústí nad Labem</option>
+              <option value="Liberec">Liberec</option>
+              <option value="Zlín">Zlín</option>
+              <option value="Jihlava">Jihlava</option>
+              <option value="Karlovy Vary">Karlovy Vary</option>
+            </select>
           </div>
           <div>
             <label class="block text-sm font-semibold text-[#1a1810] mb-3">Rozpočet na právní služby</label>
@@ -696,7 +710,7 @@
           break;
         case 'step8': {
           const loc = document.getElementById('location').value.trim();
-          if (!loc) { showError('Prosím zadejte vaši lokalitu.'); return false; }
+          if (!loc) { showError('Prosím vyberte vaše město.'); return false; }
           if (!answers.budget) { showError('Prosím vyberte rozpočet.'); return false; }
           answers.lokalita = loc;
           break;
