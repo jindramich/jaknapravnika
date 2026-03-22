@@ -321,10 +321,24 @@
     }));
     const top3 = scored.sort((a, b) => b._score - a._score).slice(0, 3);
 
+    function logoFallback(el) {
+      const PALETTES2 = [
+        {bg:'#c9ea8e',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
+        {bg:'#ffdbcd',text:'#360f00'},{bg:'#e8d5ff',text:'#2f0052'},
+        {bg:'#fff3cd',text:'#3a2f00'},{bg:'#d4f0e8',text:'#003325'},
+      ];
+      const pal = PALETTES2[(el.dataset.firm||'').charCodeAt(0) % PALETTES2.length];
+      el.style.background = pal.bg;
+      el.style.color = pal.text;
+      el.classList.remove('bg-white','border','border-[#e9e0c8]');
+      el.innerHTML = '<span style="font-size:1rem;font-weight:900;font-family:\'Plus Jakarta Sans\',sans-serif">' + el.dataset.initials + '</span>';
+    }
+
     const grid = document.getElementById('topRatedGrid');
     top3.forEach(l => {
       const pal = PALETTES[(l.firm || '').charCodeAt(0) % PALETTES.length];
       const initials = l.initials || (l.firm || '??').slice(0, 2).toUpperCase();
+      const domain = (l.website || '').replace(/^https?:\/\//,'');
       const stars = Array(5).fill(0).map((_, i) =>
         `<span style="color:${i < Math.round(l.rating || 0) ? '#f4a200' : '#dccfac'}">★</span>`
       ).join('');
@@ -336,8 +350,11 @@
       card.className = 'bg-white rounded-2xl overflow-hidden editorial-shadow hover:shadow-xl transition-all p-6';
       card.innerHTML = `
         <div class="flex items-center gap-4 mb-5">
-          <div class="w-14 h-14 rounded-xl flex items-center justify-center text-base font-extrabold flex-shrink-0"
-               style="background:${pal.bg};color:${pal.text}">${initials}</div>
+          <div class="logo-av w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden bg-white border border-[#e9e0c8]"
+               data-initials="${initials}" data-firm="${l.firm}">
+            <img src="https://logo.clearbit.com/${domain}" alt="${l.firm}" loading="lazy"
+                 class="w-full h-full object-contain p-1.5" onerror="logoFallback(this.parentElement)">
+          </div>
           <div class="min-w-0">
             <h3 class="font-bold text-[#1a1810] text-base leading-tight truncate">${l.firm}</h3>
             <p class="text-xs text-[#6b6140] mt-0.5">${l.type || ''}</p>

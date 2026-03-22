@@ -364,13 +364,22 @@
       backLink.innerHTML = backLink.innerHTML.replace('Zpět na seznam advokátů', 'Zpět na doporučení');
     }
 
+    function logoFallback(el) {
+      const pal = avatarPalette(el.dataset.firm || '');
+      el.style.background = pal.bg;
+      el.style.color = pal.text;
+      el.classList.remove('bg-white','border','border-[#e9e0c8]');
+      el.innerHTML = '<span style="font-size:2rem;font-weight:900;font-family:\'Plus Jakarta Sans\',sans-serif">' + el.dataset.initials + '</span>';
+    }
+
     function renderProfile(l) {
       // ── Avatar ──────────────────────────────────────────────
-      const pal = avatarPalette(l.firm);
       const av  = document.getElementById('firmAvatar');
-      av.textContent = l.initials || l.firm.slice(0,2).toUpperCase();
-      av.style.background = pal.bg;
-      av.style.color = pal.text;
+      const domain = (l.website || '').replace(/^https?:\/\//,'');
+      av.dataset.initials = l.initials || l.firm.slice(0,2).toUpperCase();
+      av.dataset.firm = l.firm;
+      av.classList.add('overflow-hidden','bg-white','border','border-[#e9e0c8]');
+      av.innerHTML = '<img src="https://logo.clearbit.com/' + domain + '" alt="' + l.firm + '" class="w-full h-full object-contain p-3" onerror="logoFallback(this.parentElement)">';
 
       // ── Firm name & header ──────────────────────────────────
       document.getElementById('firmName').textContent = l.firm;

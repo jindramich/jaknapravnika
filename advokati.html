@@ -407,6 +407,7 @@
         ];
         const pal = PALETTES[(lawyer.firm || '').charCodeAt(0) % PALETTES.length];
         const initials = lawyer.initials || (lawyer.firm || '??').slice(0,2).toUpperCase();
+        const domain = (lawyer.website || '').replace(/^https?:\/\//,'');
 
         const verified = lawyer.verified
           ? '<span class="inline-flex items-center gap-1 bg-[#c9ea8e] text-[#002201] px-2.5 py-0.5 rounded-full text-xs font-bold">✓ Ověřeno</span>'
@@ -433,9 +434,10 @@
         return `
           <div class="bg-white rounded-2xl p-5 flex flex-col sm:flex-row sm:items-start gap-5 editorial-shadow hover:shadow-lg transition-all border border-[#dccfac] cursor-pointer group"
                onclick="window.location.href='profil.html?id=${lawyer.id}'">
-            <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-xl font-extrabold font-['Plus_Jakarta_Sans'] select-none"
-                 style="background:${pal.bg};color:${pal.text}">
-              ${initials}
+            <div class="logo-av w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 overflow-hidden bg-white border border-[#e9e0c8]"
+                 data-initials="${initials}" data-bg="${pal.bg}" data-color="${pal.text}">
+              <img src="https://logo.clearbit.com/${domain}" alt="${lawyer.firm}" loading="lazy"
+                   class="w-full h-full object-contain p-1.5" onerror="logoFallback(this.parentElement)">
             </div>
 
             <div class="flex-1 min-w-0">
@@ -468,6 +470,13 @@
     }
 
     // Initialize on page load
+    function logoFallback(el) {
+      el.style.background = el.dataset.bg;
+      el.style.color = el.dataset.color;
+      el.classList.remove('bg-white','border','border-[#e9e0c8]');
+      el.innerHTML = '<span style="font-size:1.1rem;font-weight:900;font-family:\'Plus Jakarta Sans\',sans-serif">' + el.dataset.initials + '</span>';
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       new LawyerFilterManager();
     });
