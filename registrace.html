@@ -420,20 +420,59 @@ function selectPlan(plan) {
   }
 }
 
-document.getElementById('registrationForm').addEventListener('submit', function(e) {
+document.getElementById('registrationForm').addEventListener('submit', async function(e) {
   e.preventDefault();
 
-  // Show success banner
-  const banner = document.getElementById('successBanner');
-  banner.classList.remove('hidden');
+  const form = this;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Odesílám...';
 
-  // Reset form
-  this.reset();
+  // Collect form data
+  const data = new FormData(form);
+  const plan = form.querySelector('input[name="plan"]:checked')?.value || 'Zdarma';
 
-  // Hide banner after 5 seconds
-  setTimeout(() => {
-    banner.classList.add('hidden');
-  }, 5000);
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key:      'c65ebb76-0525-484a-a6df-a3f45faa2a1d',
+        subject:         'Nová registrace advokáta – JakNaPravnika.cz (' + plan + ')',
+        from_name:       'JakNaPravnika.cz',
+        name:            data.get('fullname') || '',
+        email:           data.get('email') || '',
+        phone:           data.get('phone') || '',
+        firm:            data.get('firmname') || '',
+        cak_number:      data.get('caknumber') || '',
+        plan:            plan,
+        address:         data.get('address') || '',
+        website:         data.get('website') || '',
+        linkedin:        data.get('linkedin') || '',
+        rate:            (data.get('rateFrom') || '') + '–' + (data.get('rateTo') || '') + ' Kč/hod',
+        description:     data.get('description') || '',
+        specializations: data.getAll('specialization').join(', '),
+        languages:       data.getAll('languages').join(', '),
+        submitted_at:    new Date().toLocaleString('cs-CZ'),
+        botcheck:        false
+      })
+    });
+    const json = await res.json();
+    if (json.success) {
+      const banner = document.getElementById('successBanner');
+      banner.classList.remove('hidden');
+      form.reset();
+      selectPlan('free');
+      setTimeout(() => banner.classList.add('hidden'), 6000);
+    } else {
+      alert('Něco se pokazilo. Zkuste to prosím znovu.');
+    }
+  } catch(err) {
+    alert('Chyba při odesílání. Zkontrolujte připojení a zkuste znovu.');
+  }
+
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Odeslat žádost o registraci';
 });
 </script>
 
