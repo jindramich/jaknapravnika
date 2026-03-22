@@ -45,6 +45,7 @@
     }
     html.dark input::placeholder, html.dark textarea::placeholder { color:#8a8060 !important; }
     html.dark .dark-toggle-btn { color:#c9ea8e !important; }
+    html.dark .hero-highlight { background-color:#3d1a0a !important; }
   </style>
 </head>
 <body>
@@ -72,13 +73,14 @@
     <div class="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto items-center">
       <!-- Left: Content -->
       <div>
-        <!-- Mobile mascot: floats right of headline, hidden on desktop -->
-        <div class="md:hidden float-right ml-2 mb-2 w-16">
+        <!-- Mobile: headline + mascot side by side -->
+        <div class="md:hidden flex items-center gap-3 mb-6">
+          <h1 class="text-5xl font-bold text-[#1f4209] leading-tight tracking-tight flex-1">Hledáte <span class="hero-highlight" style="background-color:#ffdbcd; padding: 0 4px;">ideálního</span> advokáta?</h1>
           <img src="images/mascot.png" alt="Maskot JakNaPravnika"
-               class="w-full drop-shadow-xl select-none" />
+               class="h-40 w-auto drop-shadow-xl select-none flex-shrink-0" />
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-bold text-[#1f4209] leading-tight mb-6 tracking-tight">Hledáte <span style="background-color:#ffdbcd; padding: 0 4px;">ideálního</span> advokáta?</h1>
+        <h1 class="hidden md:block text-7xl font-bold text-[#1f4209] leading-tight mb-6 tracking-tight">Hledáte <span class="hero-highlight" style="background-color:#ffdbcd; padding: 0 4px;">ideálního</span> advokáta?</h1>
         <p class="text-lg text-[#1a1810]/70 mb-8 max-w-lg leading-relaxed">Propojujeme vás s kvalifikovanými právníky v České republice. Najděte specialistu na vaši situaci, porovnejte zkušenosti a spojte se přímo.</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="quiz.html" class="bg-[#1f4209] hover:bg-[#263b07] text-white px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Získat doporučení zdarma</a>
