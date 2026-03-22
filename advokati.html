@@ -29,7 +29,7 @@
     body { font-family:'Inter',sans-serif; background-color:#faf6ed; transition: background-color 0.2s, color 0.2s; }
     h1,h2,h3,h4,.brand { font-family:'Plus Jakarta Sans',sans-serif; }
     .editorial-shadow { box-shadow: 0 12px 40px -4px rgba(25,28,24,0.06); }
-    .sticky-sidebar { position: sticky; top: 88px; }
+    .sticky-sidebar { position: sticky; top: 88px; max-height: calc(100vh - 108px); overflow-y: auto; }
 
     /* ── Dark Mode: base + things JS can't reach (hover, nav blur, inputs) ── */
     html.dark body   { background-color:#140f05 !important; color:#ede8d4; }
