@@ -206,6 +206,42 @@
               </div>
             </div>
           </div>
+          <div class="card-option p-5" data-field="oblast" data-value="spotrebitelske">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.8rem">receipt_long</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#1a1810]">Spotřebitelské právo</h3>
+                <p class="text-sm text-[#1a1810]/55">Úvěry, reklamace, ČOI</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="nahrada_ujmy">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.8rem">healing</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#1a1810]">Náhrada újmy</h3>
+                <p class="text-sm text-[#1a1810]/55">Nehody, úrazy, škoda na zdraví</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="obcanske">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.8rem">balance</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#1a1810]">Občanské právo</h3>
+                <p class="text-sm text-[#1a1810]/55">Spory, sousedé, zastupování u soudu</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="spravni">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.8rem">account_balance</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#1a1810]">Správní právo</h3>
+                <p class="text-sm text-[#1a1810]/55">Úřady, pokuty, stavební povolení</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -542,7 +578,11 @@
       trestni:     [['Obhajoba','defence'],         ['Zastupování poškozeného','victim'],['Trestní oznámení','complaint'],   ['Odvolání','appeal'],             ['Podmíněné propuštění','parole'],              ['Jiné','other']],
       dane:        [['Daňová kontrola','audit'],    ['Spor s finančním úřadem','tax_dispute'],['Daňová optimalizace','optimization'],['DPH','vat'],           ['Převod majetku','transfer'],                  ['Jiné','other']],
       it:          [['GDPR / ochrana dat','gdpr'],  ['Softwarová smlouva','software'],  ['E-commerce právo','ecommerce'],     ['Autorská práva / IP','ip'],      ['Kybernetický incident','cyber'],              ['Jiné','other']],
-      imigrace:    [['Povolení k pobytu','residence'],['Pracovní vízum','work_visa'],  ['Trvalý pobyt','permanent'],         ['Občanství','citizenship'],        ['Sloučení rodiny','family_reunification'],     ['Jiné','other']]
+      imigrace:         [['Povolení k pobytu','residence'],  ['Pracovní vízum','work_visa'],        ['Trvalý pobyt','permanent'],           ['Občanství','citizenship'],          ['Sloučení rodiny','family_reunification'],        ['Jiné','other']],
+      spotrebitelske:   [['Spotřebitelský úvěr','consumer_credit'],['Reklamace / vada zboží','complaint'],['Nekalé obchodní praktiky','unfair'],  ['Finanční arbitr','fin_arbitr'],     ['Spor s pojišťovnou','insurance_dispute'],        ['ČOI / dozorový orgán','coi'],       ['Jiné','other']],
+      nahrada_ujmy:     [['Dopravní nehoda','car_accident'],       ['Pracovní úraz','work_injury'],       ['Újma na zdraví','personal_injury'],   ['Škoda na majetku','property_damage'],['Újma způsobená státem','state_liability'],       ['Jiné','other']],
+      obcanske:         [['Spor se sousedem','neighbor_dispute'],  ['Dluh / pohledávka','debt'],           ['Zastupování před soudem','court_rep'], ['Neoprávněný zásah','trespass'],     ['Dědické řízení','inheritance'],                  ['Smlouva / smluvní spor','contract'], ['Jiné','other']],
+      spravni:          [['Stavební povolení','building_permit'],  ['Pokuta / přestupek','fine'],          ['Odvolání proti rozhodnutí úřadu','appeal'], ['Vyvlastnění','expropriation'], ['Živnostenské oprávnění','trade_license'],         ['Jiné','other']]
     };
 
     function populateProblemCards() {

@@ -146,15 +146,20 @@
   // ── Extended area keywords ───────────────────────────────────────
   // IMPORTANT: keywords must be specific to the area. Avoid broad terms
   // that match unrelated practices (e.g. "HR" matches many firms).
+  // Keys match the quiz data-value attributes exactly
   const areaKeywords = {
-    'Rodinné právo':  ['Rodinné právo','Rozvod','Divorce','Péče o děti','Child Custody','Dědické','Dědictví','Inheritance','Manželské','Family','Alimenty','Custody'],
-    'Obchodní právo': ['Obchodní právo','Korporátní','Corporate','Fúze','Fúze a akvizice','M&A','Smluvní','Zakládání firem','Venture Capital','Startup Advisory'],
-    'Nemovitosti':    ['Nemovitosti','Stavební právo','Katastr','Real Estate','Nemovitostní','Development'],
-    'Trestní právo':  ['Trestní právo','Trestní','Criminal','Obhajoba','Defense'],
-    'Pracovní právo': ['Pracovní právo','Labour','Employment','Pracovní spory','HR poradenství','Právní HR','Sociální zabezpečení'],
-    'Daně':           ['Daně','Daňové','Tax','Účetnictví','Daňové poradenství'],
-    'IT právo':       ['IT právo','Technologie','Duševní vlastnictví','E-commerce','Fintech','GDPR','TMT','Autorské právo'],
-    'Imigrace':       ['Imigrace','Visa','Work Permits','Residency','Migrace','Immigration','Azylové'],
+    'rodinne':        ['Rodinné právo','Rozvod','Divorce','Péče o děti','Child Custody','Dědické','Dědictví','Inheritance','Manželské','Family','Alimenty','Custody'],
+    'obchodni':       ['Obchodní právo','Korporátní','Corporate','Fúze','Fúze a akvizice','M&A','Smluvní','Zakládání firem','Venture Capital','Startup Advisory'],
+    'nemovitosti':    ['Nemovitosti','Stavební právo','Katastr','Real Estate','Nemovitostní','Development'],
+    'trestni':        ['Trestní právo','Trestní','Criminal','Obhajoba','Defense'],
+    'pracovni':       ['Pracovní právo','Labour','Employment','Pracovní spory','HR poradenství','Právní HR','Sociální zabezpečení'],
+    'dane':           ['Daně','Daňové','Tax','Účetnictví','Daňové poradenství'],
+    'it':             ['IT právo','Technologie','Duševní vlastnictví','E-commerce','Fintech','GDPR','TMT','Autorské právo'],
+    'imigrace':       ['Imigrace','Azylové','Work Permits','Residency','Migrace','Immigration'],
+    'spotrebitelske': ['Spotřebitelské','Consumer','Finanční arbitr','Spotřebitelský úvěr','Pojišťovací právo','Reklamace','Spory a rozhodčí řízení','Řešení sporů','Občanské právo'],
+    'nahrada_ujmy':   ['Náhrada škody','Dopravní nehody','Újma na zdraví','Pracovní úrazy','Personal Injury','Škody na zdraví','Pojišťovací právo'],
+    'obcanske':       ['Občanské právo','Občanské a obchodní','Rodinné a občanské','Řešení sporů','Mediace','Alternativní řešení sporů','Pohledávky'],
+    'spravni':        ['Správní právo','Stavební právo','Veřejné právo','Regulatorní','Administrative','Přestupky','Veřejné zakázky'],
   };
 
   // ── Firm tier: 0=solo/boutique … 3=large international ─────────
