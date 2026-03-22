@@ -75,6 +75,29 @@
         <div class="inline-block bg-[#ffdbcd] px-4 py-2 rounded-full mb-6">
           <span class="text-xs font-bold text-[#360f00] tracking-widest">PRÁVNÍ POMOC NA MÍRU</span>
         </div>
+
+        <!-- Mobile mascot: floats right of headline, hidden on desktop -->
+        <div class="md:hidden float-right ml-3 mb-2 relative w-32">
+          <img src="images/mascot.png" alt="Maskot JakNaPravnika"
+               class="w-full drop-shadow-xl select-none" />
+          <div class="editorial-shadow bg-white p-2 rounded-xl absolute -bottom-1 -right-1 w-24">
+            <div class="space-y-1">
+              <div>
+                <p class="text-base font-bold text-[#1f4209] leading-none">100+</p>
+                <p class="text-[9px] text-[#1a1810]/60 mt-0.5">advokátů</p>
+              </div>
+              <div class="border-t border-[#dccfac] pt-1">
+                <p class="text-base font-bold text-[#1f4209] leading-none">4.8★</p>
+                <p class="text-[9px] text-[#1a1810]/60 mt-0.5">hodnocení</p>
+              </div>
+              <div class="border-t border-[#dccfac] pt-1">
+                <p class="text-base font-bold text-[#1f4209] leading-none">ČR</p>
+                <p class="text-[9px] text-[#1a1810]/60 mt-0.5">Praha + regiony</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <h1 class="text-5xl md:text-7xl font-bold text-[#1f4209] leading-tight mb-6 tracking-tight">Hledáte ideálního advokáta?</h1>
         <p class="text-lg text-[#1a1810]/70 mb-8 max-w-lg leading-relaxed">Propojujeme vás s kvalifikovanými právníky v České republice. Najděte specialistu na vaši situaci, porovnejte zkušenosti a spojte se přímo.</p>
         <div class="flex flex-col sm:flex-row gap-4">
@@ -82,11 +105,11 @@
           <a href="advokati.html" class="bg-[#e2d9c0] hover:bg-[#d4c9a4] text-[#1a1810] px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Procházet advokáty</a>
         </div>
       </div>
-      <!-- Right: Mascot + floating stats card -->
-      <div class="flex justify-center items-end relative min-h-[320px] md:min-h-[480px]">
+      <!-- Right: Mascot + floating stats card (desktop only) -->
+      <div class="hidden md:flex justify-center items-end relative min-h-[480px]">
         <img src="images/mascot.png" alt="Maskot JakNaPravnika"
-             class="h-[320px] md:h-[480px] w-auto relative z-10 drop-shadow-2xl select-none" />
-        <div class="editorial-shadow bg-white p-4 md:p-5 rounded-2xl transform rotate-2 absolute bottom-4 right-0 z-20 w-40 md:w-48">
+             class="h-[480px] w-auto relative z-10 drop-shadow-2xl select-none" />
+        <div class="editorial-shadow bg-white p-5 rounded-2xl transform rotate-2 absolute bottom-4 right-0 z-20 w-48">
           <div class="space-y-3">
             <div>
               <p class="text-3xl font-bold text-[#1f4209]">100+</p>
