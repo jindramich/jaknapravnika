@@ -68,7 +68,7 @@
     <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
       <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter brand">JakNaPravnika.cz</a>
       <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Domů</a>
+        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1f4209] border-b-2 border-[#1f4209] pb-1">Domů</a>
         <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Advokáti</a>
         <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Pro advokáty</a>
         <a href="jak-najit-pravnika-a-vybrat-advokata.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Blog</a>
@@ -90,13 +90,13 @@
       <div>
         <!-- Mobile: headline + mascot side by side -->
         <div class="md:hidden flex items-center gap-3 mb-6">
-          <h1 class="text-5xl font-bold text-[#1f4209] leading-tight tracking-tight flex-1">Hledáte <span class="hero-highlight" style="background-color:#ffdbcd; padding: 0 4px;">ideálního</span> advokáta?</h1>
+          <h1 class="text-5xl font-bold text-[#1f4209] leading-tight tracking-tight flex-1">Hledáte správného advokáta <span class="hero-highlight" style="background-color:#ffdbcd; padding: 0 4px;">přímo pro Vás?</span></h1>
           <img src="images/mascot.png" alt="Maskot JakNaPravnika"
                class="h-40 w-auto drop-shadow-xl select-none flex-shrink-0" />
         </div>
 
-        <h1 class="hidden md:block text-7xl font-bold text-[#1f4209] leading-tight mb-6 tracking-tight">Hledáte <span class="hero-highlight" style="background-color:#ffdbcd; padding: 0 4px;">ideálního</span> advokáta?</h1>
-        <p class="text-lg text-[#1a1810]/70 mb-8 max-w-lg leading-relaxed">Propojujeme vás s kvalifikovanými právníky v České republice. Najděte specialistu na vaši situaci, porovnejte zkušenosti a spojte se přímo.</p>
+        <h1 class="hidden md:block text-7xl font-bold text-[#1f4209] leading-tight mb-6 tracking-tight">Hledáte správného advokáta <span class="hero-highlight" style="background-color:#ffdbcd; padding: 0 4px;">přímo pro Vás?</span></h1>
+        <p class="text-lg text-[#1a1810]/70 mb-8 max-w-lg leading-relaxed">Propojujeme Vás s kvalifikovanými právníky v České republice. Najděte specialistu na Vaši situaci, porovnejte zkušenosti a spojte se přímo.</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a href="quiz.html" class="bg-[#1f4209] hover:bg-[#263b07] text-white px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Získat doporučení zdarma</a>
           <a href="advokati.html" class="bg-[#e2d9c0] hover:bg-[#d4c9a4] text-[#1a1810] px-8 py-3.5 rounded-full font-semibold transition-all active:scale-95 inline-block text-center">Procházet advokáty</a>
@@ -130,7 +130,7 @@
   <section class="bg-[#f2e8d5] py-20 px-8">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-bold text-[#1f4209] mb-4 text-center">Jak to funguje?</h2>
-      <p class="text-center text-[#1a1810]/60 mb-16 max-w-2xl mx-auto">Tři jednoduché kroky k tomu, abyste našli ideálního právníka pro vaši situaci.</p>
+      <p class="text-center text-[#1a1810]/60 mb-16 max-w-2xl mx-auto">Tři jednoduché kroky k tomu, abyste našli správného právníka pro Vaši situaci.</p>
       
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Card 1 -->
@@ -157,7 +157,7 @@
             <span class="material-symbols-outlined text-[#1f4209] text-3xl">phone_in_talk</span>
           </div>
           <h3 class="text-xl font-bold text-[#1f4209] mb-3">3. Spojte se přímo</h3>
-          <p class="text-[#1a1810]/70">Kontaktujte advokáta přímo. Domluvte si konzultaci a začněte řešit vaši věc.</p>
+          <p class="text-[#1a1810]/70">Kontaktujte advokáta přímo. Domluvte si konzultaci a začněte řešit Vaši věc.</p>
         </div>
       </div>
     </div>
@@ -321,7 +321,7 @@
     }));
     const top3 = scored.sort((a, b) => b._score - a._score).slice(0, 3);
 
-    function logoFallback(el) {
+    window.logoFallback = function(el) {
       const PALETTES2 = [
         {bg:'#c9ea8e',text:'#002201'},{bg:'#c6e7ff',text:'#001e2d'},
         {bg:'#ffdbcd',text:'#360f00'},{bg:'#e8d5ff',text:'#2f0052'},

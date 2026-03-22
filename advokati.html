@@ -64,8 +64,9 @@
       <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter brand">JakNaPravnika.cz</a>
       <div class="hidden md:flex items-center gap-8">
         <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Domů</a>
-        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Advokáti</a>
+        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1f4209] border-b-2 border-[#1f4209] pb-1">Advokáti</a>
         <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Pro advokáty</a>
+        <a href="jak-najit-pravnika-a-vybrat-advokata.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Blog</a>
       </div>
       <div class="flex items-center gap-3">
         <button onclick="toggleDarkMode()" title="Přepnout tmavý režim"
@@ -470,7 +471,7 @@
     }
 
     // Initialize on page load
-    function logoFallback(el) {
+    window.logoFallback = function(el) {
       el.style.background = el.dataset.bg;
       el.style.color = el.dataset.color;
       el.classList.remove('bg-white','border','border-[#e9e0c8]');

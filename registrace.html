@@ -134,8 +134,9 @@ html.dark .dark-toggle-btn { color:#c9ea8e !important; }
       <div class="bg-[#1f4209] rounded-2xl p-7 border-2 border-[#1f4209] relative overflow-hidden">
         <div class="absolute top-4 right-4 bg-[#c9ea8e] text-[#002201] text-xs font-bold px-3 py-1 rounded-full">DOPORUČENO</div>
         <p class="text-xs font-bold text-[#c9ea8e]/70 uppercase tracking-widest mb-3">PRO</p>
-        <p class="text-4xl font-extrabold text-white mb-1">Na dotaz</p>
-        <p class="text-sm text-white/50 mb-6">Kontaktujte nás pro cenu</p>
+        <p class="text-4xl font-extrabold text-white mb-1">290 Kč<span class="text-xl font-semibold text-white/70">/měsíčně</span></p>
+        <p class="text-sm text-white/50 mb-1">nebo <span class="text-white/80 font-semibold">2 900 Kč/ročně</span> <span class="text-[#c9ea8e] font-bold">(ušetříte 580 Kč)</span></p>
+        <p class="text-xs text-white/40 mb-6">bez DPH</p>
         <ul class="space-y-3 text-sm text-white/90">
           <li class="flex items-center gap-2"><span class="text-[#c9ea8e] font-bold">✓</span> Vše ze základního plánu</li>
           <li class="flex items-center gap-2"><span class="text-[#c9ea8e] font-bold">✓</span> Badge <span class="inline-flex items-center gap-1 bg-[#c9ea8e] text-[#002201] px-2 py-0.5 rounded-full text-xs font-bold ml-1">✓ Ověřeno</span></li>
@@ -302,11 +303,30 @@ html.dark .dark-toggle-btn { color:#c9ea8e !important; }
               <input type="url" name="linkedin" class="w-full bg-[#e2d9c0] rounded-lg px-4 py-3 text-[#1a1810] placeholder-[#1a1810]/40 focus:outline-none focus:ring-2 focus:ring-[#1f4209]" placeholder="https://linkedin.com/in/vaseprofil">
             </div>
 
+            <!-- Plan Selector -->
+            <div>
+              <label class="block text-sm font-semibold text-[#1a1810] mb-3">Vyberte plán</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label id="planFree" class="plan-option cursor-pointer rounded-xl border-2 border-[#1f4209] bg-[#f2e8d5] p-4 flex flex-col gap-1 transition-all" onclick="selectPlan('free')">
+                  <input type="radio" name="plan" value="Zdarma" checked class="hidden">
+                  <span class="text-xs font-bold text-[#1f4209] uppercase tracking-widest">Základní</span>
+                  <span class="text-2xl font-extrabold text-[#1f4209]">Zdarma</span>
+                  <span class="text-xs text-[#1a1810]/50">Základní profil bez poplatku</span>
+                </label>
+                <label id="planPro" class="plan-option cursor-pointer rounded-xl border-2 border-transparent bg-[#e2d9c0] p-4 flex flex-col gap-1 transition-all" onclick="selectPlan('pro')">
+                  <input type="radio" name="plan" value="PRO - 290 Kč/měsíčně" class="hidden">
+                  <span class="text-xs font-bold text-[#1f4209] uppercase tracking-widest">PRO</span>
+                  <span class="text-2xl font-extrabold text-[#1f4209]">290 Kč<span class="text-sm font-semibold text-[#1a1810]/50">/měs.</span></span>
+                  <span class="text-xs text-[#1a1810]/50">nebo 2 900 Kč/ročně</span>
+                </label>
+              </div>
+            </div>
+
             <!-- Submit Button -->
             <button type="submit" class="w-full bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white font-bold py-3.5 rounded-lg hover:shadow-lg transition-all mt-8">Odeslat žádost o registraci</button>
 
             <!-- Note -->
-            <p class="text-xs text-[#1a1810]/60 text-center pt-4">Po odeslání formuláře vás kontaktujeme do 2 pracovních dnů. Základní profil je <span class="font-semibold">ZDARMA</span>.</p>
+            <p class="text-xs text-[#1a1810]/60 text-center pt-4">Po odeslání formuláře Vás kontaktujeme do 2 pracovních dnů. Základní profil je <span class="font-semibold">ZDARMA</span>.</p>
           </form>
         </div>
       </div>
@@ -382,6 +402,24 @@ html.dark .dark-toggle-btn { color:#c9ea8e !important; }
 </footer>
 
 <script>
+function selectPlan(plan) {
+  const free = document.getElementById('planFree');
+  const pro  = document.getElementById('planPro');
+  if (plan === 'free') {
+    free.classList.add('border-[#1f4209]', 'bg-[#f2e8d5]');
+    free.classList.remove('border-transparent', 'bg-[#e2d9c0]');
+    pro.classList.remove('border-[#1f4209]', 'bg-[#f2e8d5]');
+    pro.classList.add('border-transparent', 'bg-[#e2d9c0]');
+    free.querySelector('input').checked = true;
+  } else {
+    pro.classList.add('border-[#1f4209]', 'bg-[#f2e8d5]');
+    pro.classList.remove('border-transparent', 'bg-[#e2d9c0]');
+    free.classList.remove('border-[#1f4209]', 'bg-[#f2e8d5]');
+    free.classList.add('border-transparent', 'bg-[#e2d9c0]');
+    pro.querySelector('input').checked = true;
+  }
+}
+
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
   e.preventDefault();
 
