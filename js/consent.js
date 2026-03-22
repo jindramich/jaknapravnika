@@ -37,14 +37,14 @@
             Používáme Google Analytics ke sledování návštěvnosti. Žádné osobní údaje neprodáváme ani nesdílíme s třetími stranami.
           </p>
         </div>
-        <div style="display:flex;gap:0.6rem;flex-shrink:0;">
-          <button id="consent-deny"
-            style="padding:0.55rem 1.2rem;border-radius:9999px;border:1px solid #3e3b26;background:transparent;color:#8a8060;font-size:0.8rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.2s;">
-            Odmítnout
-          </button>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;flex-shrink:0;">
           <button id="consent-accept"
-            style="padding:0.55rem 1.4rem;border-radius:9999px;border:none;background:#1f4209;color:#c9ea8e;font-size:0.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.3);transition:background 0.2s;">
+            style="padding:0.6rem 1.8rem;border-radius:9999px;border:none;background:#1f4209;color:#c9ea8e;font-size:0.875rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.3);">
             Přijmout
+          </button>
+          <button id="consent-deny"
+            style="background:none;border:none;color:#3e3b26;font-size:0.7rem;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline;padding:0;">
+            odmítnout
           </button>
         </div>
       </div>
