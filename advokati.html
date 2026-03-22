@@ -155,6 +155,26 @@
               </div>
             </div>
 
+            <!-- City -->
+            <div class="mb-8">
+              <label class="block text-sm font-semibold text-[#1f4209] mb-3">Město</label>
+              <select id="city-select" class="w-full px-4 py-2.5 border-2 border-[#bdb08e] rounded-xl focus:border-[#1f4209] focus:outline-none transition-colors">
+                <option value="">Všechna města</option>
+                <option value="Praha">Praha</option>
+                <option value="Brno">Brno</option>
+                <option value="Plzeň">Plzeň</option>
+                <option value="Olomouc">Olomouc</option>
+                <option value="České Budějovice">České Budějovice</option>
+                <option value="Hradec Králové">Hradec Králové</option>
+                <option value="Pardubice">Pardubice</option>
+                <option value="Ústí nad Labem">Ústí nad Labem</option>
+                <option value="Liberec">Liberec</option>
+                <option value="Zlín">Zlín</option>
+                <option value="Jihlava">Jihlava</option>
+                <option value="Karlovy Vary">Karlovy Vary</option>
+              </select>
+            </div>
+
             <!-- Language -->
             <div class="mb-8">
               <label class="block text-sm font-semibold text-[#1f4209] mb-3">Jazyk</label>
@@ -207,6 +227,13 @@
             <!-- Will be populated by JavaScript -->
           </div>
 
+          <!-- Load More -->
+          <div id="load-more-wrap" class="text-center mt-8 hidden">
+            <button id="load-more-btn" class="bg-[#1f4209] hover:bg-[#263b07] text-white px-8 py-3 rounded-xl font-semibold text-sm transition-all active:scale-95">
+              Zobrazit další advokáty
+            </button>
+          </div>
+
           <!-- No Results -->
           <div id="no-results" class="hidden text-center py-16">
             <span class="material-symbols-outlined text-5xl text-[#1a1810]/30 block mb-4">person_off</span>
@@ -242,9 +269,12 @@
           search: '',
           areas: [],
           types: [],
-          language: ''
+          language: '',
+          city: ''
         };
         this.sortBy = 'relevance';
+        this.pageSize = 20;
+        this.visibleCount = 20;
         this.init();
       }
 
@@ -277,6 +307,12 @@
           });
         });
 
+        // City select
+        document.getElementById('city-select').addEventListener('change', (e) => {
+          this.filters.city = e.target.value;
+          this.applyFilters();
+        });
+
         // Language select
         document.getElementById('language-select').addEventListener('change', (e) => {
           this.filters.language = e.target.value;
@@ -293,27 +329,41 @@
         document.getElementById('clear-filters').addEventListener('click', () => {
           this.clearAllFilters();
         });
+
+        // Load more
+        document.getElementById('load-more-btn').addEventListener('click', () => {
+          this.visibleCount += this.pageSize;
+          this.render();
+        });
       }
 
       applyUrlParams() {
         const params = new URLSearchParams(window.location.search);
-        
+
         if (params.has('oblast')) {
           const oblast = params.get('oblast');
           this.filters.areas = [oblast];
           const checkbox = document.querySelector(`.area-checkbox[value="${oblast}"]`);
           if (checkbox) checkbox.checked = true;
         }
+
+        if (params.has('mesto')) {
+          const mesto = params.get('mesto');
+          this.filters.city = mesto;
+          document.getElementById('city-select').value = mesto;
+        }
       }
 
       applyFilters() {
+        this.visibleCount = this.pageSize;
         this.filteredLawyers = this.allLawyers.filter(lawyer => {
           const matchSearch = this.matchSearch(lawyer);
           const matchAreas = this.matchAreas(lawyer);
           const matchTypes = this.matchTypes(lawyer);
           const matchLanguage = this.matchLanguage(lawyer);
+          const matchCity = this.matchCity(lawyer);
 
-          return matchSearch && matchAreas && matchTypes && matchLanguage;
+          return matchSearch && matchAreas && matchTypes && matchLanguage && matchCity;
         });
 
         this.render();
@@ -346,16 +396,23 @@
         return lawyer.languages.includes(this.filters.language);
       }
 
+      matchCity(lawyer) {
+        if (!this.filters.city) return true;
+        return (lawyer.city || '').includes(this.filters.city);
+      }
+
       clearAllFilters() {
         this.filters = {
           search: '',
           areas: [],
           types: [],
-          language: ''
+          language: '',
+          city: ''
         };
         document.getElementById('search-input').value = '';
         document.querySelectorAll('.area-checkbox, .type-checkbox').forEach(cb => cb.checked = false);
         document.getElementById('language-select').value = '';
+        document.getElementById('city-select').value = '';
         this.applyFilters();
       }
 
@@ -386,17 +443,27 @@
         const listContainer = document.getElementById('lawyers-list');
         const resultCount = document.getElementById('result-count');
         const noResults = document.getElementById('no-results');
+        const loadMoreWrap = document.getElementById('load-more-wrap');
 
         resultCount.textContent = sorted.length;
 
         if (sorted.length === 0) {
           listContainer.innerHTML = '';
           noResults.classList.remove('hidden');
+          loadMoreWrap.classList.add('hidden');
           return;
         }
 
         noResults.classList.add('hidden');
-        listContainer.innerHTML = sorted.map(lawyer => this.createLawyerCard(lawyer)).join('');
+        const visible = sorted.slice(0, this.visibleCount);
+        listContainer.innerHTML = visible.map(lawyer => this.createLawyerCard(lawyer)).join('');
+
+        if (this.visibleCount < sorted.length) {
+          loadMoreWrap.classList.remove('hidden');
+          document.getElementById('load-more-btn').textContent = `Zobrazit další (${sorted.length - this.visibleCount} zbývá)`;
+        } else {
+          loadMoreWrap.classList.add('hidden');
+        }
       }
 
       createLawyerCard(lawyer) {
@@ -419,6 +486,7 @@
           : '<p class="mb-1"></p>';
 
         const metaParts = [
+          lawyer.city || '',
           lawyer.type || '',
           lawyer.founded ? `zal. ${lawyer.founded}` : '',
           lawyer.size    ? `${lawyer.size} právníků`  : '',
