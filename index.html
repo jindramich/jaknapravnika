@@ -347,10 +347,11 @@
       ).join('');
 
       // Avatar: portrait photo if available, otherwise clearbit logo with initials fallback
+      const photoPos = l.photoPosition || 'top center';
       const avatarHtml = l.photo
         ? `<div class="logo-av w-14 h-14 rounded-xl flex-shrink-0 overflow-hidden border border-[#e9e0c8]">
              <img src="${l.photo}" alt="${l.firm}" loading="lazy"
-                  class="w-full h-full object-cover object-top" onerror="this.parentElement.outerHTML='<div class=\\'logo-av w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden\\' style=\\'background:${pal.bg};color:${pal.text}\\'><span style=\\'font-size:1rem;font-weight:900;font-family:\\'Plus Jakarta Sans\\',sans-serif\\'>${initials}</span></div>'">
+                  class="w-full h-full object-cover" style="object-position:${photoPos}" onerror="this.parentElement.outerHTML='<div class=\\'logo-av w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden\\' style=\\'background:${pal.bg};color:${pal.text}\\'><span style=\\'font-size:1rem;font-weight:900;font-family:\\'Plus Jakarta Sans\\',sans-serif\\'>${initials}</span></div>'">
            </div>`
         : `<div class="logo-av w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden bg-white border border-[#e9e0c8]"
                data-initials="${initials}" data-firm="${l.firm}">

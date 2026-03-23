@@ -377,10 +377,16 @@
       // ── Avatar ──────────────────────────────────────────────
       const av  = document.getElementById('firmAvatar');
       const domain = (l.website || '').replace(/^https?:\/\//,'');
-      av.dataset.initials = l.initials || l.firm.slice(0,2).toUpperCase();
+      const initials = l.initials || l.firm.slice(0,2).toUpperCase();
+      av.dataset.initials = initials;
       av.dataset.firm = l.firm;
       av.classList.add('overflow-hidden','bg-white','border','border-[#e9e0c8]');
-      av.innerHTML = '<img src="https://logo.clearbit.com/' + domain + '" alt="' + l.firm + '" class="w-full h-full object-contain p-3" onerror="logoFallback(this.parentElement)">';
+      if (l.photo) {
+        const pos = l.photoPosition || 'top center';
+        av.innerHTML = '<img src="' + l.photo + '" alt="' + l.firm + '" class="w-full h-full object-cover" style="object-position:' + pos + '" onerror="logoFallback(this.parentElement)">';
+      } else {
+        av.innerHTML = '<img src="https://logo.clearbit.com/' + domain + '" alt="' + l.firm + '" class="w-full h-full object-contain p-3" onerror="logoFallback(this.parentElement)">';
+      }
 
       // ── Firm name & header ──────────────────────────────────
       document.getElementById('firmName').textContent = l.firm;
