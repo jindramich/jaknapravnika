@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <!-- Google tag (gtag.js) — consent defaults to denied until user accepts -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'wait_for_update': 500,
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRTPY18Y2H"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-PRTPY18Y2H');
+  </script>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nás | JakNaPravnika.cz</title>
+  <meta name="description" content="Příběh za platformou JakNaPravnika.cz – víkendový projekt studenta Právnické fakulty UK, který pomáhá lidem najít správného advokáta.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.jaknapravnika.cz/o-nas.html">
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = { darkMode:"class", theme:{ extend:{ colors:{ "inverse-primary":"#b8dc7e","secondary":"#964824","on-primary":"#ffffff","on-tertiary-fixed-variant":"#0a4c69","secondary-fixed-dim":"#ffb597","on-surface":"#1a1810","on-primary-container":"#9dd090","error-container":"#ffdad6","primary-fixed-dim":"#b8dc7e","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","secondary-container":"#fd9a6f","outline":"#6b6140","primary":"#1f4209","secondary-fixed":"#ffdbcd","surface-container-high":"#e2d9c0","on-secondary-fixed":"#360f00","inverse-surface":"#2e312c","surface-container":"#e9e0c8","surface-container-highest":"#dccfac","on-background":"#1a1810","background":"#faf6ed","outline-variant":"#bdb08e","error":"#ba1a1a","surface-variant":"#dccfac","on-surface-variant":"#3e3b26","surface-dim":"#d4c9a4","tertiary":"#003d57","on-secondary-fixed":"#360f00","on-secondary-fixed-variant":"#77320e","surface-tint":"#3b6934","tertiary-container":"#1a5573","on-primary-fixed-variant":"#2e4d0a","primary-fixed":"#c9ea8e","tertiary-fixed":"#c6e7ff","surface":"#faf6ed","on-error":"#ffffff","on-tertiary":"#ffffff","on-primary-fixed":"#002201","on-secondary-container":"#76300d","tertiary-fixed-dim":"#99cdf0","inverse-on-surface":"#f0f1ea","on-tertiary-fixed":"#001e2d","primary-container":"#3b580f","surface-container-low":"#f2e8d5","surface-bright":"#faf6ed" }, fontFamily:{"headline":["Plus Jakarta Sans"],"body":["Inter"],"label":["Inter"]}, borderRadius:{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"} } } }
+  </script>
+  <script src="js/dark-mode.js"></script>
+  <style>
+    .material-symbols-outlined { font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+    body { font-family:'Inter',sans-serif; background-color:#faf6ed; transition: background-color 0.2s, color 0.2s; }
+    h1,h2,h3,h4,.brand { font-family:'Plus Jakarta Sans',sans-serif; }
+    .editorial-shadow { box-shadow: 0 12px 40px -4px rgba(25,28,24,0.06); }
+    html.dark body   { background-color:#140f05 !important; color:#ede8d4; }
+    html.dark nav    { background-color:rgba(20,15,5,0.92) !important; }
+    html.dark .editorial-shadow { box-shadow:0 12px 40px -4px rgba(0,0,0,0.5) !important; }
+    html.dark .dark-toggle-btn { color:#c9ea8e !important; }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-[#faf6ed]/80 backdrop-blur-xl">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <a href="index.html" class="text-xl font-bold text-[#1f4209] tracking-tighter brand">JakNaPravnika.cz</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Domů</a>
+        <a href="advokati.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Advokáti</a>
+        <a href="registrace.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Pro advokáty</a>
+        <a href="jak-najit-pravnika-a-vybrat-advokata.html" class="text-sm font-semibold font-['Plus_Jakarta_Sans'] text-[#1a1810]/70 hover:text-[#1f4209] transition-all px-3 py-1 rounded-full hover:bg-[#f2e8d5]">Blog</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button onclick="toggleDarkMode()" title="Přepnout tmavý režim"
+          class="dark-toggle-btn w-10 h-10 rounded-full flex items-center justify-center text-[#1f4209] hover:bg-[#f2e8d5] transition-all">
+          <span class="material-symbols-outlined dark-toggle-icon" style="font-size:1.3rem">dark_mode</span>
+        </button>
+        <a href="quiz.html" class="bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg active:scale-95 transition-all">Zdarma doporučení</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-36 pb-12 px-8">
+    <div class="max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 bg-[#c9ea8e] text-[#1f4209] px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+        <span class="material-symbols-outlined" style="font-size:1rem">info</span>
+        O projektu
+      </div>
+      <h1 class="text-5xl md:text-6xl font-bold text-[#1f4209] leading-tight tracking-tight mb-6">O nás</h1>
+      <p class="text-xl text-[#1a1810]/60 leading-relaxed">Příběh za platformou JakNaPravnika.cz</p>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <section class="pb-24 px-8">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Main card -->
+      <div class="bg-white rounded-3xl editorial-shadow p-10 md:p-14">
+
+        <!-- Icon + quote -->
+        <div class="flex items-start gap-6 mb-10">
+          <div class="w-16 h-16 bg-[#c9ea8e] rounded-2xl flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#1f4209] text-3xl">school</span>
+          </div>
+          <div>
+            <p class="text-2xl md:text-3xl font-bold text-[#1f4209] leading-snug">
+              Víkendový projekt studenta práv
+            </p>
+            <p class="text-[#1a1810]/50 mt-2 text-sm">Právnická fakulta Univerzity Karlovy v Praze</p>
+          </div>
+        </div>
+
+        <!-- The text -->
+        <div class="prose prose-lg max-w-none">
+          <p class="text-lg text-[#1a1810]/80 leading-relaxed">
+            Tento web vzniká jako víkendový projekt studenta na Právnické fakultě Univerzity Karlovy v Praze. Mým cílem je bezplatně pomáhat lidem zorientovat se v právních otázkách a usnadnit jim hledání kvalitní právní pomoci. Doufám, že díky této platformě bude první krok k řešení právního problému jednodušší, srozumitelnější a dostupnější pro každého.
+          </p>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-[#e9e0c8] my-10"></div>
+
+        <!-- Values row -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="flex flex-col gap-2">
+            <div class="w-10 h-10 bg-[#f2e8d5] rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#1f4209]" style="font-size:1.2rem">volunteer_activism</span>
+            </div>
+            <p class="font-bold text-[#1f4209]">Bezplatně</p>
+            <p class="text-sm text-[#1a1810]/60">Platforma je zdarma pro každého, kdo hledá právní pomoc.</p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="w-10 h-10 bg-[#f2e8d5] rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#1f4209]" style="font-size:1.2rem">visibility</span>
+            </div>
+            <p class="font-bold text-[#1f4209]">Transparentně</p>
+            <p class="text-sm text-[#1a1810]/60">Žádné skryté poplatky ani přednostní výsledky za úplatu.</p>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="w-10 h-10 bg-[#f2e8d5] rounded-xl flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#1f4209]" style="font-size:1.2rem">handshake</span>
+            </div>
+            <p class="font-bold text-[#1f4209]">Dostupně</p>
+            <p class="text-sm text-[#1a1810]/60">Právní pomoc by neměla být výsadou jen těch, kdo vědí, kde hledat.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-8 text-center">
+        <a href="quiz.html" class="inline-block bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white px-8 py-3.5 rounded-full font-bold shadow-lg active:scale-95 transition-all">
+          Najít advokáta zdarma
+        </a>
+        <p class="text-sm text-[#1a1810]/40 mt-3">Doporučení během pár minut, zcela nezávazně.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#e9e0c8] w-full pt-16 pb-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 max-w-7xl mx-auto">
+      <div class="col-span-2"><div class="text-lg font-bold text-[#1f4209] mb-4 brand">JakNaPravnika.cz</div><p class="text-sm text-[#1a1810]/60 max-w-xs mb-4">Nejmodernější platforma pro výběr právního zastoupení v České republice. Věříme v transparentnost a odbornost.</p></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Služby</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="advokati.html" class="hover:text-[#1f4209] transition-colors">Advokáti</a></li><li><a href="quiz.html" class="hover:text-[#1f4209] transition-colors">Kvíz pro výběr</a></li><li><a href="registrace.html" class="hover:text-[#1f4209] transition-colors">Pro advokáty</a></li></ul></div>
+      <div><h4 class="font-bold text-[#1f4209] mb-4">Právní</h4><ul class="space-y-2 text-sm text-[#1a1810]/60"><li><a href="zasady-zpracovani-osobnich-udaju.html" class="hover:text-[#1f4209] transition-colors">Podmínky užití</a></li><li><a href="zasady-zpracovani-osobnich-udaju.html" class="hover:text-[#1f4209] transition-colors">Ochrana údajů</a></li><li><a href="o-nas.html" class="hover:text-[#1f4209] transition-colors font-semibold text-[#1f4209]">O nás</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-[#bdb08e]/30">
+      <p class="text-xs text-[#1a1810]/40 mb-2">UPOZORNĚNÍ: Tato platforma slouží jako informační a propojovací kanál mezi uživateli a poskytovateli právních služeb. Neposkytuje právní poradenství.</p>
+      <p class="text-sm text-[#1a1810]/60">© 2026 JakNaPravnika.cz. Všechna práva vyhrazena.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
