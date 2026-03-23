@@ -2548,6 +2548,7 @@ const lawyersData = [
     "key_partner": "Barbora Karetová (Advokát)",
     "description": "Advokátní kancelář Expat Law – Praha",
     "website": "www.expatlaw.cz",
+    "email": "info@expatlaw.cz",
     "languages": [
       "Čeština",
       "Angličtina"
@@ -2961,6 +2962,8 @@ const lawyersData = [
     "key_partner": "Silvia Borovská (Advokát)",
     "description": "Advokátní kancelář Silvia Borovská – Mediator & Lawyer – Praha",
     "website": "www.borovska.cz",
+    "email": "silvia@borovska.legal",
+    "photo": "https://borovska.legal/wp-content/uploads/2021/07/hribkova2-about1-1.jpg",
     "languages": [
       "Čeština",
       "Angličtina",
@@ -2991,7 +2994,9 @@ const lawyersData = [
     "verified": false,
     "key_partner": "Markéta Allnutt (Advokát)",
     "description": "Advokátní kancelář Markéta Allnutt – Attorney – Praha",
-    "website": "www.allnuttlaw.cz",
+    "website": "www.praguelawyer.eu",
+    "email": "office@praguelawyer.eu",
+    "photo": "https://praguelawyer.eu/wp-content/uploads/2017/04/slider-1.jpg",
     "languages": [
       "Čeština",
       "Angličtina"

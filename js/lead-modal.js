@@ -27,7 +27,7 @@ function initLeadModal() {
 
       <!-- Body -->
       <div class="px-8 py-6" id="modalFormWrapper">
-        <p class="text-[#3e3b26] text-sm mb-6 leading-relaxed">Vyplňte kontaktní údaje. <strong>Advokáta přímo neoslovíme</strong> — váš dotaz nejprve zpracujeme a do 24 hodin vás propojíme s tím pravým odborníkem.</p>
+        <p class="text-[#3e3b26] text-sm mb-6 leading-relaxed">Vyplňte kontaktní údaje. Váš dotaz nejprve zpracujeme, advokáta přímo oslovíme zcela <strong>ZDARMA</strong>. Konkrétní advokát se Vám následně ozve zpátky na Vaše kontaktní údaje.</p>
 
         <form id="leadForm" class="space-y-4" novalidate>
           <input type="hidden" id="modalAttorneyId" value="">
@@ -62,7 +62,7 @@ function initLeadModal() {
 
           <button type="submit" id="leadSubmitBtn"
             class="w-full bg-gradient-to-br from-[#1f4209] to-[#3b580f] text-white font-bold py-4 rounded-full text-base active:scale-95 transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
-            <span id="leadBtnText">Odeslat poptávku</span>
+            <span id="leadBtnText">Odeslat zprávu</span>
             <svg id="leadSpinner" class="hidden w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
               <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
               <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
@@ -115,7 +115,7 @@ function openLeadModal(attorneyId, attorneyName, firmName, quizResponseId = '') 
   document.getElementById('modalFormWrapper').classList.remove('hidden');
   document.getElementById('modalSuccess').classList.add('hidden');
   document.getElementById('leadError').classList.add('hidden');
-  document.getElementById('leadBtnText').textContent = 'Odeslat poptávku';
+  document.getElementById('leadBtnText').textContent = 'Odeslat zprávu';
   document.getElementById('leadSpinner').classList.add('hidden');
   document.getElementById('leadSubmitBtn').disabled = false;
   // Show modal
@@ -233,8 +233,8 @@ async function handleLeadSubmit(e) {
     document.getElementById('modalSuccess').classList.remove('hidden');
 
   } catch (err) {
-    showLeadError('Nepodařilo se odeslat poptávku. Zkuste to prosím znovu.');
-    document.getElementById('leadBtnText').textContent = 'Odeslat poptávku';
+    showLeadError('Nepodařilo se odeslat zprávu. Zkuste to prosím znovu.');
+    document.getElementById('leadBtnText').textContent = 'Odeslat zprávu';
     document.getElementById('leadSpinner').classList.add('hidden');
     document.getElementById('leadSubmitBtn').disabled = false;
   }
@@ -244,7 +244,7 @@ function showLeadError(msg) {
   const el = document.getElementById('leadError');
   el.textContent = msg;
   el.classList.remove('hidden');
-  document.getElementById('leadBtnText').textContent = 'Odeslat poptávku';
+  document.getElementById('leadBtnText').textContent = 'Odeslat zprávu';
   document.getElementById('leadSpinner').classList.add('hidden');
   document.getElementById('leadSubmitBtn').disabled = false;
 }
