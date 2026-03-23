@@ -26,7 +26,7 @@ const lawyersData = [
     "size": "350+",
     "verified": true,
     "key_partner": "Jaroslav Havel",
-    "description": "Advokátní kancelář HAVEL & PARTNERS – Praha",
+    "description": "HAVEL & PARTNERS je přední česká advokátní kancelář s pobočkami v městech Praha, Brno, Hradec Králové a Zlín. Na trhu působí od roku 2001. S týmem přes 350 odborníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Pracovní právo a dalších 7 oborů práva. Služby poskytuje v 9 jazycích včetně angličtiny, němčiny a francouzštiny a dalších. Kancelář je hodnocena v Tier 1 – Legal 500; Band 1 – Chambers. Ocenění: Právnická firma roku (více ročníků). Zaměřuje se zejména na korporace, Banky, Státní správa.",
     "website": "www.havelpartners.cz",
     "languages": [
       "Čeština",
@@ -40,11 +40,11 @@ const lawyersData = [
       "Španělština"
     ],
     "initials": "H&",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Largest independent Czech/Slovak firm",
+    "pricing_note": "Největší nezávislá česko-slovenská kancelář",
     "ranking": "Tier 1 – Legal 500; Band 1 – Chambers",
-    "awards": "Law Firm of the Year (multiple years)",
+    "awards": "Právnická firma roku (více ročníků)",
     "target": "Korporace, Banky, Státní správa",
     "primary": "Komplexní právní služby"
   },
@@ -73,7 +73,7 @@ const lawyersData = [
     "size": "60+",
     "verified": true,
     "key_partner": "Ota Mach",
-    "description": "Advokátní kancelář Kocián Šolc Balaštík – Praha",
+    "description": "Kocián Šolc Balaštík je přední česká advokátní kancelář s pobočkami v Praze a v Karlových Varech. Na trhu působí od roku 1990. S týmem přes 60 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Bankovní právo a dalších 8 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Kancelář je hodnocena v Tier 1 – Legal 500. Ocenění: Doporučená – Chambers Europe. Zaměřuje se zejména na korporace, Banky, Funds.",
     "website": "www.ksb.cz",
     "languages": [
       "Čeština",
@@ -82,12 +82,12 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "KŠ",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Premium Czech independent firm",
+    "pricing_note": "Prémiové Česká nezávislá kancelář",
     "ranking": "Tier 1 – Legal 500",
-    "awards": "Recommended – Chambers Europe",
-    "target": "Korporace, Banky, Funds",
+    "awards": "Doporučená – Chambers Europe",
+    "target": "Korporace, Banky, Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -112,7 +112,7 @@ const lawyersData = [
     "size": "110+",
     "verified": true,
     "key_partner": "Kateřina Winterling Vorlíčková",
-    "description": "Advokátní kancelář BBH advokátní kancelář – Praha",
+    "description": "BBH advokátní kancelář je přední česká advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1995. S týmem přes 110 odborníků. Mezi hlavní oblasti praxe patří Bankovní právo, Fúze a akvizice, Soutěžní právo a dalších 5 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Kancelář je hodnocena v Tier 1 – Legal 500 (Banking). Ocenění: Lídr na trhu bankovní právo & Finance. Zaměřuje se zejména na banky, Finanční instituce, Korporace.",
     "website": "www.bbh.cz",
     "languages": [
       "Čeština",
@@ -120,11 +120,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "BA",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Prague & Bratislava offices",
+    "pricing_note": "Pobočky v Praze a Bratislavě",
     "ranking": "Tier 1 – Legal 500 (Banking)",
-    "awards": "Market leader Banking & Finance",
+    "awards": "Lídr na trhu bankovní právo & Finance",
     "target": "Banky, Finanční instituce, Korporace",
     "primary": "Komplexní právní služby"
   },
@@ -148,7 +148,7 @@ const lawyersData = [
     "size": "40+",
     "verified": true,
     "key_partner": "Jan Juroška (Managing Partner Prague)",
-    "description": "Advokátní kancelář Kinstellar – Praha",
+    "description": "Kinstellar je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. S týmem přes 40 právníků. Mezi hlavní oblasti praxe patří Bankovní právo, Obchodní právo, Spory a rozhodčí řízení a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Tier 1 – Legal 500 (multiple). Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, PE Funds, Multinationals.",
     "website": "www.kinstellar.com",
     "languages": [
       "Čeština",
@@ -157,12 +157,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "KI",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "CEE network across 10 offices",
+    "pricing_note": "Střední a východní Evropa síť s 10 pobočkami",
     "ranking": "Tier 1 – Legal 500 (multiple)",
-    "awards": "Chambers Ranked",
-    "target": "Korporace, PE Funds, Multinationals",
+    "awards": "Hodnocena v Chambers",
+    "target": "Korporace, PE Fondy, Multinationals",
     "primary": "Komplexní právní služby"
   },
   {
@@ -189,7 +189,7 @@ const lawyersData = [
     "size": "90+",
     "verified": true,
     "key_partner": "Miloš Olík",
-    "description": "Advokátní kancelář ROWAN LEGAL – Praha",
+    "description": "ROWAN LEGAL je advokátní kancelář s pobočkami v městech Praha, Brno a Olomouc. Na trhu působí od roku 2013. S týmem přes 90 právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Soutěžní právo, IT právo a dalších 7 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Tier 1 – Legal 500 (IT Law). Ocenění: Právnická firma roku 2025 – IP, IT, Environmental. Zaměřuje se zejména na technologické firmy, Státní správa, Korporace.",
     "website": "www.rowan.legal",
     "languages": [
       "Čeština",
@@ -198,12 +198,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "RL",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong in IT law and public procurement",
+    "pricing_note": "Silná pozice v oblasti IT právo a veřejné zakázky",
     "ranking": "Tier 1 – Legal 500 (IT Law)",
-    "awards": "Law Firm of the Year 2025 – IP, IT, Environmental",
-    "target": "Tech Companies, Státní správa, Korporace",
+    "awards": "Právnická firma roku 2025 – IP, IT, Environmental",
+    "target": "Technologické firmy, Státní správa, Korporace",
     "primary": "IT právo"
   },
   {
@@ -228,7 +228,7 @@ const lawyersData = [
     "size": "40+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Weinhold Legal – Praha",
+    "description": "Weinhold Legal je advokátní kancelář s pobočkami v Praze a v Brně. Na trhu působí od roku 1996. S týmem přes 40 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Bankovní právo, Obchodní právo a dalších 5 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Insurers, Multinationals.",
     "website": "www.weinholdlegal.com",
     "languages": [
       "Čeština",
@@ -237,11 +237,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "WL",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong Czech market player since 1996",
+    "pricing_note": "Silná hráč na českém trhu od roku 1996",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Korporace, Insurers, Multinationals",
     "primary": "Komplexní právní služby"
   },
@@ -268,7 +268,7 @@ const lawyersData = [
     "size": "50+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Clifford Chance Prague – Praha",
+    "description": "Clifford Chance Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem přes 50 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, IT právo, Bankovní právo a dalších 6 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a francouzštiny. Kancelář je hodnocena v Tier 1 – Legal 500 (multiple). Ocenění: Přední international kancelář. Zaměřuje se zejména na multinationals, Banky, PE Funds.",
     "website": "www.cliffordchance.com",
     "languages": [
       "Čeština",
@@ -277,12 +277,12 @@ const lawyersData = [
       "Francouzština"
     ],
     "initials": "CC",
-    "hourly_rate": "5,000–8,000+",
+    "hourly_rate": "5 000–8 000+ Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Magic Circle premium rates",
+    "pricing_note": "Kancelář Magic Circle, prémiové sazby",
     "ranking": "Tier 1 – Legal 500 (multiple)",
-    "awards": "Leading international firm",
-    "target": "Multinationals, Banky, PE Funds",
+    "awards": "Přední international kancelář",
+    "target": "Multinationals, Banky, PE Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -308,7 +308,7 @@ const lawyersData = [
     "size": "50+",
     "verified": true,
     "key_partner": "Jan Andrušsko",
-    "description": "Advokátní kancelář White & Case Prague – Praha",
+    "description": "White & Case Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem přes 50 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Soutěžní právo, Bankovní právo a dalších 6 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Kancelář je hodnocena v Tier 1 – Legal 500. Ocenění: Firma roku střední a východní Evropa 2025. Zaměřuje se zejména na multinationals, Banky, PE Funds.",
     "website": "www.whitecase.com",
     "languages": [
       "Čeština",
@@ -316,12 +316,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "W&",
-    "hourly_rate": "5,000–8,000+",
+    "hourly_rate": "5 000–8 000+ Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Czech Republic Firm of the Year – Legal 500 CEE 2025",
+    "pricing_note": "ČR Firma roku – Legal 500 střední a východní Evropa 2025",
     "ranking": "Tier 1 – Legal 500",
-    "awards": "Firm of the Year CEE 2025",
-    "target": "Multinationals, Banky, PE Funds",
+    "awards": "Firma roku střední a východní Evropa 2025",
+    "target": "Multinationals, Banky, PE Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -350,7 +350,7 @@ const lawyersData = [
     "size": "25+",
     "verified": true,
     "key_partner": "Miroslav Dubovský (Country Managing Partner)",
-    "description": "Advokátní kancelář DLA Piper Prague – Praha",
+    "description": "DLA Piper Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Obchodní právo, Bankovní právo a dalších 9 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na multinationals, Korporace, Banky.",
     "website": "www.dlapiper.com",
     "languages": [
       "Čeština",
@@ -358,11 +358,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "DP",
-    "hourly_rate": "4,000–7,000",
+    "hourly_rate": "4 000–7 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Global network, 90+ offices worldwide",
+    "pricing_note": "Globální síť, 90+ poboček po celém světě",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Multinationals, Korporace, Banky",
     "primary": "Komplexní právní služby"
   },
@@ -391,7 +391,7 @@ const lawyersData = [
     "size": "40+",
     "verified": true,
     "key_partner": "Tomáš Matějovský",
-    "description": "Advokátní kancelář CMS Prague – Praha",
+    "description": "CMS Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem přes 40 právníků. Mezi hlavní oblasti praxe patří Soutěžní právo, Bankovní právo, IT právo a dalších 8 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a francouzštiny. Kancelář je hodnocena v Tier 1 – Legal 500 (Competition). Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Banky, Technologické firmy.",
     "website": "www.cms.law",
     "languages": [
       "Čeština",
@@ -400,12 +400,12 @@ const lawyersData = [
       "Francouzština"
     ],
     "initials": "CP",
-    "hourly_rate": "4,000–6,500",
+    "hourly_rate": "4 000–6 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "84 offices in 47 countries",
+    "pricing_note": "84 poboček ve 47 zemích",
     "ranking": "Tier 1 – Legal 500 (Competition)",
-    "awards": "Chambers Ranked",
-    "target": "Korporace, Banky, Tech Companies",
+    "awards": "Hodnocena v Chambers",
+    "target": "Korporace, Banky, Technologické firmy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -433,7 +433,7 @@ const lawyersData = [
     "size": "35+",
     "verified": true,
     "key_partner": "Ladislav Smejkal (Co-Managing Partner)",
-    "description": "Advokátní kancelář Dentons Prague – Praha",
+    "description": "Dentons Prague je advokátní kancelář s pobočkami v Praze a v Plzni. Na trhu působí od roku 2013. S týmem přes 35 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Soutěžní právo a dalších 8 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na multinationals, Banky, Státní správa.",
     "website": "www.dentons.com",
     "languages": [
       "Čeština",
@@ -442,11 +442,11 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "DP",
-    "hourly_rate": "4,000–7,000",
+    "hourly_rate": "4 000–7 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "World's largest law firm by headcount",
+    "pricing_note": "World's největší právnická kancelář dle počtu zaměstnanců",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Multinationals, Banky, Státní správa",
     "primary": "Komplexní právní služby"
   },
@@ -472,7 +472,7 @@ const lawyersData = [
     "size": "30+",
     "verified": true,
     "key_partner": "Tomáš Skoumal",
-    "description": "Advokátní kancelář Baker McKenzie Prague – Praha",
+    "description": "Baker McKenzie Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem přes 30 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Soutěžní právo, Bankovní právo a dalších 5 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 1 – Legal 500 (Tax). Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na multinationals, Banky, Korporace.",
     "website": "www.bakermckenzie.com",
     "languages": [
       "Čeština",
@@ -480,11 +480,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "BM",
-    "hourly_rate": "4,500–7,000",
+    "hourly_rate": "4 500–7 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Pioneer international firm in Prague",
+    "pricing_note": "Průkopník mezinárodní kancelář v Praze",
     "ranking": "Tier 1 – Legal 500 (Tax)",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Multinationals, Banky, Korporace",
     "primary": "Komplexní právní služby"
   },
@@ -511,7 +511,7 @@ const lawyersData = [
     "size": "40+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář A&O Shearman Prague – Praha",
+    "description": "A&O Shearman Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem přes 40 právníků. Mezi hlavní oblasti praxe patří Bankovní právo, IT právo, Spory a rozhodčí řízení a dalších 6 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, francouzštiny a němčiny. Kancelář je hodnocena v Tier 1 – Legal 500 (Banking). Ocenění: Přední international kancelář. Zaměřuje se zejména na banky, Multinationals, PE Funds.",
     "website": "www.aoshearman.com",
     "languages": [
       "Čeština",
@@ -520,12 +520,12 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "AS",
-    "hourly_rate": "5,000–8,000+",
+    "hourly_rate": "5 000–8 000+ Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Magic Circle firm (formerly Allen & Overy)",
+    "pricing_note": "Kancelář Magic Circle (dříve Allen & Overy)",
     "ranking": "Tier 1 – Legal 500 (Banking)",
-    "awards": "Leading international firm",
-    "target": "Banky, Multinationals, PE Funds",
+    "awards": "Přední international kancelář",
+    "target": "Banky, Multinationals, PE Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -549,18 +549,18 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "Rostislav Pekař",
-    "description": "Advokátní kancelář Squire Patton Boggs Prague – Praha",
+    "description": "Squire Patton Boggs Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Obchodní právo, Fúze a akvizice a dalších 4 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Státní správa, Investoři.",
     "website": "www.squirepattonboggs.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "SP",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of the longest-established in Prague",
+    "pricing_note": "Jedna z nejdéle působících kanceláří v Praze",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Korporace, Státní správa, Investoři",
     "primary": "Komplexní právní služby"
   },
@@ -586,7 +586,7 @@ const lawyersData = [
     "size": "25+",
     "verified": true,
     "key_partner": "Vladimír Čížek",
-    "description": "Advokátní kancelář Schoenherr Prague – Praha",
+    "description": "Schoenherr Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1993. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Obchodní právo, Bankovní právo a dalších 5 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Banky, Investoři.",
     "website": "www.schoenherr.eu",
     "languages": [
       "Čeština",
@@ -594,11 +594,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "SP",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong CEE/SEE network",
+    "pricing_note": "Silná střední a východní Evropa/SEE síť",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Korporace, Banky, Investoři",
     "primary": "Komplexní právní služby"
   },
@@ -625,7 +625,7 @@ const lawyersData = [
     "size": "100+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář PRK Partners – Praha",
+    "description": "PRK Partners je přední česká advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1993. S týmem přes 100 odborníků. Mezi hlavní oblasti praxe patří Bankovní právo, Fúze a akvizice, Obchodní právo a dalších 6 oborů práva. Služby poskytuje v 6 jazycích včetně angličtiny, francouzštiny a němčiny a dalších. Kancelář je hodnocena v Tier 1 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Banky, Státní správa.",
     "website": "www.prkpartners.com",
     "languages": [
       "Čeština",
@@ -636,11 +636,11 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "PP",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of the largest Czech independent firms",
+    "pricing_note": "Jedna z největších českých nezávislých kanceláří",
     "ranking": "Tier 1 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Korporace, Banky, Státní správa",
     "primary": "Komplexní právní služby"
   },
@@ -664,18 +664,18 @@ const lawyersData = [
     "size": "35",
     "verified": false,
     "key_partner": "Petr Kuhn",
-    "description": "Advokátní kancelář BADOKH – Praha",
+    "description": "BADOKH je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2014. S týmem 35 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Insolvence, Bankovní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Highly respected restrukturalizace praxe. Zaměřuje se zejména na korporace, Banky, Distressed Assets.",
     "website": "www.badokh.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "BA",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Senior advocates and tax advisors",
+    "pricing_note": "Zkušení advokáti a daňoví poradci",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Highly respected restructuring practice",
+    "awards": "Highly respected restrukturalizace praxe",
     "target": "Korporace, Banky, Distressed Assets",
     "primary": "Fúze a akvizice"
   },
@@ -700,7 +700,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "Radka Konečná",
-    "description": "Advokátní kancelář Konečná & Zacha – Praha",
+    "description": "Konečná & Zacha je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1987. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Nemovitosti, Fúze a akvizice, Bankovní právo a dalších 4 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Developers, Banky.",
     "website": "www.konecna-zacha.com",
     "languages": [
       "Čeština",
@@ -708,11 +708,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "K&",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of the oldest Czech firms",
+    "pricing_note": "Jedna z nejstarších českých kanceláří",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Korporace, Developers, Banky",
     "primary": "Komplexní právní služby"
   },
@@ -739,7 +739,7 @@ const lawyersData = [
     "size": "50",
     "verified": false,
     "key_partner": "Vladimíra Glatzová",
-    "description": "Advokátní kancelář Glatzova & Co – Praha",
+    "description": "Glatzova & Co je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1994. S týmem 50 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Spory a rozhodčí řízení a dalších 6 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Nejlepší Law Firm ranking. Zaměřuje se zejména na korporace, Malé a střední podniky, Multinationals.",
     "website": "www.glatzova.com",
     "languages": [
       "Čeština",
@@ -747,11 +747,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "G&",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Respected mid-size Czech firm",
+    "pricing_note": "Respected středně velká česká kancelář",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Best Law Firm ranking",
+    "awards": "Nejlepší Law Firm ranking",
     "target": "Korporace, Malé a střední podniky, Multinationals",
     "primary": "Komplexní právní služby"
   },
@@ -772,18 +772,18 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "Radovan Kubáč",
-    "description": "Advokátní kancelář Nedelka Kubáč advokáti – Praha",
+    "description": "Nedelka Kubáč advokáti je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2013. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Soutěžní právo, Regulatorní právo, Správní právo. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Band 1 – Chambers (Competition). Ocenění: Přední competition kancelář. Zaměřuje se zejména na korporace, Regulated Industries.",
     "website": "www.nka.eu",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "NK",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Top-tier competition law specialists",
+    "pricing_note": "Špičková specializace na soutěžní právo",
     "ranking": "Band 1 – Chambers (Competition)",
-    "awards": "Leading competition firm",
+    "awards": "Přední competition kancelář",
     "target": "Korporace, Regulated Industries",
     "primary": "Soutěžní právo"
   },
@@ -807,19 +807,19 @@ const lawyersData = [
     "size": "40+",
     "verified": false,
     "key_partner": "Marcela Vilímková",
-    "description": "Advokátní kancelář Vilímková Dudák & Partners – Praha",
+    "description": "Vilímková Dudák & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1997. S týmem přes 40 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Zdravotnické právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Healthcare law specialistas. Zaměřuje se zejména na zdravotnictví, Korporace, Malé a střední podniky.",
     "website": "www.vilimkovadudak.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "VD",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong healthcare/pharma specialization",
+    "pricing_note": "Silná specializace na zdravotnictví a farma",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Healthcare law specialists",
-    "target": "Healthcare, Korporace, Malé a střední podniky",
+    "awards": "Healthcare law specialistas",
+    "target": "Zdravotnictví, Korporace, Malé a střední podniky",
     "primary": "Komplexní právní služby"
   },
   {
@@ -841,7 +841,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "Martin Řanda",
-    "description": "Advokátní kancelář ŘANDA HAVEL LEGAL – Praha",
+    "description": "ŘANDA HAVEL LEGAL je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Obchodní právo, Fúze a akvizice a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Silná řešení sporů. Zaměřuje se zejména na korporace, Energetické společnosti, Developers.",
     "website": "www.randalegal.com",
     "languages": [
       "Čeština",
@@ -849,11 +849,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "ŘH",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of act legal international network",
+    "pricing_note": "Součást mezinárodní síť act legal",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Strong dispute resolution",
+    "awards": "Silná řešení sporů",
     "target": "Korporace, Energetické společnosti, Developers",
     "primary": "Spory a rozhodčí řízení"
   },
@@ -876,18 +876,18 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "Petr Bříza",
-    "description": "Advokátní kancelář Bříza & Trubač – Praha",
+    "description": "Bříza & Trubač je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2013. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Spory a rozhodčí řízení, Soutěžní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Band 4 – Chambers Global. Ocenění: Přední arbitration boutique. Zaměřuje se zejména na korporace, International Disputes.",
     "website": "www.brizatrubac.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "B&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Highly regarded in arbitration",
+    "pricing_note": "Vysoce uznávaná v oblasti arbitráže",
     "ranking": "Band 4 – Chambers Global",
-    "awards": "Leading arbitration boutique",
+    "awards": "Přední arbitration boutique",
     "target": "Korporace, International Disputes",
     "primary": "Spory a rozhodčí řízení"
   },
@@ -911,19 +911,19 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář ARROWS advokátní kancelář – Praha",
+    "description": "ARROWS advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2014. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Rodinné právo, Pracovní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Rostoucí national kancelář. Zaměřuje se zejména na malé a střední podniky, Fyzické osoby, Start-upy.",
     "website": "www.arws.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Consumer-friendly, broad practice",
+    "pricing_note": "Přístupná kancelář, široká praxe",
     "ranking": "",
-    "awards": "Growing national firm",
-    "target": "Malé a střední podniky, Fyzické osoby, Startupy",
+    "awards": "Rostoucí national kancelář",
+    "target": "Malé a střední podniky, Fyzické osoby, Start-upy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -948,7 +948,7 @@ const lawyersData = [
     "size": "12+",
     "verified": true,
     "key_partner": "Pavel Randl",
-    "description": "Advokátní kancelář Randl Partners – Praha",
+    "description": "Randl Partners je advokátní kancelář s pobočkami v Plzni a v Praze. Na trhu působí od roku 2009. S týmem 12+ právníků. Mezi hlavní oblasti praxe patří Pracovní právo, Mediální právo, Duševní vlastnictví a dalších 5 oborů práva. Služby poskytuje v 6 jazycích včetně angličtiny, ruštiny a francouzštiny a dalších. Kancelář je hodnocena v Tier 1 – Legal 500 (Employment). Ocenění: Přední employment law kancelář. Zaměřuje se zejména na korporace, HR Departments.",
     "website": "www.randls.com",
     "languages": [
       "Čeština",
@@ -959,11 +959,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "RP",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Ius Laboris member (global employment network)",
+    "pricing_note": "Člen Ius Laboris (globální síť pracovního práva)",
     "ranking": "Tier 1 – Legal 500 (Employment)",
-    "awards": "Leading employment law firm",
+    "awards": "Přední employment law kancelář",
     "target": "Korporace, HR Departments",
     "primary": "Pracovní právo"
   },
@@ -987,19 +987,19 @@ const lawyersData = [
     "size": "18",
     "verified": false,
     "key_partner": "Jakub Málek",
-    "description": "Advokátní kancelář PEYTON legal – Praha",
+    "description": "PEYTON legal je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 18 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Pracovní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: GDPR specialistas. Zaměřuje se zejména na technologické firmy, Malé a střední podniky, Korporace.",
     "website": "www.peytonlegal.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "PL",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong data protection focus",
+    "pricing_note": "Silné zaměření na ochranu osobních údajů",
     "ranking": "",
-    "awards": "GDPR specialists",
-    "target": "Tech Companies, Malé a střední podniky, Korporace",
+    "awards": "GDPR specialistas",
+    "target": "Technologické firmy, Malé a střední podniky, Korporace",
     "primary": "Obchodní právo"
   },
   {
@@ -1023,7 +1023,7 @@ const lawyersData = [
     "size": "23",
     "verified": false,
     "key_partner": "Roman Felix",
-    "description": "Advokátní kancelář Felix a spol. – Praha",
+    "description": "Felix a spol. je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1998. S týmem 23 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Obchodní právo, Fúze a akvizice a dalších 4 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a polštiny. Kancelář je hodnocena v Recommended – Legal 500. Ocenění: Czech Law Firm award. Zaměřuje se zejména na malé a střední podniky, Fyzické osoby, Korporace.",
     "website": "www.akf.cz",
     "languages": [
       "Čeština",
@@ -1032,9 +1032,9 @@ const lawyersData = [
       "Polština"
     ],
     "initials": "FA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Long-established Czech firm",
+    "pricing_note": "Dlouhodobě zavedená česká kancelář",
     "ranking": "Recommended – Legal 500",
     "awards": "Czech Law Firm award",
     "target": "Malé a střední podniky, Fyzické osoby, Korporace",
@@ -1061,7 +1061,7 @@ const lawyersData = [
     "size": "50+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Eversheds Sutherland Prague – Praha",
+    "description": "Eversheds Sutherland Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. S týmem přes 50 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Pracovní právo a dalších 4 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Global sítě – 74 pobočkami. Zaměřuje se zejména na multinationals, Korporace, Banky.",
     "website": "www.eversheds-sutherland.com",
     "languages": [
       "Čeština",
@@ -1069,11 +1069,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "ES",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Merged with Dvořák Hager & Partners",
+    "pricing_note": "Merged s Dvořák Hager & Partners",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Global network – 74 offices",
+    "awards": "Global sítě – 74 pobočkami",
     "target": "Multinationals, Korporace, Banky",
     "primary": "Komplexní právní služby"
   },
@@ -1097,7 +1097,7 @@ const lawyersData = [
     "size": "30+",
     "verified": true,
     "key_partner": "Robert David",
-    "description": "Advokátní kancelář Wolf Theiss Prague – Praha",
+    "description": "Wolf Theiss Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1998. S týmem přes 30 právníků. Mezi hlavní oblasti praxe patří Bankovní právo, Obchodní právo, Pracovní právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na banky, Korporace, Investoři.",
     "website": "www.wolftheiss.com",
     "languages": [
       "Čeština",
@@ -1105,11 +1105,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "WT",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Austrian-origin CEE specialist",
+    "pricing_note": "Rakouská kancelář se zaměřením na střední a východní Evropu",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Banky, Korporace, Investoři",
     "primary": "Komplexní právní služby"
   },
@@ -1133,7 +1133,7 @@ const lawyersData = [
     "size": "40",
     "verified": true,
     "key_partner": "Karin Pomaizlová",
-    "description": "Advokátní kancelář Taylor Wessing Prague – Praha",
+    "description": "Taylor Wessing Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1998. S týmem 40 právníků. Mezi hlavní oblasti praxe patří Duševní vlastnictví, Obchodní právo, Nemovitosti a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Silná IP/Tech praxe. Zaměřuje se zejména na technologické firmy, Developers, Korporace.",
     "website": "www.taylorwessing.com",
     "languages": [
       "Čeština",
@@ -1141,12 +1141,12 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "TW",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Known for IP/tech and real estate",
+    "pricing_note": "Známá v oblasti IP/tech a nemovitostí",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Strong IP/Tech practice",
-    "target": "Tech Companies, Developers, Korporace",
+    "awards": "Silná IP/Tech praxe",
+    "target": "Technologické firmy, Developers, Korporace",
     "primary": "Duševní vlastnictví"
   },
   {
@@ -1167,7 +1167,7 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "Barbara Kusak",
-    "description": "Advokátní kancelář Noerr Prague – Praha",
+    "description": "Noerr Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2000. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Insolvence, Bankovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Hodnocena v Chambers. Zaměřuje se zejména na korporace, Banky, Investoři.",
     "website": "www.noerr.com",
     "languages": [
       "Čeština",
@@ -1175,11 +1175,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "NP",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "German-origin firm with CEE network",
+    "pricing_note": "Německá kancelář se sítí ve střední a východní Evropě",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Chambers Ranked",
+    "awards": "Hodnocena v Chambers",
     "target": "Korporace, Banky, Investoři",
     "primary": "Komplexní právní služby"
   },
@@ -1202,18 +1202,18 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "Monika Rutland",
-    "description": "Advokátní kancelář Rutland & Partners – Praha",
+    "description": "Rutland & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Recommended – Legal 500. Ocenění: Rostoucí boutique. Zaměřuje se zejména na malé a střední podniky, Developers, Investoři.",
     "website": "www.rutlandandpartners.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "R&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Boutique with sector focus",
+    "pricing_note": "Boutique kancelář se sektorovým zaměřením",
     "ranking": "Recommended – Legal 500",
-    "awards": "Growing boutique",
+    "awards": "Rostoucí boutique",
     "target": "Malé a střední podniky, Developers, Investoři",
     "primary": "Obchodní právo"
   },
@@ -1238,7 +1238,7 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Richard Gürlich",
-    "description": "Advokátní kancelář Gürlich & Co – Praha",
+    "description": "Gürlich & Co je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2002. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Nemovitosti, Duševní vlastnictví a dalších 4 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Outstanding ranking 2025. Ocenění: Public procurement specialista. Zaměřuje se zejména na státní správa, Korporace, Malé a střední podniky.",
     "website": "www.akrg.cz",
     "languages": [
       "Čeština",
@@ -1246,11 +1246,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "G&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong public procurement practice",
+    "pricing_note": "Silná praxe ve veřejných zakázkách",
     "ranking": "Outstanding ranking 2025",
-    "awards": "Public procurement specialist",
+    "awards": "Public procurement specialista",
     "target": "Státní správa, Korporace, Malé a střední podniky",
     "primary": "Komplexní právní služby"
   },
@@ -1271,7 +1271,7 @@ const lawyersData = [
     "size": "5+",
     "verified": false,
     "key_partner": "Multiple Lawyers",
-    "description": "Advokátní kancelář Czech Immigration & Visa Solutions – Praha",
+    "description": "Czech Immigration & Visa Solutions je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 5+ právníků. Mezi hlavní oblasti praxe patří Imigrace, IT právo, Duševní vlastnictví. Služby poskytuje v 3 jazycích včetně angličtiny, ruštiny. Ocenění: Vysoce hodnocená immigration specialistas. Zaměřuje se zejména na expati, Businesses hiring foreigners.",
     "website": "www.czechvisalawyer.cz",
     "languages": [
       "Čeština",
@@ -1279,12 +1279,12 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "CI",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "Initial consultation od 2,000 Kč",
-    "pricing_note": "Specialized immigration boutique",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Initial consultation od 2 000 Kč",
+    "pricing_note": "Specializovaná imigrační boutique kancelář",
     "ranking": "",
-    "awards": "Top-rated immigration specialists",
-    "target": "Expats, Businesses hiring foreigners",
+    "awards": "Vysoce hodnocená immigration specialistas",
+    "target": "Expati, Businesses hiring foreigners",
     "primary": "Imigrace"
   },
   {
@@ -1310,7 +1310,7 @@ const lawyersData = [
     "size": "80+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Peterka & Partners – Praha",
+    "description": "Peterka & Partners je advokátní kancelář s pobočkami v městech Praha, Olomouc a Karlovy Vary. Na trhu působí od roku 1998. S týmem přes 80 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti a dalších 6 oborů práva. Služby poskytuje v 7 jazycích včetně angličtiny, němčiny a francouzštiny a dalších. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Multi-office střední a východní Evropa kancelář. Zaměřuje se zejména na multinationals, Malé a střední podniky, Expati.",
     "website": "www.peterkapartners.com",
     "languages": [
       "Čeština",
@@ -1322,12 +1322,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "P&",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "International network across CEE",
+    "pricing_note": "International síť v střední a východní Evropa",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Multi-office CEE firm",
-    "target": "Multinationals, Malé a střední podniky, Expats",
+    "awards": "Multi-office střední a východní Evropa kancelář",
+    "target": "Multinationals, Malé a střední podniky, Expati",
     "primary": "Komplexní právní služby"
   },
   {
@@ -1347,18 +1347,18 @@ const lawyersData = [
     "size": "5",
     "verified": false,
     "key_partner": "Martin Švehlík",
-    "description": "Advokátní kancelář Švehlík & Mikuláš advokáti – Praha",
+    "description": "Švehlík & Mikuláš advokáti je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. Tým 5 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Dědické právo, Občanské právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Doporučená rodinné právo kancelář. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.smak.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "Š&",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "First consultation 1,500 Kč",
-    "pricing_note": "Family law specialists",
+    "pricing_note": "Specialisté na rodinné právo",
     "ranking": "",
-    "awards": "Recommended family law firm",
+    "awards": "Doporučená rodinné právo kancelář",
     "target": "Fyzické osoby, Rodiny",
     "primary": "Rodinné právo"
   },
@@ -1382,7 +1382,7 @@ const lawyersData = [
     "size": "15+",
     "verified": true,
     "key_partner": "Robert Dohnal",
-    "description": "Advokátní kancelář DOHNAL PERTOT SLANINA – Praha",
+    "description": "DOHNAL PERTOT SLANINA je advokátní kancelář s pobočkami v Hradci Králové a v Praze. Na trhu působí od roku 2005. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Trestní právo, Spory a rozhodčí řízení, Obchodní právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Ocenění: Zkušená criminal defense. Zaměřuje se zejména na fyzické osoby, Korporace.",
     "website": "www.akdps.cz",
     "languages": [
       "Čeština",
@@ -1390,11 +1390,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "DP",
-    "hourly_rate": "2,000–4,000",
-    "consult_fee": "First consultation od 2,000 Kč",
-    "pricing_note": "Strong criminal defense practice",
+    "hourly_rate": "2 000–4 000 Kč",
+    "consult_fee": "Úvodní konzultace od 2 000 Kč",
+    "pricing_note": "Silná praxe v trestním právu",
     "ranking": "",
-    "awards": "Experienced criminal defense",
+    "awards": "Zkušená criminal defense",
     "target": "Fyzické osoby, Korporace",
     "primary": "Trestní právo"
   },
@@ -1417,16 +1417,16 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Jiří Mach",
-    "description": "Advokátní kancelář MACH LEGAL – Praha",
+    "description": "MACH LEGAL je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo, Obchodní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Real estate focused. Zaměřuje se zejména na developers, Investoři, Banky.",
     "website": "www.machlegal.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "ML",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Real estate transaction specialists",
+    "pricing_note": "Specialisté na nemovitostní transakce",
     "ranking": "",
     "awards": "Real estate focused",
     "target": "Developers, Investoři, Banky",
@@ -1454,7 +1454,7 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "Jaroslav Fiala",
-    "description": "Advokátní kancelář Fiala, Tejkal a partneři – Praha",
+    "description": "Fiala, Tejkal a partneři je advokátní kancelář s pobočkami v městech Brno, Olomouc a Praha. Na trhu působí od roku 1994. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Daně, Obchodní právo, Fúze a akvizice a dalších 5 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: daňové právo law specialistas. Zaměřuje se zejména na korporace, Fyzické osoby, Banky.",
     "website": "www.akfiala.cz",
     "languages": [
       "Čeština",
@@ -1463,11 +1463,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "FT",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong tax advisory practice",
+    "pricing_note": "Silná praxe v daňovém poradenství",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Tax law specialists",
+    "awards": "daňové právo law specialistas",
     "target": "Korporace, Fyzické osoby, Banky",
     "primary": "Daně"
   },
@@ -1488,16 +1488,16 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Ondřej Havlíček",
-    "description": "Advokátní kancelář Pierstone – Praha",
+    "description": "Pierstone je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2018. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Regulatorní právo, Obchodní právo, IT právo. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Funds regulation expert. Zaměřuje se zejména na fund Managers, Fintech, Banky.",
     "website": "www.pierstone.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "PI",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Specialist in funds and fintech regulation",
+    "pricing_note": "Specialista na fondy a fintech regulaci",
     "ranking": "Tier 3 – Legal 500",
     "awards": "Funds regulation expert",
     "target": "Fund Managers, Fintech, Banky",
@@ -1520,18 +1520,18 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "Tomáš Čihula",
-    "description": "Advokátní kancelář CIKR advokátní kancelář – Praha",
+    "description": "CIKR advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Insolvence, Spory a rozhodčí řízení, Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Insolvency praxe specialistas. Zaměřuje se zejména na korporace, Creditors, Banky.",
     "website": "www.cikr.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "CA",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Insolvency specialists",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Specialisté na insolvence",
     "ranking": "",
-    "awards": "Insolvency practice specialists",
+    "awards": "Insolvency praxe specialistas",
     "target": "Korporace, Creditors, Banky",
     "primary": "Insolvence"
   },
@@ -1552,19 +1552,19 @@ const lawyersData = [
     "size": "5",
     "verified": false,
     "key_partner": "Petr Dostál",
-    "description": "Advokátní kancelář epravo.cz / Dostál Advokáti – Praha",
+    "description": "Epravo.cz / Dostál Advokáti je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. Tým 5 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Nemovitosti. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Consumer-friendly. Zaměřuje se zejména na fyzické osoby, Malé firmy.",
     "website": "www.dostaladvokati.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "E/",
-    "hourly_rate": "1,500–2,500",
-    "consult_fee": "First consultation od 1,000 Kč",
-    "pricing_note": "Budget-friendly option",
+    "hourly_rate": "1 500–2 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1,000 Kč",
+    "pricing_note": "Cenově dostupná varianta",
     "ranking": "",
     "awards": "Consumer-friendly",
-    "target": "Fyzické osoby, Small Businesses",
+    "target": "Fyzické osoby, Malé firmy",
     "primary": "Občanské právo"
   },
   {
@@ -1584,19 +1584,19 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "Pavel Němec",
-    "description": "Advokátní kancelář AK Němec, Bláha & Navrátilová – Praha",
+    "description": "AK Němec, Bláha & Navrátilová je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Insolvence. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Labour law focused. Zaměřuje se zejména na korporace, HR Departments, Zaměstnanci.",
     "website": "www.aknbn.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AN",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Employment law specialists",
+    "pricing_note": "Specialisté na pracovní právo",
     "ranking": "",
     "awards": "Labour law focused",
-    "target": "Korporace, HR Departments, Employees",
+    "target": "Korporace, HR Departments, Zaměstnanci",
     "primary": "Pracovní právo"
   },
   {
@@ -1616,19 +1616,19 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "Jiří Brož",
-    "description": "Advokátní kancelář Brož & Sokol & Novák – Praha",
+    "description": "Brož & Sokol & Novák je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo, Mediální právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Rostoucí IP boutique. Zaměřuje se zejména na technologické firmy, Start-upy, Creatives.",
     "website": "www.brozadvokati.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "B&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "IP/tech specialists",
+    "pricing_note": "Specialisté na IP/tech",
     "ranking": "",
-    "awards": "Growing IP boutique",
-    "target": "Tech Companies, Startupy, Creatives",
+    "awards": "Rostoucí IP boutique",
+    "target": "Technologické firmy, Start-upy, Creatives",
     "primary": "Duševní vlastnictví"
   },
   {
@@ -1646,20 +1646,20 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Vladimír Kausta",
-    "description": "Advokátní kancelář AK Kausta, Opluštil & Partners – Praha",
+    "description": "AK Kausta, Opluštil & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2000. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Zkušená personal injury kancelář. Zaměřuje se zejména na fyzické osoby, pojišťovnictví Companies.",
     "website": "www.kausta.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Personal injury specialists",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Specialisté na náhradu škody na zdraví",
     "ranking": "",
-    "awards": "Experienced personal injury firm",
-    "target": "Fyzické osoby, Insurance Companies",
-    "primary": "Personal Injury & Insurance"
+    "awards": "Zkušená personal injury kancelář",
+    "target": "Fyzické osoby, pojišťovnictví Companies",
+    "primary": "Náhrada škody z úrazů & pojišťovnictví"
   },
   {
     "id": 46,
@@ -1679,7 +1679,7 @@ const lawyersData = [
     "size": "3",
     "verified": false,
     "key_partner": "Marek Bruna (Advokát)",
-    "description": "Advokátní kancelář Advokátní kancelář Bruna – Praha",
+    "description": "Advokátní kancelář Bruna je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. Tým 3 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Dědické právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Vysoce hodnocená on Google. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.akbruna.cz",
     "languages": [
       "Čeština",
@@ -1687,11 +1687,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "AK",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "First consultation 1,000 Kč",
-    "pricing_note": "Affordable family law practitioner",
+    "pricing_note": "Dostupný advokát pro rodinné právo",
     "ranking": "",
-    "awards": "Highly rated on Google",
+    "awards": "Vysoce hodnocená on Google",
     "target": "Fyzické osoby, Rodiny",
     "primary": "Rodinné právo"
   },
@@ -1712,19 +1712,19 @@ const lawyersData = [
     "size": "5",
     "verified": false,
     "key_partner": "Lukáš Cink (Advokát)",
-    "description": "Advokátní kancelář Advokátní kancelář CINK – Praha",
+    "description": "Advokátní kancelář CINK je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. Tým 5 právníků. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Well-reviewed criminal defense. Zaměřuje se zejména na fyzické osoby, Malé firmy.",
     "website": "www.akcink.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,000",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Criminal defense focused",
+    "hourly_rate": "2 000–3 000 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Zaměření na trestní obhajobu",
     "ranking": "",
     "awards": "Well-reviewed criminal defense",
-    "target": "Fyzické osoby, Small Businesses",
+    "target": "Fyzické osoby, Malé firmy",
     "primary": "Trestní právo"
   },
   {
@@ -1744,7 +1744,7 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "Pavel Mašek",
-    "description": "Advokátní kancelář Mašek & Partners – Praha",
+    "description": "Mašek & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2007. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Daně, Obchodní právo, Fúze a akvizice. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: daňové právo a transfer cenotvorba experts. Zaměřuje se zejména na korporace, Multinationals, Fyzické osoby.",
     "website": "www.masekpartners.cz",
     "languages": [
       "Čeština",
@@ -1752,11 +1752,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "M&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Tax advisory focus",
+    "pricing_note": "Zaměření na daňové poradenství",
     "ranking": "",
-    "awards": "Tax and transfer pricing experts",
+    "awards": "daňové právo a transfer cenotvorba experts",
     "target": "Korporace, Multinationals, Fyzické osoby",
     "primary": "Obchodní právo"
   },
@@ -1780,7 +1780,7 @@ const lawyersData = [
     "size": "50+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Rödl & Partner Prague – Praha",
+    "description": "Rödl & Partner Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1994. S týmem přes 50 právníků. Mezi hlavní oblasti praxe patří Daně, IT právo, Obchodní právo a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Ocenění: Integrated legal/tax/audit services. Zaměřuje se zejména na german Companies, Korporace, Malé a střední podniky.",
     "website": "www.roedl.com",
     "languages": [
       "Čeština",
@@ -1789,9 +1789,9 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "R&",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "German-origin audit/tax/law firm",
+    "pricing_note": "Německá auditorsko-daňově-právní kancelář",
     "ranking": "",
     "awards": "Integrated legal/tax/audit services",
     "target": "German Companies, Korporace, Malé a střední podniky",
@@ -1817,7 +1817,7 @@ const lawyersData = [
     "size": "30+",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář KPMG Legal Prague – Praha",
+    "description": "KPMG Legal Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2000. S týmem přes 30 právníků. Mezi hlavní oblasti praxe patří Daně, Regulatorní právo, Obchodní právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Právní služby v rámci velké čtyřky. Zaměřuje se zejména na korporace, Multinationals.",
     "website": "www.kpmg.cz",
     "languages": [
       "Čeština",
@@ -1825,11 +1825,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "KL",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of KPMG global network",
+    "pricing_note": "Součást globální síť KPMG",
     "ranking": "",
-    "awards": "Big 4 integrated legal services",
+    "awards": "Právní služby v rámci velké čtyřky",
     "target": "Korporace, Multinationals",
     "primary": "Daně"
   },
@@ -1854,7 +1854,7 @@ const lawyersData = [
     "size": "25+",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář Deloitte Legal Prague – Praha",
+    "description": "Deloitte Legal Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2002. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Daně a dalších 4 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a francouzštiny. Ocenění: Právní služby v rámci velké čtyřky. Zaměřuje se zejména na korporace, Multinationals.",
     "website": "www.deloittelegal.com",
     "languages": [
       "Čeština",
@@ -1863,11 +1863,11 @@ const lawyersData = [
       "Francouzština"
     ],
     "initials": "DL",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of Deloitte global network",
+    "pricing_note": "Součást globální síť Deloitte",
     "ranking": "",
-    "awards": "Big 4 integrated legal services",
+    "awards": "Právní služby v rámci velké čtyřky",
     "target": "Korporace, Multinationals",
     "primary": "Obchodní právo"
   },
@@ -1890,18 +1890,18 @@ const lawyersData = [
     "size": "12",
     "verified": false,
     "key_partner": "Radek Závodný",
-    "description": "Advokátní kancelář Z/C/H Legal – Praha",
+    "description": "Z/C/H Legal je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. S týmem 12 právníků. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo, Obchodní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Silná nemovitosti praxe. Zaměřuje se zejména na developers, Investoři, Banky.",
     "website": "www.zchlegal.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "ZL",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Real estate transaction specialists",
+    "pricing_note": "Specialisté na nemovitostní transakce",
     "ranking": "",
-    "awards": "Strong real estate practice",
+    "awards": "Silná nemovitosti praxe",
     "target": "Developers, Investoři, Banky",
     "primary": "Nemovitosti"
   },
@@ -1921,19 +1921,19 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Lukáš Jansa",
-    "description": "Advokátní kancelář Jansa, Mokrý, Otevřel & Partners – Praha",
+    "description": "Jansa, Mokrý, Otevřel & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří IT právo, Duševní vlastnictví. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Přední IT law kancelář. Zaměřuje se zejména na technologické firmy, E-commerce, Start-upy.",
     "website": "www.lawyer.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "JM",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "IT and e-commerce focused",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "IT a e-commerce zaměření",
     "ranking": "",
-    "awards": "Leading IT law firm",
-    "target": "Tech Companies, E-commerce, Startupy",
+    "awards": "Přední IT law kancelář",
+    "target": "Technologické firmy, E-commerce, Start-upy",
     "primary": "IT právo"
   },
   {
@@ -1952,18 +1952,18 @@ const lawyersData = [
     "size": "5",
     "verified": false,
     "key_partner": "Petr Lukajka (Advokát)",
-    "description": "Advokátní kancelář Advokátní kancelář LUKAJKA & PARTNERS – Praha",
+    "description": "Advokátní kancelář LUKAJKA & PARTNERS je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2011. Tým 5 právníků. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Vysoce hodnocená nemovitosti. Zaměřuje se zejména na property Buyers, Landlords, Tenants.",
     "website": "www.lukajka.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,000",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Affordable real estate law",
+    "hourly_rate": "2 000–3 000 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Dostupné nemovitosti law",
     "ranking": "",
-    "awards": "Highly rated real estate",
+    "awards": "Vysoce hodnocená nemovitosti",
     "target": "Property Buyers, Landlords, Tenants",
     "primary": "Nemovitosti"
   },
@@ -1985,7 +1985,7 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "Blanka Holubová (Advokát)",
-    "description": "Advokátní kancelář Holubová advokáti – Praha",
+    "description": "Holubová advokáti je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Imigrace, Pracovní právo, Obchodní právo a dalšího oboru práva. Služby poskytuje v 4 jazycích včetně angličtiny, ruštiny a ukrajinštiny. Ocenění: Top immigration practitioner. Zaměřuje se zejména na expati, Foreign Workers, Businesses.",
     "website": "www.holubova.cz",
     "languages": [
       "Čeština",
@@ -1994,12 +1994,12 @@ const lawyersData = [
       "Ukrajinština"
     ],
     "initials": "HA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "First consultation 1,500 Kč",
-    "pricing_note": "Expat-friendly immigration firm",
+    "pricing_note": "Expat-friendly imigrační kancelář",
     "ranking": "",
     "awards": "Top immigration practitioner",
-    "target": "Expats, Foreign Workers, Businesses",
+    "target": "Expati, Foreign Workers, Businesses",
     "primary": "Pracovní právo"
   },
   {
@@ -2021,19 +2021,19 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "Jan Daniš",
-    "description": "Advokátní kancelář Daniš Brada – Praha",
+    "description": "Daniš Brada je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2013. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Bankovní právo, IT právo, Fúze a akvizice a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Silná finance praxe. Zaměřuje se zejména na banky, Funds, Korporace.",
     "website": "www.danisbrada.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "DB",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Banking & finance specialists",
+    "pricing_note": "Bankovní právo & finance specialisté",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Strong finance practice",
-    "target": "Banky, Funds, Korporace",
+    "awards": "Silná finance praxe",
+    "target": "Banky, Fondy, Korporace",
     "primary": "Bankovní právo"
   },
   {
@@ -2055,7 +2055,7 @@ const lawyersData = [
     "size": "15+",
     "verified": true,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář BDO Legal Prague – Praha",
+    "description": "BDO Legal Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Daně, Obchodní právo, Pracovní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Integrated legal/audit services. Zaměřuje se zejména na malé a střední podniky, Korporace, Multinationals.",
     "website": "www.bdo.cz",
     "languages": [
       "Čeština",
@@ -2063,9 +2063,9 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "BL",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of BDO global network",
+    "pricing_note": "Part of BDO globální síť",
     "ranking": "",
     "awards": "Integrated legal/audit services",
     "target": "Malé a střední podniky, Korporace, Multinationals",
@@ -2087,7 +2087,7 @@ const lawyersData = [
     "size": "6",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář UNICONSULT – Praha",
+    "description": "UNICONSULT je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2002. S týmem 6 právníků. Mezi hlavní oblasti praxe patří Imigrace, IT právo. Služby poskytuje v 4 jazycích včetně angličtiny, ruštiny a vietnamštiny. Ocenění: Zkušená immigration kancelář. Zaměřuje se zejména na expati, Foreign Workers, Podnikatelé.",
     "website": "www.uniconsult.cz",
     "languages": [
       "Čeština",
@@ -2096,12 +2096,12 @@ const lawyersData = [
       "Vietnamština"
     ],
     "initials": "UN",
-    "hourly_rate": "1,500–3,000",
+    "hourly_rate": "1 500–3 000 Kč",
     "consult_fee": "Initial consultation od 1,000 Kč",
-    "pricing_note": "Budget-friendly immigration services",
+    "pricing_note": "Cenově dostupné imigrační services",
     "ranking": "",
-    "awards": "Experienced immigration firm",
-    "target": "Expats, Foreign Workers, Podnikatelé",
+    "awards": "Zkušená immigration kancelář",
+    "target": "Expati, Foreign Workers, Podnikatelé",
     "primary": "Imigrace"
   },
   {
@@ -2125,7 +2125,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "František Vyskočil",
-    "description": "Advokátní kancelář Vyskočil, Krošlák a spol. – Praha",
+    "description": "Vyskočil, Krošlák a spol. je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1990. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Obchodní právo, Fúze a akvizice a dalších 4 oborů práva. Služby poskytuje v 5 jazycích včetně angličtiny, němčiny a francouzštiny a dalších. Ocenění: Long-established kancelář. Zaměřuje se zejména na korporace, Fyzické osoby, Malé a střední podniky.",
     "website": "www.akvk.cz",
     "languages": [
       "Čeština",
@@ -2135,11 +2135,11 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "VK",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of the oldest post-1989 firms",
+    "pricing_note": "Jedna z nejstarších kanceláří po roce 1989",
     "ranking": "",
-    "awards": "Long-established firm",
+    "awards": "Long-established kancelář",
     "target": "Korporace, Fyzické osoby, Malé a střední podniky",
     "primary": "Komplexní právní služby"
   },
@@ -2162,7 +2162,7 @@ const lawyersData = [
     "size": "6",
     "verified": true,
     "key_partner": "Jan Kříž",
-    "description": "Advokátní kancelář KŘÍŽ A BĚLINA – Praha",
+    "description": "KŘÍŽ A BĚLINA je advokátní kancelář s pobočkami v Plzni a v Praze. Na trhu působí od roku 2004. S týmem 6 právníků. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Recommended – Legal 500. Ocenění: Academic-connected employment experts. Zaměřuje se zejména na korporace, HR Departments, Unions.",
     "website": "www.krizbel.cz",
     "languages": [
       "Čeština",
@@ -2170,9 +2170,9 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "KA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Pure employment law specialists",
+    "pricing_note": "Pure employment law specialisté",
     "ranking": "Recommended – Legal 500",
     "awards": "Academic-connected employment experts",
     "target": "Korporace, HR Departments, Unions",
@@ -2196,18 +2196,18 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář NWD Legal – Praha",
+    "description": "NWD Legal je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2009. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Insolvence, Bankovní právo, Spory a rozhodčí řízení a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Silná pozice v oblastisolvence track record. Zaměřuje se zejména na banky, Creditors, Korporace.",
     "website": "www.nwd.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "NL",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Insolvency specialists",
+    "pricing_note": "Specialisté na insolvence",
     "ranking": "",
-    "awards": "Strong insolvency track record",
+    "awards": "Silná pozice v oblastisolvence track record",
     "target": "Banky, Creditors, Korporace",
     "primary": "Insolvence"
   },
@@ -2232,7 +2232,7 @@ const lawyersData = [
     "size": "30+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář BPV Braun Partners – Praha",
+    "description": "BPV Braun Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem přes 30 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti a dalších 4 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Rostoucí mid-size kancelář. Zaměřuje se zejména na korporace, Multinationals, Investoři.",
     "website": "www.bfrpartners.com",
     "languages": [
       "Čeština",
@@ -2241,11 +2241,11 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "BB",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "International focus with CEE network",
+    "pricing_note": "International zaměření s střední a východní Evropa síť",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Growing mid-size firm",
+    "awards": "Rostoucí mid-size kancelář",
     "target": "Korporace, Multinationals, Investoři",
     "primary": "Komplexní právní služby"
   },
@@ -2269,7 +2269,7 @@ const lawyersData = [
     "size": "15+",
     "verified": true,
     "key_partner": "Mojmír Ježek",
-    "description": "Advokátní kancelář ECOVIS ježek – Praha",
+    "description": "ECOVIS ježek je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2006. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Imigrace a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Ocenění: Silná expat services. Zaměřuje se zejména na expati, Malé a střední podniky, Korporace.",
     "website": "www.ecovislegal.cz",
     "languages": [
       "Čeština",
@@ -2278,12 +2278,12 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "EJ",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of ECOVIS international network",
+    "pricing_note": "Part of ECOVIS mezinárodní síť",
     "ranking": "",
-    "awards": "Strong expat services",
-    "target": "Expats, Malé a střední podniky, Korporace",
+    "awards": "Silná expat services",
+    "target": "Expati, Malé a střední podniky, Korporace",
     "primary": "Komplexní právní služby"
   },
   {
@@ -2308,7 +2308,7 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "Tomáš Toman",
-    "description": "Advokátní kancelář Chrenek, Toman, Kotrba – Praha",
+    "description": "Chrenek, Toman, Kotrba je advokátní kancelář s pobočkami v Praze a v Brně. Na trhu působí od roku 2010. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Zdravotnické právo, Farmaceutické právo, Obchodní právo a dalších 5 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Právnická firma roku 2025 – Healthcare. Zaměřuje se zejména na zdravotnictví, Pharma, Hospitals.",
     "website": "www.chrenektomankotrba.cz",
     "languages": [
       "Čeština",
@@ -2316,12 +2316,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "CT",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Healthcare law specialists – Firm of the Year 2025",
+    "pricing_note": "Healthcare law specialisté – Firma roku 2025",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Law Firm of the Year 2025 – Healthcare",
-    "target": "Healthcare, Pharma, Hospitals",
+    "awards": "Právnická firma roku 2025 – Healthcare",
+    "target": "Zdravotnictví, Farmaceutický průmysl, Hospitals",
     "primary": "Zdravotnické právo"
   },
   {
@@ -2344,7 +2344,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "David Borkovec",
-    "description": "Advokátní kancelář DBK Partners – Praha",
+    "description": "DBK Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Energetika, Správní právo, Obchodní právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Právnická firma roku 2025 – energetické právo & Czech kancelář on international markets. Zaměřuje se zejména na energetické společnosti, Státní správa, Developers.",
     "website": "www.dbkp.cz",
     "languages": [
       "Čeština",
@@ -2352,11 +2352,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "DP",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Law Firm of the Year 2025 – Energy",
+    "pricing_note": "Právnická kancelářa roku 2025 – energetické právo",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Law Firm of the Year 2025 – Energy & Czech firm on international markets",
+    "awards": "Právnická firma roku 2025 – energetické právo & Czech kancelář on international markets",
     "target": "Energetické společnosti, Státní správa, Developers",
     "primary": "Energetika"
   },
@@ -2377,18 +2377,18 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář PORTOS advokátní kancelář – Praha",
+    "description": "PORTOS advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Obchodní právo, Fúze a akvizice. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Právnická firma roku 2025 – Commercial Law, řešení sporů. Zaměřuje se zejména na korporace, Malé a střední podniky.",
     "website": "www.portos.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "PA",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Law Firm of the Year 2025 – Commercial & Arbitration",
+    "pricing_note": "Právnická kancelářa roku 2025 – Commercial & Arbitration",
     "ranking": "",
-    "awards": "Law Firm of the Year 2025 – Commercial Law, Dispute Resolution",
+    "awards": "Právnická firma roku 2025 – Commercial Law, řešení sporů",
     "target": "Korporace, Malé a střední podniky",
     "primary": "Spory a rozhodčí řízení"
   },
@@ -2409,7 +2409,7 @@ const lawyersData = [
     "size": "2",
     "verified": false,
     "key_partner": "Pavol Kehl (Advokát)",
-    "description": "Advokátní kancelář Pavol Kehl – Immigration Lawyer – Praha",
+    "description": "Pavol Kehl – Immigration Lawyer je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. Tým 2 právníků. Mezi hlavní oblasti praxe patří Imigrace, Trestní právo, Duševní vlastnictví. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Ocenění: Vysoce hodnocená immigration specialista. Zaměřuje se zejména na expati, Refugees, Foreign Workers.",
     "website": "www.kehl.cz",
     "languages": [
       "Čeština",
@@ -2417,12 +2417,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "PK",
-    "hourly_rate": "2,000–3,000",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Specialist immigration lawyer",
+    "hourly_rate": "2 000–3 000 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Specialista imigrační lawyer",
     "ranking": "",
-    "awards": "Highly rated immigration specialist",
-    "target": "Expats, Refugees, Foreign Workers",
+    "awards": "Vysoce hodnocená immigration specialista",
+    "target": "Expati, Refugees, Foreign Workers",
     "primary": "Trestní právo"
   },
   {
@@ -2442,19 +2442,19 @@ const lawyersData = [
     "size": "3",
     "verified": false,
     "key_partner": "Vercímák (Advokát)",
-    "description": "Advokátní kancelář Vercímák Law – Praha",
+    "description": "Vercímák Law je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. Tým 3 právníků. Mezi hlavní oblasti praxe patří Imigrace, Rodinné právo, Občanské právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Consumer-friendly. Zaměřuje se zejména na expati, Rodiny, Refugees.",
     "website": "www.vercimak.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "VL",
-    "hourly_rate": "1,500–2,500",
-    "consult_fee": "First consultation od 1,000 Kč",
-    "pricing_note": "Affordable immigration/family law",
+    "hourly_rate": "1 500–2 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1,000 Kč",
+    "pricing_note": "Dostupné imigrační/rodinné právo",
     "ranking": "",
     "awards": "Consumer-friendly",
-    "target": "Expats, Rodiny, Refugees",
+    "target": "Expati, Rodiny, Refugees",
     "primary": "Rodinné právo"
   },
   {
@@ -2476,7 +2476,7 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář Expat Advisors / Rutland & Partners – Praha",
+    "description": "Expat Advisors / Rutland & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Imigrace, Nemovitosti, Rodinné právo a dalších 2 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Ocenění: 200+ nemovitosti transactions completed. Zaměřuje se zejména na expati, Investoři, Rodiny.",
     "website": "www.expatadvisors.cz",
     "languages": [
       "Čeština",
@@ -2485,13 +2485,13 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "EA",
-    "hourly_rate": "2,500–4,000",
-    "consult_fee": "First consultation od 2,000 Kč",
-    "pricing_note": "Full-service expat advisory",
+    "hourly_rate": "2 500–4 000 Kč",
+    "consult_fee": "Úvodní konzultace od 2 000 Kč",
+    "pricing_note": "Komplexní právní služby expat advisory",
     "ranking": "",
-    "awards": "200+ real estate transactions completed",
-    "target": "Expats, Investoři, Rodiny",
-    "primary": "Expat Legal Services"
+    "awards": "200+ nemovitosti transactions completed",
+    "target": "Expati, Investoři, Rodiny",
+    "primary": "Právní služby pro expaty"
   },
   {
     "id": 70,
@@ -2510,7 +2510,7 @@ const lawyersData = [
     "size": "4",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář Pajerová Sedláčková Advokátky – Praha",
+    "description": "Pajerová Sedláčková Advokátky je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1995. Tým 4 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Rodinné právo. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Ocenění: Veteránská kancelář zaměřená na expaty. Zaměřuje se zejména na expati, Malé firmy, Rodiny.",
     "website": "www.pajerovasedlackova.cz",
     "languages": [
       "Čeština",
@@ -2519,13 +2519,13 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "PS",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Helping expats since the 1990s",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Pomoc expatům od 90. let",
     "ranking": "",
-    "awards": "Veteran expat-serving firm",
-    "target": "Expats, Small Businesses, Rodiny",
-    "primary": "Expat Legal Services"
+    "awards": "Veteránská kancelář zaměřená na expaty",
+    "target": "Expati, Malé firmy, Rodiny",
+    "primary": "Právní služby pro expaty"
   },
   {
     "id": 71,
@@ -2542,24 +2542,26 @@ const lawyersData = [
       "Občanské právo"
     ],
     "type": "Malá kancelář",
-    "founded": 2014,
-    "size": "3",
+    "founded": 2016,
+    "size": "5",
     "verified": false,
-    "key_partner": "Barbora Karetová (Advokát)",
-    "description": "Advokátní kancelář Expat Law – Praha",
+    "key_partner": "Barbora Karetová, Ph.D.",
+    "description": "Advokátní kancelář Expat Law se specializuje na právní služby pro zahraniční klienty (expaty) žijící v České republice. Kancelář založila JUDr. Barbora Karetová, Ph.D., která působí v oboru od roku 2016 a je držitelkou doktorátu z mezinárodního práva soukromého (2018). Tým tvoří zkušení advokáti a právní asistenti, kteří klientům pomáhají zejména v oblasti rodinného práva, dědického práva, pracovního práva, nemovitostí a stavebního práva. Kancelář nabízí osobní i online konzultace a spolupracuje se sítí odborníků na imigrační a obchodní právo.",
     "website": "www.expatlaw.cz",
     "email": "info@expatlaw.cz",
+    "photo": "https://static.wixstatic.com/media/52ab00_f3d76e5034c0480e9f95ae4cfc024c4c~mv2.jpg/v1/fill/w_500,h_600,al_t,q_85,usm_0.66_1.00_0.01/52ab00_f3d76e5034c0480e9f95ae4cfc024c4c~mv2.jpg",
+    "photoPosition": "top center",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "EL",
-    "hourly_rate": "2,000–3,000",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Expat-focused family law",
+    "hourly_rate": "2 000–3 000 Kč",
+    "consult_fee": "Konzultace od 1 500 Kč",
+    "pricing_note": "Specializace na právní služby pro expaty",
     "ranking": "",
-    "awards": "Highly rated expat lawyer",
-    "target": "Expats, Rodiny, Employees",
+    "awards": "Vysoce hodnocená kancelář pro expaty",
+    "target": "Expati, Rodiny, Zaměstnanci",
     "primary": "Rodinné právo"
   },
   {
@@ -2582,7 +2584,7 @@ const lawyersData = [
     "size": "25+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Giese & Partner – Praha",
+    "description": "Giese & Partner je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1998. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Nemovitosti, Bankovní právo, IT právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 2 – Legal 500 (Real Estate). Ocenění: Hodnocení Legal 500 EMEA 2025. Zaměřuje se zejména na banky, Developers, Investoři.",
     "website": "www.giese.cz",
     "languages": [
       "Čeština",
@@ -2590,11 +2592,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "G&",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "German-origin firm, strong in real estate and finance",
+    "pricing_note": "Kancelář německého původu, silná v oblasti nemovitostí a financí",
     "ranking": "Tier 2 – Legal 500 (Real Estate)",
-    "awards": "Ranked Legal 500 EMEA 2025",
+    "awards": "Hodnocení Legal 500 EMEA 2025",
     "target": "Banky, Developers, Investoři",
     "primary": "Nemovitosti"
   },
@@ -2618,19 +2620,19 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář AZ LEGAL – Praha",
+    "description": "AZ LEGAL je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Spory a rozhodčí řízení, Nemovitosti a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Well-reviewed Prague boutique. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Expati.",
     "website": "www.azlegal.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AL",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "First consultation available",
-    "pricing_note": "Consumer-friendly boutique",
+    "pricing_note": "Přístupná boutique",
     "ranking": "",
     "awards": "Well-reviewed Prague boutique",
-    "target": "Fyzické osoby, Malé a střední podniky, Expats",
+    "target": "Fyzické osoby, Malé a střední podniky, Expati",
     "primary": "Komplexní právní služby"
   },
   {
@@ -2653,19 +2655,19 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "Jan Vejmelka",
-    "description": "Advokátní kancelář Vejmelka & Wünsch – Praha",
+    "description": "Vejmelka & Wünsch je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2015. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Bankovní právo, Fúze a akvizice, Soutěžní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Praised pro fintech expertise. Zaměřuje se zejména na banky, Fintech, PE Funds.",
     "website": "www.vejmelka.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "V&",
-    "hourly_rate": "3,000–5,000",
+    "hourly_rate": "3 000–5 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong in banking and M&A fintech",
+    "pricing_note": "Silná pozice v oblasti banking a M&A fintech",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Praised for fintech expertise",
-    "target": "Banky, Fintech, PE Funds",
+    "awards": "Praised pro fintech expertise",
+    "target": "Banky, Fintech, PE Fondy",
     "primary": "Fúze a akvizice"
   },
   {
@@ -2687,7 +2689,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Linklaters Prague – Praha",
+    "description": "Linklaters Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1996. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Bankovní právo, IT právo, Obchodní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 1 – Legal 500 (Banking). Ocenění: Magic Circle kancelář. Zaměřuje se zejména na banky, Multinationals, PE Funds.",
     "website": "www.linklaters.com",
     "languages": [
       "Čeština",
@@ -2695,12 +2697,12 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "LP",
-    "hourly_rate": "5,000–8,000+",
+    "hourly_rate": "5 000–8 000+ Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Magic Circle premium rates",
+    "pricing_note": "Kancelář Magic Circle, prémiové sazby",
     "ranking": "Tier 1 – Legal 500 (Banking)",
-    "awards": "Magic Circle firm",
-    "target": "Banky, Multinationals, PE Funds",
+    "awards": "Magic Circle kancelář",
+    "target": "Banky, Multinationals, PE Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -2722,7 +2724,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Freshfields Bruckhaus Deringer Prague – Praha",
+    "description": "Freshfields Bruckhaus Deringer Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1991. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Bankovní právo, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Tier 1 – Legal 500. Ocenění: Přední international kancelář. Zaměřuje se zejména na multinationals, Banky, PE Funds.",
     "website": "www.freshfields.com",
     "languages": [
       "Čeština",
@@ -2730,12 +2732,12 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "FB",
-    "hourly_rate": "5,000–8,000+",
+    "hourly_rate": "5 000–8 000+ Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Magic Circle premium rates",
+    "pricing_note": "Kancelář Magic Circle, prémiové sazby",
     "ranking": "Tier 1 – Legal 500",
-    "awards": "Leading international firm",
-    "target": "Multinationals, Banky, PE Funds",
+    "awards": "Přední international kancelář",
+    "target": "Multinationals, Banky, PE Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -2757,7 +2759,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář EY Law Prague – Praha",
+    "description": "EY Law Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Daně, Obchodní právo, Fúze a akvizice a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Právní služby v rámci velké čtyřky. Zaměřuje se zejména na korporace, Multinationals.",
     "website": "www.ey.com",
     "languages": [
       "Čeština",
@@ -2765,11 +2767,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "EL",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of EY global network",
+    "pricing_note": "Součást globální síť EY",
     "ranking": "",
-    "awards": "Big 4 integrated legal services",
+    "awards": "Právní služby v rámci velké čtyřky",
     "target": "Korporace, Multinationals",
     "primary": "Obchodní právo"
   },
@@ -2793,7 +2795,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "Multiple",
-    "description": "Advokátní kancelář PwC Legal Prague – Praha",
+    "description": "PwC Legal Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Daně, Obchodní právo, Regulatorní právo a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a francouzštiny. Ocenění: Právní služby v rámci velké čtyřky. Zaměřuje se zejména na korporace, Multinationals.",
     "website": "www.pwc.com",
     "languages": [
       "Čeština",
@@ -2802,11 +2804,11 @@ const lawyersData = [
       "Francouzština"
     ],
     "initials": "PL",
-    "hourly_rate": "3,500–6,000",
+    "hourly_rate": "3 500–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Part of PwC global network",
+    "pricing_note": "Součást globální síť PwC",
     "ranking": "",
-    "awards": "Big 4 integrated legal services",
+    "awards": "Právní služby v rámci velké čtyřky",
     "target": "Korporace, Multinationals",
     "primary": "Daně"
   },
@@ -2830,19 +2832,19 @@ const lawyersData = [
     "size": "15+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Hogan Lovells Prague – Praha",
+    "description": "Hogan Lovells Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Duševní vlastnictví a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Global top 10 kancelář. Zaměřuje se zejména na pharma, Tech, Multinationals.",
     "website": "www.hoganlovells.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "HL",
-    "hourly_rate": "4,000–7,000",
+    "hourly_rate": "4 000–7 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Global firm with strong IP/tech",
+    "pricing_note": "Global kancelář s silná IP/tech",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Global top 10 firm",
-    "target": "Pharma, Tech, Multinationals",
+    "awards": "Global top 10 kancelář",
+    "target": "Farmaceutický průmysl, Tech, Multinationals",
     "primary": "Komplexní právní služby"
   },
   {
@@ -2865,19 +2867,19 @@ const lawyersData = [
     "size": "15+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Bird & Bird Prague – Praha",
+    "description": "Bird & Bird Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2009. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo, Obchodní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Přední tech & IP kancelář. Zaměřuje se zejména na technologické firmy, Pharma, Start-upy.",
     "website": "www.twobirds.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "B&",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Known globally for tech and IP law",
+    "pricing_note": "Known globálníly pro tech a IP law",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Leading tech & IP firm",
-    "target": "Tech Companies, Pharma, Startupy",
+    "awards": "Přední tech & IP kancelář",
+    "target": "Technologické firmy, Farmaceutický průmysl, Start-upy",
     "primary": "Duševní vlastnictví"
   },
   {
@@ -2898,7 +2900,7 @@ const lawyersData = [
     "size": "12+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Osborne Clarke Prague – Praha",
+    "description": "Osborne Clarke Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2015. S týmem 12+ právníků. Mezi hlavní oblasti praxe patří IT právo, Obchodní právo, Nemovitosti a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Rostoucí tech-focused kancelář. Zaměřuje se zejména na technologické firmy, Digital Platforms, Start-upy.",
     "website": "www.osborneclarke.com",
     "languages": [
       "Čeština",
@@ -2906,12 +2908,12 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "OC",
-    "hourly_rate": "3,500–5,500",
+    "hourly_rate": "3 500–5 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Digital economy specialist",
+    "pricing_note": "Digital economy specialista",
     "ranking": "",
-    "awards": "Growing tech-focused firm",
-    "target": "Tech Companies, Digital Platforms, Startupy",
+    "awards": "Rostoucí tech-focused kancelář",
+    "target": "Technologické firmy, Digital Platforms, Start-upy",
     "primary": "IT právo"
   },
   {
@@ -2929,20 +2931,20 @@ const lawyersData = [
     "size": "5",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Drobiš & Novotný – Praha",
+    "description": "Drobiš & Novotný je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. Tým 5 právníků. Mezi hlavní oblasti praxe patří Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Osobní zranění specialistas. Zaměřuje se zejména na fyzické osoby, Oběti nehod.",
     "website": "www.drobisnovotny.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "D&",
-    "hourly_rate": "2,000–3,000",
-    "consult_fee": "First consultation od 1,000 Kč",
-    "pricing_note": "Contingency options available",
+    "hourly_rate": "2 000–3 000 Kč",
+    "consult_fee": "Úvodní konzultace od 1,000 Kč",
+    "pricing_note": "Contingency možnosti k dispozici",
     "ranking": "",
-    "awards": "Personal injury specialists",
-    "target": "Fyzické osoby, Accident Victims",
-    "primary": "Personal Injury"
+    "awards": "Osobní zranění specialistas",
+    "target": "Fyzické osoby, Oběti nehod",
+    "primary": "Náhrada škody z úrazů"
   },
   {
     "id": 83,
@@ -2953,29 +2955,31 @@ const lawyersData = [
     "reviews": 51,
     "areas": [
       "Rodinné právo",
-      "Mediální právo"
+      "Mediace",
+      "Občanské právo",
+      "Zastupování u soudu"
     ],
     "type": "Malá kancelář",
-    "founded": 2012,
-    "size": "2",
+    "founded": 2014,
+    "size": "1",
     "verified": false,
-    "key_partner": "Silvia Borovská (Advokát)",
-    "description": "Advokátní kancelář Silvia Borovská – Mediator & Lawyer – Praha",
-    "website": "www.borovska.cz",
+    "key_partner": "Mgr. Silvia Borovská",
+    "description": "Mgr. Silvia Borovská je advokátka a zapsaná mediátorka se sídlem v Praze. Absolvovala Právnickou fakultu Masarykovy univerzity v Brně (2012) a advokátní praxi zahájila v roce 2014. V roce 2016 absolvovala mediační výcvik u Asociace mediátorů ČR a od roku 2017 je mediátorkou zapsanou u Ministerstva spravedlnosti ČR. Zahraniční zkušenosti získala při studiu na Université de Caen v Normaii (2010/2011), stáži u Soudního dvora EU v Lucemburku (2012) a praxi v pařížské advokátní kanceláři Tosca Avocats (2019). Zaměřuje se na rodinné právo, mediaci, občanské a obchodní spory a zastupování u soudu. Služby poskytuje v češtině, angličtině a francouzštině.",
+    "website": "borovska.legal",
     "email": "silvia@borovska.legal",
     "photo": "https://borovska.legal/wp-content/uploads/2021/07/hribkova2-about1-1.jpg",
     "languages": [
       "Čeština",
       "Angličtina",
-      "Slovenština"
+      "Francouzština"
     ],
     "initials": "SB",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Mediator and lawyer",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Konzultace od 1 500 Kč",
+    "pricing_note": "Advokátka a zapsaná mediátorka",
     "ranking": "",
-    "awards": "Top-rated family law mediator",
-    "target": "Expats, Rodiny",
+    "awards": "Vysoce hodnocená mediátorka v rodinném právu",
+    "target": "Rodiny, Expati, Fyzické osoby",
     "primary": "Rodinné právo"
   },
   {
@@ -2986,29 +2990,32 @@ const lawyersData = [
     "rating": 4.7,
     "reviews": 31,
     "areas": [
-      "Rodinné právo"
+      "Rodinné právo",
+      "Nemovitosti",
+      "Obchodní právo",
+      "Náhrada škody"
     ],
     "type": "Malá kancelář",
     "founded": 2015,
     "size": "1",
     "verified": false,
-    "key_partner": "Markéta Allnutt (Advokát)",
-    "description": "Advokátní kancelář Markéta Allnutt – Attorney – Praha",
+    "key_partner": "JUDr. Markéta Allnutt",
+    "description": "JUDr. Markéta Allnutt je advokátka se sídlem v Praze, která poskytuje právní služby v češtině i angličtině. Absolvovala Právnickou fakultu Univerzity Karlovy v Praze (2009) a doktorát (JUDr.) získala v roce 2013. Kariéru zahájila v pražské kanceláři Gürlich & Co., která byla oceněna jako Nejlepší kancelář pro nemovitostní právo v ČR 2010 a 2011 podle Corporate Intl. Poté působila v kanceláři Hrudka & partneři. Specializuje se na rodinné právo (rozvody, péče o děti, výživné, předmanželské smlouvy), nemovitosti (koupě a prodej, nájmy, Airbnb), obchodní právo (zakládání s.r.o., převod podílů, ochranné známky) a náhradu škody (pracovní úrazy, odškodnění obětí trestných činů). Dobrovolně spolupracuje s neziskovou organizací, která poskytuje právní pomoc obětem domácího a sexuálního násilí.",
     "website": "www.praguelawyer.eu",
     "email": "office@praguelawyer.eu",
-    "photo": "https://praguelawyer.eu/wp-content/uploads/2017/04/slider-1.jpg",
+    "photo": "https://images.weserv.nl/?url=praguelawyer.eu/wp-content/uploads/2017/04/slider-1.jpg&w=400&h=400&a=focal&fpx=0.75&fpy=0.45&fit=cover&output=jpg",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "MA",
-    "hourly_rate": "2,000–3,000",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Specialist in international divorce",
+    "hourly_rate": "2 000–3 000 Kč",
+    "consult_fee": "Konzultace od 1 500 Kč",
+    "pricing_note": "Specialistka na mezinárodní rozvody",
     "ranking": "",
-    "awards": "Highly rated for expat divorces",
-    "target": "Expats, Rodiny",
-    "primary": "Divorce & Custody"
+    "awards": "Vysoce hodnocená pro rozvody s mezinárodním prvkem",
+    "target": "Expati, Rodiny, Fyzické osoby",
+    "primary": "Rodinné právo"
   },
   {
     "id": 85,
@@ -3027,7 +3034,7 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Stránský & Partners – Praha",
+    "description": "Stránský & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2007. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Insolvence. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Zavedená employment praxe. Zaměřuje se zejména na korporace, HR Departments.",
     "website": "www.stranskypartners.cz",
     "languages": [
       "Čeština",
@@ -3035,11 +3042,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "S&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Employment law boutique",
+    "pricing_note": "Pracovní právo law boutique",
     "ranking": "",
-    "awards": "Established employment practice",
+    "awards": "Zavedená employment praxe",
     "target": "Korporace, HR Departments",
     "primary": "Pracovní právo"
   },
@@ -3061,18 +3068,18 @@ const lawyersData = [
     "size": "5",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Halška & Partners – Praha",
+    "description": "Halška & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. Tým 5 právníků. Mezi hlavní oblasti praxe patří Mediální právo, Spory a rozhodčí řízení, Rodinné právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: ADR specialistas. Zaměřuje se zejména na korporace, Fyzické osoby, Rodiny.",
     "website": "www.halska.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "H&",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "Mediation od 2,000 Kč/hod",
-    "pricing_note": "Alternative dispute resolution focus",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Mediation od 2 000 Kč/hod",
+    "pricing_note": "Alternative řešení sporů zaměření",
     "ranking": "",
-    "awards": "ADR specialists",
+    "awards": "ADR specialistas",
     "target": "Korporace, Fyzické osoby, Rodiny",
     "primary": "Mediální právo"
   },
@@ -3096,18 +3103,18 @@ const lawyersData = [
     "size": "8",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Kopřiva & Švehlík – Praha",
+    "description": "Kopřiva & Švehlík je advokátní kancelář s pobočkami v Brně a v Praze. Na trhu působí od roku 2011. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Stavební právo, Nemovitosti, Správní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Niche construction praxe. Zaměřuje se zejména na developers, Contractors, Státní správa.",
     "website": "www.koprivasve.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "K&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Construction law specialists",
+    "pricing_note": "Construction law specialisté",
     "ranking": "",
-    "awards": "Niche construction practice",
+    "awards": "Niche construction praxe",
     "target": "Developers, Contractors, Státní správa",
     "primary": "Nemovitosti"
   },
@@ -3131,18 +3138,18 @@ const lawyersData = [
     "size": "15+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Norton Rose Fulbright Prague – Praha",
+    "description": "Norton Rose Fulbright Prague je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Bankovní právo, Obchodní právo, Spory a rozhodčí řízení a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 2 – Legal 500. Ocenění: Top global kancelář. Zaměřuje se zejména na energetické společnosti, Banky, Korporace.",
     "website": "www.nortonrosefulbright.com",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "NR",
-    "hourly_rate": "4,000–6,500",
+    "hourly_rate": "4 000–6 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Global firm with energy focus",
+    "pricing_note": "Global kancelář s energy zaměření",
     "ranking": "Tier 2 – Legal 500",
-    "awards": "Top global firm",
+    "awards": "Top global kancelář",
     "target": "Energetické společnosti, Banky, Korporace",
     "primary": "Komplexní právní služby"
   },
@@ -3166,7 +3173,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Dvořák & Partners – Praha",
+    "description": "Dvořák & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2001. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Zavedená mid-size kancelář. Zaměřuje se zejména na developers, Korporace, Malé a střední podniky.",
     "website": "www.dvorakpartners.cz",
     "languages": [
       "Čeština",
@@ -3174,11 +3181,11 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "D&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong corporate and real estate",
+    "pricing_note": "Silná corporate a nemovitosti",
     "ranking": "",
-    "awards": "Established mid-size firm",
+    "awards": "Zavedená mid-size kancelář",
     "target": "Developers, Korporace, Malé a střední podniky",
     "primary": "Obchodní právo"
   },
@@ -3201,18 +3208,18 @@ const lawyersData = [
     "size": "25+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Císař, Češka, Smutný – Praha",
+    "description": "Císař, Češka, Smutný je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2002. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Správní právo, Obchodní právo, Nemovitosti a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Public sector specialista. Zaměřuje se zejména na státní správa, Public Sector, Korporace.",
     "website": "www.akccs.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "CČ",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Strong in public procurement and administrative law",
+    "pricing_note": "Silná pozice v oblasti veřejné zakázky a administrative law",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Public sector specialist",
+    "awards": "Public sector specialista",
     "target": "Státní správa, Public Sector, Korporace",
     "primary": "Správní právo"
   },
@@ -3236,18 +3243,18 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Toman & Partners – Praha",
+    "description": "Toman & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Životní prostředí, Energetika, Regulatorní právo a dalších 3 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Rostoucí environmental praxe. Zaměřuje se zejména na energetické společnosti, Developers, Státní správa.",
     "website": "www.tomanpartners.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "T&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Environmental law specialists",
+    "pricing_note": "Environmental law specialisté",
     "ranking": "",
-    "awards": "Growing environmental practice",
+    "awards": "Rostoucí environmental praxe",
     "target": "Energetické společnosti, Developers, Státní správa",
     "primary": "Životní prostředí"
   },
@@ -3273,7 +3280,7 @@ const lawyersData = [
     "size": "6",
     "verified": true,
     "key_partner": "Multiple Lawyers",
-    "description": "Advokátní kancelář Czech Lawyers – Praha",
+    "description": "Czech Lawyers je advokátní kancelář s pobočkami v Praze a v Brně. Na trhu působí od roku 2010. S týmem 6 právníků. Mezi hlavní oblasti praxe patří Imigrace, Obchodní právo, Nemovitosti a dalších 5 oborů práva. Služby poskytuje v 6 jazycích včetně angličtiny, ruštiny a němčiny a dalších. Ocenění: Top online expat legal platprom. Zaměřuje se zejména na expati, Investoři, Start-upy.",
     "website": "www.czech-lawyers.com",
     "languages": [
       "Čeština",
@@ -3284,13 +3291,13 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "CL",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,000 Kč",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1,000 Kč",
     "pricing_note": "Online-first expat legal services",
     "ranking": "",
-    "awards": "Top online expat legal platform",
-    "target": "Expats, Investoři, Startupy",
-    "primary": "Expat Legal Services"
+    "awards": "Top online expat legal platprom",
+    "target": "Expati, Investoři, Start-upy",
+    "primary": "Právní služby pro expaty"
   },
   {
     "id": 93,
@@ -3308,19 +3315,19 @@ const lawyersData = [
     "size": "8",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Pokorný, Wagner & Partners – Praha",
+    "description": "Pokorný, Wagner & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2006. S týmem 8 právníků. Mezi hlavní oblasti praxe patří Duševní vlastnictví, Mediální právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Silná media/entertainment praxe. Zaměřuje se zejména na media Companies, Creatives, Publishers.",
     "website": "www.pokornywagner.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "PW",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "IP and media specialists",
+    "pricing_note": "IP a media specialisté",
     "ranking": "",
-    "awards": "Strong media/entertainment practice",
-    "target": "Media Companies, Creatives, Publishers",
+    "awards": "Silná media/entertainment praxe",
+    "target": "Média Companies, Creatives, Publishers",
     "primary": "Duševní vlastnictví"
   },
   {
@@ -3346,7 +3353,7 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Holec Zuska Partners – Praha",
+    "description": "Holec Zuska Partners je advokátní kancelář s pobočkami v Praze a v Olomouci. Na trhu působí od roku 2000. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Pracovní právo a dalších 6 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Spolehlivá mid-size kancelář. Zaměřuje se zejména na korporace, Malé a střední podniky, Banky.",
     "website": "www.holeczuska.cz",
     "languages": [
       "Čeština",
@@ -3355,11 +3362,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "HZ",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Established mid-size full-service",
+    "pricing_note": "Zavedená středně velká komplexní právní služby",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Reliable mid-size firm",
+    "awards": "Spolehlivá mid-size kancelář",
     "target": "Korporace, Malé a střední podniky, Banky",
     "primary": "Komplexní právní služby"
   },
@@ -3380,7 +3387,7 @@ const lawyersData = [
     "size": "3",
     "verified": false,
     "key_partner": "Jan Hartmann (Advokát)",
-    "description": "Advokátní kancelář Advokátní kancelář Hartmann – Praha",
+    "description": "Advokátní kancelář Hartmann je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. Tým 3 právníků. Mezi hlavní oblasti praxe patří Trestní právo, IT právo, Správní právo. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Ocenění: Well-regarded criminal defense. Zaměřuje se zejména na fyzické osoby, Executives.",
     "website": "www.akhartmann.cz",
     "languages": [
       "Čeština",
@@ -3388,9 +3395,9 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,500",
-    "consult_fee": "First consultation od 1,500 Kč",
-    "pricing_note": "Experienced criminal lawyer",
+    "hourly_rate": "2 000–3 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1 500 Kč",
+    "pricing_note": "Zkušená criminal lawyer",
     "ranking": "",
     "awards": "Well-regarded criminal defense",
     "target": "Fyzické osoby, Executives",
@@ -3415,18 +3422,18 @@ const lawyersData = [
     "size": "2",
     "verified": false,
     "key_partner": "Jakub Dáňa (Advokát)",
-    "description": "Advokátní kancelář Advokátní kancelář Dáňa – Praha",
+    "description": "Advokátní kancelář Dáňa je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2013. Tým 2 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Dědické právo, Občanské právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Vysoce hodnocená by individuals. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.akdana.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "1,500–2,500",
-    "consult_fee": "First consultation od 1,000 Kč",
-    "pricing_note": "Budget-friendly family law",
+    "hourly_rate": "1 500–2 500 Kč",
+    "consult_fee": "Úvodní konzultace od 1,000 Kč",
+    "pricing_note": "Cenově dostupné rodinné právo",
     "ranking": "",
-    "awards": "Highly rated by individuals",
+    "awards": "Vysoce hodnocená by individuals",
     "target": "Fyzické osoby, Rodiny",
     "primary": "Rodinné právo"
   },
@@ -3453,7 +3460,7 @@ const lawyersData = [
     "size": "25+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář JSK advokátní kancelář – Praha",
+    "description": "JSK advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Spory a rozhodčí řízení a dalších 6 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a francouzštiny. Kancelář je hodnocena v Tier 3 – Legal 500. Ocenění: Zavedená mid-size kancelář. Zaměřuje se zejména na korporace, Malé a střední podniky, Multinationals.",
     "website": "www.jsk.cz",
     "languages": [
       "Čeština",
@@ -3462,11 +3469,11 @@ const lawyersData = [
       "Francouzština"
     ],
     "initials": "JA",
-    "hourly_rate": "2,500–4,500",
+    "hourly_rate": "2 500–4 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Comprehensive mid-size firm",
+    "pricing_note": "Comprehensive středně velká kancelář",
     "ranking": "Tier 3 – Legal 500",
-    "awards": "Established mid-size firm",
+    "awards": "Zavedená mid-size kancelář",
     "target": "Korporace, Malé a střední podniky, Multinationals",
     "primary": "Komplexní právní služby"
   },
@@ -3491,7 +3498,7 @@ const lawyersData = [
     "size": "25+",
     "verified": false,
     "key_partner": "Ondřej Florián",
-    "description": "Advokátní kancelář SKILS s.r.o. – Praha",
+    "description": "SKILS s.r.o. je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1992. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Bankovní právo a dalších 4 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Recommended – Legal 500; Chambers Europe. Zaměřuje se zejména na korporace, Banky, PE Funds.",
     "website": "www.skils.cz",
     "languages": [
       "Čeština",
@@ -3500,12 +3507,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "SS",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "Rates vary by matter",
     "ranking": "Recommended – Legal 500; Chambers Europe",
     "awards": "",
-    "target": "Korporace, Banky, PE Funds",
+    "target": "Korporace, Banky, PE Fondy",
     "primary": "Obchodní právo"
   },
   {
@@ -3528,7 +3535,7 @@ const lawyersData = [
     "size": "25+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář UEPA advokáti s.r.o. – Praha",
+    "description": "UEPA advokáti s.r.o. je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2000. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a francouzštiny. Zaměřuje se zejména na malé a střední podniky, Korporace, Fyzické osoby.",
     "website": "www.uepa.cz",
     "languages": [
       "Čeština",
@@ -3537,7 +3544,7 @@ const lawyersData = [
       "Francouzština"
     ],
     "initials": "UA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -3563,7 +3570,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář endors advokátní kancelář – Praha",
+    "description": "Endors advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Vymáhání pohledávek a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.endors.cz",
     "languages": [
       "Čeština",
@@ -3571,7 +3578,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "EA",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "2,000–3,000 Kč",
     "pricing_note": "Fixed fees available",
     "ranking": "",
@@ -3597,14 +3604,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Ing. Mgr. Ivan Rada",
-    "description": "Advokátní kancelář Rada & Partner – Praha",
+    "description": "Rada & Partner je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2011. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na investoři, Malé a střední podniky.",
     "website": "www.radapartner.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "R&",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -3629,7 +3636,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Walid Achour",
-    "description": "Advokátní kancelář Achour & Partners – Praha",
+    "description": "Achour & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Spory a rozhodčí řízení. Služby poskytuje v 4 jazycích včetně angličtiny, francouzštiny a arabštiny. Zaměřuje se zejména na international Clients, Korporace.",
     "website": "www.achourpartners.com",
     "languages": [
       "Čeština",
@@ -3638,9 +3645,9 @@ const lawyersData = [
       "Arabština"
     ],
     "initials": "A&",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Multilingual firm",
+    "pricing_note": "Multilingual kancelář",
     "ranking": "",
     "awards": "",
     "target": "International Clients, Korporace",
@@ -3663,7 +3670,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář PELIKÁN KROFTA KOHOUTEK – Praha",
+    "description": "PELIKÁN KROFTA KOHOUTEK je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1995. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Nemovitosti, Rodinné právo. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.ak-pkk.cz",
     "languages": [
       "Čeština",
@@ -3671,7 +3678,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "PK",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -3698,7 +3705,7 @@ const lawyersData = [
     "size": "10–15",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář LEGALITÉ advokátní kancelář – Praha",
+    "description": "LEGALITÉ advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Kancelář je hodnocena v Recommended – Legal 500. Zaměřuje se zejména na korporace, Developers.",
     "website": "www.legalite.cz",
     "languages": [
       "Čeština",
@@ -3706,7 +3713,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "LA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "Recommended – Legal 500",
@@ -3730,14 +3737,14 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Jiří Janoušek",
-    "description": "Advokátní kancelář AK Janoušek – Praha",
+    "description": "AK Janoušek je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2009. Tým 1 právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na malé a střední podniky, Fyzické osoby.",
     "website": "www.janousekadvokat.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AJ",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "1,500 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -3763,7 +3770,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Jan Evan",
-    "description": "Advokátní kancelář Jan Evan advokátní kancelář – Praha",
+    "description": "Jan Evan advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.ak-evan.cz",
     "languages": [
       "Čeština",
@@ -3771,7 +3778,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "JE",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -3795,7 +3802,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář NIRRIS s.r.o. – Praha",
+    "description": "NIRRIS s.r.o. je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Duševní vlastnictví, Obchodní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Ocenění: Právnická firma roku – Franchise Law (více ročníků). Zaměřuje se zejména na franchisors, Distributors, Malé a střední podniky.",
     "website": "www.nirris.cz",
     "languages": [
       "Čeština",
@@ -3803,11 +3810,11 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "NS",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
-    "awards": "Law Firm of the Year – Franchise Law (multiple years)",
+    "awards": "Právnická firma roku – Franchise Law (více ročníků)",
     "target": "Franchisors, Distributors, Malé a střední podniky",
     "primary": "Franchise Law"
   },
@@ -3827,14 +3834,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Martin Rejman",
-    "description": "Advokátní kancelář REJMAN advokátní kancelář – Praha",
+    "description": "REJMAN advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Korporace.",
     "website": "www.rejman.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "RA",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -3859,19 +3866,19 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jan Brodec",
-    "description": "Advokátní kancelář Brodec & Partners – Praha",
+    "description": "Brodec & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Správní právo, IT právo, Spory a rozhodčí řízení. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na technologické firmy, Public Bodies.",
     "website": "www.akbrodec.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "B&",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Tech Companies, Public Bodies",
+    "target": "Technologické firmy, Public Bodies",
     "primary": "Správní právo"
   },
   {
@@ -3893,7 +3900,7 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Urban & Hejduk – Praha",
+    "description": "Urban & Hejduk je advokátní kancelář s pobočkami v Praze a v Karlových Varech. Na trhu působí od roku 2000. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Energetika, Fúze a akvizice a dalších 2 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Recommended – Legal 500. Zaměřuje se zejména na korporace, Energetické společnosti, Banky.",
     "website": "www.urbanhejduk.cz",
     "languages": [
       "Čeština",
@@ -3902,7 +3909,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "U&",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "Recommended – Legal 500",
@@ -3930,7 +3937,7 @@ const lawyersData = [
     "size": "10–15",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Hartmann Jelínek Malý Moreno – Praha",
+    "description": "Hartmann Jelínek Malý Moreno je advokátní kancelář s pobočkami v Praze a v Liberci. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a španělštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Korporace.",
     "website": "www.hjmm.cz",
     "languages": [
       "Čeština",
@@ -3939,7 +3946,7 @@ const lawyersData = [
       "Španělština"
     ],
     "initials": "HJ",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -3967,7 +3974,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Legitas advokátní kancelář – Praha",
+    "description": "Legitas advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1997. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Recommended – Legal 500. Zaměřuje se zejména na korporace, Malé a střední podniky.",
     "website": "www.legitas.cz",
     "languages": [
       "Čeština",
@@ -3976,7 +3983,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "LA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "Recommended – Legal 500",
@@ -4001,14 +4008,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jiří Šafra",
-    "description": "Advokátní kancelář Šafra & partneři – Praha",
+    "description": "Šafra & partneři je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Duševní vlastnictví, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na korporace, Fyzické osoby.",
     "website": "www.safra.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "Š&",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4034,7 +4041,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Adam Stuchlík",
-    "description": "Advokátní kancelář Stuchlík & advokáti – Praha",
+    "description": "Stuchlík & advokáti je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Malé a střední podniky, Fyzické osoby.",
     "website": "www.stuchlik.cz",
     "languages": [
       "Čeština",
@@ -4042,7 +4049,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "S&",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4068,7 +4075,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Gruber Sukenik Šlosar – Praha",
+    "description": "Gruber Sukenik Šlosar je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Nemovitosti a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.gss.cz",
     "languages": [
       "Čeština",
@@ -4076,7 +4083,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "GS",
-    "hourly_rate": "1,800–2,800",
+    "hourly_rate": "1 800–2 800 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4102,7 +4109,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Radka Wiesnerová",
-    "description": "Advokátní kancelář Wiesner & Associates – Praha",
+    "description": "Wiesner & Associates je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Imigrace, Pracovní právo, Rodinné právo a dalšího oboru práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Zaměřuje se zejména na expati, Multinational Companies.",
     "website": "www.wiesner.cz",
     "languages": [
       "Čeština",
@@ -4111,12 +4118,12 @@ const lawyersData = [
       "Ruština"
     ],
     "initials": "W&",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Expats, Multinational Companies",
+    "target": "Expati, Multinational Companies",
     "primary": "Imigrace"
   },
   {
@@ -4135,7 +4142,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář RESOLUTION advokátní kancelář – Praha",
+    "description": "RESOLUTION advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Obchodní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Malé a střední podniky.",
     "website": "www.resolution.cz",
     "languages": [
       "Čeština",
@@ -4143,7 +4150,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "RA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4169,7 +4176,7 @@ const lawyersData = [
     "size": "30+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Solkind – Praha",
+    "description": "Solkind je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2015. S týmem přes 30 právníků. Mezi hlavní oblasti praxe patří Správní právo, Spory a rozhodčí řízení, Duševní vlastnictví a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Kancelář je hodnocena v Recommended – Legal 500. Zaměřuje se zejména na public Bodies, Korporace.",
     "website": "www.solkind.cz",
     "languages": [
       "Čeština",
@@ -4177,9 +4184,9 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "SO",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Formed by merger of MT Legal and Urban & Hejduk divisions",
+    "pricing_note": "Formed by merger of MT Legal a Urban & Hejduk divisions",
     "ranking": "Recommended – Legal 500",
     "awards": "",
     "target": "Public Bodies, Korporace",
@@ -4202,7 +4209,7 @@ const lawyersData = [
     "size": "10–20",
     "verified": false,
     "key_partner": "JUDr. Radek Toman",
-    "description": "Advokátní kancelář Toman Devátý & Partneři – Praha",
+    "description": "Toman Devátý & Partneři je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Trestní právo, IT právo, Spory a rozhodčí řízení. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Fyzické osoby, Directors.",
     "website": "www.tdp.cz",
     "languages": [
       "Čeština",
@@ -4210,7 +4217,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "TD",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4236,7 +4243,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Pravda",
-    "description": "Advokátní kancelář PRAVDA & PARTNERS – Praha",
+    "description": "PRAVDA & PARTNERS je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, Spory a rozhodčí řízení a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, HR Departments.",
     "website": "www.pravda-partners.cz",
     "languages": [
       "Čeština",
@@ -4244,7 +4251,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "P&",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4269,19 +4276,19 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Eva Sedláková",
-    "description": "Advokátní kancelář Sedlakova Legal – Praha",
+    "description": "Sedlakova Legal je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2014. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na start-upy, Technologické firmy.",
     "website": "www.sedlakova.legal",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "SL",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
-    "pricing_note": "Startup-friendly fixed fees",
+    "pricing_note": "Start-up-friendly fixed fees",
     "ranking": "",
     "awards": "",
-    "target": "Startupy, Tech Companies",
+    "target": "Start-upy, Technologické firmy",
     "primary": "Obchodní právo"
   },
   {
@@ -4302,7 +4309,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Martin Petráš",
-    "description": "Advokátní kancelář Petráš Rezek advokátní kancelář – Praha",
+    "description": "Petráš Rezek advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Rodinné právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.petrasrezek.cz",
     "languages": [
       "Čeština",
@@ -4310,7 +4317,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "PR",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4336,16 +4343,16 @@ const lawyersData = [
     "size": "10–15",
     "verified": true,
     "key_partner": "Mgr. Frank Bold",
-    "description": "Advokátní kancelář Frank Bold advokáti – Praha",
+    "description": "Frank Bold advokáti je advokátní kancelář s pobočkami v městech Praha, Brno, České Budějovice a Jihlava. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Životní prostředí, Obchodní právo, Správní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na neziskové organizace, Obce, Fyzické osoby.",
     "website": "www.frankbold.org",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "FB",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "NGO-friendly pricing",
+    "pricing_note": "NGO-friendly cenotvorba",
     "ranking": "",
     "awards": "",
     "target": "Neziskové organizace, Obce, Fyzické osoby",
@@ -4369,7 +4376,7 @@ const lawyersData = [
     "size": "20+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář HVH Legal – Praha",
+    "description": "HVH Legal je advokátní kancelář s pobočkami v Praze a v Brně. Na trhu působí od roku 2006. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Fúze a akvizice, Obchodní právo, Nemovitosti a dalšího oboru práva. Služby poskytuje v 4 jazycích včetně angličtiny, ruštiny a španělštiny. Zaměřuje se zejména na korporace, PE Funds.",
     "website": "www.hvhlegal.cz",
     "languages": [
       "Čeština",
@@ -4378,12 +4385,12 @@ const lawyersData = [
       "Španělština"
     ],
     "initials": "HL",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Korporace, PE Funds",
+    "target": "Korporace, PE Fondy",
     "primary": "Obchodní právo"
   },
   {
@@ -4404,7 +4411,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Ondřej Vych",
-    "description": "Advokátní kancelář Advokátní kancelář VYCH & Partners – Praha",
+    "description": "Advokátní kancelář VYCH & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1997. Mezi hlavní oblasti praxe patří Stavební právo, Nemovitosti, Obchodní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na developers, Construction Firms.",
     "website": "www.ak-vych.cz",
     "languages": [
       "Čeština",
@@ -4412,7 +4419,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4438,14 +4445,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jan Doubek",
-    "description": "Advokátní kancelář DOUBEK & PARTNERS – Praha",
+    "description": "DOUBEK & PARTNERS je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Trestní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akdap.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "D&",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4471,7 +4478,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Ondřej Hošek",
-    "description": "Advokátní kancelář HOŠEK & PARTNERS – Praha",
+    "description": "HOŠEK & PARTNERS je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Developers.",
     "website": "www.hosekapartners.cz",
     "languages": [
       "Čeština",
@@ -4479,7 +4486,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "H&",
-    "hourly_rate": "1,800–2,800",
+    "hourly_rate": "1 800–2 800 Kč",
     "consult_fee": "1,800 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4506,7 +4513,7 @@ const lawyersData = [
     "size": "10–15",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář MAXIA advokátní kancelář – Praha",
+    "description": "MAXIA advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Pracovní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Korporace, Fyzické osoby.",
     "website": "www.maxia.cz",
     "languages": [
       "Čeština",
@@ -4514,7 +4521,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "MA",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4538,14 +4545,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Bělský",
-    "description": "Advokátní kancelář Bělský & Dvořák – Praha",
+    "description": "Bělský & Dvořák je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1999. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na korporace, Fyzické osoby.",
     "website": "www.belskydvorak.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "B&",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4571,14 +4578,14 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Ivana Benešová",
-    "description": "Advokátní kancelář Benešová & Kočí advokátní kancelář – Praha",
+    "description": "Benešová & Kočí advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.benesova-koci.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "B&",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "1,500–2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4604,7 +4611,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Pavlovič",
-    "description": "Advokátní kancelář Pavlovič & Partners – Praha",
+    "description": "Pavlovič & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Trestní právo, IT právo, Správní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Directors, Companies.",
     "website": "www.pavlovic.cz",
     "languages": [
       "Čeština",
@@ -4612,7 +4619,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "P&",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4637,7 +4644,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Marek Sehnal",
-    "description": "Advokátní kancelář Sehnal & Partners – Praha",
+    "description": "Sehnal & Partners je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, HR Departments.",
     "website": "www.sehnal.cz",
     "languages": [
       "Čeština",
@@ -4645,7 +4652,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "S&",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4671,14 +4678,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radek Slezák",
-    "description": "Advokátní kancelář AK Slezák & Partneři – Praha",
+    "description": "AK Slezák & Partneři je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akslezak.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AS",
-    "hourly_rate": "1,800–2,800",
+    "hourly_rate": "1 800–2 800 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4704,7 +4711,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Lucie Kubíčková",
-    "description": "Advokátní kancelář Kubíčková Mojžíš advokátní kancelář – Praha",
+    "description": "Kubíčková Mojžíš advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2011. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Start-upy.",
     "website": "www.km-ak.cz",
     "languages": [
       "Čeština",
@@ -4712,12 +4719,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "KM",
-    "hourly_rate": "2,000–3,000",
+    "hourly_rate": "2 000–3 000 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Malé a střední podniky, Startupy",
+    "target": "Malé a střední podniky, Start-upy",
     "primary": "Obchodní právo"
   },
   {
@@ -4736,7 +4743,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Pavel Matyáš",
-    "description": "Advokátní kancelář PM LEGAL SERVICES – Praha",
+    "description": "PM LEGAL SERVICES je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na expati, International Clients.",
     "website": "www.law-office-prague.com",
     "languages": [
       "Čeština",
@@ -4744,12 +4751,12 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "PL",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,500 Kč",
-    "pricing_note": "English-speaking firm",
+    "pricing_note": "English-mluvící kancelář",
     "ranking": "",
     "awards": "",
-    "target": "Expats, International Clients",
+    "target": "Expati, International Clients",
     "primary": "Spory a rozhodčí řízení"
   },
   {
@@ -4770,14 +4777,14 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Ondřej Prymula",
-    "description": "Advokátní kancelář Advokátní kancelář Prymula – Praha",
+    "description": "Advokátní kancelář Prymula je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Trestní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akprymula.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "1,500–2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4802,19 +4809,19 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Šaroch",
-    "description": "Advokátní kancelář Advokátní kancelář LEGAL21 – Praha",
+    "description": "Advokátní kancelář LEGAL21 je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2012. Mezi hlavní oblasti praxe patří IT právo, Duševní vlastnictví, Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na start-upy, Digital Companies.",
     "website": "www.legal21.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
-    "pricing_note": "Tech-focused fixed fees",
+    "pricing_note": "Tech-zaměření fixed fees",
     "ranking": "",
     "awards": "",
-    "target": "Startupy, Digital Companies",
+    "target": "Start-upy, Digital Companies",
     "primary": "IT právo"
   },
   {
@@ -4838,7 +4845,7 @@ const lawyersData = [
     "size": "25+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář KŠD LEGAL advokátní kancelář – Praha",
+    "description": "KŠD LEGAL advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2005. S týmem přes 25 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Bankovní právo a dalších 4 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Recommended – Legal 500. Zaměřuje se zejména na korporace, Banky, PE Funds.",
     "website": "www.ksd.cz",
     "languages": [
       "Čeština",
@@ -4847,12 +4854,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "KL",
-    "hourly_rate": "2,500–4,000",
+    "hourly_rate": "2 500–4 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "Recommended – Legal 500",
     "awards": "",
-    "target": "Korporace, Banky, PE Funds",
+    "target": "Korporace, Banky, PE Fondy",
     "primary": "Komplexní právní služby"
   },
   {
@@ -4872,14 +4879,14 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Ondřej Mrázek",
-    "description": "Advokátní kancelář Advokátní kancelář Mrázek – Praha",
+    "description": "Advokátní kancelář Mrázek je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Nemovitosti, Občanské právo, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Investoři.",
     "website": "www.mrazek.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "1,500–2,500",
+    "hourly_rate": "1 500–2 500 Kč",
     "consult_fee": "1,500 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -4905,7 +4912,7 @@ const lawyersData = [
     "size": "15–20",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář LEGAL PARTNERS advokátní kancelář – Praha",
+    "description": "LEGAL PARTNERS advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Bankovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Banky.",
     "website": "www.legalpartners.cz",
     "languages": [
       "Čeština",
@@ -4913,7 +4920,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "LP",
-    "hourly_rate": "2,000–4,000",
+    "hourly_rate": "2 000–4 000 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4937,14 +4944,14 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Petr Korous",
-    "description": "Advokátní kancelář AK KOROUS – Praha",
+    "description": "AK KOROUS je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na creditors, Debtors, Companies.",
     "website": "www.akkorous.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "Na dotaz",
     "pricing_note": "",
     "ranking": "",
@@ -4969,7 +4976,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Miroslav Šimák",
-    "description": "Advokátní kancelář ACTAION advokátní kancelář – Praha",
+    "description": "ACTAION advokátní kancelář je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Duševní vlastnictví. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Start-upy, Korporace.",
     "website": "www.actaion.cz",
     "languages": [
       "Čeština",
@@ -4977,12 +4984,12 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "AA",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Malé a střední podniky, Startupy, Korporace",
+    "target": "Malé a střední podniky, Start-upy, Korporace",
     "primary": "Obchodní právo"
   },
   {
@@ -5003,14 +5010,14 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Vojtěch Mach",
-    "description": "Advokátní kancelář Advokátní kancelář Mach – Praha",
+    "description": "Advokátní kancelář Mach je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1993. Mezi hlavní oblasti praxe patří Trestní právo, Spory a rozhodčí řízení, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akmach.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,000–3,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -5036,7 +5043,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Petr Lisse",
-    "description": "Advokátní kancelář Advokátní kancelář LISSE – Praha",
+    "description": "Advokátní kancelář LISSE je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.aklisse.cz",
     "languages": [
       "Čeština",
@@ -5044,7 +5051,7 @@ const lawyersData = [
       "Němčina"
     ],
     "initials": "AK",
-    "hourly_rate": "1,800–3,000",
+    "hourly_rate": "1 800–3 000 Kč",
     "consult_fee": "2,000 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -5069,7 +5076,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Luboš Zoufalý",
-    "description": "Advokátní kancelář Zoufalý & Havlát advokáti – Praha",
+    "description": "Zoufalý & Havlát advokáti je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Duševní vlastnictví, Trestní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Fyzické osoby.",
     "website": "www.zhadvokati.cz",
     "languages": [
       "Čeština",
@@ -5077,7 +5084,7 @@ const lawyersData = [
       "Slovenština"
     ],
     "initials": "Z&",
-    "hourly_rate": "2,000–3,500",
+    "hourly_rate": "2 000–3 500 Kč",
     "consult_fee": "2,500 Kč",
     "pricing_note": "",
     "ranking": "",
@@ -5101,16 +5108,16 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "JUDr. Tomáš Sokol",
-    "description": "Advokátní kancelář Advokátní kancelář Tomáš Sokol – Praha",
+    "description": "Advokátní kancelář Tomáš Sokol je advokátní kancelář se sídlem v Praze. Na trhu působí od roku 1990. Tým 1 právníků. Mezi hlavní oblasti praxe patří Trestní právo, IT právo. Služby poskytuje kromě češtiny také v angličtině. Ocenění: Top Czech criminal defence lawyer. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.ak-sokol.cz",
     "languages": [
       "Čeština",
       "Angličtina"
     ],
     "initials": "AK",
-    "hourly_rate": "3,000–6,000",
+    "hourly_rate": "3 000–6 000 Kč",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Senior criminal defence specialist",
+    "pricing_note": "Senior criminal defence specialista",
     "ranking": "",
     "awards": "Top Czech criminal defence lawyer",
     "target": "Fyzické osoby, Companies",
@@ -5137,7 +5144,7 @@ const lawyersData = [
     "size": "30+",
     "verified": true,
     "key_partner": "JUDr. Libor Muzikář",
-    "description": "Advokátní kancelář Muzikář & Partners – Brno",
+    "description": "Muzikář & Partners je přední česká advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1993. S týmem přes 30 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Občanské právo, Pracovní právo a dalších 4 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Kancelář je hodnocena v Recommended – Legal 500. Zaměřuje se zejména na korporace, Obce, Fyzické osoby.",
     "website": "www.muzikař.cz",
     "languages": [
       "Čeština",
@@ -5174,7 +5181,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář SAK – Společná advokátní kancelář – Brno",
+    "description": "SAK – Společná advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1991. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Insolvence a dalších 3 oborů práva. Služby poskytuje v 6 jazycích včetně slovenštiny, angličtiny a francouzštiny a dalších. Zaměřuje se zejména na fyzické osoby, Korporace, Malé a střední podniky.",
     "website": "www.sak.cz",
     "languages": [
       "Čeština",
@@ -5212,7 +5219,7 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "JUDr. Adam Valíček & JUDr. Irena Valíčková",
-    "description": "Advokátní kancelář Valíček & Valíčková – Brno",
+    "description": "Valíček & Valíčková je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1997. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Ocenění: Law Firma roku – Moravia. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.validek.cz",
     "languages": [
       "Čeština",
@@ -5222,9 +5229,9 @@ const lawyersData = [
     "initials": "V&",
     "hourly_rate": "1,800–3,000",
     "consult_fee": "2,000 Kč",
-    "pricing_note": "Law Firm of the Year award recipient",
+    "pricing_note": "Law Firma roku award recipient",
     "ranking": "",
-    "awards": "Law Firm of the Year – Moravia",
+    "awards": "Law Firma roku – Moravia",
     "target": "Fyzické osoby, Malé a střední podniky",
     "primary": "Komplexní právní služby"
   },
@@ -5247,7 +5254,7 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář OYERS advokátní kancelář – Brno",
+    "description": "OYERS advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1996. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Rodinné právo, Pracovní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.oyers.law",
     "languages": [
       "Čeština",
@@ -5280,7 +5287,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Jan Hladký",
-    "description": "Advokátní kancelář HLADKY.LEGAL – Brno",
+    "description": "HLADKY.LEGAL je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Fúze a akvizice, Obchodní právo, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, PE Funds, Start-upy.",
     "website": "www.hladky.legal",
     "languages": [
       "Čeština",
@@ -5293,7 +5300,7 @@ const lawyersData = [
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Korporace, PE Funds, Startupy",
+    "target": "Korporace, PE Fondy, Start-upy",
     "primary": "Obchodní právo"
   },
   {
@@ -5314,7 +5321,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Pavla Komendová",
-    "description": "Advokátní kancelář Šetina Komendová & Partners – Brno",
+    "description": "Šetina Komendová & Partners je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Duševní vlastnictví a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Tech Companies.",
     "website": "www.setinakomendova.cz",
     "languages": [
       "Čeština",
@@ -5347,7 +5354,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Spring Walk advokátní kancelář – Brno",
+    "description": "Spring Walk advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2012. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Pracovní právo. Služby poskytuje v 4 jazycích včetně angličtiny, slovenštiny a ruštiny. Zaměřuje se zejména na investoři, Developers.",
     "website": "www.springwalk.cz",
     "languages": [
       "Čeština",
@@ -5383,7 +5390,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Lenka Coufalová",
-    "description": "Advokátní kancelář Coufalová & Kubíková – Brno",
+    "description": "Coufalová & Kubíková je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.coufalova-kubikova.cz",
     "languages": [
       "Čeština",
@@ -5416,7 +5423,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jan Štourač",
-    "description": "Advokátní kancelář Advokátní kancelář Štourač – Brno",
+    "description": "Advokátní kancelář Štourač je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Trestní právo, Vymáhání pohledávek, Spory a rozhodčí řízení a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.stourac.cz",
     "languages": [
       "Čeština",
@@ -5448,7 +5455,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Kulhánek",
-    "description": "Advokátní kancelář AK KULHÁNEK – Brno",
+    "description": "AK KULHÁNEK je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Investoři.",
     "website": "www.kulhaneklaw.cz",
     "languages": [
       "Čeština",
@@ -5458,7 +5465,7 @@ const lawyersData = [
     "initials": "AK",
     "hourly_rate": "2,000–3,000",
     "consult_fee": "2,500 Kč",
-    "pricing_note": "Premium office location",
+    "pricing_note": "Prémiové office location",
     "ranking": "",
     "awards": "",
     "target": "Malé a střední podniky, Investoři",
@@ -5484,7 +5491,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Michal Bortel",
-    "description": "Advokátní kancelář Bortel advokátní kancelář – Brno",
+    "description": "Bortel advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2013. Mezi hlavní oblasti praxe patří Obchodní právo, Vymáhání pohledávek, Trestní právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.bortelak.cz",
     "languages": [
       "Čeština",
@@ -5517,7 +5524,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Martin Čermák",
-    "description": "Advokátní kancelář Martin Čermák advokát – Brno",
+    "description": "Martin Čermák advokát je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2009. Tým 1 právníků. Mezi hlavní oblasti praxe patří Pracovní právo, Vymáhání pohledávek, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.cermakadvokat.cz",
     "languages": [
       "Čeština",
@@ -5527,7 +5534,7 @@ const lawyersData = [
     "initials": "MČ",
     "hourly_rate": "1,200–2,000",
     "consult_fee": "1,000–1,500 Kč",
-    "pricing_note": "Fixed-fee options available",
+    "pricing_note": "Fixed-fee možnosti k dispozici",
     "ranking": "",
     "awards": "",
     "target": "Fyzické osoby, Malé a střední podniky",
@@ -5552,7 +5559,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "JUDr. Eva Sladká Florianová",
-    "description": "Advokátní kancelář Eva Sladká Florianová advokátka – Brno",
+    "description": "Eva Sladká Florianová advokátka je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1999. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Obchodní právo, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Expats.",
     "website": "www.advokatka-brno.cz",
     "languages": [
       "Čeština",
@@ -5565,7 +5572,7 @@ const lawyersData = [
     "pricing_note": "Certified translator Czech-German",
     "ranking": "",
     "awards": "",
-    "target": "Fyzické osoby, Expats",
+    "target": "Fyzické osoby, Cizinci v ČR",
     "primary": "Rodinné právo"
   },
   {
@@ -5587,7 +5594,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "JUDr. Jana Jakoubková",
-    "description": "Advokátní kancelář Jana Jakoubková advokátka – Brno",
+    "description": "Jana Jakoubková advokátka je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1990. Tým 1 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Pracovní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.brno-advokat.com",
     "languages": [
       "Čeština",
@@ -5620,7 +5627,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Jáchym Kanarek",
-    "description": "Advokátní kancelář Kanarek advokátní kancelář – Brno",
+    "description": "Kanarek advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1991. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Nemovitosti a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.advokat-brno.cz",
     "languages": [
       "Čeština",
@@ -5655,7 +5662,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Martin Halahija",
-    "description": "Advokátní kancelář Martin Halahija advokát – Brno",
+    "description": "Martin Halahija advokát je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2010. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Expats.",
     "website": "www.akhalahija.cz",
     "languages": [
       "Čeština",
@@ -5668,7 +5675,7 @@ const lawyersData = [
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Fyzické osoby, Expats",
+    "target": "Fyzické osoby, Cizinci v ČR",
     "primary": "Rodinné právo"
   },
   {
@@ -5688,7 +5695,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "JUDr. Martina Ďurďovič",
-    "description": "Advokátní kancelář Ďurďovič advokátka – Brno",
+    "description": "Ďurďovič advokátka je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2007. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.advokatniporadnabrno.cz",
     "languages": [
       "Čeština",
@@ -5722,7 +5729,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jiří Jelínek",
-    "description": "Advokátní kancelář Jelínek & Partneři – Brno",
+    "description": "Jelínek & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, IT právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na public Bodies, Tech Companies.",
     "website": "www.jelinek-partners.cz",
     "languages": [
       "Čeština",
@@ -5757,7 +5764,7 @@ const lawyersData = [
     "size": "15–20",
     "verified": false,
     "key_partner": "JUDr. Jan Bartoň",
-    "description": "Advokátní kancelář Bartoň & Partneři – Brno",
+    "description": "Bartoň & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1994. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Developers, Malé a střední podniky.",
     "website": "www.barton.cz",
     "languages": [
       "Čeština",
@@ -5790,7 +5797,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Aequitas Legal – Brno",
+    "description": "Aequitas Legal je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Insolvence, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Banky, Malé a střední podniky.",
     "website": "www.aequitas.cz",
     "languages": [
       "Čeština",
@@ -5823,7 +5830,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. David Hampl",
-    "description": "Advokátní kancelář Hampl & Partners – Brno",
+    "description": "Hampl & Partners je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2013. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na start-upy, Tech Companies, Investoři.",
     "website": "www.hampl-partners.cz",
     "languages": [
       "Čeština",
@@ -5833,10 +5840,10 @@ const lawyersData = [
     "initials": "H&",
     "hourly_rate": "2,000–3,500",
     "consult_fee": "2,500 Kč",
-    "pricing_note": "Startup-friendly pricing",
+    "pricing_note": "Start-up-friendly cenotvorba",
     "ranking": "",
     "awards": "",
-    "target": "Startupy, Tech Companies, Investoři",
+    "target": "Start-upy, Tech Companies, Investoři",
     "primary": "Obchodní právo"
   },
   {
@@ -5856,7 +5863,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Ondřej Jirousek",
-    "description": "Advokátní kancelář Jirousek & Partneři – Brno",
+    "description": "Jirousek & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, Správní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, HR Departments.",
     "website": "www.jirousek.cz",
     "languages": [
       "Čeština",
@@ -5890,7 +5897,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Radek Kubíček",
-    "description": "Advokátní kancelář Kubíček & Partners – Brno",
+    "description": "Kubíček & Partners je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Investoři.",
     "website": "www.kubicekpartners.cz",
     "languages": [
       "Čeština",
@@ -5925,7 +5932,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jiří Šafář",
-    "description": "Advokátní kancelář Šafář & Sáblík advokátní kancelář – Brno",
+    "description": "Šafář & Sáblík advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Rodinné právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.safarandsablik.cz",
     "languages": [
       "Čeština",
@@ -5960,7 +5967,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Jan Matoušek",
-    "description": "Advokátní kancelář Matoušek & Partners – Brno",
+    "description": "Matoušek & Partners je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1999. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 3 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Zaměřuje se zejména na korporace, Malé a střední podniky.",
     "website": "www.matousek-partners.cz",
     "languages": [
       "Čeština",
@@ -5995,7 +6002,7 @@ const lawyersData = [
     "size": "10–15",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář BKL advokátní kancelář – Brno",
+    "description": "BKL advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1996. Mezi hlavní oblasti praxe patří Bankovní právo, Obchodní právo, IT právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na banky, Finanční instituce.",
     "website": "www.bkl.cz",
     "languages": [
       "Čeština",
@@ -6027,7 +6034,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": true,
     "key_partner": "Doc. JUDr. Petr Bezouška",
-    "description": "Advokátní kancelář Bezouška & Partners – Brno",
+    "description": "Bezouška & Partners je advokátní kancelář s pobočkami v Brně a v Olomouci. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Občanské právo, Ochrana spotřebitele. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na malé a střední podniky, Fyzické osoby, Academic Institutions.",
     "website": "www.bezouska.cz",
     "languages": [
       "Čeština",
@@ -6059,7 +6066,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Petr Petrov",
-    "description": "Advokátní kancelář Advokátní kancelář Petrov – Brno",
+    "description": "Advokátní kancelář Petrov je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Trestní právo, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Fyzické osoby.",
     "website": "www.akpetrov.cz",
     "languages": [
       "Čeština",
@@ -6093,7 +6100,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Martin Malach",
-    "description": "Advokátní kancelář Advokátní kancelář Malach – Brno",
+    "description": "Advokátní kancelář Malach je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Rodinné právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akmalach.cz",
     "languages": [
       "Čeština",
@@ -6127,7 +6134,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Zdeněk Ulman",
-    "description": "Advokátní kancelář Ulman & Partneři – Brno",
+    "description": "Ulman & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Trestní právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.ulman.cz",
     "languages": [
       "Čeština",
@@ -6160,7 +6167,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Michal Vávra",
-    "description": "Advokátní kancelář Vávra & Partneři – Brno",
+    "description": "Vávra & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Nemovitosti, Insolvence, Vymáhání pohledávek. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na creditors, Developers, Banky.",
     "website": "www.vavra-partners.cz",
     "languages": [
       "Čeština",
@@ -6193,7 +6200,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Ondřej Kratochvíl",
-    "description": "Advokátní kancelář Kratochvíl & Partneři – Brno",
+    "description": "Kratochvíl & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Životní prostředí. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na obce, Developers, Companies.",
     "website": "www.kratochvilpartners.cz",
     "languages": [
       "Čeština",
@@ -6227,7 +6234,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Gajdošík",
-    "description": "Advokátní kancelář Gajdošík & Partneři – Brno",
+    "description": "Gajdošík & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Rodinné právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.gajdosik.cz",
     "languages": [
       "Čeština",
@@ -6260,7 +6267,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář Finanční & Právní poradenství s.r.o. – Brno",
+    "description": "Finanční & Právní poradenství s.r.o. je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Bankovní právo, Daně, Obchodní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na banky, Korporace, Malé a střední podniky.",
     "website": "www.fpp.cz",
     "languages": [
       "Čeština",
@@ -6270,7 +6277,7 @@ const lawyersData = [
     "initials": "F&",
     "hourly_rate": "2,000–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Combined legal and tax advisory",
+    "pricing_note": "Combined legal a daňové poradenství",
     "ranking": "",
     "awards": "",
     "target": "Banky, Korporace, Malé a střední podniky",
@@ -6294,7 +6301,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Jana Nováčková",
-    "description": "Advokátní kancelář Brno Law Office – Brno",
+    "description": "Brno Law Office je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2011. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Imigrace, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na expats, Rodiny.",
     "website": "www.brnolawoffice.cz",
     "languages": [
       "Čeština",
@@ -6307,7 +6314,7 @@ const lawyersData = [
     "pricing_note": "English-friendly",
     "ranking": "",
     "awards": "",
-    "target": "Expats, Rodiny",
+    "target": "Cizinci v ČR, Rodiny",
     "primary": "Rodinné právo"
   },
   {
@@ -6327,7 +6334,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radim Ondráček",
-    "description": "Advokátní kancelář AK Ondráček & Partneři – Brno",
+    "description": "AK Ondráček & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, Spory a rozhodčí řízení. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, Trade Unions, Employees.",
     "website": "www.akondracek.cz",
     "languages": [
       "Čeština",
@@ -6359,7 +6366,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jiří Sokol",
-    "description": "Advokátní kancelář Sokol & Partneři – Brno",
+    "description": "Sokol & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2012. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na tech Companies, Malé a střední podniky, Creatives.",
     "website": "www.sokolpartners.cz",
     "languages": [
       "Čeština",
@@ -6394,7 +6401,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Václav Koukal",
-    "description": "Advokátní kancelář Advokátní kancelář Koukal – Brno",
+    "description": "Advokátní kancelář Koukal je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1997. Mezi hlavní oblasti praxe patří Nemovitosti, Občanské právo, Rodinné právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Property Buyers.",
     "website": "www.akkoukal.cz",
     "languages": [
       "Čeština",
@@ -6428,7 +6435,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář PRAXIS advokátní kancelář – Brno",
+    "description": "PRAXIS advokátní kancelář je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Korporace.",
     "website": "www.praxis-ak.cz",
     "languages": [
       "Čeština",
@@ -6462,7 +6469,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Petr Hrnčiřík",
-    "description": "Advokátní kancelář Advokátní kancelář Hrnčiřík – Brno",
+    "description": "Advokátní kancelář Hrnčiřík je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 2008. Tým 1 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Spory a rozhodčí řízení, Pracovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.ak-hrncirik.cz",
     "languages": [
       "Čeština",
@@ -6496,7 +6503,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Aleš Nejedlý",
-    "description": "Advokátní kancelář Advokátní kancelář Nejedlý & Partneři – Brno",
+    "description": "Advokátní kancelář Nejedlý & Partneři je advokátní kancelář se sídlem v Brně. Na trhu působí od roku 1999. Mezi hlavní oblasti praxe patří Trestní právo, Spory a rozhodčí řízení, IT právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Korporace, Directors.",
     "website": "www.nejedly-ak.cz",
     "languages": [
       "Čeština",
@@ -6532,7 +6539,7 @@ const lawyersData = [
     "size": "20+",
     "verified": false,
     "key_partner": "JUDr. Pavel Rousek",
-    "description": "Advokátní kancelář Advokátní kancelář Rousek – Plzeň",
+    "description": "Advokátní kancelář Rousek je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 1993. S týmem přes 20 právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Občanské právo a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Fyzické osoby, Malé a střední podniky.",
     "website": "www.akrousek.cz",
     "languages": [
       "Čeština",
@@ -6566,7 +6573,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jan Kocourek",
-    "description": "Advokátní kancelář Advokátní kancelář Kocourek – Plzeň",
+    "description": "Advokátní kancelář Kocourek je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Občanské právo, Trestní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akkocourek.cz",
     "languages": [
       "Čeština",
@@ -6599,7 +6606,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Fišer",
-    "description": "Advokátní kancelář AK Fišer & Partneři – Plzeň",
+    "description": "AK Fišer & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Nemovitosti, Občanské právo, Stavební právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Fyzické osoby.",
     "website": "www.akfiser.cz",
     "languages": [
       "Čeština",
@@ -6632,7 +6639,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Milan Holub",
-    "description": "Advokátní kancelář HOLUB & PARTNEŘI advokátní kancelář – Plzeň",
+    "description": "HOLUB & PARTNEŘI advokátní kancelář je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Trestní právo, IT právo, Spory a rozhodčí řízení. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akholub.cz",
     "languages": [
       "Čeština",
@@ -6664,7 +6671,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Radek Němec",
-    "description": "Advokátní kancelář NĚMEC PARTNERS – Plzeň",
+    "description": "NĚMEC PARTNERS je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, HR Departments.",
     "website": "www.nemecpartners.cz",
     "languages": [
       "Čeština",
@@ -6698,7 +6705,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Pavel Šlauf",
-    "description": "Advokátní kancelář advokátní kancelář ŠLAUF – Plzeň",
+    "description": "Advokátní kancelář ŠLAUF je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 1999. Mezi hlavní oblasti praxe patří Občanské právo, Vymáhání pohledávek, Nemovitosti a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akslauf.cz",
     "languages": [
       "Čeština",
@@ -6732,7 +6739,7 @@ const lawyersData = [
     "size": "10–15",
     "verified": false,
     "key_partner": "Mgr. Ondřej Chvosta",
-    "description": "Advokátní kancelář Chvosta & Partneři – Plzeň",
+    "description": "Chvosta & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Bankovní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Investoři.",
     "website": "www.chvosta.cz",
     "languages": [
       "Čeština",
@@ -6765,7 +6772,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Eva Benýšková",
-    "description": "Advokátní kancelář AK Benýšková & Partneři – Plzeň",
+    "description": "AK Benýšková & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.akbenys.cz",
     "languages": [
       "Čeština",
@@ -6800,7 +6807,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář SOKOL ŠAFRÁNEK ŠUJAN advokáti – Plzeň",
+    "description": "SOKOL ŠAFRÁNEK ŠUJAN advokáti je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 1992. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Banky, Obce.",
     "website": "www.sssnadvokati.cz",
     "languages": [
       "Čeština",
@@ -6832,7 +6839,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Martin Kalous",
-    "description": "Advokátní kancelář Kalous & Partneři – Plzeň",
+    "description": "Kalous & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na creditors, Banky, Companies.",
     "website": "www.kalouspartners.cz",
     "languages": [
       "Čeština",
@@ -6864,7 +6871,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Jiří Votruba",
-    "description": "Advokátní kancelář AK Votruba – Plzeň",
+    "description": "AK Votruba je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby.",
     "website": "www.akvotruba.cz",
     "languages": [
       "Čeština",
@@ -6896,7 +6903,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jiří Mašek",
-    "description": "Advokátní kancelář Mašek Pinkas advokáti – Plzeň",
+    "description": "Mašek Pinkas advokáti je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo, Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na developers, Construction Firms.",
     "website": "www.mp-advokati.cz",
     "languages": [
       "Čeština",
@@ -6928,7 +6935,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radek Pechman",
-    "description": "Advokátní kancelář Pechman & Partneři – Plzeň",
+    "description": "Pechman & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Obchodní právo, Daně, Fúze a akvizice. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na german Companies, Malé a střední podniky.",
     "website": "www.pechman.cz",
     "languages": [
       "Čeština",
@@ -6962,7 +6969,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Petra Kottová",
-    "description": "Advokátní kancelář Advokátní kancelář Kottová – Plzeň",
+    "description": "Advokátní kancelář Kottová je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2012. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.ak-kottova.cz",
     "languages": [
       "Čeština",
@@ -6994,7 +7001,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Václav Dvořáček",
-    "description": "Advokátní kancelář Dvořáček & Partneři – Plzeň",
+    "description": "Dvořáček & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Občanské právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Developers.",
     "website": "www.dvoracekpartners.cz",
     "languages": [
       "Čeština",
@@ -7028,7 +7035,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Michal Vild",
-    "description": "Advokátní kancelář AK Vild – Plzeň",
+    "description": "AK Vild je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Rodinné právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akvild.cz",
     "languages": [
       "Čeština",
@@ -7061,7 +7068,7 @@ const lawyersData = [
     "size": "10+",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář Rödl & Partner – Plzeň",
+    "description": "Rödl & Partner je advokátní kancelář s pobočkami v městech Plzeň, České Budějovice, Ústí nad Labem a Karlovy Vary. Na trhu působí od roku 1995. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Daně, Fúze a akvizice a dalšího oboru práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Zaměřuje se zejména na german Companies, Korporace.",
     "website": "www.roedl.cz",
     "languages": [
       "Čeština",
@@ -7072,7 +7079,7 @@ const lawyersData = [
     "initials": "R&",
     "hourly_rate": "2,500–4,000",
     "consult_fee": "Na dotaz",
-    "pricing_note": "German-speaking international firm",
+    "pricing_note": "Mezinárodní kancelář německého původu",
     "ranking": "",
     "awards": "",
     "target": "German Companies, Korporace",
@@ -7096,7 +7103,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Bárta",
-    "description": "Advokátní kancelář AK BÁRTA & PARTNEŘI – Plzeň",
+    "description": "AK BÁRTA & PARTNEŘI je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 1996. Mezi hlavní oblasti praxe patří Nemovitosti, Občanské právo, Rodinné právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akbarta.cz",
     "languages": [
       "Čeština",
@@ -7128,7 +7135,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Havlíček",
-    "description": "Advokátní kancelář Havlíček & Partneři – Plzeň",
+    "description": "Havlíček & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2013. Mezi hlavní oblasti praxe patří Duševní vlastnictví, Obchodní právo, IT právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na tech Companies, Malé a střední podniky.",
     "website": "www.havlicekadvokati.cz",
     "languages": [
       "Čeština",
@@ -7160,7 +7167,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Ondřej Horáček",
-    "description": "Advokátní kancelář AK Horáček & Partneři – Plzeň",
+    "description": "AK Horáček & Partneři je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Duševní vlastnictví. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na obce, Developers.",
     "website": "www.akhoracek.cz",
     "languages": [
       "Čeština",
@@ -7191,7 +7198,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Lukáš Beneš",
-    "description": "Advokátní kancelář advokátní kancelář Beneš – Plzeň",
+    "description": "Advokátní kancelář Beneš je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2011. Tým 1 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Small Businesses.",
     "website": "www.akbenes.cz",
     "languages": [
       "Čeština",
@@ -7225,7 +7232,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jana Lexová",
-    "description": "Advokátní kancelář LEXIS advokátní kancelář – Plzeň",
+    "description": "LEXIS advokátní kancelář je advokátní kancelář se sídlem v Plzni. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Rodinné právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.lexis-ak.cz",
     "languages": [
       "Čeština",
@@ -7261,7 +7268,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Roman Egermaier",
-    "description": "Advokátní kancelář Egermaier & Vrábel advokátní kancelář – České Budějovice",
+    "description": "Egermaier & Vrábel advokátní kancelář je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 1993. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Obce, Malé a střední podniky.",
     "website": "www.egermaier.cz",
     "languages": [
       "Čeština",
@@ -7271,7 +7278,7 @@ const lawyersData = [
     "initials": "E&",
     "hourly_rate": "1,800–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of the region's leading firms",
+    "pricing_note": "Jedna z předních kanceláří v regionu",
     "ranking": "",
     "awards": "",
     "target": "Korporace, Obce, Malé a střední podniky",
@@ -7295,7 +7302,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Oldřich Kubát",
-    "description": "Advokátní kancelář Advokátní kancelář Kubát – České Budějovice",
+    "description": "Advokátní kancelář Kubát je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 1996. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Spory a rozhodčí řízení a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akkubat.cz",
     "languages": [
       "Čeština",
@@ -7330,7 +7337,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Pavel Táborský",
-    "description": "Advokátní kancelář TÁBORSKÝ & PARTNEŘI – České Budějovice",
+    "description": "TÁBORSKÝ & PARTNEŘI je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Stavební právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na investoři, Developers, Malé a střední podniky.",
     "website": "www.taborsky.cz",
     "languages": [
       "Čeština",
@@ -7363,7 +7370,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Martin Dvořák",
-    "description": "Advokátní kancelář AK Dvořák & Partneři ČB – České Budějovice",
+    "description": "AK Dvořák & Partneři ČB je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Občanské právo, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akdvorak-cb.cz",
     "languages": [
       "Čeština",
@@ -7396,7 +7403,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Radek Zeman",
-    "description": "Advokátní kancelář Advokátní kancelář Zeman – České Budějovice",
+    "description": "Advokátní kancelář Zeman je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Pracovní právo, Občanské právo, Správní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, Employees.",
     "website": "www.akzeman.cz",
     "languages": [
       "Čeština",
@@ -7431,7 +7438,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Vladimír Holý",
-    "description": "Advokátní kancelář Holý & Partneři advokáti – České Budějovice",
+    "description": "Holý & Partneři advokáti je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Rodinné právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.holy-advokati.cz",
     "languages": [
       "Čeština",
@@ -7463,7 +7470,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Blanka Nouzovská",
-    "description": "Advokátní kancelář AK Nouzovská – České Budějovice",
+    "description": "AK Nouzovská je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2006. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.aknouzovska.cz",
     "languages": [
       "Čeština",
@@ -7496,7 +7503,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. David Čížek",
-    "description": "Advokátní kancelář ČÍŽEK & PARTNEŘI – České Budějovice",
+    "description": "ČÍŽEK & PARTNEŘI je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo, Obchodní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na investoři, Developers.",
     "website": "www.cizek-ak.cz",
     "languages": [
       "Čeština",
@@ -7506,7 +7513,7 @@ const lawyersData = [
     "initials": "Č&",
     "hourly_rate": "1,500–2,500",
     "consult_fee": "1,500–2,000 Kč",
-    "pricing_note": "German-speaker",
+    "pricing_note": "Kancelář s německy mluvícím týmem",
     "ranking": "",
     "awards": "",
     "target": "Investoři, Developers",
@@ -7529,7 +7536,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jiří Procházka",
-    "description": "Advokátní kancelář Procházka & Partneři ČB – České Budějovice",
+    "description": "Procházka & Partneři ČB je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Duševní vlastnictví. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na malé a střední podniky, Start-upy.",
     "website": "www.prochazka-advokati.cz",
     "languages": [
       "Čeština",
@@ -7541,7 +7548,7 @@ const lawyersData = [
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Malé a střední podniky, Startupy",
+    "target": "Malé a střední podniky, Start-upy",
     "primary": "Obchodní právo"
   },
   {
@@ -7561,7 +7568,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Tomáš Matula",
-    "description": "Advokátní kancelář AK MATULA & PARTNEŘI – České Budějovice",
+    "description": "AK MATULA & PARTNEŘI je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek, Občanské právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na creditors, Banky, Companies.",
     "website": "www.matula-ak.cz",
     "languages": [
       "Čeština",
@@ -7595,7 +7602,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Petra Kolářová",
-    "description": "Advokátní kancelář Kolářová advokátka – České Budějovice",
+    "description": "Kolářová advokátka je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2013. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.advokatka-cb.cz",
     "languages": [
       "Čeština",
@@ -7628,7 +7635,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Zdeněk Skopal",
-    "description": "Advokátní kancelář SKOPAL & PARTNEŘI – České Budějovice",
+    "description": "SKOPAL & PARTNEŘI je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.skopal-advokati.cz",
     "languages": [
       "Čeština",
@@ -7660,7 +7667,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jakub Linhart",
-    "description": "Advokátní kancelář LINHART advokáti – České Budějovice",
+    "description": "LINHART advokáti je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2014. Mezi hlavní oblasti praxe patří Obchodní právo, Duševní vlastnictví, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na start-upy, Tech Companies, Malé a střední podniky.",
     "website": "www.linhart-advokati.cz",
     "languages": [
       "Čeština",
@@ -7673,7 +7680,7 @@ const lawyersData = [
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Startupy, Tech Companies, Malé a střední podniky",
+    "target": "Start-upy, Tech Companies, Malé a střední podniky",
     "primary": "Obchodní právo"
   },
   {
@@ -7693,7 +7700,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Pavel Musil",
-    "description": "Advokátní kancelář ADLAW advokátní kancelář – České Budějovice",
+    "description": "ADLAW advokátní kancelář je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Nemovitosti, Občanské právo, Rodinné právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.adlaw.cz",
     "languages": [
       "Čeština",
@@ -7726,7 +7733,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Petr Záděra",
-    "description": "Advokátní kancelář Záděra advokátní kancelář – České Budějovice",
+    "description": "Záděra advokátní kancelář je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akzadera.cz",
     "languages": [
       "Čeština",
@@ -7759,7 +7766,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Lukáš Hofmann",
-    "description": "Advokátní kancelář Hofmann & Partneři – České Budějovice",
+    "description": "Hofmann & Partneři je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2011. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Bankovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na investoři, Malé a střední podniky.",
     "website": "www.hofmann-law.cz",
     "languages": [
       "Čeština",
@@ -7792,7 +7799,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radek Jurčík",
-    "description": "Advokátní kancelář Jurčík & Partneři – České Budějovice",
+    "description": "Jurčík & Partneři je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Duševní vlastnictví. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na obce, Developers.",
     "website": "www.jurcik.cz",
     "languages": [
       "Čeština",
@@ -7826,7 +7833,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Martin Urban",
-    "description": "Advokátní kancelář URBAN advokátní kancelář ČB – České Budějovice",
+    "description": "URBAN advokátní kancelář ČB je advokátní kancelář se sídlem v Českých Budějovicích. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.urban-advokat.cz",
     "languages": [
       "Čeština",
@@ -7860,7 +7867,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Vaněk",
-    "description": "Advokátní kancelář Advokátní kancelář Vaněk & Partneři – Olomouc",
+    "description": "Advokátní kancelář Vaněk & Partneři je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 1997. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.vanekpartners.cz",
     "languages": [
       "Čeština",
@@ -7894,7 +7901,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Martina Dostálová",
-    "description": "Advokátní kancelář AK Dostálová & Partneři – Olomouc",
+    "description": "AK Dostálová & Partneři je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Pracovní právo, Rodinné právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.dostalova-advokati.cz",
     "languages": [
       "Čeština",
@@ -7928,7 +7935,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Lenka Bezchlebová",
-    "description": "Advokátní kancelář BEZCHLEBOVÁ & ŠAMAJ advokáti – Olomouc",
+    "description": "BEZCHLEBOVÁ & ŠAMAJ advokáti je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2011. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Investoři, Malé a střední podniky.",
     "website": "www.bs-advokati.cz",
     "languages": [
       "Čeština",
@@ -7961,7 +7968,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Vladimír Vrtal",
-    "description": "Advokátní kancelář VRTAL & PARTNEŘI – Olomouc",
+    "description": "VRTAL & PARTNEŘI je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Trestní právo, IT právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.vrtalapartners.cz",
     "languages": [
       "Čeština",
@@ -7994,7 +8001,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Richard Mlčoch",
-    "description": "Advokátní kancelář AK MLČOCH & PARTNEŘI – Olomouc",
+    "description": "AK MLČOCH & PARTNEŘI je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Duševní vlastnictví a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Korporace.",
     "website": "www.mlcoch.cz",
     "languages": [
       "Čeština",
@@ -8027,7 +8034,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Roman Opluštil",
-    "description": "Advokátní kancelář Advokátní kancelář Opluštil – Olomouc",
+    "description": "Advokátní kancelář Opluštil je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Životní prostředí. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na obce, Developers.",
     "website": "www.akopluštil.cz",
     "languages": [
       "Čeština",
@@ -8060,7 +8067,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Jan Čermák",
-    "description": "Advokátní kancelář Čermák a spol. – Olomouc",
+    "description": "Čermák a spol. je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Občanské právo, Vymáhání pohledávek, Pracovní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.cermakspol.cz",
     "languages": [
       "Čeština",
@@ -8091,7 +8098,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Petr Kadlec",
-    "description": "Advokátní kancelář KADLEC & PARTNEŘI – Olomouc",
+    "description": "KADLEC & PARTNEŘI je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na creditors, Banky.",
     "website": "www.kadlecpartners.cz",
     "languages": [
       "Čeština",
@@ -8125,7 +8132,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Sedlák",
-    "description": "Advokátní kancelář Sedlák & Partneři – Olomouc",
+    "description": "Sedlák & Partneři je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Trestní právo, Spory a rozhodčí řízení, Správní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.sedlak-advokati.cz",
     "languages": [
       "Čeština",
@@ -8156,7 +8163,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Tomáš Šmíd",
-    "description": "Advokátní kancelář IP Advokáti – Olomouc",
+    "description": "IP Advokáti je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2012. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na tech Companies, Creatives, Universities.",
     "website": "www.ipadvokati.cz",
     "languages": [
       "Čeština",
@@ -8190,7 +8197,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Stanislav Ostrý",
-    "description": "Advokátní kancelář Ostrý & Partneři – Olomouc",
+    "description": "Ostrý & Partneři je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Nemovitosti, Občanské právo, Obchodní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Property Buyers.",
     "website": "www.ostrylaw.cz",
     "languages": [
       "Čeština",
@@ -8224,7 +8231,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Andrea Součková",
-    "description": "Advokátní kancelář Palacký Legal advokátní kancelář – Olomouc",
+    "description": "Palacký Legal advokátní kancelář je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2015. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na students, Fyzické osoby, Employees.",
     "website": "www.palackylegal.cz",
     "languages": [
       "Čeština",
@@ -8233,7 +8240,7 @@ const lawyersData = [
     "initials": "PL",
     "hourly_rate": "1,200–2,000",
     "consult_fee": "1,200 Kč",
-    "pricing_note": "Student/individual-friendly rates",
+    "pricing_note": "Student/individual-friendly sazby",
     "ranking": "",
     "awards": "",
     "target": "Students, Fyzické osoby, Employees",
@@ -8256,7 +8263,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Miloš Vlček",
-    "description": "Advokátní kancelář VLČEK advokátní kancelář – Olomouc",
+    "description": "VLČEK advokátní kancelář je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 1999. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Spory a rozhodčí řízení. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Malé a střední podniky.",
     "website": "www.advokat-olomouc.cz",
     "languages": [
       "Čeština",
@@ -8291,7 +8298,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Radek Jurka",
-    "description": "Advokátní kancelář AK Jurka & Partneři – Olomouc",
+    "description": "AK Jurka & Partneři je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.jurkaadvokati.cz",
     "languages": [
       "Čeština",
@@ -8324,7 +8331,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Miroslav Chvostek",
-    "description": "Advokátní kancelář Chvostek & Partneři – Olomouc",
+    "description": "Chvostek & Partneři je advokátní kancelář se sídlem v Olomouci. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Insolvence, Nemovitosti, Obchodní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na creditors, Companies.",
     "website": "www.chvostek.cz",
     "languages": [
       "Čeština",
@@ -8359,7 +8366,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Jiří Barták",
-    "description": "Advokátní kancelář Advokátní kancelář Barták & Partneři – Hradec Králové",
+    "description": "Advokátní kancelář Barták & Partneři je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 1993. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Zaměřuje se zejména na korporace, Obce, Malé a střední podniky.",
     "website": "www.bartak-advokati.cz",
     "languages": [
       "Čeština",
@@ -8370,7 +8377,7 @@ const lawyersData = [
     "initials": "AK",
     "hourly_rate": "1,800–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of East Bohemia's leading firms",
+    "pricing_note": "Jedna z předních kanceláří ve východních Čechách",
     "ranking": "",
     "awards": "",
     "target": "Korporace, Obce, Malé a střední podniky",
@@ -8395,7 +8402,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jiří Vávra",
-    "description": "Advokátní kancelář AK Vávra & Partneři HK – Hradec Králové",
+    "description": "AK Vávra & Partneři HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.vavra-hk.cz",
     "languages": [
       "Čeština",
@@ -8427,7 +8434,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Tomáš Sokol jr.",
-    "description": "Advokátní kancelář SOKOL advokátní kancelář HK – Hradec Králové",
+    "description": "SOKOL advokátní kancelář HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Malé a střední podniky.",
     "website": "www.sokoladvokati-hk.cz",
     "languages": [
       "Čeština",
@@ -8459,7 +8466,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Miroslav Boháček",
-    "description": "Advokátní kancelář Boháček & Partneři HK – Hradec Králové",
+    "description": "Boháček & Partneři HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na companies, Fyzické osoby.",
     "website": "www.bohacekpartners.cz",
     "languages": [
       "Čeština",
@@ -8491,7 +8498,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Pospíšil",
-    "description": "Advokátní kancelář AK Pospíšil & Partneři – Hradec Králové",
+    "description": "AK Pospíšil & Partneři je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, IT právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, HR Departments.",
     "website": "www.pospisiladvokati.cz",
     "languages": [
       "Čeština",
@@ -8524,7 +8531,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Jan Říha",
-    "description": "Advokátní kancelář ŘÍHA advokátní kancelář – Hradec Králové",
+    "description": "ŘÍHA advokátní kancelář je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby.",
     "website": "www.akriha.cz",
     "languages": [
       "Čeština",
@@ -8557,7 +8564,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Pavel Holub",
-    "description": "Advokátní kancelář Holub & Partneři HK – Hradec Králové",
+    "description": "Holub & Partneři HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Nemovitosti, Rodinné právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.holub-advokati.cz",
     "languages": [
       "Čeština",
@@ -8590,7 +8597,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radek Toman jr.",
-    "description": "Advokátní kancelář TOMAN & PARTNEŘI HK – Hradec Králové",
+    "description": "TOMAN & PARTNEŘI HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2012. Mezi hlavní oblasti praxe patří Obchodní právo, Daně, Fúze a akvizice a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na malé a střední podniky, Investoři.",
     "website": "www.toman-partners.cz",
     "languages": [
       "Čeština",
@@ -8624,7 +8631,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Jana Novotná",
-    "description": "Advokátní kancelář AK Novotná & Partneři – Hradec Králové",
+    "description": "AK Novotná & Partneři je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.novotna-advokati.cz",
     "languages": [
       "Čeština",
@@ -8657,7 +8664,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Karel Rübsamen",
-    "description": "Advokátní kancelář Rübsamen & Partneři HK – Hradec Králové",
+    "description": "Rübsamen & Partneři HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Životní prostředí a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na obce, Developers.",
     "website": "www.rubsamen.cz",
     "languages": [
       "Čeština",
@@ -8689,7 +8696,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Petr Beneš",
-    "description": "Advokátní kancelář BENEŠ & NOVÝ advokáti HK – Hradec Králové",
+    "description": "BENEŠ & NOVÝ advokáti HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Korporace.",
     "website": "www.benes-novy.cz",
     "languages": [
       "Čeština",
@@ -8723,7 +8730,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Roman Blažek",
-    "description": "Advokátní kancelář AK Blažek HK – Hradec Králové",
+    "description": "AK Blažek HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2008. Tým 1 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Vymáhání pohledávek a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akblazek.cz",
     "languages": [
       "Čeština",
@@ -8755,7 +8762,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Ondřej Šafránek",
-    "description": "Advokátní kancelář ŠAFRÁNEK & PARTNEŘI HK – Hradec Králové",
+    "description": "ŠAFRÁNEK & PARTNEŘI HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2014. Mezi hlavní oblasti praxe patří Duševní vlastnictví, Obchodní právo, IT právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na tech Companies, Malé a střední podniky.",
     "website": "www.safranek-hk.cz",
     "languages": [
       "Čeština",
@@ -8788,7 +8795,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Martin Medek",
-    "description": "Advokátní kancelář MEDEK advokátní kancelář – Hradec Králové",
+    "description": "MEDEK advokátní kancelář je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akmedek.cz",
     "languages": [
       "Čeština",
@@ -8821,7 +8828,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Lukáš Janáček",
-    "description": "Advokátní kancelář Janáček & Partneři HK – Hradec Králové",
+    "description": "Janáček & Partneři HK je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Nemovitosti, Insolvence, Vymáhání pohledávek a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na creditors, Developers, Banky.",
     "website": "www.janacek-advokati.cz",
     "languages": [
       "Čeština",
@@ -8856,7 +8863,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Zdeněk Topolan",
-    "description": "Advokátní kancelář TOPOLAN & PARTNEŘI – Hradec Králové",
+    "description": "TOPOLAN & PARTNEŘI je advokátní kancelář se sídlem v Hradci Králové. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Rodinné právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.topolan-ak.cz",
     "languages": [
       "Čeština",
@@ -8890,7 +8897,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Pavel Šimáně",
-    "description": "Advokátní kancelář ŠIMÁNĚ & PARTNEŘI – Pardubice",
+    "description": "ŠIMÁNĚ & PARTNEŘI je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 1994. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Obce, Malé a střední podniky.",
     "website": "www.simane-advokati.cz",
     "languages": [
       "Čeština",
@@ -8900,7 +8907,7 @@ const lawyersData = [
     "initials": "Š&",
     "hourly_rate": "1,800–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of East Bohemia's leading firms",
+    "pricing_note": "Jedna z předních kanceláří ve východních Čechách",
     "ranking": "",
     "awards": "",
     "target": "Korporace, Obce, Malé a střední podniky",
@@ -8924,7 +8931,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Ondřej Pařízek",
-    "description": "Advokátní kancelář PAŘÍZEK & PARTNEŘI – Pardubice",
+    "description": "PAŘÍZEK & PARTNEŘI je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Investoři, Malé a střední podniky.",
     "website": "www.parizek-law.cz",
     "languages": [
       "Čeština",
@@ -8959,7 +8966,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Tomáš Navrátil",
-    "description": "Advokátní kancelář AK Navrátil & Partneři – Pardubice",
+    "description": "AK Navrátil & Partneři je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 1999. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Rodinné právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.navratil-ak.cz",
     "languages": [
       "Čeština",
@@ -8992,7 +8999,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jan Doubravský",
-    "description": "Advokátní kancelář Advokátní kancelář Doubravský – Pardubice",
+    "description": "Advokátní kancelář Doubravský je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na developers, Property Buyers.",
     "website": "www.doubravsky-ak.cz",
     "languages": [
       "Čeština",
@@ -9026,7 +9033,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Lukáš Bárta",
-    "description": "Advokátní kancelář BÁRTA & PARTNEŘI – Pardubice",
+    "description": "BÁRTA & PARTNEŘI je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, IT právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, Employees.",
     "website": "www.barta-pardubice.cz",
     "languages": [
       "Čeština",
@@ -9059,7 +9066,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. David Kadlec",
-    "description": "Advokátní kancelář KADLEC advokátní kancelář – Pardubice",
+    "description": "KADLEC advokátní kancelář je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Občanské právo, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akkadlec.cz",
     "languages": [
       "Čeština",
@@ -9091,7 +9098,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Petra Haasová",
-    "description": "Advokátní kancelář Haas & Partneři – Pardubice",
+    "description": "Haas & Partneři je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.haas-advokati.cz",
     "languages": [
       "Čeština",
@@ -9124,7 +9131,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Radoslav Pokorný",
-    "description": "Advokátní kancelář AK POKORNÝ – Pardubice",
+    "description": "AK POKORNÝ je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 1997. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akpokorny.cz",
     "languages": [
       "Čeština",
@@ -9156,7 +9163,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Pavel Ryšán",
-    "description": "Advokátní kancelář Ryšán & Partneři – Pardubice",
+    "description": "Ryšán & Partneři je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Duševní vlastnictví. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Start-upy.",
     "website": "www.rysan-advokati.cz",
     "languages": [
       "Čeština",
@@ -9169,7 +9176,7 @@ const lawyersData = [
     "pricing_note": "",
     "ranking": "",
     "awards": "",
-    "target": "Malé a střední podniky, Startupy",
+    "target": "Malé a střední podniky, Start-upy",
     "primary": "Obchodní právo"
   },
   {
@@ -9189,7 +9196,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Eva Mašková",
-    "description": "Advokátní kancelář MAŠKOVÁ & PARTNEŘI – Pardubice",
+    "description": "MAŠKOVÁ & PARTNEŘI je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Duševní vlastnictví. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na obce, Public Bodies.",
     "website": "www.maskova-advokati.cz",
     "languages": [
       "Čeština",
@@ -9222,7 +9229,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Jana Šimáčková",
-    "description": "Advokátní kancelář AK ŠIMÁČKOVÁ – Pardubice",
+    "description": "AK ŠIMÁČKOVÁ je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2011. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.simaeckova-ak.cz",
     "languages": [
       "Čeština",
@@ -9254,7 +9261,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radim Hrdlička",
-    "description": "Advokátní kancelář HRDLIČKA & PARTNEŘI – Pardubice",
+    "description": "HRDLIČKA & PARTNEŘI je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Nemovitosti, Insolvence, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na creditors, Developers.",
     "website": "www.hrdlickapartners.cz",
     "languages": [
       "Čeština",
@@ -9286,7 +9293,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Josef Langr",
-    "description": "Advokátní kancelář LANGR advokátní kancelář – Pardubice",
+    "description": "LANGR advokátní kancelář je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Občanské právo, Obchodní právo, Spory a rozhodčí řízení. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.langr-ak.cz",
     "languages": [
       "Čeština",
@@ -9319,7 +9326,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Martin Zikán",
-    "description": "Advokátní kancelář Advokátní kancelář Zikán – Pardubice",
+    "description": "Advokátní kancelář Zikán je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2013. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo, Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na tech Companies, Malé a střední podniky.",
     "website": "www.akzikan.cz",
     "languages": [
       "Čeština",
@@ -9352,7 +9359,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jan Pospíšil",
-    "description": "Advokátní kancelář POSPÍŠIL & NOVÁK – Pardubice",
+    "description": "POSPÍŠIL & NOVÁK je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 1999. Mezi hlavní oblasti praxe patří Trestní právo, Spory a rozhodčí řízení, Správní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.pospisilnovak-pce.cz",
     "languages": [
       "Čeština",
@@ -9385,7 +9392,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jiří Prokeš",
-    "description": "Advokátní kancelář PROKEŠ & PARTNEŘI – Pardubice",
+    "description": "PROKEŠ & PARTNEŘI je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na korporace, Developers.",
     "website": "www.prokes-advokati.cz",
     "languages": [
       "Čeština",
@@ -9418,7 +9425,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Ondřej Ráček",
-    "description": "Advokátní kancelář AK RÁČEK – Pardubice",
+    "description": "AK RÁČEK je advokátní kancelář se sídlem v Pardubicích. Na trhu působí od roku 2010. Tým 1 právníků. Mezi hlavní oblasti praxe patří Občanské právo, Rodinné právo, Vymáhání pohledávek a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akracek.cz",
     "languages": [
       "Čeština",
@@ -9452,7 +9459,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": true,
     "key_partner": "",
-    "description": "Advokátní kancelář KODEX advokátní kancelář – Pardubice",
+    "description": "KODEX advokátní kancelář je advokátní kancelář s pobočkami v Pardubicích a ve Zlíně. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Korporace.",
     "website": "www.kodex-ak.cz",
     "languages": [
       "Čeština",
@@ -9487,7 +9494,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Karel Petrus",
-    "description": "Advokátní kancelář PETRUS & PARTNEŘI – Ústí nad Labem",
+    "description": "PETRUS & PARTNEŘI je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 1992. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na korporace, Obce, Malé a střední podniky.",
     "website": "www.petrus-advokati.cz",
     "languages": [
       "Čeština",
@@ -9497,7 +9504,7 @@ const lawyersData = [
     "initials": "P&",
     "hourly_rate": "1,800–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of North Bohemia's leading firms",
+    "pricing_note": "Jedna z předních kanceláří v severních Čechách",
     "ranking": "",
     "awards": "",
     "target": "Korporace, Obce, Malé a střední podniky",
@@ -9522,7 +9529,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jiří Váňa",
-    "description": "Advokátní kancelář AK Jiří Váňa – Ústí nad Labem",
+    "description": "AK Jiří Váňa je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 1997. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, German Companies.",
     "website": "www.akvana.cz",
     "languages": [
       "Čeština",
@@ -9532,7 +9539,7 @@ const lawyersData = [
     "initials": "AJ",
     "hourly_rate": "1,500–2,500",
     "consult_fee": "1,500–2,000 Kč",
-    "pricing_note": "German-speaker serving cross-border clients",
+    "pricing_note": "Advokát s německy mluvícím servisem pro přeshraniční klienty",
     "ranking": "",
     "awards": "",
     "target": "Fyzické osoby, German Companies",
@@ -9555,7 +9562,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Radim Soukup",
-    "description": "Advokátní kancelář SOUKUP & PARTNEŘI Ústí – Ústí nad Labem",
+    "description": "SOUKUP & PARTNEŘI Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na developers, Investoři, Malé a střední podniky.",
     "website": "www.soukup-advokati.cz",
     "languages": [
       "Čeština",
@@ -9588,7 +9595,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Pavel Kratochvíl",
-    "description": "Advokátní kancelář KRATOCHVÍL advokátní kancelář Ústí – Ústí nad Labem",
+    "description": "KRATOCHVÍL advokátní kancelář Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Občanské právo, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.kratochvil-ul.cz",
     "languages": [
       "Čeština",
@@ -9621,7 +9628,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Martin David",
-    "description": "Advokátní kancelář AK DAVID & PARTNEŘI Ústí – Ústí nad Labem",
+    "description": "AK DAVID & PARTNEŘI Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Obchodní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na companies, Employees.",
     "website": "www.akdavid.cz",
     "languages": [
       "Čeština",
@@ -9654,7 +9661,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Martin Smrž",
-    "description": "Advokátní kancelář AK SMRŽ & PARTNEŘI – Ústí nad Labem",
+    "description": "AK SMRŽ & PARTNEŘI je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.smrz-advokati.cz",
     "languages": [
       "Čeština",
@@ -9686,7 +9693,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Ondřej Horník",
-    "description": "Advokátní kancelář HORNÍK advokátní kancelář – Ústí nad Labem",
+    "description": "HORNÍK advokátní kancelář je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Duševní vlastnictví. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na german Companies, Malé a střední podniky.",
     "website": "www.hornik-ak.cz",
     "languages": [
       "Čeština",
@@ -9719,7 +9726,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Jiří Zelenka",
-    "description": "Advokátní kancelář AK Zelenka Ústí – Ústí nad Labem",
+    "description": "AK Zelenka Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2007. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.akzelenka.cz",
     "languages": [
       "Čeština",
@@ -9751,7 +9758,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Miroslav Pilc",
-    "description": "Advokátní kancelář PILC & PARTNEŘI – Ústí nad Labem",
+    "description": "PILC & PARTNEŘI je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek, Nemovitosti. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na creditors, Banky.",
     "website": "www.pilc-advokati.cz",
     "languages": [
       "Čeština",
@@ -9784,7 +9791,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Petra Sedláčková",
-    "description": "Advokátní kancelář AK SEDLÁČKOVÁ Ústí – Ústí nad Labem",
+    "description": "AK SEDLÁČKOVÁ Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Nemovitosti, Rodinné právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Property Buyers.",
     "website": "www.sedlackova-ul.cz",
     "languages": [
       "Čeština",
@@ -9816,7 +9823,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jakub Řeřicha",
-    "description": "Advokátní kancelář ŘEŘICHA & PARTNEŘI – Ústí nad Labem",
+    "description": "ŘEŘICHA & PARTNEŘI je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Správní právo, Stavební právo, Životní prostředí. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na obce, Developers.",
     "website": "www.rericha-ak.cz",
     "languages": [
       "Čeština",
@@ -9850,7 +9857,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Josef Franc",
-    "description": "Advokátní kancelář AK FRANC & PARTNEŘI – Ústí nad Labem",
+    "description": "AK FRANC & PARTNEŘI je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.franc-advokati.cz",
     "languages": [
       "Čeština",
@@ -9882,7 +9889,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Martin Šimánek",
-    "description": "Advokátní kancelář LEXUM advokátní kancelář Ústí – Ústí nad Labem",
+    "description": "LEXUM advokátní kancelář Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2013. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo, Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na tech Companies, Malé a střední podniky.",
     "website": "www.lexum.cz",
     "languages": [
       "Čeština",
@@ -9916,7 +9923,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář NOVA LEGAL Ústí – Ústí nad Labem",
+    "description": "NOVA LEGAL Ústí je advokátní kancelář se sídlem v městě Ústí nad Labem. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Korporace.",
     "website": "www.novalegal.cz",
     "languages": [
       "Čeština",
@@ -9951,7 +9958,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Jan Kopečný",
-    "description": "Advokátní kancelář KOPEČNÝ & PARTNEŘI – Liberec",
+    "description": "KOPEČNÝ & PARTNEŘI je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 1993. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a polštiny. Zaměřuje se zejména na korporace, German/Polish Companies.",
     "website": "www.kopecny-liberec.cz",
     "languages": [
       "Čeština",
@@ -9962,7 +9969,7 @@ const lawyersData = [
     "initials": "K&",
     "hourly_rate": "1,800–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "German and Polish-speaking firm",
+    "pricing_note": "German a Polish-mluvící kancelář",
     "ranking": "",
     "awards": "",
     "target": "Korporace, German/Polish Companies",
@@ -9987,7 +9994,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Petr Šmíd",
-    "description": "Advokátní kancelář AK Šmíd & Partneři – Liberec",
+    "description": "AK Šmíd & Partneři je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.smid-liberec.cz",
     "languages": [
       "Čeština",
@@ -10021,7 +10028,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Martin Sokolov",
-    "description": "Advokátní kancelář SOKOLOV & PARTNEŘI – Liberec",
+    "description": "SOKOLOV & PARTNEŘI je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na investoři, Developers.",
     "website": "www.sokolov-advokati.cz",
     "languages": [
       "Čeština",
@@ -10031,7 +10038,7 @@ const lawyersData = [
     "initials": "S&",
     "hourly_rate": "1,500–2,500",
     "consult_fee": "1,500–2,000 Kč",
-    "pricing_note": "German-speaker",
+    "pricing_note": "Kancelář s německy mluvícím týmem",
     "ranking": "",
     "awards": "",
     "target": "Investoři, Developers",
@@ -10054,7 +10061,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radek Pokorný",
-    "description": "Advokátní kancelář POKORNÝ & PARTNEŘI – Liberec",
+    "description": "POKORNÝ & PARTNEŘI je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Občanské právo, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.pokorny-liberec.cz",
     "languages": [
       "Čeština",
@@ -10087,7 +10094,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Jana Řeháčková",
-    "description": "Advokátní kancelář AK ŘEHÁČKOVÁ – Liberec",
+    "description": "AK ŘEHÁČKOVÁ je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2010. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.rehackova-ak.cz",
     "languages": [
       "Čeština",
@@ -10120,7 +10127,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Václav Beneš",
-    "description": "Advokátní kancelář BENEŠ & PARTNEŘI – Liberec",
+    "description": "BENEŠ & PARTNEŘI je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Obchodní právo, Daně, Fúze a akvizice. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na malé a střední podniky, Investoři.",
     "website": "www.benes-liberec.cz",
     "languages": [
       "Čeština",
@@ -10153,7 +10160,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Pavel Jirásek",
-    "description": "Advokátní kancelář JIRÁSEK & PARTNEŘI – Liberec",
+    "description": "JIRÁSEK & PARTNEŘI je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Správní právo. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a polštiny. Zaměřuje se zejména na companies, HR Departments.",
     "website": "www.jirasek-advokati.cz",
     "languages": [
       "Čeština",
@@ -10188,7 +10195,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Stanislav Horáček",
-    "description": "Advokátní kancelář AK HORÁČEK – Liberec",
+    "description": "AK HORÁČEK je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Spory a rozhodčí řízení a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.horacek-liberec.cz",
     "languages": [
       "Čeština",
@@ -10221,7 +10228,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Jana Kremlová",
-    "description": "Advokátní kancelář KREML advokátní kancelář – Liberec",
+    "description": "KREML advokátní kancelář je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Nemovitosti, Rodinné právo, Občanské právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.kreml-ak.cz",
     "languages": [
       "Čeština",
@@ -10253,7 +10260,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Luboš Vlček",
-    "description": "Advokátní kancelář VLČEK & PARTNEŘI – Liberec",
+    "description": "VLČEK & PARTNEŘI je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek, Nemovitosti. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na creditors, Banky.",
     "website": "www.vlcek-liberec.cz",
     "languages": [
       "Čeština",
@@ -10285,7 +10292,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": true,
     "key_partner": "Mgr. Tomáš Nový",
-    "description": "Advokátní kancelář IP LEGAL – Liberec",
+    "description": "IP LEGAL je advokátní kancelář s pobočkami v Liberci a ve Zlíně. Na trhu působí od roku 2013. Mezi hlavní oblasti praxe patří Duševní vlastnictví, IT právo, Obchodní právo. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a slovenštiny. Zaměřuje se zejména na tech Companies, Malé a střední podniky.",
     "website": "www.iplegal-liberec.cz",
     "languages": [
       "Čeština",
@@ -10320,7 +10327,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Milan Bureš",
-    "description": "Advokátní kancelář AK Bureš & Partneři – Liberec",
+    "description": "AK Bureš & Partneři je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Pracovní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.bures-advokati.cz",
     "languages": [
       "Čeština",
@@ -10354,7 +10361,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Karel Novotný",
-    "description": "Advokátní kancelář NOVOTNÝ advokátní kancelář – Liberec",
+    "description": "NOVOTNÝ advokátní kancelář je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2008. Tým 1 právníků. Mezi hlavní oblasti praxe patří Trestní právo, Občanské právo, Správní právo a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby.",
     "website": "www.ak-liberec.cz",
     "languages": [
       "Čeština",
@@ -10388,7 +10395,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář GEMA advokátní kancelář – Liberec",
+    "description": "GEMA advokátní kancelář je advokátní kancelář se sídlem v Liberci. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Korporace.",
     "website": "www.gema-ak.cz",
     "languages": [
       "Čeština",
@@ -10424,7 +10431,7 @@ const lawyersData = [
     "size": "15+",
     "verified": false,
     "key_partner": "JUDr. Martin Dohnal",
-    "description": "Advokátní kancelář Advokátní kancelář Dohnal & Partneři – Zlín",
+    "description": "Advokátní kancelář Dohnal & Partneři je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 1993. S týmem 15+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice a dalších 3 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Obce, Malé a střední podniky.",
     "website": "www.dohnal-zlin.cz",
     "languages": [
       "Čeština",
@@ -10434,7 +10441,7 @@ const lawyersData = [
     "initials": "AK",
     "hourly_rate": "1,800–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "One of Zlín region's leading firms",
+    "pricing_note": "Jedna z předních kanceláří ve zlínském regionu",
     "ranking": "",
     "awards": "",
     "target": "Korporace, Obce, Malé a střední podniky",
@@ -10458,7 +10465,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Pavel Mašek",
-    "description": "Advokátní kancelář MAŠEK & PARTNEŘI – Zlín",
+    "description": "MAŠEK & PARTNEŘI je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Obchodní právo, Fúze a akvizice, Nemovitosti a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Investoři.",
     "website": "www.masek-zlin.cz",
     "languages": [
       "Čeština",
@@ -10491,7 +10498,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Hana Jurečková",
-    "description": "Advokátní kancelář AK Jurečková & Partneři – Zlín",
+    "description": "AK Jurečková & Partneři je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.jureckovaadvokati.cz",
     "languages": [
       "Čeština",
@@ -10525,7 +10532,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Petr Vaculík",
-    "description": "Advokátní kancelář VACULÍK & PARTNEŘI advokátní kancelář – Zlín",
+    "description": "VACULÍK & PARTNEŘI advokátní kancelář je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Trestní právo, Spory a rozhodčí řízení, Správní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.vaculik-advokati.cz",
     "languages": [
       "Čeština",
@@ -10558,7 +10565,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jana Batíková",
-    "description": "Advokátní kancelář BATA Legal – Zlín",
+    "description": "BATA Legal je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Obchodní právo, Pracovní právo, Duševní vlastnictví. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na manufacturing Companies, Korporace.",
     "website": "www.bata-legal.cz",
     "languages": [
       "Čeština",
@@ -10568,7 +10575,7 @@ const lawyersData = [
     "initials": "BL",
     "hourly_rate": "1,800–3,000",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Industry roots in shoe/manufacturing sector",
+    "pricing_note": "Industry roots v oblasti shoe/manufacturing sektorové",
     "ranking": "",
     "awards": "",
     "target": "Manufacturing Companies, Korporace",
@@ -10592,7 +10599,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Martin Prachař",
-    "description": "Advokátní kancelář PRACHAŘ & PARTNEŘI – Zlín",
+    "description": "PRACHAŘ & PARTNEŘI je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Nemovitosti, Stavební právo, Obchodní právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Investoři.",
     "website": "www.prachar-advokati.cz",
     "languages": [
       "Čeština",
@@ -10625,7 +10632,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Tomáš Vlček",
-    "description": "Advokátní kancelář AK VLČEK & PARTNEŘI – Zlín",
+    "description": "AK VLČEK & PARTNEŘI je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Obchodní právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na companies, Employees.",
     "website": "www.vlcek-zlin.cz",
     "languages": [
       "Čeština",
@@ -10659,7 +10666,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Radoslav Halas",
-    "description": "Advokátní kancelář Halas & Partneři – Zlín",
+    "description": "Halas & Partneři je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 1998. Mezi hlavní oblasti praxe patří Občanské právo, Vymáhání pohledávek, Nemovitosti a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.halas-advokati.cz",
     "languages": [
       "Čeština",
@@ -10692,7 +10699,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Karel Kovář",
-    "description": "Advokátní kancelář KOVAR & PARTNEŘI – Zlín",
+    "description": "KOVAR & PARTNEŘI je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na creditors, Banky.",
     "website": "www.kovarlegal.cz",
     "languages": [
       "Čeština",
@@ -10726,7 +10733,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Monika Jančíková",
-    "description": "Advokátní kancelář AK Jančíková – Zlín",
+    "description": "AK Jančíková je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2012. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Pracovní právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Employees.",
     "website": "www.akjancikova.cz",
     "languages": [
       "Čeština",
@@ -10760,7 +10767,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Radim Hanuš",
-    "description": "Advokátní kancelář HANUŠ & PARTNEŘI – Zlín",
+    "description": "HANUŠ & PARTNEŘI je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2002. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.hanus-advokati.cz",
     "languages": [
       "Čeština",
@@ -10792,7 +10799,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Jakub Beneš",
-    "description": "Advokátní kancelář BENEŠ advokátní kancelář – Zlín",
+    "description": "BENEŠ advokátní kancelář je advokátní kancelář se sídlem ve Zlíně. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Developers.",
     "website": "www.benes-zlin.cz",
     "languages": [
       "Čeština",
@@ -10827,7 +10834,7 @@ const lawyersData = [
     "size": "10+",
     "verified": false,
     "key_partner": "JUDr. Martin Tůma",
-    "description": "Advokátní kancelář Advokátní kancelář Tůma & Partneři – Jihlava",
+    "description": "Advokátní kancelář Tůma & Partneři je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 1993. S týmem 10+ právníků. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Spory a rozhodčí řízení a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na korporace, Obce, Malé a střední podniky.",
     "website": "www.tuma-advokati.cz",
     "languages": [
       "Čeština",
@@ -10837,7 +10844,7 @@ const lawyersData = [
     "initials": "AK",
     "hourly_rate": "1,800–3,000",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Largest firm in Jihlava",
+    "pricing_note": "Largest kancelář v oblasti Jihlava",
     "ranking": "",
     "awards": "",
     "target": "Korporace, Obce, Malé a střední podniky",
@@ -10862,7 +10869,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Petr Novotný",
-    "description": "Advokátní kancelář AK Novotný & Partneři – Jihlava",
+    "description": "AK Novotný & Partneři je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2000. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.novotny-jihlava.cz",
     "languages": [
       "Čeština",
@@ -10894,7 +10901,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Martin Šebela",
-    "description": "Advokátní kancelář ŠEBELA & PARTNEŘI – Jihlava",
+    "description": "ŠEBELA & PARTNEŘI je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na developers, Investoři, Malé a střední podniky.",
     "website": "www.sebela-advokati.cz",
     "languages": [
       "Čeština",
@@ -10927,7 +10934,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Pavel Kratochvíl",
-    "description": "Advokátní kancelář AK KRATOCHVÍL – Jihlava",
+    "description": "AK KRATOCHVÍL je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2003. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Občanské právo, Trestní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.akkratochvil.cz",
     "languages": [
       "Čeština",
@@ -10959,7 +10966,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Roman Veselý",
-    "description": "Advokátní kancelář VESELÝ advokátní kancelář – Jihlava",
+    "description": "VESELÝ advokátní kancelář je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2010. Mezi hlavní oblasti praxe patří Pracovní právo, IT právo, Obchodní právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na companies, Employees.",
     "website": "www.vesely-ak.cz",
     "languages": [
       "Čeština",
@@ -10992,7 +10999,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Ondřej Dvořák",
-    "description": "Advokátní kancelář AK Dvořák – Jihlava",
+    "description": "AK Dvořák je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Trestní právo, Správní právo, Spory a rozhodčí řízení a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.dvorak-jihlava.cz",
     "languages": [
       "Čeština",
@@ -11024,7 +11031,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Markéta Hofmanová",
-    "description": "Advokátní kancelář Hofmanová advokátka – Jihlava",
+    "description": "Hofmanová advokátka je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2011. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Občanské právo, Dědické právo. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Rodiny.",
     "website": "www.akjhofmanova.cz",
     "languages": [
       "Čeština",
@@ -11056,7 +11063,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jaromír Král",
-    "description": "Advokátní kancelář KRÁL & PARTNEŘI – Jihlava",
+    "description": "KRÁL & PARTNEŘI je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Obchodní právo, Nemovitosti, Fúze a akvizice. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na malé a střední podniky, Investoři.",
     "website": "www.kral-advokati.cz",
     "languages": [
       "Čeština",
@@ -11090,7 +11097,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Josef Pazdera",
-    "description": "Advokátní kancelář AK PAZDERA – Jihlava",
+    "description": "AK PAZDERA je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Vymáhání pohledávek a dalšího oboru práva. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.akpazdera.cz",
     "languages": [
       "Čeština",
@@ -11121,7 +11128,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Jan Sedlář",
-    "description": "Advokátní kancelář Insolvency & Debt – Jihlava",
+    "description": "Insolvency & Debt je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2008. Mezi hlavní oblasti praxe patří Insolvence, Vymáhání pohledávek. Služby poskytuje kromě češtiny také v angličtině. Zaměřuje se zejména na creditors, Companies.",
     "website": "www.insolvency-jihlava.cz",
     "languages": [
       "Čeština",
@@ -11155,7 +11162,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář MORAVIA LEGAL – Jihlava",
+    "description": "MORAVIA LEGAL je advokátní kancelář se sídlem v Jihlavě. Na trhu působí od roku 2006. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, slovenštiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky, Korporace.",
     "website": "www.moravia-legal.cz",
     "languages": [
       "Čeština",
@@ -11189,7 +11196,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Zdeněk Víšek",
-    "description": "Advokátní kancelář AK VÍŠEK & PARTNEŘI – Karlovy Vary",
+    "description": "AK VÍŠEK & PARTNEŘI je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 1995. Mezi hlavní oblasti praxe patří Nemovitosti, IT právo, Obchodní právo a dalšího oboru práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Zaměřuje se zejména na investoři, International Buyers.",
     "website": "www.visek-advokati.cz",
     "languages": [
       "Čeština",
@@ -11200,7 +11207,7 @@ const lawyersData = [
     "initials": "AV",
     "hourly_rate": "2,000–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Specialists in KV spa property",
+    "pricing_note": "Specialists v oblasti KV spa property",
     "ranking": "",
     "awards": "",
     "target": "Investoři, International Buyers",
@@ -11224,7 +11231,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "Mgr. Alexej Novikov",
-    "description": "Advokátní kancelář ČESKO-RUSKÁ advokátní kancelář – Karlovy Vary",
+    "description": "ČESKO-RUSKÁ advokátní kancelář je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 2005. Mezi hlavní oblasti praxe patří Fúze a akvizice, Nemovitosti, Imigrace a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně ruštiny, angličtiny. Zaměřuje se zejména na investoři, Expats.",
     "website": "www.cr-advokati.cz",
     "languages": [
       "Čeština",
@@ -11234,10 +11241,10 @@ const lawyersData = [
     "initials": "ČA",
     "hourly_rate": "2,000–3,500",
     "consult_fee": "Na dotaz",
-    "pricing_note": "Russian-Czech bilingual firm",
+    "pricing_note": "Russian-Česká bilingual kancelář",
     "ranking": "",
     "awards": "",
-    "target": "Investoři, Expats",
+    "target": "Investoři, Cizinci v ČR",
     "primary": "International / Russian Law"
   },
   {
@@ -11259,7 +11266,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Jaroslav Vágner",
-    "description": "Advokátní kancelář AK VÁGNER & PARTNEŘI – Karlovy Vary",
+    "description": "AK VÁGNER & PARTNEŘI je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 1997. Mezi hlavní oblasti praxe patří Občanské právo, Trestní právo, Správní právo a dalších 2 oborů práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Malé a střední podniky.",
     "website": "www.vagner-advokati.cz",
     "languages": [
       "Čeština",
@@ -11293,7 +11300,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "Mgr. Jakub Egermaier",
-    "description": "Advokátní kancelář EGERMAIER & PARTNEŘI KV – Karlovy Vary",
+    "description": "EGERMAIER & PARTNEŘI KV je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 2007. Mezi hlavní oblasti praxe patří Nemovitosti, Obchodní právo, Stavební právo a dalšího oboru práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Zaměřuje se zejména na investoři, Developers.",
     "website": "www.egermaier-kv.cz",
     "languages": [
       "Čeština",
@@ -11326,7 +11333,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "JUDr. Milan Šindelka",
-    "description": "Advokátní kancelář ŠINDELKA & PARTNEŘI – Karlovy Vary",
+    "description": "ŠINDELKA & PARTNEŘI je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 2001. Mezi hlavní oblasti praxe patří Spory a rozhodčí řízení, Trestní právo. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na fyzické osoby, Companies.",
     "website": "www.sindelka-ak.cz",
     "languages": [
       "Čeština",
@@ -11360,7 +11367,7 @@ const lawyersData = [
     "size": "1",
     "verified": false,
     "key_partner": "Mgr. Ondřej Roček",
-    "description": "Advokátní kancelář AK ROČEK – Karlovy Vary",
+    "description": "AK ROČEK je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 2011. Tým 1 právníků. Mezi hlavní oblasti praxe patří Rodinné právo, Imigrace, Občanské právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, ruštiny. Zaměřuje se zejména na fyzické osoby, Expats.",
     "website": "www.akrocek.cz",
     "languages": [
       "Čeština",
@@ -11370,10 +11377,10 @@ const lawyersData = [
     "initials": "AR",
     "hourly_rate": "1,200–2,000",
     "consult_fee": "1,200–1,500 Kč",
-    "pricing_note": "Russian-speaker",
+    "pricing_note": "Russian-mluvící tým",
     "ranking": "",
     "awards": "",
-    "target": "Fyzické osoby, Expats",
+    "target": "Fyzické osoby, Cizinci v ČR",
     "primary": "Rodinné právo"
   },
   {
@@ -11394,7 +11401,7 @@ const lawyersData = [
     "size": "3–5",
     "verified": false,
     "key_partner": "JUDr. Zdeněk Marek",
-    "description": "Advokátní kancelář MAREK & PARTNEŘI KV – Karlovy Vary",
+    "description": "MAREK & PARTNEŘI KV je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 2009. Mezi hlavní oblasti praxe patří Pracovní právo, Obchodní právo, IT právo a dalšího oboru práva. Služby poskytuje v 3 jazycích včetně angličtiny, němčiny. Zaměřuje se zejména na hotels, Employers, Companies.",
     "website": "www.marek-kv.cz",
     "languages": [
       "Čeština",
@@ -11429,7 +11436,7 @@ const lawyersData = [
     "size": "5–10",
     "verified": false,
     "key_partner": "",
-    "description": "Advokátní kancelář LEXIKON advokátní kancelář KV – Karlovy Vary",
+    "description": "LEXIKON advokátní kancelář KV je advokátní kancelář se sídlem v Karlových Varech. Na trhu působí od roku 2004. Mezi hlavní oblasti praxe patří Občanské právo, Nemovitosti, Trestní právo a dalších 2 oborů práva. Služby poskytuje v 4 jazycích včetně angličtiny, němčiny a ruštiny. Zaměřuje se zejména na fyzické osoby, International Clients, Malé a střední podniky.",
     "website": "www.lexikon-kv.cz",
     "languages": [
       "Čeština",
@@ -11440,7 +11447,7 @@ const lawyersData = [
     "initials": "LA",
     "hourly_rate": "1,800–3,000",
     "consult_fee": "1,800–2,500 Kč",
-    "pricing_note": "Multilingual spa-town firm",
+    "pricing_note": "Multilingual spa-town kancelář",
     "ranking": "",
     "awards": "",
     "target": "Fyzické osoby, International Clients, Malé a střední podniky",
