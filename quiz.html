@@ -242,6 +242,24 @@
               </div>
             </div>
           </div>
+          <div class="card-option p-5" data-field="oblast" data-value="insolvence">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.8rem">currency_exchange</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#1a1810]">Insolvenční právo</h3>
+                <p class="text-sm text-[#1a1810]/55">Úpadek, oddlužení, věřitelé</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-option p-5" data-field="oblast" data-value="dedicke">
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-[#1f4209] flex-shrink-0" style="font-size:1.8rem">family_star</span>
+              <div>
+                <h3 class="font-bold font-['Plus_Jakarta_Sans'] text-[#1a1810]">Dědické právo</h3>
+                <p class="text-sm text-[#1a1810]/55">Závěti, dědická řízení, pozůstalost</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -596,7 +614,9 @@
       spotrebitelske:   [['Spotřebitelský úvěr','consumer_credit'],['Reklamace / vada zboží','complaint'],['Nekalé obchodní praktiky','unfair'],  ['Finanční arbitr','fin_arbitr'],     ['Spor s pojišťovnou','insurance_dispute'],        ['ČOI / dozorový orgán','coi'],       ['Jiné','other']],
       nahrada_ujmy:     [['Dopravní nehoda','car_accident'],       ['Pracovní úraz','work_injury'],       ['Újma na zdraví','personal_injury'],   ['Škoda na majetku','property_damage'],['Újma způsobená státem','state_liability'],       ['Jiné','other']],
       obcanske:         [['Spor se sousedem','neighbor_dispute'],  ['Dluh / pohledávka','debt'],           ['Zastupování před soudem','court_rep'], ['Neoprávněný zásah','trespass'],     ['Dědické řízení','inheritance'],                  ['Smlouva / smluvní spor','contract'], ['Jiné','other']],
-      spravni:          [['Stavební povolení','building_permit'],  ['Pokuta / přestupek','fine'],          ['Odvolání proti rozhodnutí úřadu','appeal'], ['Vyvlastnění','expropriation'], ['Živnostenské oprávnění','trade_license'],         ['Jiné','other']]
+      spravni:          [['Stavební povolení','building_permit'],  ['Pokuta / přestupek','fine'],          ['Odvolání proti rozhodnutí úřadu','appeal'], ['Vyvlastnění','expropriation'], ['Živnostenské oprávnění','trade_license'],         ['Jiné','other']],
+      insolvence:       [['Osobní bankrot / oddlužení','personal_bankruptcy'], ['Insolvenční řízení firmy','company_insolvency'], ['Přihláška pohledávky věřitele','creditor_claim'], ['Reorganizace firmy','reorganization'], ['Vymáhání pohledávek v insolvenci','insolvency_debt'], ['Jiné','other']],
+      dedicke:          [['Sepsání závěti','will_writing'],       ['Dědické řízení','probate'],           ['Dědická dohoda','inheritance_agreement'], ['Vydědění / námitka nepravosti','disinheritance'], ['Darování majetku','gift_transfer'],             ['Správa pozůstalosti','estate_management'], ['Jiné','other']]
     };
 
     function populateProblemCards() {
